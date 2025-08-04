@@ -1,0 +1,76 @@
+<section class="strength-spotter">
+    <div class="container">
+      <div class="header">
+        <div class="badge">⭐ Challenge of the Week</div>
+        <h1 class="title">Strength Spotter</h1>
+        <p class="subtitle">
+          Ask 2 people: <strong>"What's something I'm good at?"</strong><br />
+          Record their answers to share next week and discover your hidden strengths!
+        </p>
+      </div>
+  
+      <div class="instructions">
+        <h3>🌀 How it works:</h3>
+        <ol>
+          <li>Choose 2 people who know you well (friends, family, colleagues)</li>
+          <li>Ask them: <em>"What's something I'm good at?"</em></li>
+          <li>Record their names and responses below</li>
+          <li>Reflect on their answers and prepare to share next week</li>
+        </ol>
+      </div>
+  
+      <div class="response-grid">
+        <div class="response-card">
+          <h4>♡ Person 1</h4>
+          <label>
+            Their Name
+            <input [(ngModel)]="person1Name" placeholder="e.g., Sarah, Mom, Alex..." />
+          </label>
+          <label>
+            What they said you're good at
+            <textarea [(ngModel)]="person1Response" placeholder="Write or draw their response here..."></textarea>
+          </label>
+        </div>
+  
+        <div class="response-card">
+          <h4>♡ Person 2</h4>
+          <label>
+            Their Name
+            <input [(ngModel)]="person2Name" placeholder="e.g., David, Best friend, Teacher..." />
+          </label>
+          <label>
+            What they said you're good at
+            <textarea [(ngModel)]="person2Response" placeholder="Write or draw their response here..."></textarea>
+          </label>
+        </div>
+      </div>
+  
+      <div class="save-btn-container">
+        <button (click)="saveResponses()" class="save-btn">Save My Responses</button>
+      </div>
+      
+    </div>
+
+    <div class="completion-message" *ngIf="challengeComplete">
+        <div class="status-header">
+          <span class="status-icon">✅</span>
+          <span class="status-text">Challenge Complete!</span>
+        </div>
+     
+      
+        <div class="reflection-box">
+          <p><strong>Wonderful! You've completed this week's challenge 🌟</strong></p>
+          <p>
+            Take some time to reflect on what {{ person1Name }} and {{ person2Name }} shared with you.
+            These insights reveal strengths you might not have noticed about yourself.
+            Get ready to share these discoveries next week!
+          </p>
+        </div>
+        <br>
+        <div class="status-header">
+            <button class="reset-btn" (click)="reset()">Start Over</button>
+            <button routerLink="/second-week-level7" class="cta-button">🚀 Proceed to Level 7</button>
+        </div>
+      </div>
+  </section>
+  

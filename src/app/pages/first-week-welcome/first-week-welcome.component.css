@@ -1,0 +1,135 @@
+.learning-journey {
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #ffe99f, #e6f0fa);
+    border-radius: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .journey-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .lesson-card {
+    flex: 1 1 350px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .badge {
+    background: #e6f0ff;
+    color: #0057d8;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .lesson-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .faded {
+    color: #bbb;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  
+  .box {
+    background: #f7faff;
+    border-left: 4px solid #00b67a;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .box p, .box ul {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .box ul {
+    padding-left: 1rem;
+  }
+  
+  .box li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .illustration {
+    flex: 1 1 350px;
+    text-align: center;
+  }
+  
+  .illustration img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .journey-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lesson-card, .illustration {
+      width: 100%;
+    }
+  
+    .header h1 {
+      font-size: 1.7rem;
+    }
+  }
+  .start-button {
+    margin-top: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(90deg, #5BB6E5, #FF8F2E);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .start-button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #4aaad7, #e87f15);
+  }
+  

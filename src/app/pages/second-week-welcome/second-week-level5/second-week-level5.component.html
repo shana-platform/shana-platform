@@ -1,0 +1,70 @@
+
+<div class="game-header">
+    <h1><span class="gradient-text">Match Your <strong>Strengths</strong></span></h1>
+    <p class="subtitle text-muted">Connect personality strengths with the characters that show them!</p>
+      <div class="game-status-box">
+        <div class="status-section">
+          <div class="status-item">
+            <div class="status-number blue">0</div>
+            <div class="status-label">Score</div>
+          </div>
+          <div class="status-item">
+            <div class="status-number green">0/6</div>
+            <div class="status-label">Matches</div>
+          </div>
+          <button class="start-btn">Let's Start!</button>
+        </div>
+        <button class="reset-btn">Reset Game</button>
+      </div>
+      
+  </div>
+  
+<div class="game-container">
+    <div class="column">
+        <h2 style="color: #1e90ff;" class="text-center">Personality Strengths</h2>
+        <div style="color: #1e90ff;" class="card strength-card">Kind</div>
+        <div style="color: #1e90ff;" class="card strength-card">Funny</div>
+        <div style="color: #1e90ff;" class="card strength-card">Brave</div>
+        <div style="color: #1e90ff;" class="card strength-card">Creative</div>
+        <div style="color: #1e90ff;" class="card strength-card">Smart</div>
+        <div style="color: #1e90ff;" class="card strength-card">Helpful</div>
+      </div>
+      
+      <div class="column">
+        <h2 style="color: #00bfa6;" class="text-center">Character Actions</h2>
+        <div class="card action-card"><img src="assets/help.png" alt="character" />Helping Others</div>
+        <div class="card action-card"><img src="assets/laugh.png" alt="character" />Making People Laugh</div>
+        <div class="card action-card"><img src="assets/challenges.png" alt="character" />Facing Challenges</div>
+        <div class="card action-card"><img src="assets/art.png" alt="character" />Making Art</div>
+        <div class="card action-card"><img src="assets/read.png" alt="character" />Learning & Reading</div>
+        <div class="card action-card"><img src="assets/friends.png" alt="character" />Supporting Friends</div>
+      </div>
+      
+  </div>
+
+  <div class="how-to-play text-center">
+    <h3 class="how-title">🧠 How to Play?</h3>
+    <p>🎯 <b>Click</b> or <b>drag</b> to match personality strengths with character actions</p>
+    <p>✨ Find all 6 matches to complete the game</p>
+    🎉 Each correct match earns you points!
+  </div>
+
+  <div class="match-toast" [class.show]="showToast" [class.success]="toastSuccess" [class.failure]="!toastSuccess">
+    <strong>{{ toastMessage }}</strong>
+    <div *ngIf="toastDetail">{{ toastDetail }}</div>
+  </div>
+  
+  <div class="congrats-modal" [class.show]="showCongratsModal">
+    <div class="modal-content">
+      <h2>🎉 Wonderful Job!</h2>
+      <p>You matched all the strengths successfully.</p>
+  
+      <div class="modal-buttons">
+        <button class="btn btn-sm replay" (click)="resetGame()">🔄 Replay Game</button>
+        <button class="btn btn-sm proceed" routerLink="/second-week-level6">➡️ Proceed to Level 6</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,98 @@
+<div class="name-shine-container">
+    <!-- Header -->
+    <header class="shine-header">
+        <div class="logo-section">
+          <div class="logo-circle">
+              <span class="sparkle">✨</span>
+            </div>
+            
+          <div>
+            <h1>Name & Shine</h1>
+            <p>Your identity is all about what makes you, YOU!</p>
+          </div>
+        </div>
+        <button routerLink="/first-week-level2" class="student-view-btn">➡️ Proceed to Lesson 2</button>
+      </header>
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left: Input Form -->
+      <div class="card form-card">
+        <h2>🎵 Share Your Shine!</h2>
+        <form (ngSubmit)="addStudent()" #shineForm="ngForm">
+          <label>What's your name?</label>
+          <input
+            type="text"
+            [(ngModel)]="name"
+            name="name"
+            placeholder="Enter your name..."
+            required
+          />
+  
+          <label>One thing you like (food, color, animal, hobby...)</label>
+          <input
+            type="text"
+            [(ngModel)]="interest"
+            name="interest"
+            placeholder="I like..."
+            required
+          />
+  
+          <button class="submit-btn" type="submit" [disabled]="!shineForm.form.valid">
+            💜 Add Your Shine!
+          </button>
+        </form>
+      </div>
+  
+      <!-- Right: Student Cards -->
+      <div class="card group-card">
+        <div class="group-header">
+            <h4><i style="color: #8e59b4;" class="fa fa-users"></i> Our Amazing Group</h4>
+            <span class="student">{{ students.length }} students</span>
+        </div>
+        <div class="student-list">
+          <div
+            class="student-card"
+            *ngFor="let s of students; let i = index"
+            [style.background]="colorPalette[i % colorPalette.length]"
+          >
+            <strong>{{ s.name }}</strong>
+            <p>Likes: {{ s.interest }}</p>
+            <span class="heart">🤍</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom: Summary -->
+    <div class="summary-row">
+      <div class="card how-it-works">
+        <h3>How it works:</h3>
+        <ul>
+            <li>🟡 Share your name and something you like</li>
+            <li>🟡 See how unique and special everyone is!</li>
+            <li>🟡 Teachers can see all responses</li>
+          </ul>
+      </div>
+  
+      <div class="card teacher-summary" *ngIf="showFollowUpCard">
+        <h3>🎓 Teacher Follow-up:</h3>
+        <p>
+          "Wow! Look at all the different things we like! That's part of what makes you YOU."
+        </p>
+        <div class="summary-boxes">
+          <div class="summary-box">
+            <span>Total Responses:</span>
+            &nbsp;
+            <strong>{{ students.length }}</strong>
+          </div>
+          <div class="summary-box">
+            <span>Unique Interests:</span>
+            &nbsp;
+            <strong>{{ uniqueInterests.length }}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

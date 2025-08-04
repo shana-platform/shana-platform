@@ -1,0 +1,40 @@
+<div class="session-wrapper">
+    <div class="session-card">
+      <h1>Power Pose Session! 🦸‍♀️</h1>
+      <p class="subtitle">An interactive Q&A between teacher and student</p>
+  
+      <div class="chat-log">
+        <div *ngFor="let entry of conversation" [ngClass]="entry.role === 'teacher' ? 'chat-bubble teacher' : 'chat-bubble student'">
+          <span class="icon">{{ entry.role === 'teacher' ? '👩‍🏫' : '🧒' }}</span>
+          <div class="text">{{ entry.message }}</div>
+        </div>
+      </div>
+  
+      <form *ngIf="!sessionComplete" (ngSubmit)="submitAnswer()" class="input-row">
+        <input
+          [(ngModel)]="studentInput"
+          name="studentInput"
+          required
+          class="student-input"
+          placeholder="Type your answer here..."
+          autofocus
+        />
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+  
+      <div class="action-buttons" *ngIf="sessionComplete">
+        <button (click)="replaySession()" class="replay-button">🔁 Replay Session</button>
+        <button routerLink="/second-week-level2" class="next-level-button">➡️ Proceed to Lesson 2</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Reaction Modal -->
+<div class="reaction-modal" *ngIf="showReactionModal">
+    <div class="reaction-content">
+      <p>{{ currentReaction }}</p>
+    </div>
+  </div>
+  
+  

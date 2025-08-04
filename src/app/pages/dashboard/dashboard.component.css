@@ -1,0 +1,245 @@
+.course-progress-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    border-left: 6px solid #5BB6E5;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .course-progress-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .course-header h4 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .course-code {
+    background-color: #e5f4fb;
+    color: #5BB6E5;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .progress-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+  
+  .progress-bar-wrapper {
+    height: 10px;
+    background-color: #f4f4f5;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #FF8F2E;
+    transition: width 0.4s ease;
+  }
+  
+  .next-class {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 10px;
+  }
+
+  .task-card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-header h6 {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .priority {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    text-transform: lowercase;
+  }
+  
+  .priority.high {
+    background-color: #ef4444;
+  }
+  
+  .priority.medium {
+    background-color: #FF8F2E;
+  }
+
+    .priority.low {
+    background-color: #0f172a;
+  }
+  
+  .task-meta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .meta-item {
+    margin-right: 10px;
+  }
+  
+  .dashboard-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .dashboard-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .stat-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .stat-card {
+    flex: 1 1 280px;
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-header .icon {
+    font-size: 1.5rem;
+  }
+  
+  .card .badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+  }
+  
+  .stat-card h6 {
+    font-size: 2rem;
+    margin: 1rem 0 0.3rem;
+  }
+  
+  .stat-card p {
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+    /* color: black; */
+  }
+  
+  .stat-card small {
+    font-size: 0.75rem;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0.5rem 0;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  .blue {
+    background: #FF8A5B;
+    /* background: linear-gradient(to bottom, #AAC0AA, #A18276); */
+  }
+  
+  .yellow {
+    background: #4F517D;
+  }
+  
+  .orange {
+    background: #C2847A;
+  }
+  
+  .learning-stats {
+    background: #f9f9f9;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .stat-box {
+    flex: 1 1 150px;
+  }
+  
+  .stat-box h6 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .stat-box .green {
+    color: #00a86b;
+  }
+  
+  @media (max-width: 768px) {
+    .stat-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .learning-stats {
+      flex-direction: column;
+    }
+  }
+  

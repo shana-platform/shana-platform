@@ -1,0 +1,128 @@
+.full-login-page {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .left-pane {
+    width: 50%;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  .right-pane {
+    width: 50%;
+    background: linear-gradient(135deg, #116997, #5bb6e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-pane img {
+    max-width: 90%;
+    height: auto;
+  }
+  
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+  
+  .brand {
+    color: #ff8f2e;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .form-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group .icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #999;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #116997;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0e577d;
+  }
+  
+  .footer-text {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .footer-text a {
+    color: #5bb6e5;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 30px;
+  }
+  

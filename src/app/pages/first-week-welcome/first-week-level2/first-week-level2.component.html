@@ -1,0 +1,218 @@
+<div class="discover-container">
+    <header class="shine-header">
+        <div class="logo-section">
+          <div class="logo-circle">
+              <span class="sparkle">✨</span>
+            </div>
+            
+          <div>
+            <h1>Discovering Your Unique Gift</h1>
+            <p>A lesson inspired by Disney's Encanto</p>
+          </div>
+        </div>
+        <button routerLink="/first-week-level3" class="student-view-btn">➡️ Proceed to Lesson 3</button>
+      </header>
+      <nav class="nav-tabs">
+        <button [class.active-tab]="selectedTab === 'introduction'" (click)="selectTab('introduction')">⚝ Introduction</button>
+        <button [class.active-tab]="selectedTab === 'clip'" (click)="selectTab('clip')">▶ Watch Clip</button>
+        <button [class.active-tab]="selectedTab === 'discussion'" (click)="selectTab('discussion')">💬 Discussion</button>
+        <button [class.active-tab]="selectedTab === 'reflection'" (click)="selectTab('reflection')">📝 Reflection</button>
+      </nav>
+  
+    <!-- INTRODUCTION -->
+    <main class="main-content" *ngIf="selectedTab === 'introduction'">
+      <h2 class="movie-intro">You might know this movie...</h2>
+      <p class="movie-description">
+        When Mirabel realizes she might be the only Madrigal family member without a magical gift, 
+        yet she discovers her unique contributions—her empathy, resilience, and connection to others.
+      </p>
+  
+      <div class="info-cards">
+        <div class="card left-card">
+          <h3>About This Moment</h3>
+          <p>
+            This powerful scene visually and emotionally highlights discovering inner value, 
+            even without visible talents. Mirabel’s journey shows us that being different doesn’t 
+            mean being less valuable.
+          </p>
+          <div class="theme-note">
+            <span>⭐ Key Theme: Inner Worth & Uniqueness</span>
+          </div>
+        </div>
+        <div class="card right-card">
+          <h3>What We'll Explore</h3>
+          <ul>
+            <li>🟡 Share your name and something you like</li>
+            <li>🟡 See how unique and special everyone is!</li>
+            <li>🟡 Teachers can see all responses</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button (click)="selectTab('clip')" class="start-button">
+            ▶ Watch Clip <i class="fa fa-arrow-right"></i>
+          </button>
+      </div>
+    </main>
+<!-- END OF INTRODUCTION -->
+
+    <!-- PLAY CLIP -->
+    <main class="main-content" *ngIf="selectedTab === 'clip'">
+      <h2 class="movie-intro">Encanto: Mirabel's Discovery</h2>
+      <p class="movie-description">
+        Watch this 1-2 minute clip about finding your inner gift
+      </p>
+
+      <div class="video-section">
+        <div class="video-wrapper" *ngIf="!videoPlaying" (click)="playVideo()">
+          <div class="play-icon">
+            ▶
+          </div>
+          <p class="play-text">Click to play Encanto clip</p>
+          <p class="note">In a real classroom, you would embed the actual video clip here</p>
+        </div>
+      
+        <video
+          #videoPlayer
+          *ngIf="videoPlaying"
+          class="actual-video"
+          controls
+          (ended)="videoPlaying = false"
+        >
+          <source src="assets/encanto-clip.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      
+        <div class="video-footer">
+          <div class="duration">
+            🔊 Duration: 1–2 minutes
+          </div>
+          <button class="discussion-btn" (click)="selectTab('discussion')">
+            Ready for Discussion →
+          </button>
+        </div>
+      </div>
+      
+    </main>
+     <!-- END OF PLAY CLIP -->
+
+    <!-- DISCUSSION -->
+    <main class="main-content" *ngIf="selectedTab === 'discussion'">
+      <h2 class="movie-intro">Let's Discuss</h2>
+      <p class="movie-description">
+        Share your thoughts about Mirabel's journey
+      </p>
+
+      <div class="discussion-container">
+        <div class="discussion-boxes">
+          <!-- LEFT: Discussion Starters -->
+          <div class="discussion-left">
+            <h2>💬 Discussion Starters</h2>
+      
+            <label>Your Name:</label>
+            <input type="text" [(ngModel)]="studentName" placeholder="Enter your name..." />
+      
+            <label>Choose a question:</label>
+            <div class="question-options">
+              <label *ngFor="let q of questions">
+                <input
+                  type="radio"
+                  name="question"
+                  [value]="q"
+                  [(ngModel)]="selectedQuestion"
+                />
+                {{ q }}
+              </label>
+            </div>
+      
+            <label>Your Response:</label>
+            <textarea [(ngModel)]="studentResponse" placeholder="Share your thoughts..."></textarea>
+      
+            <button class="submit-btn" (click)="submitResponse()">Share Your Thoughts</button>
+          </div>
+      
+          <!-- RIGHT: Class Responses -->
+          <div class="discussion-right">
+            <h2>👥 Class Responses</h2>
+            <div *ngIf="responses.length === 0" class="no-response">
+              <i class="fa fa-comment-dots"></i>
+              No responses yet!<br />
+              Be the first to share your thoughts.
+            </div>
+            <ul *ngIf="responses.length > 0">
+              <li *ngFor="let res of responses">
+                <strong>{{ res.name }}:</strong>
+                <em>{{ res.question }}</em>
+                <p>{{ res.response }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-btn">
+          <button (click)="selectTab('reflection')" class="next-btn">Continue to Reflection →</button>
+        </div>
+      </div>
+    </main>
+     <!-- END OF DISCUSSION -->
+
+    <!-- REFLECTION -->
+    <main class="main-content" *ngIf="selectedTab === 'reflection'">
+        <header class="reflection-header">
+          <div class="reflection-icon">
+            <span class="heart-icon">💜</span>
+          </div>
+          <h2 class="reflection-title">Tie It Back</h2>
+        </header>
+      
+        <section class="key-takeaway-card">
+          <p class="takeaway-text">
+            "Just like Mirabel, each one of us has something special, even if it's different from everyone else's gift or talent."
+          </p>
+          <div class="key-label">⭐ Key Takeaway ⭐</div>
+        </section>
+      
+        <section class="core-strengths">
+          <div class="strength-card">
+            <div class="icon blue">💙</div>
+            <h3>Your Worth</h3>
+            <p>You have value just as you are</p>
+          </div>
+          <div class="strength-card">
+            <div class="icon green">💚</div>
+            <h3>Your Uniqueness</h3>
+            <p>Being different makes you special</p>
+          </div>
+          <div class="strength-card">
+            <div class="icon purple">💜</div>
+            <h3>Your Connection</h3>
+            <p>You contribute to our community</p>
+          </div>
+        </section>
+        <div class="text-center">
+            <button (click)="openModal()" class="start-button">
+                Click To Earn Your Lesson 2 Batch 
+              </button>
+          </div>
+    </main>
+     <!-- END OF REFLECTION -->
+  </div>
+  
+    <!-- Modal -->
+    <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+        <div class="modal-content animated fadeInDown">
+          <span class="close-btn" (click)="closeModal()">&times;</span>
+          <div class="modal-header">
+            <img src="assets/batch.jpeg" alt="Trophy" class="modal-icon" />
+            <h2>🎉 Congratulations!</h2>
+          </div>
+          <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+          <p class="modal-subtext">🏆 You’ve unlocked a batch for completing <strong>Lesson 2</strong></p>
+          <p class="modal-note">Complete more lessons to earn more batches and level up!</p>
+          <div class="modal-actions">
+            <button routerLink="/dashboard" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+            <button routerLink="/first-week-level3" class="btn proceed">🚀 Proceed to Lesson 3</button>
+          </div>
+        </div>
+      </div>

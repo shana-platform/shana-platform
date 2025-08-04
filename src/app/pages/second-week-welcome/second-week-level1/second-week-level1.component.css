@@ -1,0 +1,167 @@
+.session-wrapper {
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to bottom right, #fff8dc, #fffcf2);
+    border-radius: 20px;
+    /* margin-top: 150px; */
+  }
+  
+  .session-card {
+    background: #ffffffee;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .session-card h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .session-card .subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .chat-log {
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .chat-bubble {
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    max-width: 85%;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .chat-bubble.teacher {
+    background-color: #fff9c4;
+    border-left: 5px solid #ffeb3b;
+    align-self: flex-start;
+  }
+  
+  .chat-bubble.student {
+    background-color: #bbdefb;
+    border-left: 5px solid #42a5f5;
+    align-self: flex-end;
+  }
+  
+  .chat-bubble .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .input-row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .student-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.2rem;
+    background: #4facfe;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #1f8eed;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .replay-button,
+  .next-level-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .replay-button {
+    background-color: #81c784;
+  }
+  
+  .replay-button:hover {
+    background-color: #66bb6a;
+  }
+  
+  .next-level-button {
+    background-color: #ffb74d;
+  }
+  
+  .next-level-button:hover {
+    background-color: #ffa726;
+  }
+  
+  .reaction-modal {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff8e1;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .reaction-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .reaction-content .emoji {
+    font-size: 2rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  

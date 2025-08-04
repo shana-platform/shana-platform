@@ -1,0 +1,58 @@
+  .navbar {
+    position: sticky;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    background: #C0D6DF;
+  }
+  
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  
+  .brand-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  
+  .highlight {
+    color: #f59e0b;
+    font-weight: bold;
+    margin: 0 4px;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar {
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .notification {
+    position: relative;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .notification .badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+  

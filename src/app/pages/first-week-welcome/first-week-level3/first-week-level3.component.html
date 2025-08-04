@@ -1,0 +1,213 @@
+<div class="discover-container">
+    <header class="shine-header">
+        <div class="logo-section">
+          <div class="logo-circle">
+              <span class="sparkle">🧠</span>
+            </div>
+            
+          <div>
+            <h1>Think and Reflect</h1>
+            <p>Discover what makes you uniquely you</p>
+          </div>
+        </div>
+        <button (click)="openModal()" class="student-view-btn">Complete Lesson</button>
+      </header>
+      <nav class="nav-tabs">
+        <button [class.active-tab]="selectedTab === 'thoughts'" (click)="selectTab('thoughts')">💬 Share Your thoughts</button>
+        <button [class.active-tab]="selectedTab === 'reflections'" (click)="selectTab('reflections')">▶ Class Reflections</button>
+      </nav>
+
+    <!-- SHARE YOUR THOUGHTS -->
+    <main class="main-content" *ngIf="selectedTab === 'thoughts'">
+        <header class="reflection-header">
+          <div class="reflection-icon">
+            <span class="sparkle">🧠</span>
+          </div>
+          <h2 class="reflection-title">Time to Think and Reflect</h2>
+        </header>
+      
+        <section class="key-takeaway-card">
+          <p class="takeaway-text">
+            Take a moment to think deeply about yourself. Remember, there are no wrong answers - being yourself is your power!
+          </p>
+        </section>
+      
+        <section class="core-strengths">
+          <div (click)="selectCard('What do you like about yourself?')" class="strength-card selected">
+            <div class="icon blue">🤍</div>
+            <h3>What do you like about yourself?</h3>
+            <p>Think about your qualities, talents, or things that make vou proud</p>
+          </div>
+          <div (click)="selectCard('Is it okay to be different from others?')" class="strength-card">
+            <div class="icon green">✨</div>
+            <h3>Is it okay to be different from others?</h3>
+            <p>Consider how differences make our world more interesting</p>
+          </div>
+          <div (click)="selectCard('Why is it important to know who you are?')"  class="strength-card">
+            <div class="icon purple">💡</div>
+            <h3>Why is it important to know who you are?</h3>
+            <p>Reflect on how self-knowledge helps you in life</p>
+          </div>
+        </section>
+    </main>
+     <!-- END OF SHARE YOUR THOUGHTS -->
+  </div>
+
+
+  <!-- CLASS REFLECTIONS -->
+  <div class="no-reflections-card" *ngIf="selectedTab === 'reflections'">
+    <h2>Our Class Reflections</h2>
+    <p class="subtext">See how everyone is discovering their unique qualities</p>
+  
+    <div class="icon-box">
+      <i class="icon">👥</i>
+    </div>
+  
+    <p class="no-reflections">No reflections yet!</p>
+    <p class="encourage">Be the first to share your thoughts</p>
+  
+    <button (click)="selectTab('thoughts')" class="reflect-btn" routerLink="/your-reflection-page">
+      🌟 Start Reflecting
+    </button>
+  </div>
+  <!-- END OF CLASS REFLECTIONS -->
+
+
+  <!-- CLASS REFLECTIONS -->
+  <!-- <div class="class-reflections-container" *ngIf="selectedTab === 'reflections'">
+    <h1 class="section-title">Our Class Reflections</h1>
+    <p class="section-subtitle">
+      See how everyone is discovering their unique qualities
+    </p>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h2>1</h2>
+        <p>Total Reflections</p>
+      </div>
+      <div class="stat-card">
+        <h2>1</h2>
+        <p>Students Participating</p>
+      </div>
+      <div class="stat-card">
+        <h2>3</h2>
+        <p>Questions Explored</p>
+      </div>
+    </div>
+    <div class="question-card">
+      <h3>💖 What do you like about yourself?</h3>
+      <p class="reflection-note">1 student reflected on this</p>
+    </div>
+    <div class="response-card">
+      <h4 class="student-name">Marian</h4>
+      <p class="student-reflection">I like that I am confident</p>
+    </div>
+    <div class="self-discovery-card">
+      <div class="card-content">
+        <div class="star-icon">⭐</div>
+        <div class="text-content">
+          <h2>Amazing Self-Discovery!</h2>
+          <p>
+            Look at all these wonderful reflections! Each person's thoughts show how unique and special they are.
+            <strong>Remember: <span class="highlight">Being yourself is your power!</span></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- END OF CLASS REFLECTIONS -->
+
+  <div *ngIf="selectedCard == 'What do you like about yourself?'" class="reflection-form-card">
+    <h3>💬 Share Your Reflection</h3>
+    <div class="form-group">
+      <label>Your Name:</label>
+      <input type="text" placeholder="Enter your name..." [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label>You're reflecting on:</label>
+      <div class="reflection-topic">{{ selectedCard }}</div>
+    </div>
+  
+    <div class="form-group">
+      <label>Your Thoughts:</label>
+      <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
+    </div>
+    <div class="trainer-tip">
+        <p><strong>🌟 Trainer Tip:</strong></p>
+        <p>Remember, no answer is wrong. Being yourself is your power!</p>
+      </div>
+    <button class="submit-btn" (click)="onShareReflection()">
+      Share My Reflection →
+    </button>
+  </div>
+  <div *ngIf="selectedCard == 'Is it okay to be different from others?'" class="reflection-form-card">
+    <h3>💬 Share Your Reflection</h3>
+    <div class="form-group">
+      <label>Your Name:</label>
+      <input type="text" placeholder="Enter your name..." [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label>You're reflecting on:</label>
+      <div class="reflection-topic">{{ selectedCard }}</div>
+    </div>
+  
+    <div class="form-group">
+      <label>Your Thoughts:</label>
+      <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
+    </div>
+    <div class="trainer-tip">
+        <p><strong>🌟 Trainer Tip:</strong></p>
+        <p>Remember, no answer is wrong. Being yourself is your power!</p>
+      </div>
+    <button class="submit-btn" (click)="onShareReflection()">
+      Share My Reflection →
+    </button>
+  </div>
+  <div *ngIf="selectedCard == 'Why is it important to know who you are?'" class="reflection-form-card">
+    <h3>💬 Share Your Reflection</h3>
+    <div class="form-group">
+      <label>Your Name:</label>
+      <input type="text" placeholder="Enter your name..." [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label>You're reflecting on:</label>
+      <div class="reflection-topic">{{ selectedCard }}</div>
+    </div>
+    <div class="form-group">
+      <label>Your Thoughts:</label>
+      <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
+    </div>
+    <div class="trainer-tip">
+        <p><strong>🌟 Trainer Tip:</strong></p>
+        <p>Remember, no answer is wrong. Being yourself is your power!</p>
+      </div>
+    <button class="submit-btn" (click)="onShareReflection()">
+      Share My Reflection →
+    </button>
+  </div>
+  
+    <!-- Modal -->
+    <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+        <div class="modal-content animated fadeInDown">
+          <span class="close-btn" (click)="closeModal()">&times;</span>
+          <div class="modal-header">
+            <img src="assets/batch.jpeg" alt="Trophy" class="modal-icon" />
+            <h2>🎉 Congratulations!</h2>
+          </div>
+          <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+          <p class="modal-subtext">🏆 You’ve unlocked a badge for completing <strong>Lesson 3</strong></p>
+          <p class="modal-note">Complete more lessons to earn more badges and level up!</p>
+          <div class="modal-actions">
+            <button routerLink="/dashboard" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+            <button routerLink="/first-week-level4" class="btn proceed">🚀 Proceed to Lesson 4</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-modal" *ngIf="showPopup">
+        <div class="popup-content">
+          <span class="sparkles">✨</span>
+          <h2>Beautiful Reflection!</h2>
+          <p>Your thoughts are powerful!</p>
+        </div>
+      </div>
+      

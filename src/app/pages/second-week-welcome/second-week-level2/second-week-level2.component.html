@@ -1,0 +1,79 @@
+<div class="junior-page">
+    <h1 class="title">🎨 Junior and His Magic Hands <span class="sparkle">✨</span></h1>
+    <p class="subtitle">
+      Join us for an inspiring conversation where Junior discovers that his love for drawing is more than just a hobby—
+      it’s his special talent that brings joy to everyone around him!
+    </p>
+  
+    <div class="junior-image-container">
+      <img src="assets/junior.jpg" alt="Junior drawing" class="junior-image" />
+  
+      <div class="magic-card">
+        ❤️ <strong>The Magic of Creativity</strong><br />
+        <em>
+          “When Junior draws, he doesn’t just create art—he creates smiles, wonder, and happiness for everyone who sees his work.”
+        </em>
+      </div>
+    </div>
+
+   <!-- Info Box -->
+   <section class="info-box text-center p-4 rounded shadow-sm">
+    <h4 style="font-weight: 300;">📌 Interactive Learning Experience</h4>
+    <p>
+      Experience this heartwarming conversation between a caring teacher and Junior as they explore the joy of discovering one's unique talents and passions.
+    </p>
+    <button (click)="startChat()" class="btn btn-warning">Start Story</button>
+  </section>
+  
+    <!-- Chat Cards -->
+    <div *ngIf="showChatCard" class="chat-cards">
+        <div class="chat-card teacher">
+          <span class="label">Teacher 👩🏽‍🏫:</span>
+          Junior, what makes you happy when you draw?
+        </div>
+        <div class="chat-card junior">
+          <span class="label">Junior 🧒🏽:</span>
+          I feel like I’m flying! Drawing helps me tell my stories and make others smile.
+        </div>
+    
+        <div class="chat-reply success">You’re amazing, just the way you are! 🌟</div>
+    
+        <button (click)="startNextChat()" class="btn btn-primary mt-4">Start My Journey of Discovery</button>
+      </div>
+
+         <!-- Next Chat Exchange -->
+         <div *ngIf="showNextChatCard" class="chat-cards">
+            <div class="chat-card teacher">
+                <span class="label">Teacher 👩🏽‍🏫:</span>
+                Do you think drawing is your special talent?
+              </div>
+              <div class="chat-card junior">
+                <span class="label"> Junior🧒🏽: </span>
+                <span>Yes! I think I have magic hands that can bring happiness to paper, and then share that happiness with everyone!</span>
+              </div>
+          
+              <div class="chat-reply success mb-4">🌟 Junior, you’ve discovered something truly special about yourself!</div>
+          
+              <button (click)="completeCardJourney()" class="btn btn-success">🎯 Complete the Journey</button>
+          </div>
+          <div *ngIf="completeJourney" class="journey-complete">
+            <div class="completion-card">
+              <div class="icon">✨</div>
+              <h2>Junior's Journey of Discovery is Complete!</h2>
+              <p class="description">
+                Through this conversation, Junior discovered that his love for drawing isn't just a hobby—it's his special talent that brings joy to others!
+              </p>
+          
+              <div class="quote-block">
+                "When we follow our passions and use our talents to help others smile, we discover the magic within ourselves."
+              </div>
+              <button routerLink="/second-week-level1" class="btn-dashboard">⬅️ Back</button>
+              &nbsp;
+              <button routerLink="/second-week-level3" class="cta-button">
+                ➡️ Proceed to Lesson 3
+              </button>
+            </div>
+          </div>
+          
+  </div>
+  
