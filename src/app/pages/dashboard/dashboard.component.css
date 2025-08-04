@@ -196,7 +196,6 @@
   
   .blue {
     background: #FF8A5B;
-    /* background: linear-gradient(to bottom, #AAC0AA, #A18276); */
   }
   
   .yellow {
@@ -205,6 +204,10 @@
   
   .orange {
     background: #C2847A;
+  }
+
+    .green {
+    background: #ffe99f;
   }
   
   .learning-stats {
@@ -243,3 +246,66 @@
     }
   }
   
+  /* Scrollable wrapper for small screens */
+.stats-grid-wrapper {
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+/* Container holding all cards in a row */
+.stats-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  min-width: 800px; /* ensures the row doesn’t collapse on small screens */
+}
+
+/* Base card styles */
+.stat-card {
+  flex: 1;
+  min-width: 180px;
+  max-width: 220px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Color themes */
+.orange {
+  background: linear-gradient(135deg, #ff8c00, #ff6600);
+}
+
+.pink {
+  background: linear-gradient(135deg, #d65bff, #f46fff);
+}
+
+.green {
+  background: linear-gradient(135deg, #00c853, #4caf50);
+}
+
+.yellow {
+  background: linear-gradient(135deg, #ffca28, #ffc107);
+}
+
+/* Card contents */
+.icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}

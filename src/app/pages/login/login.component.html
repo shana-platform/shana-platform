@@ -1,25 +1,16 @@
 <div class="full-login-page">
-    <!-- Left pane: Login form -->
     <div class="left-pane">
       <div class="login-box">
-        <!-- <div class="header text-center">
-          <img style="height: 160px; width: 160px;" src="assets/shana.png" alt="shana Logo" class="logo" />
-          <h1><span class="brand">Shana</span> Life Skills</h1>
-          <p class="subtitle">Your gateway to learning excellence</p>
-        </div> -->
         <form [formGroup]="loginForm" (ngSubmit)="login()">
-          <h2><span class="icon">🎓</span> Welcome Back</h2>
-          <p class="form-subtitle">Sign in to your student account to continue learning</p>
-          <br>
+           <h5>✨ <span class="gradient-text">Welcome To <strong>Shana LifeSkills Center</strong></span> ✨</h5>
+           <br>
           <label>Email Address</label>
           <div class="input-group">
-            <span class="icon">📧</span>
             <input type="email" formControlName="email" placeholder="student@shana.edu" />
           </div>
             <br>
           <label>Password</label>
           <div class="input-group">
-            <span class="icon">🔒</span>
             <input type="password" formControlName="password" placeholder="Enter your password" />
           </div>
   
@@ -43,6 +34,6 @@
   
     <!-- Right pane: Hero image or branding -->
     <div class="right-pane">
-      <img style="height: 700px; width: 700px;" src="assets/learn.png" alt="Learning Illustration" />
+      <img style="height: 597px; width: 800px;" src="assets/hero-strengths.jpg" alt="Learning Illustration" />
     </div>
   </div>
