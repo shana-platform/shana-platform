@@ -16,9 +16,7 @@ export class SecondWeekWelcomeComponent implements OnInit {
     { label: 'Creative Thinker', emoji: '🎨' },
     { label: 'Kind Helper', emoji: '💖' },
     { label: 'Brave Explorer', emoji: '🚀' },
-    { label: 'Problem Solver', emoji: '🧩' },
-    { label: 'Great Friend', emoji: '⭐' },
-    // { label: 'Curious Learner', emoji: '📚' }
+    { label: 'Problem Solver', emoji: '🧩' }
   ];
   constructor() { }
 

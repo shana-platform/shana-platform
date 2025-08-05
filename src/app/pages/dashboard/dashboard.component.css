@@ -1,11 +1,11 @@
 .course-progress-card {
-    background: white;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     padding: 1.5rem;
     border-left: 6px solid #5BB6E5;
     transition: transform 0.2s ease;
     cursor: pointer;
+    background: linear-gradient(to left, #f1f3f6 0%, #d2e5fb 100%);
   }
   
   .course-progress-card:hover {
@@ -81,27 +81,7 @@
     margin: 0;
     font-weight: 600;
   }
-  
-  .priority {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    color: white;
-    text-transform: lowercase;
-  }
-  
-  .priority.high {
-    background-color: #ef4444;
-  }
-  
-  .priority.medium {
-    background-color: #FF8F2E;
-  }
 
-    .priority.low {
-    background-color: #0f172a;
-  }
   
   .task-meta {
     margin-top: 8px;
@@ -133,54 +113,6 @@
     color: #666;
   }
   
-  .stat-cards {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .stat-card {
-    flex: 1 1 280px;
-    border-radius: 12px;
-    padding: 1.5rem;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card-header .icon {
-    font-size: 1.5rem;
-  }
-  
-  .card .badge {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.3rem 0.6rem;
-    border-radius: 10px;
-    font-size: 0.75rem;
-  }
-  
-  .stat-card h6 {
-    font-size: 2rem;
-    margin: 1rem 0 0.3rem;
-  }
-  
-  .stat-card p {
-    font-weight: bold;
-    margin: 0 0 0.5rem;
-    /* color: black; */
-  }
-  
-  .stat-card small {
-    font-size: 0.75rem;
-  }
-  
   .progress-bar {
     height: 8px;
     border-radius: 4px;
@@ -194,77 +126,16 @@
     border-radius: 4px;
   }
   
-  .blue {
-    background: #FF8A5B;
-  }
-  
-  .yellow {
-    background: #4F517D;
-  }
-  
-  .orange {
-    background: #C2847A;
-  }
-
-    .green {
-    background: #ffe99f;
-  }
-  
-  .learning-stats {
-    background: #f9f9f9;
-    margin-top: 2rem;
-    padding: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    border-radius: 12px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  
-  .stat-box {
-    flex: 1 1 150px;
-  }
-  
-  .stat-box h6 {
-    font-size: 1.75rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .stat-box .green {
-    color: #00a86b;
-  }
-  
   @media (max-width: 768px) {
-    .stat-cards {
+    .stat-card {
       flex-direction: column;
       align-items: center;
     }
-  
-    .learning-stats {
-      flex-direction: column;
-    }
   }
-  
-  /* Scrollable wrapper for small screens */
-.stats-grid-wrapper {
-  overflow-x: auto;
-  padding: 1rem;
-}
-
-/* Container holding all cards in a row */
-.stats-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  min-width: 800px; /* ensures the row doesn’t collapse on small screens */
-}
 
 /* Base card styles */
 .stat-card {
   flex: 1;
-  min-width: 180px;
-  max-width: 220px;
   padding: 1.5rem;
   border-radius: 1rem;
   color: #fff;
@@ -273,23 +144,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 /* Color themes */
 .orange {
-  background: linear-gradient(135deg, #ff8c00, #ff6600);
+  background: linear-gradient(135deg, #5ABCB9, #6EF9F5);
 }
 
 .pink {
-  background: linear-gradient(135deg, #d65bff, #f46fff);
+  background: linear-gradient(135deg, #CA9CE1, #F2BEFC);
 }
 
 .green {
-  background: linear-gradient(135deg, #00c853, #4caf50);
+  background: linear-gradient(135deg, #548687, #8FBC94);
 }
 
 .yellow {
-  background: linear-gradient(135deg, #ffca28, #ffc107);
+  background: linear-gradient(135deg, #ebcc6d, #edbd2c);
 }
 
 /* Card contents */
