@@ -67,19 +67,16 @@ currentReaction: string = '';
 
   submitAnswer() {
     if (!this.studentInput.trim()) return;
-  
     this.conversation.push({ role: 'student', message: this.studentInput.trim() });
     this.studentInput = '';
-  
     const randomReaction = this.teacherReactions[Math.floor(Math.random() * this.teacherReactions.length)];
     this.currentReaction = randomReaction;
     this.showReactionModal = true;
+  }
   
-    setTimeout(() => {
-      this.showReactionModal = false;
-  
-      this.currentQuestionIndex++;
-  
+  closeModal(){
+    this.showReactionModal = false;
+    this.currentQuestionIndex++;
       if (this.currentQuestionIndex < this.questions.length) {
         this.conversation.push({
           role: 'teacher',
@@ -88,7 +85,5 @@ currentReaction: string = '';
       } else {
         this.sessionComplete = true;
       }
-    }, 2000); // Show modal for 2 seconds
   }
-  
 }

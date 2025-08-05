@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-second-week-level2',
@@ -9,6 +9,9 @@ export class SecondWeekLevel2Component implements OnInit {
   showChatCard = false;
   completeJourney = false;
   showNextChatCard = false;
+  showVideo = false;
+  videoPlaying = false;
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
   constructor() { }
 
   ngOnInit(): void {
@@ -27,5 +30,14 @@ export class SecondWeekLevel2Component implements OnInit {
     this.showNextChatCard = false;
     this.showChatCard = false;
     //  confetti();
+  }
+  viewVideo() {
+    this.showVideo = true;
+  }
+  playVideo() {
+    this.videoPlaying = true;
+    setTimeout(() => {
+      this.videoPlayer.nativeElement.play();
+    }, 0);
   }
 }

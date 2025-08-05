@@ -60,6 +60,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
   }
   
   .discover-btn:hover {
@@ -446,10 +447,10 @@
 }
 
 .confidence-card {
-  background: #2492ff;
+  background: linear-gradient(to bottom right, #fff8dc, #fffcf2);
   padding: 2rem;
   border-radius: 12px;
-  color: white;
+  color: black;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -467,13 +468,6 @@
 
 .link-description {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.strength-box {
-  background: #6cb5f5;
-  padding: 1rem;
-  border-radius: 10px;
   margin-bottom: 1.5rem;
 }
 
@@ -498,6 +492,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .star {

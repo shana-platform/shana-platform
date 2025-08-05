@@ -13,49 +13,45 @@
         <em>
           “When Junior draws, he doesn’t just create art—he creates smiles, wonder, and happiness for everyone who sees his work.”
         </em>
+        <br> <br>
+        <section class="text-center">
+          <button (click)="viewVideo()" class="btn btn-warning">Start Story</button>
+        </section>
       </div>
     </div>
-
-   <!-- Info Box -->
-   <section class="info-box text-center p-4 rounded shadow-sm">
-    <h4 style="font-weight: 300;">📌 Interactive Learning Experience</h4>
-    <p>
-      Experience this heartwarming conversation between a caring teacher and Junior as they explore the joy of discovering one's unique talents and passions.
-    </p>
-    <button (click)="startChat()" class="btn btn-warning">Start Story</button>
-  </section>
-  
-    <!-- Chat Cards -->
-    <div *ngIf="showChatCard" class="chat-cards">
-        <div class="chat-card teacher">
-          <span class="label">Teacher 👩🏽‍🏫:</span>
-          Junior, what makes you happy when you draw?
-        </div>
-        <div class="chat-card junior">
-          <span class="label">Junior 🧒🏽:</span>
-          I feel like I’m flying! Drawing helps me tell my stories and make others smile.
-        </div>
-    
-        <div class="chat-reply success">You’re amazing, just the way you are! 🌟</div>
-    
-        <button (click)="startNextChat()" class="btn btn-primary mt-4">Start My Journey of Discovery</button>
-      </div>
-
-         <!-- Next Chat Exchange -->
-         <div *ngIf="showNextChatCard" class="chat-cards">
-            <div class="chat-card teacher">
-                <span class="label">Teacher 👩🏽‍🏫:</span>
-                Do you think drawing is your special talent?
+        <!-- PLAY CLIP -->
+        <main class="main-content" *ngIf="showVideo">
+          <div class="video-section">
+            <div class="video-wrapper" *ngIf="!videoPlaying" (click)="playVideo()">
+              <div class="play-icon">
+                ▶
               </div>
-              <div class="chat-card junior">
-                <span class="label"> Junior🧒🏽: </span>
-                <span>Yes! I think I have magic hands that can bring happiness to paper, and then share that happiness with everyone!</span>
+              <p class="play-text">Click to play</p>
+            </div>
+          
+            <video
+              #videoPlayer
+              *ngIf="videoPlaying"
+              class="actual-video"
+              controls
+              (ended)="videoPlaying = false"
+            >
+              <source src="assets/encanto-clip.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          
+            <div class="video-footer">
+              <div class="duration">
+                🔊 Duration: 1–2 minutes
               </div>
-          
-              <div class="chat-reply success mb-4">🌟 Junior, you’ve discovered something truly special about yourself!</div>
-          
-              <button (click)="completeCardJourney()" class="btn btn-success">🎯 Complete the Journey</button>
+              <button class="discussion-btn" routerLink="/second-week-level3">
+                Ready for Discussion →
+              </button>
+            </div>
           </div>
+          
+        </main>
+         <!-- END OF PLAY CLIP -->
           <div *ngIf="completeJourney" class="journey-complete">
             <div class="completion-card">
               <div class="icon">✨</div>

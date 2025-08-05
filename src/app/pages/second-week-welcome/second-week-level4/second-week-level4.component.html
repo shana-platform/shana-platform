@@ -1,52 +1,3 @@
-<!-- <section class="main">
-    <div class="container">
-        <h1>✨ <span class="gradient-text">Discover Your <strong>Strengths</strong></span> <span class="heart">♡</span></h1>
-        <p class="subtitle">Think about 2–3 things you're really good at! Add them below, then share them to earn stars. Everyone has amazing strengths – let’s celebrate yours! ✨</p>
-    
-        <div class="stars-earned">
-          <div class="star-box">
-            <div class="star-count">0</div>
-            <div class="star-label">Stars Earned</div>
-          </div>
-        </div>
-    
-        <div class="main-content">
-          <div class="input-section">
-            <h2>💡 Add Your Strength (0/3)</h2>
-            <input type="text" placeholder="I am good at..." />
-            <button class="add-btn">+ Add This Strength</button>
-    
-            <div class="inspiration">
-              <p>Need inspiration? Try these:</p>
-              <div class="tags">
-                <button>I’m a great listener</button>
-                <button>I’m creative and artistic</button>
-                <button>I’m good at solving problems</button>
-              </div>
-            </div>
-          </div>
-          <div class="output-section">
-            <h2>🏆 Your Strengths</h2>
-            <div class="card placeholder">
-              <div class="icon">✨</div>
-              <p>Add your first strength to get started!</p>
-            </div>
-          </div>
-        </div>
-        <div class="notification">
-          <p>Wonderful strength added!<br><span>Now share it to earn your star! ✨</span></p>
-        </div>
-    
-        <div class="celebration hidden">
-          <h2>🎉 Fantastic Job! 🎉</h2>
-          <p>You've shared all your strengths and earned <strong>1 stars</strong>! You should be proud of recognizing what makes you special.</p>
-        </div>
-    
-        <button class="reset-btn">Start Over</button>
-      </div>
-</section> -->
-
-
 <section class="main">
     <div class="container">
       <h1>✨ <span class="gradient-text">Discover Your <strong>Strengths</strong></span> <span class="heart">♡</span></h1>
@@ -87,13 +38,6 @@
   
         <div class="output-section">
           <h2>🏆 Your Strengths</h2>
-  
-          <!-- <ng-container *ngIf="strengths.length; else placeholder">
-            <div class="card" *ngFor="let s of strengths">
-              <div class="icon">🌟</div>
-              <p>{{ s }}</p>
-            </div>
-          </ng-container> -->
           <ng-container *ngIf="strengths.length; else placeholder">
             <div class="card" *ngFor="let s of strengths">
               <div class="strength-header">
@@ -114,9 +58,9 @@
         </div>
       </div>
   
-      <div class="notification" *ngIf="showNotification">
+      <!-- <div class="notification" *ngIf="showNotification">
         <p> 👏 Wonderful strength added!<br /><span>Now share it to earn your star! ✨</span></p>
-      </div>
+      </div> -->
   
       <div class="celebration" *ngIf="strengths.length === 3">
         <h2>🎉 Fantastic Job! 🎉</h2>

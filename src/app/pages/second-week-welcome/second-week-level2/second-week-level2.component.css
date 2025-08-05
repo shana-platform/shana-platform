@@ -3,7 +3,6 @@
     padding: 2rem;
     background: linear-gradient(to bottom right, #f8f9ff, #f0f8ff);
     min-height: 100vh;
-    /* margin-top: 50px; */
   }
   
   .title {
@@ -42,59 +41,7 @@
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     font-size: 1rem;
-    /* max-width: 1000px; */
     text-align: left;
-  }
-  
-  .chat-card {
-    margin-top: 2rem;
-    background: #e4e8ff;
-    padding: 1rem 1.5rem;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 12px;
-    font-size: 1.1rem;
-  }
-
-  .junior-page .chat-cards .chat-card.teacher {
-    border-left: 5px solid #4f73ff;
-  }
-
-  .junior-page .chat-cards .chat-card.junior {
-    background: linear-gradient(to right, #ff9966, #ff5e62);
-  }
-  .info-box {
-    background: linear-gradient(to bottom right, #c8d0f1, #b8e6f1);
-    border: 1px solid #dec792;;
-    max-width: 800px;
-    margin: auto;
-    margin-top: 45px;
-    font-size: 1rem;
-  }
-  .junior-page .chat-cards .chat-reply {
-    text-align: center;
-    margin-top: 1rem;
-    font-weight: 500;
-  }
-  
-  .junior-page .chat-cards .chat-reply.success {
-    color: #2e7d32;
-    background-color: #e8f5e9;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .junior-page .chat-cards .btn {
-    display: block;
-    margin: 1rem auto;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    background-color: #76b5cd;
-    color: #fff;
-    border: none;
-    cursor: pointer;
   }
   
   .journey-complete p {
@@ -161,7 +108,7 @@
   .icon {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #f97316; /* warm orange */
+    color: #f97316;
   }
   
   .completion-card h2 {
@@ -203,5 +150,89 @@
     background: linear-gradient(to right, #3b82f6, #6d28d9);
   }
   
-  
+    .main-content {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .movie-intro {
+      font-size: 1.75rem;
+      margin-top: 1rem;
+    }
+    
+    .movie-description {
+      max-width: 700px;
+      margin: 1rem auto 2rem;
+      line-height: 1.6;
+      color: #000;
+    }
+    
+    .video-section {
+      background: linear-gradient(to bottom right, #fff8dc, #fffcf2);
+      padding: 2rem;
+      border-radius: 20px;
+      color: white;
+      max-width: 850px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .video-wrapper {
+      background: rgb(79, 78, 78);
+      padding: 8rem 2rem;
+      border-radius: 16px;
+      text-align: center;
+      cursor: pointer;
+      min-height: 400px;
+    }
+    
+    
+    .play-icon {
+      font-size: 4rem;
+      color: white;
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+    
+    .play-text {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .note {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    
+    .actual-video {
+      width: 100%;
+      border-radius: 16px;
+      background-color: black;
+    }
+    
+    .video-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .duration {
+      font-size: 0.95rem;
+      color: black;
+    }
+
+    .discussion-btn {
+      background: linear-gradient(to right, #ffe99f, #ffe99f);
+      color: black;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
   
