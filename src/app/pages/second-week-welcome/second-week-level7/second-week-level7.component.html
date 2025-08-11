@@ -1,61 +1,29 @@
   <div class="confidence-wrapper" *ngIf="!showStrengths">
-  <h1 class="title">
+  <!-- <h1 class="title">
     Building Confidence! <span class="emoji">🌟</span>
-  </h1>
+  </h1> -->
+  <h1>✨ <span class="gradient-text">Building <strong>Confidence</strong></span> <span class="heart">♡</span></h1>
   <p class="subtitle">
-    Discover your amazing strengths and feel confident to try new things!
+    Knowing what you're good at helps you feel confident to try new
+things.
   </p>
 
   <div class="confidence-card">
-    <h2 class="confidence-link">My Confidence Link</h2>
-    <p class="link-description">
-      Knowing what you're good at helps you feel confident to try new things!
-    </p>
-
-    <div class="strength-box">
-      <h3>I am good at:</h3>
-      <ul>
-        <li *ngFor="let item of strengths">
-          <span class="star">⭐</span> {{ item }}
-        </li>
-      </ul>
-    </div>
- <button (click)="showStrengths = true" class="discover-btn">Discover Your Strengths →</button>
+ <button (click)="showStrengths = true" class="discover-btn">My Daily Affirmation →</button>
   </div>
 </div>
 
-<div *ngIf="showStrengths" class="core-strengths-section">
-    <div class="section-header">
-      <h2>Discover Your Core Strengths</h2>
-      <p>Understanding your unique abilities is the foundation of true confidence.  
-      Here are some areas where you might shine.</p>
+<div class="junior-page" *ngIf="showStrengths && !showFoundationSection">
+  <div class="junior-image-container">
+    <img src="assets/junior.jpg" alt="Junior drawing" class="junior-image" />
+
+    <div class="magic-card">
+      <em> When we know we have strength, we show strength! </em>
+      <section class="text-center">
+        <button (click)="openModal()" class="btn btn-warning">Complete Module 1</button>
+      </section>
     </div>
-  
-    <div class="card-container">
-      <div (click)="selectStrengthCard('Leadership')" class="strength-card">
-        <div class="leadership-icon"></div>
-        <span class="badge">Leadership</span>
-        <p>You naturally inspire others and guide them toward success with your vision and determination.</p>
-      </div>
-      <div (click)="selectStrengthCard('Leadership')" class="strength-card">
-        <div class="creativity-icon"></div>
-        <span class="badge">Creativity</span>
-        <p>Your innovative thinking allows you to find unique solutions and bring fresh perspectives to any challenge.</p>
-      </div>
-    </div>
-<br>
-     <div class="card-container">
-      <div (click)="selectStrengthCard('Leadership')" class="strength-card">
-        <div class="empathy-icon"></div>
-        <span class="badge">Empathy</span>
-        <p>You understand and connect with others deeply, creating meaningful relationships and fostering trust.</p>
-      </div>
-      <div (click)="selectStrengthCard('Leadership')" class="strength-card">
-        <div class="determination-icon"></div>
-        <span class="badge">Determination</span>
-        <p>When you set your mind to something, you persist through challenges until you achieve your goals.</p>
-      </div>
-    </div>
+  </div>
   </div>
 
   <div class="foundation-card" *ngIf="showFoundationSection">

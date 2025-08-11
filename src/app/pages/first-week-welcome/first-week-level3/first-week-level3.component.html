@@ -4,7 +4,6 @@
           <div class="logo-circle">
               <span class="sparkle">🧠</span>
             </div>
-            
           <div>
             <h1>Think and Reflect</h1>
             <p>Discover what makes you uniquely you</p>
@@ -19,13 +18,6 @@
 
     <!-- SHARE YOUR THOUGHTS -->
     <main class="main-content" *ngIf="selectedTab === 'thoughts'">
-        <header class="reflection-header">
-          <div class="reflection-icon">
-            <span class="sparkle">🧠</span>
-          </div>
-          <h2 class="reflection-title">Time to Think and Reflect</h2>
-        </header>
-      
         <section class="key-takeaway-card">
           <p class="takeaway-text">
             Take a moment to think deeply about yourself. Remember, there are no wrong answers - being yourself is your power!
@@ -116,75 +108,47 @@
   </div> -->
   <!-- END OF CLASS REFLECTIONS -->
 
-  <div *ngIf="selectedCard == 'What do you like about yourself?'" class="reflection-form-card">
-    <h3>💬 Share Your Reflection</h3>
-    <div class="form-group">
-      <label>Your Name:</label>
-      <input type="text" placeholder="Enter your name..." [(ngModel)]="name">
-    </div>
-    <div class="form-group">
-      <label>You're reflecting on:</label>
-      <div class="reflection-topic">{{ selectedCard }}</div>
-    </div>
-  
-    <div class="form-group">
-      <label>Your Thoughts:</label>
-      <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
-    </div>
-    <div class="trainer-tip">
-        <p><strong>🌟 Trainer Tip:</strong></p>
-        <p>Remember, no answer is wrong. Being yourself is your power!</p>
+  <div *ngIf="(selectedCard == 'What do you like about yourself?' || selectedCard == 'Is it okay to be different from others?' || selectedCard == 'Why is it important to know who you are?') && selectedTab === 'thoughts'" class="qa-session-wrapper">
+    <div class="qa-session-wrapper">
+        <div class="qa-card">
+          <div class="qa-header">
+            <h2>💬 Share Your Reflection</h2>
+          </div>
+          <label for="">Your Name:</label>
+          <form class="answer-form">
+            <input
+            [(ngModel)]="name"
+              required
+              class="answer-input"
+              type="text" placeholder="Enter your name..."
+              autofocus />
+          </form>
+          <br>
+          <label for="">You are reflecting on:</label>
+          <div class="question-card">
+            <div class="question-title">{{ selectedCard || 'What do you like about yourself?' }}</div>
+          </div>
+          <label for="">Your Thoughts:</label>
+          <form class="answer-form">
+            <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
+          </form>
+          <div class="previous-answers"  *ngIf="selectedCard == 'What do you like about yourself?'">
+            <h6>🌟 Here’s what another learner said:</h6>
+            <p>“I like that I am kind and help my friends.”
+              What about you? Everyone has something special.</p>
+          </div>
+          <div class="previous-answers" *ngIf="selectedCard == 'Is it okay to be different from others?'">
+            <h6>🌟 Here's a sample thought:</h6>
+            <p>“Yes, because we are all unique and have different gifts. That’s what makes the world interesting.”</p>
+          </div>
+          <div class="previous-answers" *ngIf="selectedCard == 'Why is it important to know who you are?'">
+            <h6>🌟 Think about this:</h6>
+            <p>“When you know who you are, you feel more confident and can make better choices.”</p>
+          </div>
+          <button (click)="onShareReflection()" type="submit" class="submit-btn">Share My Reflection →</button>
+        </div>
       </div>
-    <button class="submit-btn" (click)="onShareReflection()">
-      Share My Reflection →
-    </button>
   </div>
-  <div *ngIf="selectedCard == 'Is it okay to be different from others?'" class="reflection-form-card">
-    <h3>💬 Share Your Reflection</h3>
-    <div class="form-group">
-      <label>Your Name:</label>
-      <input type="text" placeholder="Enter your name..." [(ngModel)]="name">
-    </div>
-    <div class="form-group">
-      <label>You're reflecting on:</label>
-      <div class="reflection-topic">{{ selectedCard }}</div>
-    </div>
-  
-    <div class="form-group">
-      <label>Your Thoughts:</label>
-      <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
-    </div>
-    <div class="trainer-tip">
-        <p><strong>🌟 Trainer Tip:</strong></p>
-        <p>Remember, no answer is wrong. Being yourself is your power!</p>
-      </div>
-    <button class="submit-btn" (click)="onShareReflection()">
-      Share My Reflection →
-    </button>
-  </div>
-  <div *ngIf="selectedCard == 'Why is it important to know who you are?'" class="reflection-form-card">
-    <h3>💬 Share Your Reflection</h3>
-    <div class="form-group">
-      <label>Your Name:</label>
-      <input type="text" placeholder="Enter your name..." [(ngModel)]="name">
-    </div>
-    <div class="form-group">
-      <label>You're reflecting on:</label>
-      <div class="reflection-topic">{{ selectedCard }}</div>
-    </div>
-    <div class="form-group">
-      <label>Your Thoughts:</label>
-      <textarea placeholder="Take your time and share what you're thinking..." [(ngModel)]="thoughts"></textarea>
-    </div>
-    <div class="trainer-tip">
-        <p><strong>🌟 Trainer Tip:</strong></p>
-        <p>Remember, no answer is wrong. Being yourself is your power!</p>
-      </div>
-    <button class="submit-btn" (click)="onShareReflection()">
-      Share My Reflection →
-    </button>
-  </div>
-  
     <!-- Modal -->
     <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
         <div class="modal-content animated fadeInDown">

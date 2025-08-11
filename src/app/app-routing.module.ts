@@ -6,6 +6,7 @@ import { FirstWeekLevel1Component } from './pages/first-week-welcome/first-week-
 import { FirstWeekLevel2Component } from './pages/first-week-welcome/first-week-level2/first-week-level2.component';
 import { FirstWeekLevel3Component } from './pages/first-week-welcome/first-week-level3/first-week-level3.component';
 import { FirstWeekWelcomeComponent } from './pages/first-week-welcome/first-week-welcome.component';
+import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
       { path: 'second-week-level5', component: SecondWeekLevel5Component },
       { path: 'second-week-level6', component: SecondWeekLevel6Component },
       { path: 'second-week-level7', component: SecondWeekLevel7Component },
+      { path: 'games', component: GamesPageComponent }
     ]
   }
 ];

@@ -24,6 +24,7 @@ import { SecondWeekLevel7Component } from './pages/second-week-welcome/second-we
 import { FirstWeekLevel1Component } from './pages/first-week-welcome/first-week-level1/first-week-level1.component';
 import { FirstWeekLevel2Component } from './pages/first-week-welcome/first-week-level2/first-week-level2.component';
 import { FirstWeekLevel3Component } from './pages/first-week-welcome/first-week-level3/first-week-level3.component';
+import { GamesPageComponent } from './pages/games-page/games-page.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { FirstWeekLevel3Component } from './pages/first-week-welcome/first-week-
     SecondWeekLevel7Component,
     FirstWeekLevel1Component,
     FirstWeekLevel2Component,
-    FirstWeekLevel3Component
+    FirstWeekLevel3Component,
+    GamesPageComponent
   ],
   imports: [
     BrowserModule,

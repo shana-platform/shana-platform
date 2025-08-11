@@ -1,0 +1,74 @@
+/* Background */
+.game-hub-container {
+    background-color: #e8f5ff;
+    min-height: 100vh;
+    padding: 0;
+    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  }
+  
+  /* Header Section */
+  .header {
+    background: url('/assets/kids-bg.jpg') no-repeat center center/cover;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff6ec7, #ffa500, #32cd32, #1e90ff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .rainbow-line {
+    height: 4px;
+    width: 80px;
+    margin: 10px auto;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ff6ec7, #ffa500, #32cd32, #1e90ff, #8a2be2);
+  }
+  
+  /* Game Grid */
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Game Cards */
+  .game-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), #fdfaff);
+    border-radius: 12px;
+    text-align: center;
+    padding: 40px 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  
+  .game-card:hover {
+    box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.6);
+    transform: translateY(-5px);
+    border-color: #ff6ec7;
+  }
+  
+  .game-card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .game-grid a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

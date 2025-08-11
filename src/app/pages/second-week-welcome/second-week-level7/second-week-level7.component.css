@@ -70,7 +70,7 @@
   .core-strengths-section {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom right, #ffe99f, #fffefb);background-color: #fdfaf6;
+    /* background: linear-gradient(to bottom right, #ffe99f, #fffefb);background-color: #fdfaf6; */
     margin-top: 20px;
     border-radius: 10px;
   }
@@ -170,7 +170,7 @@
     padding: 2rem;
     background-color: #fffefb;
     text-align: center;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 3rem auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.03);
   }
@@ -447,7 +447,7 @@
 }
 
 .confidence-card {
-  background: linear-gradient(to bottom right, #fff8dc, #fffcf2);
+  /* background: linear-gradient(to bottom right, #fff8dc, #fffcf2); */
   padding: 2rem;
   border-radius: 12px;
   color: black;
@@ -507,5 +507,56 @@
   font-weight: 600;
 }
 
+  .gradient-text {
+    background: linear-gradient(to right, #f4a261, #efd6a4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.junior-page {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f8f9ff, #f0f8ff);
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.junior-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.junior-image {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.magic-card {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  text-align: left;
+}
   
   

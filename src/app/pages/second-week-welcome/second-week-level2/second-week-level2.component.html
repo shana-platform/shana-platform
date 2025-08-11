@@ -5,7 +5,7 @@
       it’s his special talent that brings joy to everyone around him!
     </p>
   
-    <div class="junior-image-container">
+    <div class="junior-image-container" *ngIf="!showVideo">
       <img src="assets/junior.jpg" alt="Junior drawing" class="junior-image" />
   
       <div class="magic-card">
@@ -36,7 +36,7 @@
               controls
               (ended)="videoPlaying = false"
             >
-              <source src="assets/encanto-clip.mp4" type="video/mp4" />
+              <source src="assets/week2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           

@@ -1,7 +1,7 @@
 .strength-spotter {
     padding: 2rem;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom right, #ffe99f, #fffefb);
+    /* background: linear-gradient(to bottom right, #ffe99f, #fffefb); */
     color: #333;
     border-radius: 10px;
   }
