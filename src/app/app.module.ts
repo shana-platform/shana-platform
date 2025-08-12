@@ -25,6 +25,11 @@ import { FirstWeekLevel1Component } from './pages/first-week-welcome/first-week-
 import { FirstWeekLevel2Component } from './pages/first-week-welcome/first-week-level2/first-week-level2.component';
 import { FirstWeekLevel3Component } from './pages/first-week-welcome/first-week-level3/first-week-level3.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
+import { FirstWeekLevel4Component } from './pages/first-week-welcome/first-week-level4/first-week-level4.component';
+import { FirstWeekLevel6Component } from './pages/first-week-welcome/first-week-level6/first-week-level6.component';
+import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week-welcome.component';
+import { FirstWeekLevel5Component } from './pages/first-week-welcome/first-week-level5/first-week-level5.component';
+import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-level1/third-week-level1.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +54,12 @@ import { GamesPageComponent } from './pages/games-page/games-page.component';
     FirstWeekLevel1Component,
     FirstWeekLevel2Component,
     FirstWeekLevel3Component,
-    GamesPageComponent
+    GamesPageComponent,
+    FirstWeekLevel4Component,
+    FirstWeekLevel6Component,
+    ThirdWeekWelcomeComponent,
+    FirstWeekLevel5Component,
+    ThirdWeekLevel1Component
   ],
   imports: [
     BrowserModule,

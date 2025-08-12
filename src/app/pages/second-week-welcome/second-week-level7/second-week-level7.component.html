@@ -12,15 +12,22 @@ things.
  <button (click)="showStrengths = true" class="discover-btn">My Daily Affirmation →</button>
   </div>
 </div>
+<!-- <div *ngIf="showStrengths && !showFoundationSection" class="affirmation-card">
+  <p class="quote">
+    ✨ "I am me, and that is my superpower!" ✨
+  </p>
+</div> -->
 
 <div class="junior-page" *ngIf="showStrengths && !showFoundationSection">
   <div class="junior-image-container">
-    <img src="assets/junior.jpg" alt="Junior drawing" class="junior-image" />
+    <img src="assets/hero.jpg" alt="Junior drawing" class="junior-image" />
 
     <div class="magic-card">
-      <em> When we know we have strength, we show strength! </em>
+      <p class="quote">
+        ✨ “When we know we have strength, we show strength!” ✨
+      </p>
       <section class="text-center">
-        <button (click)="openModal()" class="btn btn-warning">Complete Module 1</button>
+        <button (click)="openModal()" class="btn btn-warning">Complete Module 2</button>
       </section>
     </div>
   </div>
@@ -70,11 +77,11 @@ things.
         <h2>🎉 Congratulations!</h2>
       </div>
       <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
-      <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Module 1</strong></p>
+      <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Module 2</strong></p>
       <p class="modal-note">Complete more modules to earn more trophies and level up!</p>
       <div class="modal-actions">
         <button routerLink="/dashboard" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
-        <button routerLink="/second-week" class="btn proceed">🚀 Proceed to Module 2</button>
+        <button routerLink="/third-week" class="btn proceed">🚀 Proceed to Module 3</button>
       </div>
     </div>
   </div>

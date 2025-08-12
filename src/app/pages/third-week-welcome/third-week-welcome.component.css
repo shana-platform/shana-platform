@@ -1,0 +1,103 @@
+.learning-journey-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #eef5ff;
+    max-width: 1500px;
+    margin: auto;
+  }
+  
+  /* Welcome Section */
+  .welcome-card {
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(to right, #f9faff, #fff5f0);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .avatar {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+  }
+  
+  .highlight {
+    color: #1a73e8;
+  }
+  
+  .intro-text {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .buttons {
+    margin: 15px 0;
+  }
+  
+  .btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #1a73e8;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .reminder {
+    background-color: #e8f8ec;
+    border-left: 4px solid #4caf50;
+    padding: 8px 12px;
+    margin-top: 10px;
+    color: #333;
+    border-radius: 4px;
+  }
+  
+  /* My Choices Section */
+  .choices-card {
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .choices-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .circle {
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 14px;
+    font-weight: bold;
+  }
+  
+  .badge {
+    background-color: #d4f5dd;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .choices-content {
+    background-color: #f3f8ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  

@@ -182,3 +182,50 @@
   letter-spacing: 1px;
   opacity: 0.85;
 }
+
+.welcome-banner {
+  background: linear-gradient(90deg, #c471f5, #fa709a, #b5a54b, #58c2a8);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  border-radius: 12px;
+  padding: 40px 20px;
+  color: white;
+  /* text-align: center; */
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.highlight {
+  color: #ffd36f; /* golden yellow for 'Jane!' */
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: left;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

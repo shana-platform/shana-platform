@@ -108,7 +108,7 @@
   /* MAIN */
   .main-content {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
   
   .movie-intro {
@@ -592,7 +592,7 @@
     /* text-align: center; */
     /* background: linear-gradient(to bottom right, #fff8dc, #fffcf2); */
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 40px;
   }
   
   .qa-card {

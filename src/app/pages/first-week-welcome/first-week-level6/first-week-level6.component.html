@@ -1,0 +1,51 @@
+<div class="confidence-wrapper" *ngIf="!showStrengths">
+    <!-- <h1 class="title">
+      Building Confidence! <span class="emoji">🌟</span>
+    </h1> -->
+    <h1>✨ <span class="gradient-text">I Know Me, <strong>I Like Me</strong></span> <span class="heart">♡</span></h1>
+    <p class="subtitle">
+        “When you know who you are, you feel strong inside. You don’t need to be like everyone else — you are already enough.”
+    </p>
+  
+    <div class="confidence-card">
+   <button (click)="showStrengths = true" class="discover-btn">My Daily Affirmation →</button>
+    </div>
+  </div>
+  <!-- <div *ngIf="showStrengths && !showFoundationSection" class="affirmation-card">
+    <p class="quote">
+      ✨ "I am me, and that is my superpower!" ✨
+    </p>
+  </div> -->
+  
+  <div class="junior-page" *ngIf="showStrengths && !showFoundationSection">
+    <div class="junior-image-container">
+      <img src="assets/hero.jpg" alt="Junior drawing" class="junior-image" />
+  
+      <div class="magic-card">
+        <p class="quote">
+          ✨ “I am me, and that is my superpower!” ✨
+        </p>
+        <section class="text-center">
+          <button (click)="openModal()" class="btn btn-warning">Complete Module 1</button>
+        </section>
+      </div>
+    </div>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+      <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+          <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+          <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Module 1</strong></p>
+        <p class="modal-note">Complete more modules to earn more trophies and level up!</p>
+        <div class="modal-actions">
+          <button routerLink="/dashboard" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+          <button routerLink="/second-week" class="btn proceed">🚀 Proceed to Module 2</button>
+        </div>
+      </div>
+    </div>

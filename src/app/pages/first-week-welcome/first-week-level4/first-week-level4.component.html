@@ -1,0 +1,50 @@
+<section>
+
+    <div class="container">
+      <!-- Left image -->
+      <div class="image-section">
+        <img src="assets/stu-intro.png" alt="Student" class="student-img">
+      </div>
+  
+      <!-- Right form card -->
+      <div class="form-card">
+        <div class="icon-circle">🎓</div>
+        <h2>About Me</h2>
+        <label class="label blue">💬 My Name</label>
+        <input type="text" [(ngModel)]="name" placeholder="Enter your name">
+  
+        <label class="label green">🎂 I am ___ years old</label>
+        <input type="text" [(ngModel)]="age" placeholder="Enter your age">
+  
+        <label class="label pink">🎨 My favorite color is ___</label>
+        <input type="text" [(ngModel)]="color" placeholder="Enter your favorite color">
+  
+        <label class="label yellow">⭐ One thing that makes me special is ___</label>
+        <input type="text" [(ngModel)]="specialty" placeholder="What makes you special?">
+  
+        <button (click)="openModal()" class="save-btn">✨ Save My Card ✨</button>
+      </div>
+    </div>
+  
+    <!-- Modal -->
+<div class="modal-backdrop" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <div class="profile-card">
+        <div class="profile-icon">
+            🧑‍🎓
+        </div>
+        <h2 class="profile-name text-muted">{{name}}</h2>
+        <span class="profile-tag">Student</span>
+      
+        <div class="profile-details">
+          <p><strong>Age: </strong>{{age}}</p>
+          <p><strong>Favorite Color: </strong>{{color}}</p>
+          <p><strong>Special Thing: </strong>{{specialty}}</p>
+        </div>
+      </div>
+    <button class="btn btn-success mt-3" routerLink="/first-week-level5">
+      Proceed to Next Lesson
+    </button>
+  </div>
+</div>
+</section>

@@ -1,0 +1,72 @@
+<div class="identity-container">
+    <h1 class="title">My Identity Poster</h1>
+    <p class="subtitle">Click to edit and make it yours!</p>
+    <div class="poster-card">
+        <span class="poster-icon red"></span>
+        <span class="poster-icon yellow"></span>
+    
+        <p class="intro-text">👋 Hi, I'm...</p>
+        <h2 (click)="enableEdit()" class="name" *ngIf="!isEditingName">{{ userName }}</h2>
+        <input *ngIf="isEditingName" [(ngModel)]="userName" (blur)="saveName()" (keyup.enter)="saveName()" autofocus>
+    
+        <h3 class="section-title">☘ My Favorite Things</h3>
+        <div class="favorites">
+            <span *ngFor="let fav of favorites; let i = index" class="favorite" (click)="removeFavorite(i)">
+                {{ fav }}
+            </span>
+        </div>
+      <div class="add-favorite">
+        <input [(ngModel)]="newFavorite" (keyup.enter)="addFavorite()" type="text" placeholder="Add a favorite thing..." />
+        <!-- <button class="btn btn-sm add-btn">Add ✚</button> -->
+      </div>
+  
+      <h3 class="section-title purple">✨ What Makes Me Unique</h3>
+      <!-- Unique Trait -->
+        <div class="unique-trait" (click)="startEditingTrait()">
+            {{ uniqueTrait || 'Click to add your unique trait' }}
+        </div> 
+        <br> 
+        <input 
+            *ngIf="isEditingTrait"
+            type="text" 
+            class="unique-input" 
+            placeholder="I can make people smile" 
+            [(ngModel)]="uniqueTrait"
+            (blur)="saveTrait()"
+            (keydown.enter)="saveTrait()" 
+            />
+      <!-- <input type="text" class="unique-input" placeholder="I can make people smile" /> -->
+  
+      <div class="action-buttons">
+        <!-- <button class="shuffle-btn">🎨 Shuffle Colors</button> -->
+        <button class="celebrate-btn" (click)="openCelebrateModal()">🎉 Celebrate Me!</button>
+      </div>
+    </div>
+    <div class="instructions">
+        <h2 class="instructions-title">How to Use Your Interactive Poster</h2>
+      
+        <div>
+            ✏️ <strong>Edit Your Name</strong>
+          <p>Click on your name to change it</p>
+        </div>
+        <div>
+            ⭐ <strong>Add Favorites</strong>
+          <p>Type in new favorites and click to remove old ones</p>
+        </div>
+        <div>
+          ✨ <strong>Edit Unique Trait</strong>
+          <p>Click on the quote to change what makes you special</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal-backdrop" *ngIf="isCelebrateModalOpen">
+    <div class="modal-card">
+      <h2>🎉 Good Job!</h2>
+      <p>You can share your poster card with your friends</p>
+  
+      <button class="primary-btn" routerLink="/first-week-level6">Proceed to Next Lesson</button>
+    </div>
+  </div>
+  
