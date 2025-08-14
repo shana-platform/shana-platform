@@ -1,0 +1,243 @@
+/* Gradient Header */
+.perfect-day-header {
+    background: linear-gradient(90deg, #ff7eb3, #a66cff, #7dd3fc);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  
+  .header-icons {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .perfect-day-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+  }
+  
+  .perfect-day-header .subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0.5rem auto 2rem;
+    line-height: 1.5;
+    color: #f0f0f0;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #7e22ce;
+    padding: 0.8rem 1.6rem;
+    border: 2px solid #7e22ce;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-secondary:hover {
+    background: #f3e8ff;
+  }
+  
+  /* Dream Day Section */
+  .dream-day-section {
+    background: linear-gradient(180deg, #dbeafe, #ede9fe);
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .icon-circle {
+    background: linear-gradient(90deg, #facc15, #fb923c);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+  }
+  
+  .dream-day-section h2 {
+    color: #6d28d9;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dream-day-section p {
+    color: #7e22ce;
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .day-planner {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(180deg, #dbeafe, #ede9fe);
+  }
+  
+  /* Name Box */
+  .name-box {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #f0d0f7;
+  }
+  .name-box label {
+    display: block;
+    font-weight: bold;
+    color: #7e22ce;
+    margin-bottom: 0.5rem;
+  }
+  .name-box input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: #fdf4ff;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  /* Day Cards Layout */
+  .day-cards {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Day Card Base */
+  .day-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    text-align: center;
+    border-top: 5px solid transparent;
+  }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .day-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  .day-card .time {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input inside card */
+  .activity-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .activity-input input {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  .activity-input button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* Empty message */
+  .empty-msg {
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  .empty-msg span {
+    font-size: 0.8rem;
+  }
+  
+  /* Color Variants */
+  .morning {
+    background: linear-gradient(180deg, #fef9c3, #fde68a);
+    border-color: #facc15;
+  }
+  .morning button {
+    background: linear-gradient(90deg, #facc15, #fb923c);
+  }
+  
+  .afternoon {
+    background: linear-gradient(180deg, #ffedd5, #fdba74);
+    border-color: #f97316;
+  }
+  .afternoon button {
+    background: linear-gradient(90deg, #f97316, #ef4444);
+  }
+  
+  .evening {
+    background: linear-gradient(180deg, #ede9fe, #ddd6fe);
+    border-color: #8b5cf6;
+  }
+  .evening button {
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  }
+  
+  /* Share Button */
+  .share-btn {
+    background: linear-gradient(90deg, #f472b6, #f97316);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .share-btn:hover {
+    transform: translateY(-2px);
+  }
+  

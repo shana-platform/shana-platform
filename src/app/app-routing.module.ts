@@ -21,6 +21,9 @@ import { SecondWeekLevel6Component } from './pages/second-week-welcome/second-we
 import { SecondWeekLevel7Component } from './pages/second-week-welcome/second-week-level7/second-week-level7.component';
 import { SecondWeekWelcomeComponent } from './pages/second-week-welcome/second-week-welcome.component';
 import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-level1/third-week-level1.component';
+import { ThirdWeekLevel2Component } from './pages/third-week-welcome/third-week-level2/third-week-level2.component';
+import { ThirdWeekLevel3Component } from './pages/third-week-welcome/third-week-level3/third-week-level3.component';
+import { ThirdWeekLevel4Component } from './pages/third-week-welcome/third-week-level4/third-week-level4.component';
 import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week-welcome.component';
 
 const routes: Routes = [
@@ -49,7 +52,10 @@ const routes: Routes = [
       { path: 'second-week-level6', component: SecondWeekLevel6Component },
       { path: 'second-week-level7', component: SecondWeekLevel7Component },
       { path: 'third-week', component: ThirdWeekWelcomeComponent },
-      { path: 'third-week-level1', component: ThirdWeekLevel1Component }
+      { path: 'third-week-level1', component: ThirdWeekLevel1Component },
+      { path: 'third-week-level2', component: ThirdWeekLevel2Component },
+      { path: 'third-week-level3', component: ThirdWeekLevel3Component },
+      { path: 'third-week-level4', component: ThirdWeekLevel4Component }
     ]
   }
 ];

@@ -5,6 +5,7 @@
     border-left: 6px solid #5BB6E5;
     transition: transform 0.2s ease;
     cursor: pointer;
+    /* background: linear-gradient(to bottom, #6bb8ff, #d7c8f3); */
     background: linear-gradient(to left, #f1f3f6 0%, #d2e5fb 100%);
   }
   

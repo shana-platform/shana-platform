@@ -30,6 +30,9 @@ import { FirstWeekLevel6Component } from './pages/first-week-welcome/first-week-
 import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week-welcome.component';
 import { FirstWeekLevel5Component } from './pages/first-week-welcome/first-week-level5/first-week-level5.component';
 import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-level1/third-week-level1.component';
+import { ThirdWeekLevel2Component } from './pages/third-week-welcome/third-week-level2/third-week-level2.component';
+import { ThirdWeekLevel3Component } from './pages/third-week-welcome/third-week-level3/third-week-level3.component';
+import { ThirdWeekLevel4Component } from './pages/third-week-welcome/third-week-level4/third-week-level4.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-
     FirstWeekLevel6Component,
     ThirdWeekWelcomeComponent,
     FirstWeekLevel5Component,
-    ThirdWeekLevel1Component
+    ThirdWeekLevel1Component,
+    ThirdWeekLevel2Component,
+    ThirdWeekLevel3Component,
+    ThirdWeekLevel4Component
   ],
   imports: [
     BrowserModule,
