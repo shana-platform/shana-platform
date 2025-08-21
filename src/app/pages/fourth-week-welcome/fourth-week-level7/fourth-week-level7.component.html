@@ -1,0 +1,43 @@
+<div class="confidence-wrapper" *ngIf="!showStrengths">
+    <h1>✨ <span class="gradient-text">Building <strong>Confidence</strong></span> <span class="heart">♡</span></h1>
+    <p class="subtitle">
+        Talking about what we’re proud of makes our confidence grow.
+    </p>
+  
+    <div class="confidence-card">
+   <button (click)="showStrengths = true" class="discover-btn">My Daily Affirmation →</button>
+    </div>
+  </div>
+  
+  <div class="junior-page" *ngIf="showStrengths && !showFoundationSection">
+    <div class="junior-image-container">
+      <img src="assets/hero.jpg" alt="Junior drawing" class="junior-image" />
+  
+      <div class="magic-card">
+        <p class="quote">
+          ✨ Trainer says: “You should be your own biggest cheerleader!” ✨
+        </p>
+        <section class="text-center">
+          <button (click)="openModal()" class="btn btn-warning">Complete Module 4</button>
+        </section>
+      </div>
+    </div>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+      <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+          <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+          <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Module 4</strong></p>
+        <p class="modal-note">Bravo! You are a champion!</p>
+        <div class="modal-actions">
+          <button routerLink="/dashboard" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+          <!-- <button routerLink="/third-week" class="btn proceed">🚀 Proceed to Module 3</button> -->
+        </div>
+      </div>
+    </div>

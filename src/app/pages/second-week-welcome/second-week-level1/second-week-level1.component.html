@@ -1,6 +1,8 @@
 <div class="session-wrapper">
     <div class="session-card">
       <h1>Power Pose Session! 🦸‍♀️</h1>
+      <p>Welcome to our Power Pose warm-up activity!</p>
+      <br>
       <div class="chat-log">
         <div *ngFor="let entry of conversation" [ngClass]="entry.role === 'teacher' ? 'chat-bubble teacher' : 'chat-bubble student'">
           <span class="icon">{{ entry.role === 'teacher' ? '👩‍🏫' : '🧒' }}</span>
@@ -30,10 +32,6 @@
 
   <!-- Reaction Modal -->
 <div class="reaction-modal" *ngIf="showReactionModal">
-    <!-- <div class="reaction-content">
-      <p>{{ currentReaction }}</p>
-      <p><button (click)="closeModal()" class="btn btn-sm">continue</button></p>
-    </div> -->
     <p>
       {{ currentReaction }}
     </p>

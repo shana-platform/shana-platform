@@ -33,6 +33,16 @@ import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-
 import { ThirdWeekLevel2Component } from './pages/third-week-welcome/third-week-level2/third-week-level2.component';
 import { ThirdWeekLevel3Component } from './pages/third-week-welcome/third-week-level3/third-week-level3.component';
 import { ThirdWeekLevel4Component } from './pages/third-week-welcome/third-week-level4/third-week-level4.component';
+import { ThirdWeekLevel5Component } from './pages/third-week-welcome/third-week-level5/third-week-level5.component';
+import { ThirdWeekLevel7Component } from './pages/third-week-welcome/third-week-level7/third-week-level7.component';
+import { ThirdWeekLevel6Component } from './pages/third-week-welcome/third-week-level6/third-week-level6.component';
+import { FourthWeekWelcomeComponent } from './pages/fourth-week-welcome/fourth-week-welcome.component';
+import { FourthWeekLevel1Component } from './pages/fourth-week-welcome/fourth-week-level1/fourth-week-level1.component';
+import { FourthWeekLevel2Component } from './pages/fourth-week-welcome/fourth-week-level2/fourth-week-level2.component';
+import { FourthWeekLevel3Component } from './pages/fourth-week-welcome/fourth-week-level3/fourth-week-level3.component';
+import { FourthWeekLevel4Component } from './pages/fourth-week-welcome/fourth-week-level4/fourth-week-level4.component';
+import { FourthWeekLevel6Component } from './pages/fourth-week-welcome/fourth-week-level6/fourth-week-level6.component';
+import { FourthWeekLevel7Component } from './pages/fourth-week-welcome/fourth-week-level7/fourth-week-level7.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +75,17 @@ import { ThirdWeekLevel4Component } from './pages/third-week-welcome/third-week-
     ThirdWeekLevel1Component,
     ThirdWeekLevel2Component,
     ThirdWeekLevel3Component,
-    ThirdWeekLevel4Component
+    ThirdWeekLevel4Component,
+    ThirdWeekLevel5Component,
+    ThirdWeekLevel7Component,
+    ThirdWeekLevel6Component,
+    FourthWeekWelcomeComponent,
+    FourthWeekLevel1Component,
+    FourthWeekLevel2Component,
+    FourthWeekLevel3Component,
+    FourthWeekLevel4Component,
+    FourthWeekLevel6Component,
+    FourthWeekLevel7Component
   ],
   imports: [
     BrowserModule,

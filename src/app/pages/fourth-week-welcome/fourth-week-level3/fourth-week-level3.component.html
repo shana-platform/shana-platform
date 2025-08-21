@@ -1,0 +1,51 @@
+<div *ngIf="!sessionComplete" class="qa-session-wrapper">
+    <div class="qa-card">
+      <div class="qa-header">
+        <h2>🧠 Discussion Points</h2>
+        <p class="subtitle">Take your time to reflect on each question</p>
+      </div>
+      <div class="question-card">
+        <div class="question-title">Question {{ currentQuestionIndex + 1 }}</div>
+        <div class="question-text">{{ questions[currentQuestionIndex] }}</div>
+      </div>
+      <form (ngSubmit)="submitAnswer()" class="answer-form">
+        <input
+          [(ngModel)]="studentInput"
+          name="studentInput"
+          required
+          class="answer-input"
+          placeholder="Type your thoughtful response here..."
+          autofocus/>
+        <button type="submit" class="submit-btn">
+          {{ currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Submit' }}
+        </button>
+      </form>
+      <div *ngIf="showSuggestion" class="previous-answers">
+        <h4>{{ suggestions[currentQuestionIndex].title }}</h4>
+        <ul>
+          <li>{{ suggestions[currentQuestionIndex].text }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Reaction Modal -->
+  <div class="reaction-modal" *ngIf="showReactionModal">
+    <p>{{ currentReaction }}</p>
+  </div>
+  
+  <!-- Session Complete Card -->
+  <div *ngIf="sessionComplete" class="qa-session-wrapper">
+    <div class="celebration-card">
+      <h2>🎉 Great Work!</h2>
+      <p>You've completed your reflection session. Your thoughtful answers show real self-awareness!</p>
+      <div class="summary-answer" *ngFor="let q of questions; let i = index">
+        <strong style="color: #1f8eed;">{{ q }}</strong>
+        <p class="text-muted"><em>{{ previousAnswers[i] }}</em></p>
+      </div>
+      <button class="replay-button" (click)="replaySession()">🔁 Replay Session</button>
+      &nbsp;
+      <button routerLink="/fourth-week-level4" class="proceed-btn">🚀 Proceed to Lesson 4</button>
+    </div>
+  </div>
+  

@@ -33,37 +33,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
   }
   
   .slide {
     display: flex;
-    max-width: 1000px;
+    max-width: 900px;
     border-radius: 12px;
     overflow: hidden;
+    height: 750px;
   }
   
   .slide-image img {
     width: 600px;
     height: auto;
     object-fit: cover;
-  }
-  
-  .slide-text {
-    flex: 1;
-    background: linear-gradient(180deg, #fde4c7, #f9c6a0);
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .slide-text h2 {
-    color: transparent;
-    margin-bottom: 8px;
-  }
-  
-  .slide-text p {
-    color: transparent;
-    font-size: 1rem;
   }
   
   .nav-btn {

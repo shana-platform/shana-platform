@@ -9,6 +9,13 @@ import { FirstWeekLevel4Component } from './pages/first-week-welcome/first-week-
 import { FirstWeekLevel5Component } from './pages/first-week-welcome/first-week-level5/first-week-level5.component';
 import { FirstWeekLevel6Component } from './pages/first-week-welcome/first-week-level6/first-week-level6.component';
 import { FirstWeekWelcomeComponent } from './pages/first-week-welcome/first-week-welcome.component';
+import { FourthWeekLevel1Component } from './pages/fourth-week-welcome/fourth-week-level1/fourth-week-level1.component';
+import { FourthWeekLevel2Component } from './pages/fourth-week-welcome/fourth-week-level2/fourth-week-level2.component';
+import { FourthWeekLevel3Component } from './pages/fourth-week-welcome/fourth-week-level3/fourth-week-level3.component';
+import { FourthWeekLevel4Component } from './pages/fourth-week-welcome/fourth-week-level4/fourth-week-level4.component';
+import { FourthWeekLevel6Component } from './pages/fourth-week-welcome/fourth-week-level6/fourth-week-level6.component';
+import { FourthWeekLevel7Component } from './pages/fourth-week-welcome/fourth-week-level7/fourth-week-level7.component';
+import { FourthWeekWelcomeComponent } from './pages/fourth-week-welcome/fourth-week-welcome.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -24,6 +31,9 @@ import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-
 import { ThirdWeekLevel2Component } from './pages/third-week-welcome/third-week-level2/third-week-level2.component';
 import { ThirdWeekLevel3Component } from './pages/third-week-welcome/third-week-level3/third-week-level3.component';
 import { ThirdWeekLevel4Component } from './pages/third-week-welcome/third-week-level4/third-week-level4.component';
+import { ThirdWeekLevel5Component } from './pages/third-week-welcome/third-week-level5/third-week-level5.component';
+import { ThirdWeekLevel6Component } from './pages/third-week-welcome/third-week-level6/third-week-level6.component';
+import { ThirdWeekLevel7Component } from './pages/third-week-welcome/third-week-level7/third-week-level7.component';
 import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week-welcome.component';
 
 const routes: Routes = [
@@ -55,7 +65,17 @@ const routes: Routes = [
       { path: 'third-week-level1', component: ThirdWeekLevel1Component },
       { path: 'third-week-level2', component: ThirdWeekLevel2Component },
       { path: 'third-week-level3', component: ThirdWeekLevel3Component },
-      { path: 'third-week-level4', component: ThirdWeekLevel4Component }
+      { path: 'third-week-level4', component: ThirdWeekLevel4Component },
+      { path: 'third-week-level5', component: ThirdWeekLevel5Component },
+      { path: 'third-week-level6', component: ThirdWeekLevel6Component },
+      { path: 'third-week-level7', component: ThirdWeekLevel7Component },
+      { path: 'fourth-week', component: FourthWeekWelcomeComponent },
+      { path: 'fourth-week-level1', component: FourthWeekLevel1Component },
+      { path: 'fourth-week-level2', component: FourthWeekLevel2Component },
+      { path: 'fourth-week-level3', component: FourthWeekLevel3Component },
+      { path: 'fourth-week-level4', component: FourthWeekLevel4Component },
+      { path: 'fourth-week-level6', component: FourthWeekLevel6Component },
+      { path: 'fourth-week-level7', component: FourthWeekLevel7Component }
     ]
   }
 ];

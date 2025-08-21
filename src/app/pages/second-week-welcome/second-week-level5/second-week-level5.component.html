@@ -2,6 +2,13 @@
 <div class="game-header">
     <h1><span class="gradient-text">Match Your <strong>Strengths</strong></span></h1>
     <p class="subtitle text-muted">Connect personality strengths with the characters that show them!</p>
+    <div class="how-to-play text-center">
+      <h3 class="how-title">🎮  How to Play?</h3>
+      <p>🎯 <b>Click</b> to match personality strengths with character actions</p>
+      <p>✨ Find all 6 matches to complete the game</p>
+      🎉 Each correct match earns you points!
+    </div>
+    <br>
       <div class="game-status-box">
         <div class="status-section">
           <div class="status-item">
@@ -12,7 +19,6 @@
             <div class="status-number green">0/6</div>
             <div class="status-label">Matches</div>
           </div>
-          <button class="start-btn">Let's Start!</button>
         </div>
         <button class="reset-btn">Reset Game</button>
       </div>
@@ -40,13 +46,6 @@
         <div class="card action-card"><img src="assets/friends.png" alt="character" />Supporting Friends</div>
       </div>
       
-  </div>
-
-  <div class="how-to-play text-center">
-    <h3 class="how-title">🧠 How to Play?</h3>
-    <p>🎯 <b>Click</b> or <b>drag</b> to match personality strengths with character actions</p>
-    <p>✨ Find all 6 matches to complete the game</p>
-    🎉 Each correct match earns you points!
   </div>
 
   <div class="match-toast" [class.show]="showToast" [class.success]="toastSuccess" [class.failure]="!toastSuccess">

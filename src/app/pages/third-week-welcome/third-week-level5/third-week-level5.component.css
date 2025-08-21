@@ -1,0 +1,223 @@
+.hero-page {
+    padding: 2rem;
+    background: #f4f7ff;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+  }
+  
+  /* Header */
+  .hero-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero-header .title {
+    color: #a855f7; /* purple */
+    font-weight: 700;
+  }
+  .hero-header .subtitle {
+    color: #666;
+    max-width: 600px;
+    margin: 0.5rem auto 1rem;
+  }
+  .header-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Main Layout */
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Left: Character Preview */
+  .hero-preview {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+  }
+  .hero-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  .hero-image {
+    width: 180px;
+    margin: 1rem auto;
+  }
+  .hero-footer h3 {
+    margin: 0.5rem 0;
+  }
+  .hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: #e0e7ff;
+  }
+  .tag.casual {
+    background: #dbeafe;
+    color: #2563eb;
+  }
+  .tag.disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+  }
+  
+  /* Right: Options */
+  .hero-options {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .option-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  }
+  .option-card h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Style grid */
+  .style-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .style-btn {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    padding: 0.8rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .style-btn:hover {
+    border-color: #a855f7;
+    background: #f3e8ff;
+  }
+  .style-btn.active {
+    border-color: #8b5cf6;
+    background: #ede9fe;
+    font-weight: 600;
+  }
+  
+  /* Color Palette */
+  .color-palette {
+    display: grid;
+    grid-template-columns: repeat(6, 40px);
+    gap: 0.8rem;
+  }
+  .color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.2s ease;
+  }
+  .color-swatch:hover {
+    transform: scale(1.1);
+  }
+  .color-swatch.red {
+    background: #ef4444;
+  }
+  .color-swatch.blue {
+    background: #3b82f6;
+  }
+  .color-swatch.green {
+    background: #22c55e;
+  }
+  .color-swatch.yellow {
+    background: #facc15;
+  }
+  .color-swatch.purple {
+    background: #a855f7;
+  }
+  .color-swatch.orange {
+    background: #f97316;
+  }
+  
+  /* (previous CSS remains the same, adding below new parts) */
+
+/* Magic Section */
+.magic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .magic-btn {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .magic-btn:hover {
+    border-color: #a855f7;
+    background: #f3e8ff;
+  }
+  .magic-btn.active {
+    border-color: #9333ea;
+    background: #ede9fe;
+    font-weight: 600;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  .save-btn {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .save-btn:hover {
+    transform: scale(1.05);
+  }
+  .restart-btn {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .restart-btn:hover {
+    transform: scale(1.05);
+  }
+  

@@ -1,7 +1,4 @@
   <div class="confidence-wrapper" *ngIf="!showStrengths">
-  <!-- <h1 class="title">
-    Building Confidence! <span class="emoji">🌟</span>
-  </h1> -->
   <h1>✨ <span class="gradient-text">Building <strong>Confidence</strong></span> <span class="heart">♡</span></h1>
   <p class="subtitle">
     Knowing what you're good at helps you feel confident to try new
@@ -12,11 +9,6 @@ things.
  <button (click)="showStrengths = true" class="discover-btn">My Daily Affirmation →</button>
   </div>
 </div>
-<!-- <div *ngIf="showStrengths && !showFoundationSection" class="affirmation-card">
-  <p class="quote">
-    ✨ "I am me, and that is my superpower!" ✨
-  </p>
-</div> -->
 
 <div class="junior-page" *ngIf="showStrengths && !showFoundationSection">
   <div class="junior-image-container">
@@ -31,41 +23,6 @@ things.
       </section>
     </div>
   </div>
-  </div>
-
-  <div class="foundation-card" *ngIf="showFoundationSection">
-    <img src="assets/line.png" alt="Growth Icon" class="foundation-icon" />
-  
-    <h2 class="foundation-title">Building on Your Foundation</h2>
-    <p class="foundation-text">
-      When you recognize and acknowledge your existing strengths, you create a solid foundation for growth.
-      <br />
-      This self-awareness becomes the springboard that gives you the courage to step into new challenges
-      and expand your capabilities.
-    </p>
-  
-    <div class="foundation-steps">
-      <div class="step">
-        <div class="step-number step-orange">1</div>
-        <h4>Recognize</h4>
-        <p>Identify what you're naturally good at</p>
-      </div>
-      <div class="step">
-        <div class="step-number step-green">2</div>
-        <h4>Appreciate</h4>
-        <p>Value and celebrate your unique abilities</p>
-      </div>
-      <div class="step">
-        <div class="step-number step-orange">3</div>
-        <h4>Expand</h4>
-        <p>Use confidence to try new things</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div *ngIf="showFoundationSection" class="complete-module">
-    <button class="complete-btn" (click)="openModal()">Complete Module 1</button>
   </div>
 
   <!-- Modal -->

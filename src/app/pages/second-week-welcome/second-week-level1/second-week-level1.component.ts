@@ -11,10 +11,10 @@ export class SecondWeekLevel1Component implements OnInit {
   sessionComplete: boolean = false;
   currentQuestionIndex: number = 0;
   showReactionModal: boolean = false;
-currentReaction: string = '';
+  currentReaction: string = '';
 
   questions = [
-    'Welcome to our Power Pose warm-up activity! ✨',
+    // 'Welcome to our Power Pose warm-up activity! ✨',
     'Let’s start by striking your best superhero pose! What do you feel when you do this pose? 💪',
     'What makes you feel powerful or proud in your everyday life?',
     'What about when you learn something new?',
@@ -42,21 +42,6 @@ currentReaction: string = '';
   addStudentMessage(message: string) {
     this.conversation.push({ role: 'student', message });
   }
-
-  // submitAnswer() {
-  //   if (!this.studentInput.trim()) return;
-
-  //   this.addStudentMessage(this.studentInput.trim());
-  //   this.studentInput = '';
-
-  //   this.currentStep++;
-
-  //   if (this.currentStep < this.questions.length) {
-  //     setTimeout(() => this.addTeacherMessage(this.questions[this.currentStep]), 500);
-  //   } else {
-  //     this.sessionComplete = true;
-  //   }
-  // }
 
   replaySession() {
     this.conversation = [];
