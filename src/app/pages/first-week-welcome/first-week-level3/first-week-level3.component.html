@@ -45,69 +45,6 @@
      <!-- END OF SHARE YOUR THOUGHTS -->
   </div>
 
-
-  <!-- CLASS REFLECTIONS -->
-  <div class="no-reflections-card" *ngIf="selectedTab === 'reflections'">
-    <h2>Our Class Reflections</h2>
-    <p class="subtext">See how everyone is discovering their unique qualities</p>
-  
-    <div class="icon-box">
-      <i class="icon">👥</i>
-    </div>
-  
-    <p class="no-reflections">No reflections yet!</p>
-    <p class="encourage">Be the first to share your thoughts</p>
-  
-    <button (click)="selectTab('thoughts')" class="reflect-btn" routerLink="/your-reflection-page">
-      🌟 Start Reflecting
-    </button>
-  </div>
-  <!-- END OF CLASS REFLECTIONS -->
-
-
-  <!-- CLASS REFLECTIONS -->
-  <!-- <div class="class-reflections-container" *ngIf="selectedTab === 'reflections'">
-    <h1 class="section-title">Our Class Reflections</h1>
-    <p class="section-subtitle">
-      See how everyone is discovering their unique qualities
-    </p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h2>1</h2>
-        <p>Total Reflections</p>
-      </div>
-      <div class="stat-card">
-        <h2>1</h2>
-        <p>Students Participating</p>
-      </div>
-      <div class="stat-card">
-        <h2>3</h2>
-        <p>Questions Explored</p>
-      </div>
-    </div>
-    <div class="question-card">
-      <h3>💖 What do you like about yourself?</h3>
-      <p class="reflection-note">1 student reflected on this</p>
-    </div>
-    <div class="response-card">
-      <h4 class="student-name">Marian</h4>
-      <p class="student-reflection">I like that I am confident</p>
-    </div>
-    <div class="self-discovery-card">
-      <div class="card-content">
-        <div class="star-icon">⭐</div>
-        <div class="text-content">
-          <h2>Amazing Self-Discovery!</h2>
-          <p>
-            Look at all these wonderful reflections! Each person's thoughts show how unique and special they are.
-            <strong>Remember: <span class="highlight">Being yourself is your power!</span></strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- END OF CLASS REFLECTIONS -->
-
   <div *ngIf="(selectedCard == 'What do you like about yourself?' || selectedCard == 'Is it okay to be different from others?' || selectedCard == 'Why is it important to know who you are?') && selectedTab === 'thoughts'" class="qa-session-wrapper">
     <div class="qa-session-wrapper">
         <div class="qa-card">

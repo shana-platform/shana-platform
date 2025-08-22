@@ -1,173 +1,74 @@
-<!-- <section>
-    <div class="container">
-      <header>
-        <h1>Warm-Up Questions</h1>
-      </header>
-  
-      <div class="chat">
+<section>
+  <div class="container">
+    <div class="title">Warm-Up Questions</div>
+
+    <div class="chat-box">
+
+      <!-- Teacher's Intro -->
+      <div class="message left">
+        <img src="assets/trainer.png" alt="Trainer" />
+        <div class="bubble blue">
+          Hey there! Ready for today's warm-up questions? These help us get our minds thinking about the choices we make every day! ✨
+        </div>
+      </div>
+
+      <div class="message right">
+        <img src="assets/week3_student.png" alt="Student" />
+        <div class="bubble pink">
+          I'm ready! What kind of questions?
+        </div>
+      </div>
+
+      <div class="message left">
+        <img src="assets/trainer.png" alt="Trainer" />
+        <div class="bubble blue">
+          Perfect! Let's start with something simple but interesting. Here are two questions for you to think about:
+        </div>
+      </div>
+
+      <!-- Loop through Questions -->
+      <ng-container *ngFor="let q of questions; let i = index">
+        
+        <!-- Teacher Question -->
         <div class="message left">
           <img src="assets/trainer.png" alt="Trainer" />
           <div class="bubble blue">
-            Hey there! Ready for today's warm-up questions? These help us get our minds thinking about the choices we make every day! ✨
+            {{ q.text }}
           </div>
         </div>
-  
-        <div class="message right">
+
+        <!-- Student Answer Input -->
+        <div class="message right" *ngIf="!q.answered">
+          <img src="assets/week3_student.png" alt="Student" />
+          <div class="bubble input-bubble">
+            <input type="text" [(ngModel)]="q.tempAnswer" placeholder="Type your answer..." />
+            <button (click)="submitAnswer(i)">Send</button>
+          </div>
+        </div>
+
+        <!-- Student Answer Display -->
+        <div class="message right" *ngIf="q.answered">
           <img src="assets/week3_student.png" alt="Student" />
           <div class="bubble pink">
-            I'm ready! What kind of questions?
-          </div>
-        </div>
-  
-        <div class="message left">
-          <img src="assets/trainer.png" alt="Trainer" />
-          <div class="bubble blue">
-            Perfect! Let's start with something simple but interesting. Here are two questions for you to think about:
-          </div>
-        </div>
-  
-        <div class="message left">
-          <img src="assets/trainer.png" alt="Trainer" />
-          <div class="bubble blue">
-            "What did you choose to wear today?"
+            {{ q.answer }}
           </div>
         </div>
 
-        <div class="message right">
-            <img src="assets/week3_student.png" alt="Student" />
-            <div class="bubble pink">
-              I chose to wear yellow shirt and sneakers
-            </div>
-          </div>
-
-        <div class="message left">
+        <!-- Reaction -->
+        <div class="message left reaction" *ngIf="q.answered">
           <img src="assets/trainer.png" alt="Trainer" />
-          <div class="bubble blue">
-            "Did you choose your own breakfast?"
-          </div>
-        </div>
-  
-        <div class="message right">
-            <img src="assets/week3_student.png" alt="Student" />
-            <div class="bubble pink">
-              Yes I did
-            </div>
-          </div>
-
-        <div class="message left">
-          <img src="assets/trainer.png" alt="Trainer" />
-          <div class="bubble blue">
-            These might seem like easy questions, but they're actually great for thinking about how we make decisions in our daily lives!
+          <div class="bubble green">
+            Great, you've earned 3 pts! 🎉
           </div>
         </div>
 
-        <div class="message right">
-            <img src="assets/week3_student.png" alt="Student" />
-            <div class="bubble pink">
-                That's really interesting! I never thought about my morning routine as making choices before.
-            </div>
-          </div>
-          <div class="message left">
-            <img src="assets/trainer.png" alt="Trainer" />
-            <div class="bubble blue">
-                Exactly! Every day we make hundreds of small choices, and recognizing them helps us become more mindful decision-makers. Ready to explore more?
-            </div>
-          </div>
-      </div>
+      </ng-container>
+
     </div>
-  <div class="container">
-    <div class="yellow-card">
-        <strong>💡 Ready to continue your learning journey?</strong>
-        Think about your answers to these questions and how choices shape your day!
-      </div>
+<br>
+    <div routerLink="/third-week-level2" class="yellow-card">
+      <strong>💡 Ready to continue your learning journey?</strong>
+      Think about your answers to these questions and how choices shape your day!
+    </div>
   </div>
-  </section> -->
-
-  <section>
-    <div class="container">
-      <div class="title">Warm-Up Questions</div>
-      <!-- <div class="subtitle">A friendly conversation between trainer and student about daily choices</div> -->
-  
-      <div class="chat-box">
-        <div class="message left">
-            <img src="assets/trainer.png" alt="Trainer" />
-            <div class="bubble blue">
-              Hey there! Ready for today's warm-up questions? These help us get our minds thinking about the choices we make every day! ✨
-            </div>
-          </div>
-    
-          <div class="message right">
-            <img src="assets/week3_student.png" alt="Student" />
-            <div class="bubble pink">
-              I'm ready! What kind of questions?
-            </div>
-          </div>
-    
-          <div class="message left">
-            <img src="assets/trainer.png" alt="Trainer" />
-            <div class="bubble blue">
-              Perfect! Let's start with something simple but interesting. Here are two questions for you to think about:
-            </div>
-          </div>
-    
-          <div class="message left">
-            <img src="assets/trainer.png" alt="Trainer" />
-            <div class="bubble blue">
-              "What did you choose to wear today?"
-            </div>
-          </div>
-  
-          <div class="message right">
-              <img src="assets/week3_student.png" alt="Student" />
-              <div class="bubble pink">
-                I chose to wear yellow shirt and sneakers
-              </div>
-            </div>
-  
-          <div class="message left">
-            <img src="assets/trainer.png" alt="Trainer" />
-            <div class="bubble blue">
-              "Did you choose your own breakfast?"
-            </div>
-          </div>
-    
-          <div class="message right">
-              <img src="assets/week3_student.png" alt="Student" />
-              <div class="bubble pink">
-                Yes I did
-              </div>
-            </div>
-  
-          <div class="message left">
-            <img src="assets/trainer.png" alt="Trainer" />
-            <div class="bubble blue">
-              These might seem like easy questions, but they're actually great for thinking about how we make decisions in our daily lives!
-            </div>
-          </div>
-  
-          <div class="message right">
-              <img src="assets/week3_student.png" alt="Student" />
-              <div class="bubble pink">
-                  That's really interesting! I never thought about my morning routine as making choices before.
-              </div>
-            </div>
-            <div class="message left">
-              <img src="assets/trainer.png" alt="Trainer" />
-              <div class="bubble blue">
-                  Exactly! Every day we make hundreds of small choices, and recognizing them helps us become more mindful decision-makers. Ready to explore more?
-              </div>
-            </div>
-            <div class="message right">
-                <img src="assets/week3_student.png" alt="Student" />
-                <div class="bubble pink">
-                  Absolutely 💪
-                </div>
-              </div>
-      </div>
-  
-      <div routerLink="/third-week-level2" class="yellow-card">
-        <strong>💡 Ready to continue your learning journey?</strong>
-        Think about your answers to these questions and how choices shape your day!
-      </div>
-    </div>
-  </section>
+</section>

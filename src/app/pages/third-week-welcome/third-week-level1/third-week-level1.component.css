@@ -94,3 +94,84 @@
     margin-bottom: 5px;
     cursor: pointer;
   }
+
+  .chat-box {
+    background: #f9f9ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-end;
+    margin: 1rem 0;
+  }
+  
+  .message img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .message.right {
+    flex-direction: row-reverse;
+  }
+  
+  .message.right img {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  
+  .bubble {
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    max-width: 70%;
+    font-size: 0.95rem;
+  }
+  
+  .blue {
+    background: #e3f2fd;
+    color: #0d47a1;
+  }
+  
+  .pink {
+    background: #ffe4ec;
+    color: #880e4f;
+  }
+  
+  .green {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  
+  .input-bubble {
+    background: #fff;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .input-bubble input {
+    border: none;
+    padding: 0.5rem;
+    flex: 1;
+    border-radius: 8px;
+    background: #f1f1f1;
+  }
+  
+  .input-bubble button {
+    background: #7e57c2;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .input-bubble button:hover {
+    background: #5e35b1;
+  }
+  
