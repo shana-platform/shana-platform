@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fourth-week-level4.component.css']
 })
 export class FourthWeekLevel4Component implements OnInit {
-
+showReactionModal = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  shareMoment(){
+    this.showReactionModal = true;
+  }
 }

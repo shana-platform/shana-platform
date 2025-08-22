@@ -1,1 +1,29 @@
-<p>fourth-week-level4 works!</p>
+<div class="proud-page">
+    <div class="row" *ngIf="!showReactionModal">
+        <div class="col">
+            <div class="illustration">
+                <img src="assets/happy-children.png" alt="Happy kids celebrating" />
+            </div>
+            <div class="title-section">
+                <h1><span class="gradient-text">My Proud Moments!</span></h1>
+                <p>Share something amazing about yourself! ✨</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="moment-card">
+                <h3>🌟 This week I was brave when...</h3>
+                <textarea placeholder="Share your proud moment here..."></textarea>
+                <button (click)="shareMoment()" class="submit-btn">Share My Proud Moment!</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="showReactionModal" class="feedback-card">
+        <h2>🌟 You're Amazing!</h2>
+        <p>
+            Every proud moment makes you stronger and more confident.
+            Keep sharing and celebrating the wonderful things you do! 🎉
+        </p>
+    </div>
+    <br>
+    <button *ngIf="showReactionModal" routerLink="/fourth-week-level6" class="submit-btn">Next Lesson 🚀</button>
+</div>

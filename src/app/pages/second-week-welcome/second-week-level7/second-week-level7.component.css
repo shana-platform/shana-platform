@@ -541,7 +541,7 @@
 
 .junior-image {
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -580,8 +580,6 @@
   padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: left;
 }
-  
-  
