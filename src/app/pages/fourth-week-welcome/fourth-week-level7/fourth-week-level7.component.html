@@ -1,29 +1,43 @@
-<div class="confidence-wrapper" *ngIf="!showStrengths">
-    <h1>✨ <span class="gradient-text">Building <strong>Confidence</strong></span> <span class="heart">♡</span></h1>
-    <p class="subtitle">
-        Talking about what we’re proud of makes our confidence grow.
-    </p>
-  
-    <div class="confidence-card">
-   <button (click)="showStrengths = true" class="discover-btn">My Daily Affirmation →</button>
-    </div>
-  </div>
-  
-  <div class="junior-page" *ngIf="showStrengths && !showFoundationSection">
-    <div class="junior-image-container">
-      <img src="assets/cheerleader.jpg" alt="Junior drawing" class="junior-image" />
-  
-      <div class="magic-card">
-        <p class="quote">
-          ✨ Trainer says: “You should be your own biggest cheerleader!” ✨
-        </p>
-        <section class="text-center">
-          <button (click)="openModal()" class="btn btn-sm btn-warning">Complete Module 4</button>
-        </section>
+<div class="page-container">
+  <!-- Header -->
+  <h1 class="title">Confidence Link</h1>
+
+  <!-- What We're Proud Of Section -->
+  <div class="section orange-box">
+    <div class="image-text">
+      <img src="assets/confidence-kids.jpg" alt="Happy kids" class="kids-image" />
+      <div class="text-block">
+        <h2>What We're Proud Of</h2>
+        <p>Talking about what we're proud of makes our confidence grow! 🌱</p>
+        <button class="pink-btn">You should be your own biggest cheerleader! 🎯</button>
       </div>
     </div>
+  </div>
+
+  <!-- Celebrate, Feel Strong, Shine Bright -->
+  <!-- <div class="features">
+    <div class="card blue">
+      <h3>🏆 Celebrate Wins</h3>
+      <p>Every achievement, big or small, helps build our confidence!</p>
     </div>
-  
+    <div class="card pink">
+      <h3>💪 Feel Strong</h3>
+      <p>When we share our proud moments, we feel stronger inside!</p>
+    </div>
+    <div class="card green">
+      <h3>🌟 Shine Bright</h3>
+      <p>Your confidence helps you shine and inspire others too!</p>
+    </div>
+  </div> -->
+
+  <!-- Ready Section -->
+  <div class="section orange-box">
+    <h2>Ready to Build Confidence? 🚀</h2>
+    <p>Share something you're proud of today and watch your confidence grow!</p>
+    <button (click)="openModal()" class="orange-btn">I'm Ready! Let's Go! ✨</button>
+  </div>
+</div>
+
     <!-- Modal -->
     <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
       <div class="modal-content animated fadeInDown">
