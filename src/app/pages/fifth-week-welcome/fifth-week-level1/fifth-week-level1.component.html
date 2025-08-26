@@ -1,0 +1,52 @@
+<div class="magic-chat">
+    <header>
+      <h1>✨ Magic Pencil Chat ✨</h1>
+      <p class="subtitle">
+        A magical conversation space where imagination meets learning.
+      </p>
+      <button class="tag">Trainer & Student Conversation</button>
+    </header>
+  
+    <!-- Chat Box -->
+    <div class="chat-box">
+      <!-- Trainer message -->
+      <div class="message trainer">
+        <div class="bubble">
+          If you had a magic pencil, what's one thing you'd like to learn or do?
+          <span class="time">21:12</span>
+        </div>
+      </div>
+  
+      <!-- Student messages -->
+      <div class="message student" *ngFor="let msg of messages">
+        <div class="bubble">
+          {{ msg }}
+          <span class="time">{{ currentTime }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Input (only before first answer) -->
+    <div class="input-area" *ngIf="messages.length === 0">
+      <input
+        type="text"
+        placeholder="✨ Share what you'd do with your magic pencil..."
+        [(ngModel)]="studentInput"
+        (keyup.enter)="sendMessage()"
+      />
+      <button class="send-btn" (click)="sendMessage()">✏️</button>
+    </div>
+  
+    <!-- Footer + Button (only after first message) -->
+    <ng-container *ngIf="messages.length > 0">
+      <footer>
+        ✨ Every great journey begins with a single magical idea ✨
+      </footer>
+  
+      <br />
+      <div class="btn btn-warning" routerLink="/fifth-week-level2">
+        🚀 Ready to proceed?
+      </div>
+    </ng-container>
+  </div>
+  

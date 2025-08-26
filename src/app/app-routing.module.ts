@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
+import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
+import { FifthWeekLevel3Component } from './pages/fifth-week-welcome/fifth-week-level3/fifth-week-level3.component';
+import { FifthWeekLevel4Component } from './pages/fifth-week-welcome/fifth-week-level4/fifth-week-level4.component';
+import { FifthWeekWelcomeComponent } from './pages/fifth-week-welcome/fifth-week-welcome.component';
 import { FirstWeekLevel1Component } from './pages/first-week-welcome/first-week-level1/first-week-level1.component';
 import { FirstWeekLevel2Component } from './pages/first-week-welcome/first-week-level2/first-week-level2.component';
 import { FirstWeekLevel3Component } from './pages/first-week-welcome/first-week-level3/first-week-level3.component';
@@ -75,7 +80,12 @@ const routes: Routes = [
       { path: 'fourth-week-level3', component: FourthWeekLevel3Component },
       { path: 'fourth-week-level4', component: FourthWeekLevel4Component },
       { path: 'fourth-week-level6', component: FourthWeekLevel6Component },
-      { path: 'fourth-week-level7', component: FourthWeekLevel7Component }
+      { path: 'fourth-week-level7', component: FourthWeekLevel7Component },
+      { path: 'fifth-week', component: FifthWeekWelcomeComponent },
+      { path: 'fifth-week-level1', component: FifthWeekLevel1Component },
+      { path: 'fifth-week-level2', component: FifthWeekLevel2Component },
+      { path: 'fifth-week-level3', component: FifthWeekLevel3Component },
+      { path: 'fifth-week-level4', component: FifthWeekLevel4Component }
     ]
   }
 ];

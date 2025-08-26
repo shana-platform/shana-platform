@@ -1,0 +1,102 @@
+.identity-plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 10rem;
+    background: linear-gradient(to bottom right, #e8f6ff, #ffffff);
+  }
+  
+  /* Left content */
+  .content {
+    max-width: 750px;
+  }
+  
+  .badge {
+    background: #f7f3ff;
+    color: #ff6600;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  
+  .highlight {
+    color: #f47ca4;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .focus-box {
+    background: #ffe4c7;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .focus-box h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .focus-box p {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.start {
+    background: #ff6600;
+    color: white;
+  }
+  
+  .btn.start:hover {
+    background: #e05500;
+  }
+  
+  .btn.learn {
+    background: white;
+    border: 2px solid #ddd;
+    color: #333;
+  }
+  
+  .btn.learn:hover {
+    background: #f9f9f9;
+  }
+  
+  /* Right character */
+  .character img {
+    width: 480px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
