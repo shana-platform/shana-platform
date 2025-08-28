@@ -1,0 +1,177 @@
+.proud-container {
+    font-family: "Comic Neue", "Poppins", sans-serif;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #3b2e2e;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff7a59;
+  }
+  
+  .header .brand {
+    color: #ffb347;
+  }
+  
+  .header p {
+    max-width: 600px;
+    margin: 0.5rem auto;
+    font-size: 1rem;
+    color: #5c4033;
+  }
+  .top-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  .profile-card {
+    background: linear-gradient(135deg, #ffd580, #ffb6b9);
+    border-radius: 20px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .profile-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .profile-card .subtitle {
+    font-size: 0.9rem;
+    color: #6a4e42;
+    margin-bottom: 1rem;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .progress-container {
+    background: #ffe8d6;
+    border-radius: 20px;
+    height: 10px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    width: 60%;
+    height: 100%;
+    background: #ff7a59;
+    border-radius: 20px;
+  }
+  
+  .progress-note {
+    font-size: 0.8rem;
+    color: #6a4e42;
+  }
+  
+  /* Share card */
+  .share-card {
+    background: #fff8e7;
+    border-radius: 20px;
+    padding: 1.5rem;
+    flex: 2;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .share-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ff914d;
+  }
+  
+  .share-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #5c4033;
+  }
+  
+  .share-card input,
+  .share-card textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ffd580;
+    border-radius: 12px;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  
+  .share-btn {
+    background: linear-gradient(90deg, #ff914d, #ffb347);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .share-btn:hover {
+    transform: translateY(-2px);
+  }
+  .constellation {
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .moment-card {
+    background: #fff3e0;
+    border-radius: 16px;
+    padding: 1.1rem;
+    max-width: 300px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .moment-card h4 {
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    color: #ff914d;
+  }
+
+  
+  .moment-card .footer {
+    font-size: 0.8rem;
+    color: #6a4e42;
+  }
+
+  .btn-proceed {
+    background: linear-gradient(90deg, #ff8a00, #ffcc00);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  

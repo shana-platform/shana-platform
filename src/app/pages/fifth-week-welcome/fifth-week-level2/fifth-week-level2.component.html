@@ -1,37 +1,46 @@
-<div class="story-container">
-    <h1 class="story-title">
-      <span class="highlight-blue">Yaa's Helping Story</span>
-    </h1>
-    <p class="story-subtitle">Follow along as Yaa discovers the joy of helping her little brother with his homework!</p>
-    <div class="carousel">
-      <button class="nav-btn left" (click)="prevSlide()">&#8249;</button>
-      <div class="slide">
-        <div class="slide-image">
-          <img [src]="slides[currentIndex].image" [alt]="slides[currentIndex].title">
-        </div>
-        <div class="slide-text">
-          <h2>{{ slides[currentIndex].title }}</h2>
-          <p>{{ slides[currentIndex].text }}</p>
-        </div>
+<div class="storybook">
+  <header>
+    <div class="icons">
+      <span>📖</span>
+    </div>
+    <h1>Kwame's Reading Journey</h1>
+    <p class="subtitle">
+      A heartwarming story about how asking for help and practicing every day
+      can turn reading challenges into reading success
+    </p>
+  </header>
+  <div class="carousel">
+    <button class="nav left" (click)="prevSlide()" [disabled]="currentIndex === 0">‹</button>
+
+    <div class="slide">
+      <div class="image">
+        <img [src]="slides[currentIndex].image" alt="Story image" />
       </div>
-      <button class="nav-btn right" (click)="nextSlide()">&#8250;</button>
+      <div class="content">
+        <h2>{{ slides[currentIndex].title }}</h2>
+        <p>{{ slides[currentIndex].text }}</p>
+        <span class="counter">{{ currentIndex + 1 }} of {{ slides.length }}</span>
+      </div>
     </div>
-    <div class="indicators">
-      <span 
-        *ngFor="let slide of slides; let i = index" 
-        class="dot" 
-        [class.active]="i === currentIndex"
-        (click)="goToSlide(i)">
-      </span>
-    </div>
-    <div class="footer-controls">
-      <span class="page-count">{{ currentIndex + 1 }} of {{ slides.length }}</span>
-      <button class="autoplay-btn" (click)="toggleAutoplay()">
-        {{ autoplay ? '⏸ Pause' : '▶ Auto Play' }}
-      </button>
-      <button class="cta-button" routerLink="/fifth-week-level3">
-        🚀  Next Lesson
-      </button>
-    </div>
+    <button class="nav right" (click)="nextSlide()" [disabled]="currentIndex === slides.length - 1">›</button>
   </div>
-  
+  <div *ngIf="currentIndex < slides.length" class="dots">
+    <span
+      *ngFor="let slide of slides; let i = index"
+      class="dot"
+      [class.active]="i === currentIndex"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+    <div *ngIf="currentIndex === slides.length - 1" class="end-card">
+      <h6>The Power of Practice & Support</h6>
+      <p>
+        Just like Kwame, every reader can improve with patience, practice,
+        and the help of caring people. Reading is a wonderful adventure that
+        gets better every day!
+      </p>
+      <button class="btn-proceed" routerLink="/fifth-week-level3">
+        🚀 Proceed to Lesson 3
+      </button>
+    </div>
+</div>

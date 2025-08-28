@@ -43,11 +43,11 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.tab.active {
+/* .tab.active {
   background: #9b5cff;
   color: white;
   box-shadow: 0 4px 12px rgba(155,92,255,0.4);
-}
+} */
 
 .moment-card {
   background: linear-gradient(135deg, #e0ffe5, #f0fff8);
@@ -77,7 +77,7 @@
 }
 
 .submit-btn {
-  background: linear-gradient(90deg, #ff66cc, #9b5cff);
+  background: linear-gradient(to right, #f4a261, #efd6a4);
   color: white;
   border: none;
   padding: 12px 20px;

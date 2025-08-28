@@ -41,7 +41,7 @@
     <p>You've completed your reflection session. Your thoughtful answers show real self-awareness!</p>
     <div class="summary-answer" *ngFor="let q of questions; let i = index">
       <strong style="color: #1f8eed;">{{ q }}</strong>
-      <p class="text-muted"><em>{{ previousAnswers[i] }}</em></p>
+      <p class="text-muted">{{ previousAnswers[i] }}</p>
     </div>
     <button class="replay-button" (click)="replaySession()">🔁 Replay Session</button>
     &nbsp;

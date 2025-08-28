@@ -1,0 +1,60 @@
+<div class="proud-container">
+    <!-- Header -->
+    <div class="header">
+      <h1>🌟 Welcome to <span class="brand">Proud Star Toss</span></h1>
+      <p>
+        Each learner shares something they’re proud of and earns a virtual or real
+        “Proud Star.” It’s a way to recognize their growth in the Identity module.
+      </p>
+    </div>
+  
+    <div class="top-section">
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <h3>⭐ Proud Star Toss</h3>
+        <p class="subtitle">Constellation of Achievement</p>
+  
+        <div class="stats">
+          <div><span>{{ proudStars }}</span><br />Proud Stars</div>
+          <div><span>{{ moments.length }}</span><br />Moments</div>
+          <div><span>L{{ level }}</span><br />Level</div>
+        </div>
+  
+        <div class="progress-container">
+          <div [style.width.%]="progress" class="progress-bar"></div>
+        </div>
+        <p class="progress-note">
+          Progress to Level {{ level + 1 }} · {{ 10 - (proudStars % 10) }} stars needed
+        </p>
+  
+        <!-- ✅ Proceed button shows only when stars hit 10, 20, 30... -->
+        <button *ngIf="proudStars > 0 && proudStars % 5 === 0" class="proceed-btn">
+          🚀 Proceed to Next Lesson
+        </button>
+      </div>
+  
+      <!-- Share Your Pride -->
+      <div class="share-card">
+        <h3>🌟 Share Your Pride</h3>
+        <p>Tell us something you’re proud of and earn a Proud Star!</p>
+        <input
+          type="text"
+          placeholder="What are you proud of? (e.g., 'Learned a new skill')"
+          [(ngModel)]="newMoment"
+        />
+        <button class="share-btn" (click)="sharePride()">✨ Share & Earn Your Star</button>
+      </div>
+    </div>
+  
+    <!-- Pride Constellations -->
+    <div class="constellation">
+      <h3>✨ Your Pride Constellations</h3>
+      <div class="cards">
+        <div class="moment-card" *ngFor="let moment of moments">
+          <h4>{{ moment.text }}</h4>
+          <div class="footer">⭐ 1 star earned · just now</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

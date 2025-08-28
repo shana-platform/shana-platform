@@ -6,76 +6,56 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fifth-week-level2.component.css']
 })
 export class FifthWeekLevel2Component implements OnInit {
+  currentIndex = 0;
+
   slides = [
     {
-      image: 'assets/yaa1.jpg',
-      title: 'Yaa Notices!',
-      text: 'Yaa saw her little brother struggling with his homework. He looked confused and frustrated with all the papers scattered around.'
+      image: 'assets/kwame-struggling1.jpg',
+      title: "Kwame's Reading Challenge",
+      text: "Kwame loved stories, but reading was really hard for him. The words seemed to dance around on the page, and he felt frustrated when he couldn't keep up with his classmates."
     },
     {
-      image: 'assets/yaa2.jpg',
-      title: 'A Helpful Idea',
-      text: 'Yaa decided she wanted to help! She had a bright idea - maybe she could explain the homework in a way her brother would understand.'
+      image: 'assets/asking-sister.jpg',
+      title: "Asking for Help",
+      text: "One day, Kwame decided to ask his big sister Akosua for help. Can you teach me to read faster? he asked hopefully. She smiled warmly and said, Of course! I'd love to help you."
     },
     {
-      image: 'assets/yaa3.jpg',
-      title: 'Teaching Together',
-      text: 'Yaa sat down next to her brother and patiently explained each problem. She pointed to the books and helped him understand step by step.'
+      image: 'assets/reading-together.jpg',
+      title: "Learning Together",
+      text: "Akosua showed Kwame special tricks for reading. She taught him to follow along with his finger and to sound out difficult words. Reading together made it so much more fun!"
     },
     {
-      image: 'assets/yaa4.jpg',
-      title: 'Understanding Dawns',
-      text: `Suddenly, her brother's face lit up He understood the homework problems and felt excited to solve them himself.`
+      image: 'assets/reading-routine.jpg',
+      title: "Practice Every Night",
+      text: "Every evening after dinner, Kwame and Akosua would sit together and read. Some nights they read adventure stories, other nights they read about animals or faraway places."
     },
     {
-      image: 'assets/yaa5.jpg',
-      title: 'Mission Accomplished',
-      text: `Together, they finished all the homework! Her brother was so happy to complete his work successfully with Yaa's help.`
+      image: 'assets/kwame-success.jpg',
+      title: "Success!",
+      text: "After weeks of practice, Kwame discovered he could read much faster! He felt proud and confident. Now he could enjoy all the wonderful stories he had always wanted to read by himself."
     }
   ];
-
-  currentIndex = 0;
-  autoplay = false;
-  autoplayInterval: any;
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  ngOnDestroy() {
-    this.stopAutoplay();
+  get isLastSlide() {
+    return this.currentIndex === this.slides.length; // end card index
   }
-
+  
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+    if (this.currentIndex < this.slides.length - 1) {
+      this.currentIndex++;
+    }
   }
 
   prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
   }
 
   goToSlide(index: number) {
     this.currentIndex = index;
-  }
-
-  toggleAutoplay() {
-    this.autoplay = !this.autoplay;
-    if (this.autoplay) {
-      this.startAutoplay();
-    } else {
-      this.stopAutoplay();
-    }
-  }
-
-  startAutoplay() {
-    this.autoplayInterval = setInterval(() => {
-      this.nextSlide();
-    }, 3000);
-  }
-
-  stopAutoplay() {
-    if (this.autoplayInterval) {
-      clearInterval(this.autoplayInterval);
-    }
   }
 }

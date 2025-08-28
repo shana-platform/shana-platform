@@ -57,6 +57,7 @@
     max-width: 900px;
     border-radius: 12px;
     overflow: hidden;
+    margin: 20px;
   }
   
   .slide-image img {
@@ -66,7 +67,7 @@
   }
   
   .nav-btn {
-    background: #fff6e0;
+    background: #f9c6a0;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
