@@ -1,0 +1,47 @@
+<div class="confidence-container">
+    <div class="confidence-content">
+      <div class="text-section">
+        <div class="icon-row">
+          <img src="assets/lightbulb-character-CbaHe81x.jpg" alt="idea" class="idea-icon" />
+          <div class="underline"></div>
+        </div>
+        <h1 class="title">
+          <span class="highlight">Confidence</span> Link
+        </h1>
+        <div class="quote-box">
+          <p>
+            Planning gives you power. When you know what you want, you feel ready
+            to go after it!
+          </p>
+        </div>
+        <div class="button-row">
+          <button (click)="openModal()" class="btn start">Complete Module</button>
+        </div>
+      </div>
+      <div class="image-section">
+        <img
+          src="assets/hero-planning-id0n7L4v.jpg"
+          alt="Planning illustration"
+          class="main-image"
+        />
+      </div>
+    </div>
+  </div>
+
+      <!-- Modal -->
+      <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+        <div class="modal-content animated fadeInDown">
+          <span class="close-btn" (click)="closeModal()">&times;</span>
+          <div class="modal-header">
+            <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+            <h2>🎉 Congratulations!</h2>
+          </div>
+          <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+          <p class="modal-subtext">🏆 You’ve unlocked completed all<strong> 5 Modules</strong></p>
+          <p class="modal-note">Bravo! You are a champion!</p>
+          <div class="modal-actions">
+            <button routerLink="/dashboard" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+          </div>
+        </div>
+      </div>
+  

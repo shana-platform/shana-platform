@@ -1,0 +1,204 @@
+/* Main container */
+.welcome-container {
+    /* background: #bde5f5; */
+    text-align: center;
+    /* min-height: 100vh; */
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Header */
+  /* .welcome-header h1 {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 2.8rem;
+    color: #3b2a1a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .welcome-header span {
+    font-size: 2.5rem;
+  }
+  
+  .welcome-header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: #5a4634;
+    margin-bottom: 2rem;
+  }
+  .hero-image img {
+    max-width: 900px;
+    width: 100%;
+    border-radius: 1.2rem;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  }
+   */
+  /* Floating Icons */
+  .floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  
+  .icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: white;
+    animation: float 6s infinite ease-in-out;
+  }
+  
+  /* Icon Colors */
+  .icon.pink {
+    background: #f78da7;
+    top: 20%;
+    right: 15%;
+  }
+  
+  .icon.green {
+    background: #6fdcbf;
+    bottom: 10%;
+    left: 10%;
+  }
+  
+  .icon.purple {
+    background: rgba(200, 150, 255, 0.3);
+    top: 25%;
+    left: 5%;
+  }
+  
+  .icon.blue {
+    background: rgba(100, 200, 255, 0.3);
+    bottom: 15%;
+    right: 5%;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .challenge-container {
+    /* background: #bde5f5; */
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 2rem 1rem; */
+  }
+  
+  /* Main challenge card */
+  .challenge-card {
+    background: #fffdf9;
+    border-radius: 1.2rem;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .challenge-title {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.8rem;
+    color: #f88a3b;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Inner challenge box */
+  .challenge-box {
+    background: linear-gradient(90deg, #f78da7, #f79c74);
+    color: white;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .challenge-box h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+  }
+  
+  .challenge-description {
+    background: #fff7e5;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .challenge-description .highlight {
+    color: #e85a24;
+    font-weight: bold;
+  }
+  
+  /* Buttons */
+  .challenge-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .btn {
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn.start {
+    background: linear-gradient(to right, #f88a3b, #fbc96d);
+    color: white;
+  }
+  
+  .btn.ideas {
+    background: #9ad4fb;
+    color: #124f77;
+  }
+  
+  /* Note under buttons */
+  .challenge-note {
+    font-size: 0.9rem;
+    color: #6a4a3b;
+    margin-top: 1rem;
+  }
+  
+  /* Bottom reminder */
+  .reminder-card {
+    background: #e7f5ff;
+    border-radius: 0.8rem;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { CoursesComponent } from './pages/courses/courses.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
 import { FifthWeekLevel3Component } from './pages/fifth-week-welcome/fifth-week-level3/fifth-week-level3.component';
 import { FifthWeekLevel4Component } from './pages/fifth-week-welcome/fifth-week-level4/fifth-week-level4.component';
 import { FifthWeekLevel5Component } from './pages/fifth-week-welcome/fifth-week-level5/fifth-week-level5.component';
+import { FifthWeekLevel6Component } from './pages/fifth-week-welcome/fifth-week-level6/fifth-week-level6.component';
+import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-level7/fifth-week-level7.component';
 import { FifthWeekWelcomeComponent } from './pages/fifth-week-welcome/fifth-week-welcome.component';
 import { FirstWeekLevel1Component } from './pages/first-week-welcome/first-week-level1/first-week-level1.component';
 import { FirstWeekLevel2Component } from './pages/first-week-welcome/first-week-level2/first-week-level2.component';
@@ -51,7 +54,8 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'games', component: GamesPageComponent },
-      { path: 'home', component: HomeComponent },
+      { path: 'home', component: CoursesComponent },
+      { path: 'courses', component: HomeComponent },
       { path: 'first-week', component: FirstWeekWelcomeComponent },
       { path: 'first-week-level1', component: FirstWeekLevel1Component },
       { path: 'first-week-level2', component: FirstWeekLevel2Component },
@@ -87,7 +91,9 @@ const routes: Routes = [
       { path: 'fifth-week-level2', component: FifthWeekLevel2Component },
       { path: 'fifth-week-level3', component: FifthWeekLevel3Component },
       { path: 'fifth-week-level4', component: FifthWeekLevel4Component },
-      { path: 'fifth-week-level5', component: FifthWeekLevel5Component }
+      { path: 'fifth-week-level5', component: FifthWeekLevel5Component },
+      { path: 'fifth-week-level6', component: FifthWeekLevel6Component },
+      { path: 'fifth-week-level7', component: FifthWeekLevel7Component }
     ]
   }
 ];

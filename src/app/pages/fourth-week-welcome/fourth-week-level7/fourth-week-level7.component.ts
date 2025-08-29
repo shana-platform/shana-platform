@@ -10,13 +10,7 @@ export class FourthWeekLevel7Component implements OnInit {
   selectedStrengthCard: string | null = null;
   showFoundationSection = false;
   showModal: boolean = false;
-  //   strengths: string[] = [
-  //   'Being kind to others',
-  //   'Asking great questions',
-  //   'Making people smile'
-  // ];
 
-  // affirmation: string = 'When we know we have strength, we show strength!';
   constructor() { }
 
   ngOnInit(): void {
@@ -24,7 +18,7 @@ export class FourthWeekLevel7Component implements OnInit {
 
   selectStrengthCard(card: string) {
     this.selectedStrengthCard = card;
-    this.showFoundationSection = true; // triggers the reveal
+    this.showFoundationSection = true;
   }
 
   openModal(): void {

@@ -49,6 +49,9 @@ import { FifthWeekLevel3Component } from './pages/fifth-week-welcome/fifth-week-
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
 import { FifthWeekLevel4Component } from './pages/fifth-week-welcome/fifth-week-level4/fifth-week-level4.component';
 import { FifthWeekLevel5Component } from './pages/fifth-week-welcome/fifth-week-level5/fifth-week-level5.component';
+import { FifthWeekLevel6Component } from './pages/fifth-week-welcome/fifth-week-level6/fifth-week-level6.component';
+import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-level7/fifth-week-level7.component';
+import { CoursesComponent } from './pages/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +100,10 @@ import { FifthWeekLevel5Component } from './pages/fifth-week-welcome/fifth-week-
     FifthWeekLevel3Component,
     FifthWeekLevel2Component,
     FifthWeekLevel4Component,
-    FifthWeekLevel5Component
+    FifthWeekLevel5Component,
+    FifthWeekLevel6Component,
+    FifthWeekLevel7Component,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
