@@ -54,8 +54,8 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'games', component: GamesPageComponent },
-      { path: 'home', component: CoursesComponent },
-      { path: 'courses', component: HomeComponent },
+      { path: 'courses', component: CoursesComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'first-week', component: FirstWeekWelcomeComponent },
       { path: 'first-week-level1', component: FirstWeekLevel1Component },
       { path: 'first-week-level2', component: FirstWeekLevel2Component },
