@@ -1,359 +1,156 @@
-.course-progress-card {
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    padding: 1.5rem;
-    border-left: 6px solid #5BB6E5;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    background: linear-gradient(to left, #f1f3f6 0%, #d2e5fb 100%);
-  }
-  
-  .course-progress-card:hover {
-    transform: translateY(-3px);
-  }
-  
-  .course-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .course-header h4 {
-    font-size: 16px;
-    margin: 0;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .course-code {
-    background-color: #2D82B7;
-    color: #e5f4fb;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .progress-label {
-    font-size: 13px;
-    color: #6b7280;
-    margin-top: 12px;
-    margin-bottom: 6px;
-  }
-  
-  .progress-bar-wrapper {
-    height: 10px;
-    background-color: #f4f4f5;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  
-  .progress-bar-fill {
-    height: 100%;
-    background-color: #FF8F2E;
-    transition: width 0.4s ease;
-  }
-  
-  .next-class {
-    font-size: 13px;
-    color: #6b7280;
-    margin-top: 10px;
-  }
-
-  .task-card {
-    background: white;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .task-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .task-header h6 {
-    font-size: 12px;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  
-  .task-meta {
-    margin-top: 8px;
-    font-size: 13px;
-    color: #555;
-  }
-  
-  .meta-item {
-    margin-right: 10px;
-  }
-  
-  .dashboard-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-    font-family: "Segoe UI", sans-serif;
-    color: #333;
-  }
-  
-  .dashboard-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-  }
-  
-  .dashboard-subtitle {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
-  .progress-bar {
-    height: 8px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 0.5rem 0;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: white;
-    border-radius: 4px;
-  }
-  
-  @media (max-width: 768px) {
-    .stat-card {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-/* Base card styles */
-.stat-card {
-  flex: 1;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  color: #fff;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.2s ease;
-  cursor: pointer;
+.dashboard-container {
+  padding: 2rem;
+  background: #f0f8fb;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
 }
 
-/* Color themes */
-.orange {
-  background: linear-gradient(135deg, #5ABCB9, #6EF9F5);
-}
-
-.pink {
-  background: linear-gradient(135deg, #CA9CE1, #F2BEFC);
-}
-
-.green {
-  background: linear-gradient(135deg, #548687, #8FBC94);
-}
-
-.yellow {
-  background: linear-gradient(135deg, #ebcc6d, #edbd2c);
-}
-
-/* Card contents */
-.icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.stat-value {
-  font-size: 2.2rem;
-  font-weight: bold;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.85;
-}
-
-.welcome-banner {
-  background: linear-gradient(90deg, #dab1f2, #f0acc1);
-  background-size: 300% 300%;
-  animation: gradientShift 12s ease infinite;
-  border-radius: 12px;
-  padding: 40px 20px;
-  color: white;
-}
-
-.badge {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.25);
-  padding: 6px 16px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 2.2rem;
+/* Greeting */
+.greeting {
+  font-size: 2rem;
   font-weight: 700;
-  margin: 10px 0;
-}
-
-.highlight {
-  color: #ffd36f; /* golden yellow for 'Jane!' */
+  color: #1d4e89;
 }
 
 .subtitle {
-  max-width: 700px;
-  margin: 10px auto 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
-  text-align: left;
-}
-
-/* Smooth gradient animation */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ===== HEADER ===== */
-.course-header {
-  text-align: center;
-  margin: 40px 20px;
-}
-
-/* .course-header .icon {
-  font-size: 2.5rem;
-  background: #ff944d;
-  color: white;
-  display: inline-block;
-  padding: 12px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
- */
-.course-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.course-header p {
-  color: #555;
   font-size: 1rem;
-  margin-bottom: 15px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #4b5563;
+  margin-bottom: 2rem;
 }
 
-.course-header .stats {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* ===== SEARCH BOX ===== */
-.search-box {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-}
-
-.search-box input {
-  width: 100%;
-  max-width: 450px;
-  padding: 12px 15px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 1rem;
-}
-
-/* ===== GRID LAYOUT ===== */
-.course-list {
+/* Stats */
+.stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 0 20px 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
 }
 
-/* ===== CARD ===== */
-.course-card {
+.stat-card {
   background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.thumbnail {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
-.course-content {
-  padding: 15px;
-  position: relative;
+.stat-info h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
 }
 
-.course-content h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+.stat-info p {
+  color: #6b7280;
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
 }
 
-.course-content h2.highlight {
-  color: #ff6600;
-}
-
-/* ===== BADGE ===== */
-.badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #2D82B7;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* ===== INSTRUCTOR ===== */
-.instructor {
+/* Icon with hexagon style */
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background: #f3f4f6;
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%,
+    75% 94%, 25% 94%,
+    0% 50%
+  );
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 10px 0;
+  justify-content: center;
 }
 
-.avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+.stat-icon i {
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-/* ===== TAG ===== */
-.tag {
-  background: #f5f5f5;
-  font-size: 0.85rem;
-  padding: 5px 10px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 5px;
+/* Different colors per icon */
+.stat-icon.star {
+  background: #facc15;
+}
+.stat-icon.trophy {
+  background: #22c55e;
+}
+.stat-icon.badge {
+  background: #6366f1;
+}
+.stat-icon.game {
+  background: #f97316;
+}
+
+/* Adventures */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d4e89;
+  margin-bottom: 1rem;
+}
+
+.adventures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.adventure-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.adventure-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.adventure-card .info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.adventure-card .info p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0.3rem 0 1rem;
+}
+
+/* Progress */
+.progress {
+  height: 15px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #2D82B7;
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #2D82B7;
 }

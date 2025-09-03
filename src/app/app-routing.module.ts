@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
-import { CoursesComponent } from './pages/courses/courses.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
@@ -54,7 +53,6 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'games', component: GamesPageComponent },
-      { path: 'courses', component: CoursesComponent },
       { path: 'home', component: HomeComponent },
       { path: 'first-week', component: FirstWeekWelcomeComponent },
       { path: 'first-week-level1', component: FirstWeekLevel1Component },

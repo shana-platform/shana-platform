@@ -1,211 +1,106 @@
-<div>
-    <!-- <div class="welcome-section">
-        <h4>Welcome Back Jane! 👋</h4>
-        <p style="font-family: 'Montserrat', sans-serif; font-size: small;">
-            Get ready for an exciting adventure where learning is fun, creative, and all about YOU! ✨<br>
-            You’ll explore amazing lessons, earn badges, play games, and discover what makes you unique and awesome!
-            🚀<br>
-        </p>
-    </div> -->
-    <div class="welcome-banner">
-      <!-- <div class="badge">
-        ✨ Learning Adventure ✨
-      </div> -->
-      <h1>Welcome Back <span class="highlight">Jane!</span> 👋</h1>
-      <span>Get ready for an exciting adventure where learning is fun, creative, and all about YOU! ✨</span>
-      <br>
-      <span>You’ll explore amazing lessons, earn badges, play games, and discover what makes you unique and awesome! 🚀</span>
-      <!-- <p class="subtitle">
-        Get ready for an exciting adventure where learning is fun, creative, and all about YOU! ✨<br>
-        You’ll explore amazing lessons, earn badges, play games, and discover what makes you unique and awesome! 🚀
-      </p> -->
-    </div>
-    
-  <br>
-    <div class="row">
-      <div class="col">
-        <div class="stat-card yellow">
-          <div class="icon">⭐</div>
-          <div class="stat-value">48</div>
-          <div class="stat-label">STARS EARNED</div>
-        </div>
+<div class="dashboard-container">
+  <!-- Greeting -->
+  <h1 class="greeting">Hi there, Sam! 🎉</h1>
+  <p class="subtitle">
+    You're doing amazing! Let's see all the cool things you've learned! 🏄‍♂️
+  </p>
+
+  <!-- Stats Section -->
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-info">
+        <h2>247</h2>
+        <p>Stars Earned</p>
       </div>
-      <div class="col">
-        <div class="stat-card orange">
-          <div class="icon">🏆</div>
-          <div class="stat-value">4</div>
-          <div class="stat-label">TROPHIES WON</div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="stat-card pink">
-          <div class="icon">🎖️</div>
-          <div class="stat-value">12</div>
-          <div class="stat-label">BADGES EARNED</div>
-        </div>
-      </div>
-      <div class="col">
-        <div routerLink="/games" class="stat-card green">
-          <div class="icon">🎮 🎯 🎲 🦄</div>
-          <div class="stat-value">4</div>
-          <div class="stat-label">GAMES AVAILABLE</div>
-        </div>
+      <div class="stat-icon star">
+        <i class="fas fa-star"></i>
       </div>
     </div>
-    <br> <br>
-    <div class="row">
-        <div class="col">
-            <div routerLink="/first-week" class="card course-progress-card" style="cursor: pointer;">
-                <div class="course-header">
-                    <h4>AWARENESS: “What Makes Me Unique?”</h4>
-                    <span class="course-code">Week 1</span>
-                </div>
-                <div class="progress-label">Progress</div>
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" style="width: 75%"></div>
-                </div>
-                <div class="next-class">Next: Tomorrow 10:00 AM</div>
-            </div>
-        </div>
-        <div class="col">
-            <div routerLink="/second-week" class="card course-progress-card">
-                <div class="course-header">
-                    <h4>PRACTICE: “My Strengths”</h4>
-                    <span class="course-code">Week 2</span>
-                </div>
-                <div class="progress-label">Progress</div>
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" style="width: 50%"></div>
-                </div>
-                <div class="next-class">Next: Tomorrow 10:00 AM</div>
-            </div>
-        </div>
+    <div class="stat-card">
+      <div class="stat-info">
+        <h2>12</h2>
+        <p>Trophies Won</p>
+      </div>
+      <div class="stat-icon trophy">
+        <i class="fas fa-trophy"></i>
+      </div>
     </div>
-    <br> <br>
-    <div class="row">
-        <div class="col">
-            <div routerLink="/third-week" class="card course-progress-card" style="cursor: pointer;">
-                <div class="course-header">
-                    <h4>PRACTICE: “My Choices”</h4>
-                    <span class="course-code">Week 3</span>
-                </div>
-                <div class="progress-label">Progress</div>
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" style="width: 30%"></div>
-                </div>
-                <div class="next-class">Next: Tomorrow 10:00 AM</div>
-            </div>
-        </div>
-        <div class="col">
-            <div routerLink="/fourth-week" class="card course-progress-card" style="cursor: pointer;">
-                <div class="course-header">
-                    <h4>MASTERY: “I Am Proud of Me”</h4>
-                    <span class="course-code">Week 4</span>
-                </div>
-                <div class="progress-label">Progress</div>
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" style="width: 70%"></div>
-                </div>
-                <div class="next-class">Next: Tomorrow 10:00 AM</div>
-            </div>
-        </div>
-        <div class="col">
-            <div routerLink="/fifth-week" class="card course-progress-card" style="cursor: pointer;">
-                <div class="course-header">
-                    <h4>MASTERY: “My Identity Plan”</h4>
-                    <span class="course-code">Week 5</span>
-                </div>
-                <div class="progress-label">Progress</div>
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" style="width: 70%"></div>
-                </div>
-                <div class="next-class">Next: Tomorrow 10:00 AM</div>
-            </div>
-        </div>
+    <div class="stat-card">
+      <div class="stat-info">
+        <h2>8</h2>
+        <p>Badges Collected</p>
+      </div>
+      <div class="stat-icon badge">
+        <i class="fas fa-award"></i>
+      </div>
+    </div>
+    <div routerLink="/games" class="stat-card">
+      <div class="stat-info">
+        <h2>15</h2>
+        <p>Games Available</p>
+      </div>
+      <div class="stat-icon game">
+        <i class="fas fa-gamepad"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adventures Section -->
+  <h2 class="section-title">Your Super Cool Adventures! 🎊</h2>
+  <div class="adventures">
+    <div routerLink="/first-week" class="adventure-card">
+      <div class="info">
+        <h3>AWARENESS: “What Makes Me Unique?” 🔢</h3>
+        <p>Week 1 of 5</p>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 40%"></div>
+      </div>
+      <span class="progress-label">40%</span>
     </div>
 
-    <!-- <br>
-
-    <div class="course-list">
-      <div class="course-card">
-        <img src="assets/course-programming-DzLWEAkg.jpg" alt="Course thumbnail" class="thumbnail" />
-        <div class="course-content">
-          <h2>AWARENESS: “What Makes Me Unique?”</h2>
-          <span class="badge">Week 1</span>
-          <div class="instructor">
-            <img src="assets/instructor-sarah-B_wq92_s.jpg" alt="Sarah Johnson" class="avatar" />
-            <span>Sarah Johnson</span>
-          </div>
-          <span class="tag">Programming</span>
-        </div>
+    <div routerLink="/second-week" class="adventure-card">
+      <div class="info">
+        <h3>PRACTICE: “My Strengths” 🐻</h3>
+        <p>Week 2 of 5</p>
       </div>
-    
-      <div class="course-card">
-        <img src="assets/course-design-BJ6_RkbR.jpg" alt="Course thumbnail" class="thumbnail" />
-        <div class="course-content">
-          <h2 class="highlight">PRACTICE: “My Strengths”</h2>
-          <span class="badge">Week 2</span>
-          <div class="instructor">
-            <img src="assets/instructor-james-D_qdVA_4.jpg" alt="Michael Chen" class="avatar" />
-            <span>Michael Chen</span>
-          </div>
-          <span class="tag">Programming</span>
-        </div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 15%"></div>
       </div>
-    
-      <div class="course-card">
-        <img src="assets/course-programming-DzLWEAkg.jpg" alt="Course thumbnail" class="thumbnail" />
-        <div class="course-content">
-          <h2>PRACTICE: “My Choices”</h2>
-          <span class="badge">Week 1</span>
-          <div class="instructor">
-            <img src="assets/instructor-sarah-B_wq92_s.jpg" alt="Emma Davis" class="avatar" />
-            <span>Emma Davis</span>
-          </div>
-          <span class="tag">Design</span>
-        </div>
-      </div>
+      <span class="progress-label">15%</span>
     </div>
 
-    <br>
-        <div class="course-list">
-      <div class="course-card">
-        <img src="assets/course-programming-DzLWEAkg.jpg" alt="Course thumbnail" class="thumbnail" />
-        <div class="course-content">
-          <h2>AWARENESS: “What Makes Me Unique?”</h2>
-          <span class="badge">Week 1</span>
-          <div class="instructor">
-            <img src="assets/instructor-sarah-B_wq92_s.jpg" alt="Sarah Johnson" class="avatar" />
-            <span>Sarah Johnson</span>
-          </div>
-          <span class="tag">Programming</span>
-        </div>
+    <div routerLink="/thirdth-week" class="adventure-card">
+      <div class="info">
+        <h3>PRACTICE: “My Choices” 📚</h3>
+        <p>Week 3 of 5</p>
       </div>
-    
-      <div class="course-card">
-        <img src="assets/course-design-BJ6_RkbR.jpg" alt="Course thumbnail" class="thumbnail" />
-        <div class="course-content">
-          <h2 class="highlight">PRACTICE: “My Strengths”</h2>
-          <span class="badge">Week 2</span>
-          <div class="instructor">
-            <img src="assets/instructor-james-D_qdVA_4.jpg" alt="Michael Chen" class="avatar" />
-            <span>Michael Chen</span>
-          </div>
-          <span class="tag">Programming</span>
-        </div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 75%"></div>
       </div>
-    
-      <div class="course-card">
-        <img src="assets/course-programming-DzLWEAkg.jpg" alt="Course thumbnail" class="thumbnail" />
-        <div class="course-content">
-          <h2>PRACTICE: “My Choices”</h2>
-          <span class="badge">Week 1</span>
-          <div class="instructor">
-            <img src="assets/instructor-sarah-B_wq92_s.jpg" alt="Emma Davis" class="avatar" />
-            <span>Emma Davis</span>
-          </div>
-          <span class="tag">Design</span>
-        </div>
+      <span class="progress-label">75%</span>
+    </div>
+
+    <div routerLink="/fourth-week" class="adventure-card">
+      <div class="info">
+        <h3>MASTERY: “I Am Proud of Me” 🎨</h3>
+        <p>Week 4 of 5</p>
       </div>
-    </div> -->
+      <div class="progress">
+        <div class="progress-bar" style="width: 30%"></div>
+      </div>
+      <span class="progress-label">30%</span>
+    </div>
+
+    <div routerLink="/fifth-week" class="adventure-card">
+      <div class="info">
+        <h3>MASTERY: “My Identity Plan” 🚀</h3>
+        <p>Week 4 of 5</p>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+      <span class="progress-label">85%</span>
+    </div>
+  </div>
 </div>
