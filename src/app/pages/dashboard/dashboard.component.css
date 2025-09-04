@@ -1,232 +1,158 @@
-.course-progress-card {
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    padding: 1.5rem;
-    border-left: 6px solid #5BB6E5;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    /* background: linear-gradient(to bottom, #6bb8ff, #d7c8f3); */
-    background: linear-gradient(to left, #f1f3f6 0%, #d2e5fb 100%);
-  }
-  
-  .course-progress-card:hover {
-    transform: translateY(-3px);
-  }
-  
-  .course-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .course-header h4 {
-    font-size: 16px;
-    margin: 0;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .course-code {
-    background-color: #2D82B7;
-    color: #e5f4fb;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .progress-label {
-    font-size: 13px;
-    color: #6b7280;
-    margin-top: 12px;
-    margin-bottom: 6px;
-  }
-  
-  .progress-bar-wrapper {
-    height: 10px;
-    background-color: #f4f4f5;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  
-  .progress-bar-fill {
-    height: 100%;
-    background-color: #FF8F2E;
-    transition: width 0.4s ease;
-  }
-  
-  .next-class {
-    font-size: 13px;
-    color: #6b7280;
-    margin-top: 10px;
-  }
+.dashboard-container {
+  padding: 2rem;
+  background: #fffaf4;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
 
-  .task-card {
-    background: white;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .task-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .task-header h6 {
-    font-size: 12px;
-    margin: 0;
-    font-weight: 600;
-  }
+/* Header */
+.welcome-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f97316;
+}
 
-  
-  .task-meta {
-    margin-top: 8px;
-    font-size: 13px;
-    color: #555;
-  }
-  
-  .meta-item {
-    margin-right: 10px;
-  }
-  
-  .dashboard-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-    font-family: "Segoe UI", sans-serif;
-    color: #333;
-  }
-  
-  .dashboard-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-  }
-  
-  .dashboard-subtitle {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
-  .progress-bar {
-    height: 8px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 0.5rem 0;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: white;
-    border-radius: 4px;
-  }
-  
-  @media (max-width: 768px) {
-    .stat-card {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+.welcome-section p {
+  margin-top: 0.5rem;
+  color: #444;
+  font-size: 1rem;
+}
 
-/* Base card styles */
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
 .stat-card {
-  flex: 1;
+  background: white;
   padding: 1.5rem;
-  border-radius: 1rem;
-  color: #fff;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.2s ease;
-  cursor: pointer;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
-/* Color themes */
-.orange {
-  background: linear-gradient(135deg, #5ABCB9, #6EF9F5);
-}
-
-.pink {
-  background: linear-gradient(135deg, #CA9CE1, #F2BEFC);
-}
-
-.green {
-  background: linear-gradient(135deg, #548687, #8FBC94);
-}
-
-.yellow {
-  background: linear-gradient(135deg, #ebcc6d, #edbd2c);
-}
-
-/* Card contents */
-.icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.journey-card:hover {
+  transform: translateY(-3px);
 }
 
 .stat-value {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .stat-label {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.85;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #666;
 }
 
-.welcome-banner {
-  background: linear-gradient(90deg, #c471f5, #fa709a, #b5a54b, #58c2a8);
-  background-size: 300% 300%;
-  animation: gradientShift 12s ease infinite;
-  border-radius: 12px;
-  padding: 40px 20px;
-  color: white;
-  /* text-align: center; */
+.stat-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
 }
 
-.badge {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.25);
-  padding: 6px 16px;
-  border-radius: 30px;
+.stat-card.yellow {
+  border-top: 4px solid #facc15;
+}
+.stat-card.green {
+  border-top: 4px solid #22c55e;
+}
+.stat-card.purple {
+  border-top: 4px solid #a855f7;
+}
+.stat-card.orange {
+  border-top: 4px solid #f97316;
+}
+
+/* Shared hover effect */
+.stat-card,
+.journey-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover,
+.journey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Journey */
+.journey-title {
+  font-size: 1.5rem;
   font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
+  color: #222;
 }
 
-h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 10px 0;
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.highlight {
-  color: #ffd36f; /* golden yellow for 'Jane!' */
+.journey-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
 }
 
-.subtitle {
-  max-width: 700px;
-  margin: 10px auto 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
-  text-align: left;
+.journey-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
 }
 
-/* Smooth gradient animation */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.journey-icon {
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
 }
+
+.journey-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.journey-header p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.progress-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #f9954d, #b36cf6);
+  border-radius: 6px;
+}
+
+.progress-percent {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+}
+
 

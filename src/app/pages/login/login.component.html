@@ -2,15 +2,17 @@
     <div class="left-pane">
       <div class="login-box">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
-           <h5>✨ <span class="gradient-text">Welcome To <strong>Shana LifeSkills Center</strong></span> ✨</h5>
-           <br>
-          <label>Email Address</label>
-          <div class="input-group">
+          <h1 class="portal-title">Learning Portal</h1>
+          <p class="text-muted">
+            Your gateway to amazing discoveries and fun learning adventures!
+          </p>
+          <br>
+          <label for="username">Username or Email</label>
+          <div class="form-group">
             <input type="email" formControlName="email" placeholder="student@shana.edu" />
           </div>
-            <br>
           <label>Password</label>
-          <div class="input-group">
+          <div class="form-group">
             <input type="password" formControlName="password" placeholder="Enter your password" />
           </div>
   
@@ -31,9 +33,7 @@
         <footer>© 2025 ShanaPortal. All rights reserved.</footer>
       </div>
     </div>
-  
-    <!-- Right pane: Hero image or branding -->
     <div class="right-pane">
-      <img style="height: 597px; width: 800px;" src="assets/hero-strengths.jpg" alt="Learning Illustration" />
+      <img style="height: 597px; width: 800px;" src="assets/teacher-students.jpg" alt="Learning Illustration" />
     </div>
   </div>
