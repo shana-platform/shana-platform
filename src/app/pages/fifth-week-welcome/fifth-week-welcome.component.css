@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8rem 10rem;
-    background: linear-gradient(to bottom right, #e8f6ff, #ffffff);
+    /* padding: 4rem 5rem; */
+    /* background: linear-gradient(to bottom right, #e8f6ff, #ffffff); */
   }
   
   /* Left content */
@@ -12,7 +12,7 @@
   }
   
   .badge {
-    background: #f7f3ff;
+    background: #d6c4fa;
     color: #ff6600;
     font-size: 0.9rem;
     font-weight: 600;
@@ -40,7 +40,7 @@
   
   .focus-box {
     background: #ffe4c7;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.3rem;
     border-radius: 12px;
     margin-bottom: 2rem;
   }
