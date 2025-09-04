@@ -1,6 +1,5 @@
 /* Gradient Header */
 .perfect-day-header {
-    /* background: linear-gradient(90deg, #ff7eb3, #a66cff, #7dd3fc); */
     color: white;
     text-align: center;
     padding: 3rem 1rem;
@@ -39,7 +38,7 @@
   
   /* Buttons */
   .btn-primary {
-    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    background: linear-gradient(to bottom, #6bb8ff, #b68fff);
     color: white;
     padding: 0.8rem 1.6rem;
     border: none;
@@ -70,7 +69,6 @@
   
   /* Dream Day Section */
   .dream-day-section {
-    /* background: linear-gradient(180deg, #dbeafe, #ede9fe); */
     text-align: center;
     padding: 3rem 1rem;
   }
@@ -105,7 +103,6 @@
   .day-planner {
     text-align: center;
     padding: 2rem 1rem;
-    /* background: linear-gradient(180deg, #dbeafe, #ede9fe); */
   }
   
   /* Name Box */
@@ -227,7 +224,7 @@
   
   /* Share Button */
   .share-btn {
-    background: linear-gradient(90deg, #f472b6, #f97316);
+    background: linear-gradient(to bottom, #2D82B7, #2D82B7);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -258,7 +255,7 @@
 
 /* Popup card */
 .popup-card {
-  background: linear-gradient(135deg, #ff8fcf, #9c6bff);
+  background: linear-gradient(to bottom, #6bb8ff, #b68fff);
   color: white;
   padding: 2rem;
   border-radius: 1rem;
