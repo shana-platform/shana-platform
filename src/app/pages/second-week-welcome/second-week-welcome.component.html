@@ -4,7 +4,7 @@
         <div class="welcome-content">
           <div class="text">
             <h4>🌟 Week 2 Practice</h4>
-            <h1>My Strengths<br /><small>✨ Make Me Shine!</small></h1>
+            <h2>My Strengths <small> Make Me Shine!</small></h2>
             <p>
               Welcome, amazing learner! Today we're going on a special adventure to discover all the wonderful things that make <strong>YOU</strong> special. Let's find your strengths together!
             </p>
@@ -22,49 +22,7 @@
     <section class="teacher-message" *ngIf="discoveryStarted">
       <h3>👩‍🏫 Trainer’s Message</h3>
       <p>Every strength makes you special! ✨</p>
-    </section>
-  
-    <!-- Strength Cards -->
-    <section class="cards" *ngIf="discoveryStarted">
-      <h2>Choose Your Strength! ✨</h2>
-      <p>Click on the ones that sound like YOU!</p>
-  
-      <div class="card-grid">
-        <div 
-          class="strength-card" 
-          *ngFor="let strength of strengths"
-          [class.active]="selectedStrengths.includes(strength)"
-          (click)="toggleStrength(strength)"
-        >
-          <span class="emoji">{{ strength.emoji }}</span>
-          <h4>{{ strength.label }}</h4>
-          <p>Click to discover!</p>
-        </div>
-      </div>
-    </section>
-  
-    <!-- Final Message -->
-    <section class="celebration" *ngIf="selectedStrengths.length">
-        <h2>🎉 Remember, You Are Incredible! 🤍</h2>
-        <p>
-          Every single one of these strengths lives inside you. Some days different strengths shine brighter, and that’s perfectly wonderful!
-        </p>
-      
-        <div class="button-row">
-          <button class="celebrate-btn" (click)="celebrate()">Celebrate Me! 🎊</button>
-          <button routerLink="/second-week-level2" class="begin-lessons-btn">Begin Lessons 🚀</button>
-        </div>
-      </section>      
-
-    <div class="celebration-modal" *ngIf="showCelebration" (click)="closeCelebration()">
-        <div class="modal-content" (click)="$event.stopPropagation()">
-          <div class="emoji">🎉</div>
-          <h2>You're amazing! Keep being you!</h2>
-          <!-- <p>You've completed your Power Pose session. We’re so proud of you!</p>
-          <button (click)="replaySession()">🔁 Replay Session</button> -->
-        </div>
-      </div>
-      
-      
+      <button routerLink="/second-week-level2" class="begin-lessons-btn">Begin Lessons 🚀</button>
+    </section> 
   </div>
   
