@@ -47,6 +47,8 @@ import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'signUp', component: LoginComponent },
+  { path: 'forgotpassword', component: LoginComponent },
   {
     path: '',
     component: LayoutComponent,
