@@ -45,12 +45,14 @@ import { ThirdWeekLevel7Component } from './pages/third-week-welcome/third-week-
 import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week-welcome.component';
 import { SignupComponent } from './pages/core/signup/signup.component';
 import { ForgotPasswordComponent } from './pages/core/forgot-password/forgot-password.component';
+import { ResetpasswordComponent } from './pages/core/resetpassword/resetpassword.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signUp', component: SignupComponent },
   { path: 'forgotpassword', component: ForgotPasswordComponent },
+  { path: 'resetPassword', component: ResetpasswordComponent },
   {
     path: '',
     component: LayoutComponent,

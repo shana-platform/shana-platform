@@ -4,13 +4,17 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { SignupComponent } from './signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 
 
 
 @NgModule({
   declarations: [
     ForgotPasswordComponent,
-    SignupComponent
+    SignupComponent,
+    ResetpasswordComponent,
+    TermsandconditionComponent
   ],
   imports: [
     CommonModule,
