@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  role="student"
 
   constructor(private router: Router, private fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -24,4 +25,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/dashboard']);
   }
 
+  selectRole(role:string){
+    this.role = role
+  }
 }

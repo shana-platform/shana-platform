@@ -1,39 +1,39 @@
-  .navbar {
+.navbar {
     position: sticky;
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
     background: #C0D6DF;
   }
-  
-  
+
+  /*
   .navbar-brand {
     display: flex;
     align-items: center;
     padding-left: 1rem;
   }
-  
+
   .brand-logo {
     height: 60px;
     width: auto;
     object-fit: contain;
   }
-  
-  
+
+
   .highlight {
     color: #f59e0b;
     font-weight: bold;
     margin: 0 4px;
   }
-  
+
   .navbar-actions {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  
+
   .avatar {
     height: 32px;
     border-radius: 50%;
@@ -44,7 +44,7 @@
     font-size: 1.3rem;
     cursor: pointer;
   }
-  
+
   .notification .badge {
     position: absolute;
     top: -6px;
@@ -55,4 +55,21 @@
     font-size: 0.7rem;
     padding: 2px 6px;
   }
-  
+   */
+
+   .navbar-brand img {
+  max-height: 200px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.dropdown-item i {
+  font-size: 1rem;
+}
+
