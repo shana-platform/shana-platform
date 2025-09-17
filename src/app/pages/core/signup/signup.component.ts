@@ -42,7 +42,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    this.router.navigate(['/dashboard'])
+    // this.router.navigate(['/dashboard'])
 
     this.submitted = true;
     if (this.signupForm.invalid) {
