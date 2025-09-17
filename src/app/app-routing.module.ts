@@ -43,12 +43,14 @@ import { ThirdWeekLevel5Component } from './pages/third-week-welcome/third-week-
 import { ThirdWeekLevel6Component } from './pages/third-week-welcome/third-week-level6/third-week-level6.component';
 import { ThirdWeekLevel7Component } from './pages/third-week-welcome/third-week-level7/third-week-level7.component';
 import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week-welcome.component';
+import { SignupComponent } from './pages/core/signup/signup.component';
+import { ForgotPasswordComponent } from './pages/core/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'signUp', component: LoginComponent },
-  { path: 'forgotpassword', component: LoginComponent },
+  { path: 'signUp', component: SignupComponent },
+  { path: 'forgotpassword', component: ForgotPasswordComponent },
   {
     path: '',
     component: LayoutComponent,

@@ -1,0 +1,126 @@
+/* Container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
+   background: #fc4a1a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Form Box */
+.form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.message {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+label {
+  position: relative;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.input:focus {
+  border-color: #2575fc;
+}
+
+/* Floating label effect */
+label span {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 0.85rem;
+  color: #999;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.input:focus + span,
+.input:not(:placeholder-shown) + span {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #2575fc;
+  background: #fff;
+  padding: 0 4px;
+}
+
+/* Error messages */
+small {
+  color: red;
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Button */
+.submit {
+  width: 100%;
+  background: #fc6d25;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit:hover {
+  background: #cb5211;
+}
+
+/* Signin link */
+.signin {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.signin a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+.signin a:hover {
+  text-decoration: underline;
+}
+
+/* Flex for first & last name */
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+.flex label {
+  flex: 1;
+}

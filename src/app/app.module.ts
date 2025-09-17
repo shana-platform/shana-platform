@@ -50,7 +50,7 @@ import { FifthWeekLevel4Component } from './pages/fifth-week-welcome/fifth-week-
 import { FifthWeekLevel5Component } from './pages/fifth-week-welcome/fifth-week-level5/fifth-week-level5.component';
 import { FifthWeekLevel6Component } from './pages/fifth-week-welcome/fifth-week-level6/fifth-week-level6.component';
 import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-level7/fifth-week-level7.component';
-import { SignupComponent } from './pages/core/signup/signup.component';
+import { CoreModule } from './pages/core/core.module';
 
 @NgModule({
   declarations: [
@@ -107,7 +107,8 @@ import { SignupComponent } from './pages/core/signup/signup.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

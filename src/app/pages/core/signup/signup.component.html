@@ -1,1 +1,57 @@
-<p>signup works!</p>
+<div class="signup-container">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form">
+    <p class="title">Register</p>
+    <p class="message">Signup now and get full access to our app.</p>
+
+    <div class="flex">
+      <label>
+        <input formControlName="firstname" type="text" class="input" required />
+        <span>Firstname</span>
+        <small *ngIf="submitted && f['firstname'].errors?.['required']">
+          Firstname is required
+        </small>
+      </label>
+
+      <label>
+        <input formControlName="lastname" type="text" class="input" required />
+        <span>Lastname</span>
+        <small *ngIf="submitted && f['lastname'].errors?.['required']">
+          Lastname is required
+        </small>
+      </label>
+    </div>
+
+    <label>
+      <input formControlName="email" type="email" class="input" required />
+      <span>Email</span>
+      <small *ngIf="submitted && f['email'].errors?.['required']">Email is required</small>
+      <small *ngIf="submitted && f['email'].errors?.['email']">Enter a valid email</small>
+    </label>
+
+    <label>
+      <input formControlName="password" type="password" class="input" required />
+      <span>Password</span>
+      <small *ngIf="submitted && f['password'].errors?.['required']">Password is required</small>
+      <small *ngIf="submitted && f['password'].errors?.['minlength']">
+        Minimum 6 characters
+      </small>
+    </label>
+
+    <label>
+      <input formControlName="confirmPassword" type="password" class="input" required />
+      <span>Confirm password</span>
+      <small *ngIf="submitted && f['confirmPassword'].errors?.['required']">
+        Confirmation is required
+      </small>
+      <small *ngIf="submitted && signupForm.errors?.['passwordMismatch']">
+        Passwords do not match
+      </small>
+    </label>
+
+    <button type="submit" class="submit">Submit</button>
+    <p class="signin">
+      Already have an account?
+      <a routerLink="/login">Sign In</a>
+    </p>
+  </form>
+</div>
