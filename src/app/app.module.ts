@@ -51,6 +51,8 @@ import { FifthWeekLevel5Component } from './pages/fifth-week-welcome/fifth-week-
 import { FifthWeekLevel6Component } from './pages/fifth-week-welcome/fifth-week-level6/fifth-week-level6.component';
 import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-level7/fifth-week-level7.component';
 import { CoreModule } from './pages/core/core.module';
+import { WeeklyviewComponent } from './pages/components/weeklyview/weeklyview.component';
+import { DynamiclessonComponent } from './pages/components/dynamiclesson/dynamiclesson.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +103,9 @@ import { CoreModule } from './pages/core/core.module';
     FifthWeekLevel4Component,
     FifthWeekLevel5Component,
     FifthWeekLevel6Component,
-    FifthWeekLevel7Component
+    FifthWeekLevel7Component,
+    WeeklyviewComponent,
+    DynamiclessonComponent
   ],
   imports: [
     BrowserModule,
