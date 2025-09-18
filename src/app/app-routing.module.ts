@@ -46,6 +46,7 @@ import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week
 import { SignupComponent } from './pages/core/signup/signup.component';
 import { ForgotPasswordComponent } from './pages/core/forgot-password/forgot-password.component';
 import { ResetpasswordComponent } from './pages/core/resetpassword/resetpassword.component';
+import { WeeklydetailsComponent } from './pages/users/simplepath/weeklydetails/weeklydetails.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -59,6 +60,9 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'games', component: GamesPageComponent },
+      { path: 'user', loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule)},
+      { path: 'trainer', loadChildren: () => import('./pages/trainers/trainers.module').then(m => m.TrainersModule)},
+
       { path: 'home', component: HomeComponent },
       { path: 'first-week', component: FirstWeekWelcomeComponent },
       { path: 'first-week-level1', component: FirstWeekLevel1Component },
