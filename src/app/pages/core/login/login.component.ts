@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   role="student"
 
-  constructor(private router: Router, private fb: FormBuilder) {
+  constructor(private router: Router, private fb: FormBuilder,private http:HttpService) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
@@ -22,7 +23,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() { }
 
   login() {
-    this.router.navigate(['/dashboard']);
+    if(this.role == 'student'){
+      this.router.navigate(['/user']);
+      this.http.localData('role','user','set')
+
+    }else{
+      this.http.localData('role','trainer','set')
+      this.router.navigate(['/trainer']);
+    }
   }
 
   selectRole(role:string){
