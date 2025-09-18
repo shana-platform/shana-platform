@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -28,4 +28,8 @@ export class LoginComponent implements OnInit {
   selectRole(role:string){
     this.role = role
   }
+
+    get f(): { [key: string]: AbstractControl } {
+      return this.loginForm.controls;
+    }
 }

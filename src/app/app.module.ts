@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
 import { LayoutComponent } from './layout/layout.component';
-import { LoginComponent } from './pages/core/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -59,7 +58,6 @@ import { DynamiclessonComponent } from './pages/components/dynamiclesson/dynamic
     AppComponent,
     PagesComponent,
     LayoutComponent,
-    LoginComponent,
     DashboardComponent,
     HomeComponent,
     NavbarComponent,

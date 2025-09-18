@@ -1,56 +1,82 @@
-<div class="full-login-page">
-    <div class="left-pane">
-      <div class="login-box">
+<div class="container-fluid  vh-100 d-flex">
+  <div class="row flex-grow-1 w-100">
+    <!-- Left Pane (Login Form) -->
+    <div class="col-md-5 col-sm-6 d-flex align-items-center justify-content-center bg-light">
+      <div class="p-4 w-100" style="max-width: 470px;">
+      <div class="formcard shadow-lg  rounded-4 p-4 bg-white bg-opacity-75">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
-          <h6 class="gradient-text text-center"> Welcome To  </h6>
-           <h2 class="mb-4   fs-3 text-center">✨ <span class="gradient-text"><strong>Shana LifeSkills Center</strong></span> ✨</h2>
-            <div class="text-center my-3">
-            <img src="assets/shana.png" alt="University Logo" class="img-fluid" style="height: 90px;">
+          <h6 class="gradient-text text-center mt-4" style="font-size: 0.8rem;font-weight: 400;">Welcome To</h6>
+          <h4 class="text-center text-wrap mb-3" style="font-weight: 800;">
+            ✨<span class="gradient-text fw-light">Shana LifeSkills Center</span>✨
+          </h4>
+          <div class="text-center">
+            <!-- <img src="assets/shana.png" alt="University Logo" class="img-fluid" style="height: 90px;"> -->
           </div>
-           <h5 class="text-center fw-light">
-            Log In As
-           </h5>
-            <div class="btn-group w-100 mb-5" role="group" style="border-radius: 40px;">
-              <!-- btn-special -->
-            <button type="button" class="btn btn-outline-dark border-1 " [ngClass]="{'btn-special':role === 'student'}"
+          <!-- Role Selector -->
+          <div class="mb-3">
+        <p class="text-center mb-0 mt-5 pt-5 fw-light"><small style="font-size: 0.7rem;">Log In As</small></p>
+        <div class="btn-group w-100  mb-4 " role="group" style="border-radius: 50px;" ngbTooltip="Click to select role">
+          <button type="button"
+                  class="btn btn-sm "
+                  [ngClass]="{'btn-special text-light': role === 'student','btn-light text-muted shadow':role != 'student'}"
+                  (click)="selectRole('student')"> <small>Student </small> </button>
+          <button type="button"
+                  class="btn btn-sm  "
+                  [ngClass]="{'btn-special text-light': role === 'trainer','btn-light text-muted shadow':role != 'trainer'}"
+                  (click)="selectRole('trainer')"><small> Trainer</small> </button>
+        </div>
+          </div>
+          <div>
+              <label>
+              <!--  placeholder="student@shana.edu". required -->
+              <input formControlName="email" type="email" class="inputtype"   />
+              <span>Email</span>
+              <small  class="text-danger mt-0"  style="font-size: 0.5em;" *ngIf="f['email'].errors?.['required'] && f['email'].touched && f['email'].dirty && f['email'].invalid">Email is required</small>
+              <small  class="text-danger mt-0"  style="font-size: 0.5em;" *ngIf="f['email'].errors?.['email'] && f['email'].touched && f['email'].dirty && f['email'].invalid">Enter a valid email</small>
+            </label>
 
-                    (click)="selectRole('student')">Student</button>
-            <button type="button" class="btn btn-outline-secondary border-1 "
-                    [ngClass]="{'btn-special':role === 'trainer'}"
-                    (click)="selectRole('trainer')">Trainer</button>
-          </div>
-          <div class="mt-1">
-          <label class="mb-0"> <small>  Email Address </small></label>
-          <div class="input-group">
-            <input type="email" formControlName="email" placeholder="student@shana.edu" />
-          </div>
-            <br>
-          <label><small> Password </small> </label>
-          <div class="input-group">
-            <input type="password" formControlName="password" placeholder="Enter your password" />
+            <label class="mb-3">
+              <input formControlName="password" type="password" class="inputtype"  />
+              <span>Password</span>
+              <small class="text-danger mt-0" style="font-size: 0.5em;" *ngIf="f['password'].errors?.['required'] && f['password'].touched && f['password'].dirty && f['password'].invalid">Password is required</small>
+              <small  class="text-danger mt-0"  *ngIf="f['password'].errors?.['minlength'] && f['password'].touched && f['password'].dirty && f['password'].invalid">
+                Minimum 6 characters
+              </small>
+            </label>
           </div>
 
-          <div class="options">
-            <label><input type="checkbox" /> Remember me</label>
-            <a routerLink="/forgotpassword">Forgot password?</a>
-          </div>
+          <!-- Options -->
+          <div class="d-flex align-items-center justify-content-between ">
+            <div class="form-check ">
+              <input type="checkbox" class="form-check-input" id="remember">
+              <label class="form-check-label" for="remember"> <small>Remember me </small> </label>
+            </div>
+            <label>
+              <a [routerLink]="'/forgotpassword'" style="text-decoration: none;font-size:0.81rem">Forgot password?</a>
+            </label>
 
-          <button type="submit" class="btn-primary">
-            Sign In  <i class="fa fa-arrow-right ms-2"></i>
+          </div>
+          <!-- [disabled]="loginForm.invalid" -->
+          <button type="submit" class="btn btn-primary w-100 mt-3 mb-3" >
+             Sign In <i class="fa fa-arrow-right ms-2"></i>
           </button>
-          </div>
 
-          <div class="footer-text">
-            New student? <a routerLink="/signUp">Create an account</a>
+          <!-- Footer Links -->
+          <div class="text-center my-4">
+            <small>New Student? <a routerLink="/signUp" style="text-decoration: none;font-size:0.99em">Create an account</a></small>
           </div>
         </form>
+      </div>
 
-        <footer>© 2025 ShanaPortal. All rights reserved.</footer>
+        <footer class="text-center mt-5 small text-muted">
+          © 2025 <strong> ShanaPortal. </strong> All rights reserved.
+        </footer>
       </div>
     </div>
 
-    <!-- Right pane: Hero image or branding -->
-    <div class="right-pane">
-      <img style="height: 597px; width: 800px;" src="assets/hero-strengths.jpg" alt="Learning Illustration" />
+    <!-- Right Pane (Illustration / Hero Image) -->
+    <div class="col-md-7 d-none d-md-flex align-items-center justify-content-center bg-white">
+      <img src="assets/hero-strengths.jpg" alt="Learning Illustration" class="img-fluid" >
     </div>
   </div>
+</div>

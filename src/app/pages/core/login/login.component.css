@@ -1,87 +1,3 @@
-.full-login-page {
-    display: flex;
-    height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-    .gradient-text {
-    background: linear-gradient(to right, #9b5de5, #f15bb5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .left-pane {
-    width: 50%;
-    padding: 60px 40px;
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-  }
-
-  .right-pane {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .right-pane img {
-    /* max-width: 90%; */
-    /* height: 90%; */
-  }
-
-  .login-box {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .logo {
-    width: 60px;
-    height: auto;
-  }
-
-  .brand {
-    color: #ff8f2e;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    color: #888;
-  }
-
-  h2 {
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
-
-  .form-subtitle {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #555;
-  }
-
-  .input-group {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-
-  input[type="email"],
-  input[type="password"] {
-    border: none;
-    outline: none;
-    width: 100%;
-  }
 
   .options {
     display: flex;
@@ -91,11 +7,47 @@
     margin-bottom: 20px;
   }
 
-  .btn-primary {
+.btn.active {
+  background-color: #0d9488 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #9b5de5, #f15bb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.formcard {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+
+  border-radius: 12px;
+  padding: 2px;
+  /* background: linear-gradient(45deg, #9b5de5, #f15bb5); */
+}
+
+/* formcard */
+.formcard::before {
+  z-index: -99;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #9b5de5, #f15bb5);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.btn-primary {
     background-color: #116997;
     color: #fff;
     border: none;
-    padding: 12px;
+    padding: 10px;
     border-radius: 6px;
     width: 100%;
     cursor: pointer;
@@ -106,28 +58,44 @@
     background-color: #0e577d;
   }
 
-  .footer-text {
-    font-size: 13px;
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .footer-text a {
-    color: #5bb6e5;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 30px;
-  }
-
-  
-.btn.active {
-  background-color: #0d9488 !important;
-  color: white !important;
-  border: none !important;
+label {
+  position: relative;
+  display: block;
+  margin-bottom: 1.2rem;
 }
+
+.inputtype {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.inputtype:focus {
+  border-color: #2575fc;
+}
+
+/* Floating label effect */
+label span {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 0.85rem;
+  color: #999;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.inputtype:focus + span,
+.inputtype:not(:placeholder-shown) + span {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #2575fc;
+  background: #fff;
+  padding: 0 4px;
+}
+

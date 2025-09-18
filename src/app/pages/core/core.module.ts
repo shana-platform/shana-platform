@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
+import { LoginComponent } from './login/login.component';
 
 
 
 @NgModule({
   declarations: [
     ForgotPasswordComponent,
+    LoginComponent,
     SignupComponent,
     ResetpasswordComponent,
     TermsandconditionComponent
