@@ -1,8 +1,8 @@
 <div class="dashboard-container">
   <!-- Greeting -->
-  <h1 class="greeting">Hi there, Jane! 🎉</h1>
+  <h1 class="greeting">Hi there, {{isUser? 'Jane!':'Trainer Joe'}}  🎉</h1>
   <p class="subtitle">
-    You're doing amazing! Let's see all the cool things you've learned! 🏄‍♂️
+    {{greeeting}},  You're doing amazing! Let's see all the cool things you've learned! 🏄‍♂️
   </p>
 
   <!-- Stats Section -->
@@ -44,10 +44,33 @@
       </div>
     </div>
   </div>
-
   <!-- Adventures Section -->
   <h2 class="section-title">Your Super Cool Adventures!</h2>
-  <div class="adventures">
+<div class="row">
+  <div class="col-sm-12 col-md-6 col-lg-6 mb-4" *ngFor="let set of weeklyContent;let i = index">
+    <div class="card border-0 shadow-sm card-hover rounded-4 clickable" [routerLink]="['/user/simple/weekly',set.id]">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-4  p-2">
+          <div class="fs-3 bg">
+            <span>{{set.config.icon}} </span>
+          </div>
+          <div class="info">
+            <h5 class="fw-light">{{set.kind}}: {{set.name}} </h5>
+            <p class="text-info">Week {{i + 1}} of {{weeklyContent.length}}</p>
+
+
+          </div>
+        </div>
+         <div class="progress">
+              <div class="progress-bar" [style.width.%]="set.config.progressPercentage"></div>
+            </div>
+        <span class="progress-label">{{set.config.progressPercentage}}%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="adventures d-none ">
     <div routerLink="/first-week" class="adventure-card">
       <div class="info">
         <h3>AWARENESS: “What Makes Me Unique?”</h3>
@@ -65,7 +88,7 @@
         <p>Week 2 of 5</p>
       </div>
       <div class="progress">
-        <div class="progress-bar" style="width: 15%"></div>
+        <div class="progress-bar" style="width: 45%"></div>
       </div>
       <span class="progress-label">15%</span>
     </div>
