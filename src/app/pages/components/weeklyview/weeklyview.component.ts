@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-weeklyview',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeeklyviewComponent implements OnInit {
 
+  @Input() data:any;
+  @Input() config:any;
+
+  weekInformation:any;
+  weekConfiguration:any;
   constructor() { }
 
+
   ngOnInit(): void {
+
   }
 
 }
