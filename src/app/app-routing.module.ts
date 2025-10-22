@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { ConfidenceModuleComponent } from './pages/confidence-module/confidence-module.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
@@ -26,7 +27,9 @@ import { FourthWeekLevel7Component } from './pages/fourth-week-welcome/fourth-we
 import { FourthWeekWelcomeComponent } from './pages/fourth-week-welcome/fourth-week-welcome.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { HomeComponent } from './pages/home/home.component';
+import { IdentityModuleComponent } from './pages/identity-module/identity-module.component';
 import { LoginComponent } from './pages/login/login.component';
+import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
 import { SecondWeekLevel2Component } from './pages/second-week-welcome/second-week-level2/second-week-level2.component';
 import { SecondWeekLevel3Component } from './pages/second-week-welcome/second-week-level3/second-week-level3.component';
@@ -91,7 +94,11 @@ const routes: Routes = [
       { path: 'fifth-week-level4', component: FifthWeekLevel4Component },
       { path: 'fifth-week-level5', component: FifthWeekLevel5Component },
       { path: 'fifth-week-level6', component: FifthWeekLevel6Component },
-      { path: 'fifth-week-level7', component: FifthWeekLevel7Component }
+      { path: 'fifth-week-level7', component: FifthWeekLevel7Component },
+      { path: 'identity-module', component: IdentityModuleComponent },
+      { path: 'planning-module', component: PlanningModuleComponent },
+      { path: 'confidence-module', component: ConfidenceModuleComponent },
+      // { path: 'confidence-module-week1', component: ConfidenceModuleWeek1Component }
     ]
   }
 ];

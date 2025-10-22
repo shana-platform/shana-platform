@@ -50,6 +50,9 @@ import { FifthWeekLevel4Component } from './pages/fifth-week-welcome/fifth-week-
 import { FifthWeekLevel5Component } from './pages/fifth-week-welcome/fifth-week-level5/fifth-week-level5.component';
 import { FifthWeekLevel6Component } from './pages/fifth-week-welcome/fifth-week-level6/fifth-week-level6.component';
 import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-level7/fifth-week-level7.component';
+import { ConfidenceModuleComponent } from './pages/confidence-module/confidence-module.component';
+import { IdentityModuleComponent } from './pages/identity-module/identity-module.component';
+import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +103,10 @@ import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-
     FifthWeekLevel4Component,
     FifthWeekLevel5Component,
     FifthWeekLevel6Component,
-    FifthWeekLevel7Component
+    FifthWeekLevel7Component,
+    ConfidenceModuleComponent,
+    IdentityModuleComponent,
+    PlanningModuleComponent
   ],
   imports: [
     BrowserModule,

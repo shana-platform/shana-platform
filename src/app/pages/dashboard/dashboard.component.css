@@ -90,6 +90,9 @@
 .stat-icon.game {
   background: #f97316;
 }
+.stat-icon.book {
+  background: #ffb7ce;
+}
 
 /* Adventures */
 .section-title {
@@ -153,4 +156,64 @@
   font-size: 0.7rem;
   font-weight: 600;
   color: #2D82B7;
+}
+.modules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background-color: #faf9f6;
+}
+
+.module-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Warm & Subtle Theme Colors */
+.identity,
+.confidence,
+.planning {
+  background: linear-gradient(135deg, #C0D6DF, #96b0b7);
+}
+
+.integrity,
+.respect,
+.empathy {
+  background: linear-gradient(135deg, #e7d8f6, #f4e1f1);
+}
+
+.speaking,
+.listening,
+.expression {
+  background: linear-gradient(135deg, #d8f3dc, #f0fdf4);
 }
