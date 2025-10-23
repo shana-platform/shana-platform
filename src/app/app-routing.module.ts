@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { ConfidenceModuleComponent } from './pages/confidence-module/confidence-module.component';
+import { ConfidenceWeek1L1Component } from './pages/confidence-module/confidence-week1-l1/confidence-week1-l1.component';
+import { ConfidenceWeek1L2Component } from './pages/confidence-module/confidence-week1-l2/confidence-week1-l2.component';
+import { ConfidenceWeek1L3Component } from './pages/confidence-module/confidence-week1-l3/confidence-week1-l3.component';
+import { ConfidenceWeek1L4Component } from './pages/confidence-module/confidence-week1-l4/confidence-week1-l4.component';
+import { ConfidenceWeek1Component } from './pages/confidence-module/confidence-week1/confidence-week1.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
@@ -98,7 +103,11 @@ const routes: Routes = [
       { path: 'identity-module', component: IdentityModuleComponent },
       { path: 'planning-module', component: PlanningModuleComponent },
       { path: 'confidence-module', component: ConfidenceModuleComponent },
-      // { path: 'confidence-module-week1', component: ConfidenceModuleWeek1Component }
+      { path: 'confidence-week1', component: ConfidenceWeek1Component },
+      { path: 'confidence-week1-l1', component: ConfidenceWeek1L1Component },
+      { path: 'confidence-week1-l2', component: ConfidenceWeek1L2Component },
+      { path: 'confidence-week1-l3', component: ConfidenceWeek1L3Component },
+      { path: 'confidence-week1-l4', component: ConfidenceWeek1L4Component }
     ]
   }
 ];

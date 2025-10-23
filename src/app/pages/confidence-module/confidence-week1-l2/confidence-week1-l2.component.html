@@ -1,0 +1,66 @@
+<div class="story-container">
+    <!-- Header -->
+    <header class="story-header">
+      <h1>📖 Stand Tall, Molly Lou Melon</h1>
+      <p class="author">by Patty Lovell</p>
+    </header>
+  
+    <!-- Tabs -->
+    <nav class="story-tabs">
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'video'" 
+        (click)="setActiveTab('video')">
+        📹 Video
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'discussion'" 
+        (click)="setActiveTab('discussion')">
+        💬 Discussion
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'activity'" 
+        (click)="setActiveTab('activity')">
+        🎨 Activity
+      </button>
+    </nav>
+  
+    <!-- Story Summary Section -->
+    <section class="summary-card" *ngIf="activeTab === 'video'">
+      <h2>Story Summary</h2>
+      <p class="subtitle">For learners</p>
+      <p class="summary">
+        Molly Lou Melon is small and different, and sometimes people make fun of her. 
+        But she remembers her grandmother’s advice to 
+        <strong>stand tall</strong>, <strong>smile big</strong>, and <strong>believe in herself</strong>. 
+        Because of that, she turns her differences into her strengths.
+      </p>
+    </section>
+  
+    <!-- Discussion Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'discussion'">
+        <app-week1-l2-dicussion-tab></app-week1-l2-dicussion-tab>
+      <!-- <h2>Discussion Questions</h2>
+      <ul>
+        <li>How did Molly Lou Melon show confidence?</li>
+        <li>What advice did her grandmother give her?</li>
+        <li>Have you ever turned something you didn’t like about yourself into a strength?</li>
+      </ul> -->
+    </section>
+  
+    <!-- Activity Tab -->
+    <section class="activity-card" *ngIf="activeTab === 'activity'">
+      <h2>Try This!</h2>
+      <p>Draw or write about something that makes you unique. How can you use it as a strength?</p>
+      <button class="activity-btn">Submit Your Reflection</button>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="story-footer">
+      <p>Stand tall and believe in yourself! 💙</p>
+      <button routerLink="/confidence-week1-l3" class="save-btn">Next Lesson </button>
+    </footer>
+  </div>
+  

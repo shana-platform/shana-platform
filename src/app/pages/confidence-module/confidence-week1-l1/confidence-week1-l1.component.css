@@ -1,0 +1,187 @@
+ /* Mirror Talk Section */
+ .mirror-talk {
+    background: linear-gradient(180deg, #f6f9ff 0%, #c6d5f5 100%);
+    text-align: center;
+    padding: 60px 10%;
+  }
+  
+  .mirror-talk .tag {
+    background-color: #e0e7ff;
+    color: #6c63ff;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .mirror-talk h2 {
+    font-size: 1.8rem;
+    color: #1b3d92;
+    margin-bottom: 8px;
+  }
+  
+  .mirror-talk p {
+    color: #5c6b80;
+  }
+  
+  /* Reminder */
+  .reminder {
+    margin-top: 40px;
+    color: #1e60d3;
+  }
+  
+  .reminder i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff7a7a;
+  }
+  
+  .reminder span {
+    color: #50667a;
+    font-size: 0.95rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      margin-top: 20px;
+    }
+  
+    .objective-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .shine-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem auto;
+    max-width: 600px;
+  }
+  
+  .shine-card {
+    background: #f9fbff;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shine-icon-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .shine-icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+  
+  .shine-icon {
+    font-size: 2rem;
+  }
+  
+  .shine-text {
+    color: #3b82f6;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+  
+  .shine-input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .shine-input {
+    flex: 1;
+    max-width: 350px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e0e7ff;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .shine-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
+  
+  .shine-add-btn {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .shine-add-btn:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  }
+  
+  .shine-example {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .shine-example-label {
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .shine-example-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .shine-example-btn {
+    border: none;
+    background: #f3f4f6;
+    color: #2563eb;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .shine-example-btn:hover {
+    background: #e0e7ff;
+  }
+
+  .save-btn {
+    background: linear-gradient(to right, #4c8ef7, #4c8ef7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  

@@ -1,0 +1,31 @@
+<div class="discussion-card">
+    <h2>Discussion Prompts</h2>
+    <p class="subtitle">Think and share your thoughts</p>
+  
+    <div class="discussion-item" *ngFor="let prompt of discussionPrompts; let i = index">
+      <div class="question">
+        <span class="number">{{ i + 1 }}</span>
+        <span class="text">{{ prompt.question }}</span>
+      </div>
+  
+      <div class="others" *ngIf="prompt.answers && prompt.answers.length">
+        <p class="see-others">→ See what others said:</p>
+  
+        <!-- Simple answers -->
+        <div class="answers" *ngIf="!prompt.answersBy">
+          <span class="answer" *ngFor="let answer of prompt.answers">
+            "{{ answer }}"
+          </span>
+        </div>
+  
+        <!-- Answers with names -->
+        <div class="answers-by" *ngIf="prompt.answersBy">
+            <div *ngFor="let by of prompt.answersBy" class="answer-by">
+              <p class="by-name">→ {{ by.name }} said:</p>
+              <p class="by-text">"{{ by.text }}"</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

@@ -53,6 +53,13 @@ import { FifthWeekLevel7Component } from './pages/fifth-week-welcome/fifth-week-
 import { ConfidenceModuleComponent } from './pages/confidence-module/confidence-module.component';
 import { IdentityModuleComponent } from './pages/identity-module/identity-module.component';
 import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
+import { ConfidenceWeek1Component } from './pages/confidence-module/confidence-week1/confidence-week1.component';
+import { ConfidenceWeek1L1Component } from './pages/confidence-module/confidence-week1-l1/confidence-week1-l1.component';
+import { ConfidenceWeek1L2Component } from './pages/confidence-module/confidence-week1-l2/confidence-week1-l2.component';
+import { ConfidenceWeek1L3Component } from './pages/confidence-module/confidence-week1-l3/confidence-week1-l3.component';
+import { ConfidenceWeek1L4Component } from './pages/confidence-module/confidence-week1-l4/confidence-week1-l4.component';
+import { Week1L3DicussionTabComponent } from './pages/confidence-module/confidence-week1-l3/week1-l3-dicussion-tab/week1-l3-dicussion-tab.component';
+import { Week1L2DicussionTabComponent } from './pages/confidence-module/confidence-week1-l2/week1-l2-dicussion-tab/week1-l2-dicussion-tab.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +113,14 @@ import { PlanningModuleComponent } from './pages/planning-module/planning-module
     FifthWeekLevel7Component,
     ConfidenceModuleComponent,
     IdentityModuleComponent,
-    PlanningModuleComponent
+    PlanningModuleComponent,
+    ConfidenceWeek1Component,
+    ConfidenceWeek1L1Component,
+    ConfidenceWeek1L2Component,
+    ConfidenceWeek1L3Component,
+    ConfidenceWeek1L4Component,
+    Week1L3DicussionTabComponent,
+    Week1L2DicussionTabComponent
   ],
   imports: [
     BrowserModule,

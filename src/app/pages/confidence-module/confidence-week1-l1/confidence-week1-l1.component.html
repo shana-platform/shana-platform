@@ -1,0 +1,43 @@
+ <!-- Mirror Talk Section -->
+ <section class="mirror-talk">
+    <div class="tag">💬 Warm-Up Game</div>
+    <h2>Mirror Talk</h2>
+    <p>
+      Look into your imaginary mirror and say one thing you like about yourself
+    </p>
+
+    <div class="shine-card-container">
+        <div class="shine-card shadow">
+          <div class="shine-icon-section">
+            <div class="shine-icon-circle">
+              <span class="shine-icon">✨</span>
+            </div>
+            <p class="shine-text">Your turn to shine!</p>
+          </div>
+      
+          <div class="shine-input-section">
+            <input
+              type="text"
+              class="shine-input"
+              placeholder="I like my..."
+              [(ngModel)]="shineText"
+            />
+            <button class="shine-add-btn" (click)="addShine()">Add</button>
+          </div>
+        </div>
+      
+        <div class="shine-example">
+          <p class="shine-example-label">Example:</p>
+          <div class="shine-example-buttons">
+            <button class="shine-example-btn">"I like my smile"</button>
+            <button class="shine-example-btn">"I'm good at drawing"</button>
+          </div>
+        </div>
+      </div>
+    <div class="reminder">
+      <p><strong>Remember:</strong> You are amazing just as you are!</p>
+      <span>Keep practicing positive self-talk every day</span>
+    </div>
+    <br>
+    <button routerLink="/confidence-week1-l2" class="save-btn">Continue Your Journey</button>
+  </section>
