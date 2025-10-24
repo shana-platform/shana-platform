@@ -1,0 +1,30 @@
+<main class="main-content" >
+    <div class="video-section">
+      When faced with a big challenge where potential failure seems to lurk at every corner, you’ve probably heard the advice, “Be more confident!” But where does confidence come from, and how can you get more of it? Here are three easy tips to boost your confidence.
+
+      <p>Lesson by TED-Ed, animation by Kozmonot Animation Studio.</p>
+      <div class="video-wrapper" *ngIf="!videoPlaying" (click)="playVideo()">
+        <div class="play-icon">
+          ▶
+        </div>
+        <p class="play-text">Click to play video</p>
+      </div>
+    
+      <video
+        #videoPlayer
+        *ngIf="videoPlaying"
+        class="actual-video"
+        controls
+        (ended)="videoPlaying = false">
+        <source src="https://drive.google.com/uc?export=download&id=1jcgfwMLtBTABu7MGTqJZEWGs7ikcIX9a" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+    
+      <div class="video-footer">
+        <div class="duration">
+          🔊 Duration: 4-5 minutes
+          <p> <a href="https://youtu.be/l_NYrWqUR40?si=FPX8gvS7IJU5HpNY&utm_source=chatgpt.com">Click here</a> to watch video on youtube(to play with subtitles)</p>
+        </div>
+      </div>
+    </div>
+  </main>

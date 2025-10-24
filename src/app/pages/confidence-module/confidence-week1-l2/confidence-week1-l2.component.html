@@ -1,11 +1,8 @@
 <div class="story-container">
-    <!-- Header -->
     <header class="story-header">
       <h1>📖 Stand Tall, Molly Lou Melon</h1>
       <p class="author">by Patty Lovell</p>
     </header>
-  
-    <!-- Tabs -->
     <nav class="story-tabs">
       <button 
         class="tab" 
@@ -42,25 +39,29 @@
     <!-- Discussion Tab -->
     <section class="discussion-card" *ngIf="activeTab === 'discussion'">
         <app-week1-l2-dicussion-tab></app-week1-l2-dicussion-tab>
-      <!-- <h2>Discussion Questions</h2>
-      <ul>
-        <li>How did Molly Lou Melon show confidence?</li>
-        <li>What advice did her grandmother give her?</li>
-        <li>Have you ever turned something you didn’t like about yourself into a strength?</li>
-      </ul> -->
     </section>
   
     <!-- Activity Tab -->
     <section class="activity-card" *ngIf="activeTab === 'activity'">
-      <h2>Try This!</h2>
-      <p>Draw or write about something that makes you unique. How can you use it as a strength?</p>
-      <button class="activity-btn">Submit Your Reflection</button>
-    </section>
+      <h2><i class="fas fa-lightbulb"></i> Stand Tall Poster</h2>
+      <p class="subtitle">Create your own confidence poster</p>
   
-    <!-- Footer -->
-    <footer class="story-footer">
-      <p>Stand tall and believe in yourself! 💙</p>
+      <div class="instructions">
+        <h3>Activity Instructions:</h3>
+        <ol>
+          <li>Draw a picture of yourself "standing tall"</li>
+          <li>Write one thing you love about yourself in a speech bubble</li>
+          <li>Share your poster with the class!</li>
+        </ol>
+      </div>
+  
+      <p class="trainer-note">
+        <strong>For Trainers:</strong> Showcase a few posters at the end of class to celebrate everyone’s uniqueness!
+      </p>
+      
+      <button class="activity-btn">Submit Your Reflection</button>
+      &nbsp;
       <button routerLink="/confidence-week1-l3" class="save-btn">Next Lesson </button>
-    </footer>
+    </section>
   </div>
   

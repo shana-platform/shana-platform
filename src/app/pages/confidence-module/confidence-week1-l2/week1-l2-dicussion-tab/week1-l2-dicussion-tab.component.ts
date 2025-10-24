@@ -1,10 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+interface DiscussionAnswer {
+  name?: string;
+  comment?: string;
+  text?: string;
+}
+
 interface DiscussionPrompt {
   id: number;
   question: string;
-  answers: string[];
-  answersBy?: { name: string; text: string }[];
+  userAnswer?: string;
+  submitted?: boolean | any;
+  others: DiscussionAnswer[];
 }
 
 @Component({
@@ -18,26 +25,38 @@ export class Week1L2DicussionTabComponent implements OnInit {
     {
       id: 1,
       question: 'What makes Molly Lou Melon different?',
-      answers: ['Her voice was funny.', 'She was short.', 'Her teeth were big.']
+      others: [
+        { text: 'Her voice was funny.' },
+        { text: 'She was short.' },
+        { text: 'Her teeth were big.' }
+      ]
     },
     {
       id: 2,
-      question: 'How did Molly Lou stay confident even when people laughed at her?',
-      answersBy: [
-        { name: 'Kwame', text: "She remembered her grandma's words." },
-        { name: 'Ama', text: "She didn't listen to the mean kids." }
-      ],
-      answers: []
+      question: 'How did Molly Lou stay confident even when people laughed at her?”',
+      others: [
+        { name: 'Kwame', comment: 'She remembered her grandma’s words.' },
+        { name: 'Ama', comment: 'She didn’t listen to the mean kids.' }
+      ]
     },
     {
       id: 3,
       question: 'What is something special about YOU that you like?',
-      answers: ['I run very fast.', 'I like making my friends laugh.']
+      others: [
+        { text: 'I run very fast.' },
+        { text: 'I like making my friends laugh.' }
+      ]
     }
   ];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  submitAnswer(prompt: any) {
+    if (prompt.userAnswer.trim()) {
+      prompt.submitted = true;
+    }
+  }
 }

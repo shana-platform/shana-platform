@@ -1,0 +1,77 @@
+.movie-intro {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+  }
+  
+  .movie-description {
+    max-width: 1200px;
+    margin: 1rem auto 2rem;
+    line-height: 1.6;
+    color: #000;
+  }
+
+  .play-icon {
+    font-size: 4rem;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+  
+  .play-text {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .note {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .actual-video {
+    width: 100%;
+    border-radius: 16px;
+    background-color: rgb(94, 94, 94);
+  }
+  
+  .video-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .duration {
+    font-size: 0.95rem;
+    color: white;
+  }
+
+  .main-content {
+    margin-top: 2.5rem;
+  }
+
+  .video-section {
+    background: #b1aa93;
+    padding: 2rem;
+    border-radius: 20px;
+    color: white;
+    max-width: 1200px;
+    position: relative;
+  }
+  
+  .video-wrapper {
+    background: rgb(88, 87, 87);
+    padding: 8rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    min-height: 400px;
+  }
+
+  .theme-note {
+    margin-top: 1rem;
+    color: white;
+    font-weight: bold;
+  }

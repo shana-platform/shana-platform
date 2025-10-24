@@ -1,1 +1,67 @@
-<p>confidence-week1-l3 works!</p>
+<div class="challenge-container">
+    <!-- Challenge Badge -->
+    <div class="challenge-badge">
+      <i class="fas fa-star"></i> Challenge of the Week
+    </div>
+  
+    <!-- Main Title & Description -->
+    <div class="challenge-header">
+      <div class="text-section">
+        <h1>Stand Tall Challenge</h1>
+        <p>
+          Every day, look into a real mirror and say one positive thing about yourself.
+        </p>
+        <div class="parent-note">
+          <i class="fas fa-heart"></i>
+          Parents can help check this off at home
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="assets/hero-mirror.jpg" alt="Mirror" />
+      </div>
+    </div>
+  
+    <!-- Cards Section -->
+    <div class="cards-section">
+      <div class="card blue">
+        <div class="card-icon"><i class="fas fa-sparkles"></i></div>
+        <h3>Confidence</h3>
+        <p>"I believe in myself, even when things are hard."</p>
+      </div>
+  
+      <div class="card yellow">
+        <div class="card-icon"><i class="fas fa-calendar"></i></div>
+        <h3>Planning</h3>
+        <p>"I can practice saying good things about myself every day to grow stronger."</p>
+      </div>
+    </div>
+  
+    <!-- Closing Section -->
+    <div class="closing-section">
+      <div class="closing-icon"><i class="fas fa-heart"></i></div>
+      <h2>You Are Amazing!</h2>
+      <p>
+        Remember, every positive word you say to yourself helps you grow stronger and more confident.
+        Keep standing tall and believing in yourself!
+      </p>
+      <br>
+      <button (click)="openModal()" class="save-btn">Complete Lesson</button>
+    </div>
+  </div>
+  
+<!-- Modal -->
+<div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Lesson 1</strong></p>
+        <p class="modal-note">Complete more lesson to earn more trophies and level up!</p>
+        <div class="modal-actions">
+        <button routerLink="/confidence-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+    </div>

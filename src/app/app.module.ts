@@ -57,9 +57,13 @@ import { ConfidenceWeek1Component } from './pages/confidence-module/confidence-w
 import { ConfidenceWeek1L1Component } from './pages/confidence-module/confidence-week1-l1/confidence-week1-l1.component';
 import { ConfidenceWeek1L2Component } from './pages/confidence-module/confidence-week1-l2/confidence-week1-l2.component';
 import { ConfidenceWeek1L3Component } from './pages/confidence-module/confidence-week1-l3/confidence-week1-l3.component';
-import { ConfidenceWeek1L4Component } from './pages/confidence-module/confidence-week1-l4/confidence-week1-l4.component';
-import { Week1L3DicussionTabComponent } from './pages/confidence-module/confidence-week1-l3/week1-l3-dicussion-tab/week1-l3-dicussion-tab.component';
 import { Week1L2DicussionTabComponent } from './pages/confidence-module/confidence-week1-l2/week1-l2-dicussion-tab/week1-l2-dicussion-tab.component';
+import { ConfidenceWeek2Component } from './pages/confidence-module/confidence-week2/confidence-week2.component';
+import { ConfidenceWeek2L1Component } from './pages/confidence-module/confidence-week2/confidence-week2-l1/confidence-week2-l1.component';
+import { ConfidenceWeek2L2Component } from './pages/confidence-module/confidence-week2/confidence-week2-l2/confidence-week2-l2.component';
+import { Week2L2VideoComponent } from './pages/confidence-module/confidence-week2/confidence-week2-l2/week2-l2-video/week2-l2-video.component';
+import { Week2L2DiscussionComponent } from './pages/confidence-module/confidence-week2/confidence-week2-l2/week2-l2-discussion/week2-l2-discussion.component';
+import { Week2L2ActivityComponent } from './pages/confidence-module/confidence-week2/confidence-week2-l2/week2-l2-activity/week2-l2-activity.component';
 
 @NgModule({
   declarations: [
@@ -118,9 +122,13 @@ import { Week1L2DicussionTabComponent } from './pages/confidence-module/confiden
     ConfidenceWeek1L1Component,
     ConfidenceWeek1L2Component,
     ConfidenceWeek1L3Component,
-    ConfidenceWeek1L4Component,
-    Week1L3DicussionTabComponent,
-    Week1L2DicussionTabComponent
+    Week1L2DicussionTabComponent,
+    ConfidenceWeek2Component,
+    ConfidenceWeek2L1Component,
+    ConfidenceWeek2L2Component,
+    Week2L2VideoComponent,
+    Week2L2DiscussionComponent,
+    Week2L2ActivityComponent
   ],
   imports: [
     BrowserModule,

@@ -5,8 +5,10 @@ import { ConfidenceModuleComponent } from './pages/confidence-module/confidence-
 import { ConfidenceWeek1L1Component } from './pages/confidence-module/confidence-week1-l1/confidence-week1-l1.component';
 import { ConfidenceWeek1L2Component } from './pages/confidence-module/confidence-week1-l2/confidence-week1-l2.component';
 import { ConfidenceWeek1L3Component } from './pages/confidence-module/confidence-week1-l3/confidence-week1-l3.component';
-import { ConfidenceWeek1L4Component } from './pages/confidence-module/confidence-week1-l4/confidence-week1-l4.component';
 import { ConfidenceWeek1Component } from './pages/confidence-module/confidence-week1/confidence-week1.component';
+import { ConfidenceWeek2L1Component } from './pages/confidence-module/confidence-week2/confidence-week2-l1/confidence-week2-l1.component';
+import { ConfidenceWeek2L2Component } from './pages/confidence-module/confidence-week2/confidence-week2-l2/confidence-week2-l2.component';
+import { ConfidenceWeek2Component } from './pages/confidence-module/confidence-week2/confidence-week2.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
@@ -107,7 +109,9 @@ const routes: Routes = [
       { path: 'confidence-week1-l1', component: ConfidenceWeek1L1Component },
       { path: 'confidence-week1-l2', component: ConfidenceWeek1L2Component },
       { path: 'confidence-week1-l3', component: ConfidenceWeek1L3Component },
-      { path: 'confidence-week1-l4', component: ConfidenceWeek1L4Component }
+      { path: 'confidence-week2', component: ConfidenceWeek2Component },
+      { path: 'confidence-week2-l1', component: ConfidenceWeek2L1Component },
+      { path: 'confidence-week2-l2', component: ConfidenceWeek2L2Component }
     ]
   }
 ];
