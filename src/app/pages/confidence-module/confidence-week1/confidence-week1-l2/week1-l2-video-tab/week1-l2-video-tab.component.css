@@ -48,17 +48,17 @@
     color: white;
   }
 
-  .main-content {
+  /* .main-content {
     margin-top: 2.5rem;
-  }
+  } */
 
   .video-section {
     background: #b1aa93;
     padding: 2rem;
     border-radius: 20px;
     color: white;
-    max-width: 1200px;
-    position: relative;
+    width: 100%;
+    max-width: 1250px;
   }
   
   .video-wrapper {

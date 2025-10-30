@@ -1,4 +1,4 @@
-  .story-container {
+.story-container {
     background: #f5f8ff;
     min-height: 100vh;
     display: flex;
@@ -67,7 +67,7 @@
     padding: 2rem;
     margin-top: 2rem;
     width: 100%;
-    max-width: 850px;
+    max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     text-align: left;
   }

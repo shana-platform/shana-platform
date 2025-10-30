@@ -1,77 +1,75 @@
-.movie-intro {
-    font-size: 1.75rem;
-    margin-top: 1rem;
-  }
-  
-  .movie-description {
-    max-width: 1200px;
-    margin: 1rem auto 2rem;
-    line-height: 1.6;
-    color: #000;
-  }
+.bravery-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(120deg, #f7ac95, #4791c5);
+  color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-  .play-icon {
-    font-size: 4rem;
-    color: white;
-    opacity: 0.7;
-    margin-bottom: 1rem;
-  }
-  
-  .play-text {
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .note {
-    font-size: 0.9rem;
-    color: #ccc;
-  }
-  
-  .actual-video {
-    width: 100%;
-    border-radius: 16px;
-    background-color: rgb(94, 94, 94);
-  }
-  
-  .video-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .duration {
-    font-size: 0.95rem;
-    color: white;
-  }
+/* Tag */
+.tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+}
 
-  .main-content {
-    margin-top: 2.5rem;
-  }
+/* Title */
+.title {
+  font-size: 52px;
+  font-weight: 800;
+  /* margin-top: 20px; */
+  /* margin-bottom: 15px; */
+  width: 100%;
+  max-width: 480px;
+}
 
-  .video-section {
-    background: #b1aa93;
-    padding: 2rem;
-    border-radius: 20px;
-    color: white;
-    max-width: 1200px;
-    position: relative;
-  }
-  
-  .video-wrapper {
-    background: rgb(88, 87, 87);
-    padding: 8rem 2rem;
-    border-radius: 16px;
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  color: #f8f8f8;
+  margin-bottom: 30px;
+}
+
+/* Image */
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bravery-container {
+    flex-direction: column;
     text-align: center;
-    cursor: pointer;
-    min-height: 400px;
   }
-
-  .theme-note {
-    margin-top: 1rem;
-    color: white;
-    font-weight: bold;
+  .title {
+    font-size: 40px;
   }
+  .subtitle {
+    font-size: 16px;
+    margin: 0 auto 25px;
+  }
+  .image-box img {
+    max-width: 400px;
+  }
+}

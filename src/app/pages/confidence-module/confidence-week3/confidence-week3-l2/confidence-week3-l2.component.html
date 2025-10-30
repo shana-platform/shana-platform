@@ -1,7 +1,7 @@
 <div class="story-container">
     <header class="story-header">
-      <h1>📹 “3 Tips to Boost Your Confidence”</h1>
-      <p class="author">by TED-Ed</p>
+      <h1>📹 Anne answers a question in class after being shy.</h1>
+      <p class="author">short skit/video</p>
     </header>
     <nav class="story-tabs">
       <button 
@@ -26,17 +26,17 @@
   
     <!-- Story Summary Section -->
     <section class="summary-card" *ngIf="activeTab === 'video'">
-        <app-week2-l2-video></app-week2-l2-video>
+        <app-week3-l2-video></app-week3-l2-video>
     </section>
   
     <!-- Discussion Tab -->
     <section class="discussion-card" *ngIf="activeTab === 'discussion'">
-        <app-week2-l2-discussion></app-week2-l2-discussion>
+        <app-week3-l2-discussion></app-week3-l2-discussion>
     </section>
   
     <!-- Activity Tab -->
     <section class="discussion-card" *ngIf="activeTab === 'activity'">
-        <app-week2-l2-activity></app-week2-l2-activity>
+        <app-week3-l2-activity></app-week3-l2-activity>
       
       <button class="activity-btn">Submit Your Reflection</button>
       &nbsp;

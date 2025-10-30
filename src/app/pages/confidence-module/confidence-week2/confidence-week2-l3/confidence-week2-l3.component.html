@@ -1,0 +1,42 @@
+<div class="challenge-container">
+    <!-- Title -->
+    <h1 class="challenge-title">
+      <span class="warm">Challenge</span> of the <span class="cool">Week</span>
+    </h1>
+  
+    <!-- Bravery Ticket Box -->
+    <div class="card">
+      <p class="main-text">
+        Use <span class="highlight">1 Bravery Ticket</span> during the week.
+      </p>
+      <p class="sub-text">Tell the group about it next session.</p>
+    </div>
+  
+    <!-- Confidence Link -->
+    <div class="card confidence">
+      <h3 class="conf-title">Confidence Link</h3>
+      <p class="conf-quote">
+        <em>"When I try small, brave steps, my confidence grows like a seed."</em>
+      </p>
+    </div>
+    <button (click)="openModal()" class="activity-btn">Complete Module</button>
+  </div>
+
+
+  <!-- Modal -->
+<div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Lesson 2</strong></p>
+        <p class="modal-note">Complete more lessons to earn more trophies and level up!</p>
+        <div class="modal-actions">
+        <button routerLink="/confidence-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+  </div>
+  

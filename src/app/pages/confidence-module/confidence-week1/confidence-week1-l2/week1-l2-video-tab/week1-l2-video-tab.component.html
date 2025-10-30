@@ -1,7 +1,11 @@
-<main class="main-content" >
+<!-- <main class="main-content" > -->
+    <h2 class="text-primary">Story Summary</h2>
+    <p class="subtitle">For learners</p>
     <div class="video-section">
-      When faced with a big challenge where potential failure seems to lurk at every corner, you’ve probably heard the advice, “Be more confident!” But where does confidence come from, and how can you get more of it? Here are three easy tips to boost your confidence.
-
+        Molly Lou Melon is small and different, and sometimes people make fun of her. 
+        But she remembers her grandmother’s advice to 
+        <strong>stand tall</strong>, <strong>smile big</strong>, and <strong>believe in herself</strong>. 
+        Because of that, she turns her differences into her strengths.
       <p>Lesson by TED-Ed, animation by Kozmonot Animation Studio.</p>
       <div class="video-wrapper" *ngIf="!videoPlaying" (click)="playVideo()">
         <div class="play-icon">
@@ -9,7 +13,6 @@
         </div>
         <p class="play-text">Click to play video</p>
       </div>
-    
       <video
         #videoPlayer
         *ngIf="videoPlaying"
@@ -29,4 +32,4 @@
     </div>
     <br>
     <button class="activity-btn">Proceed to discussion section ➡️</button>
-  </main>
+  <!-- </main> -->

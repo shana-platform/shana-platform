@@ -154,7 +154,8 @@
     font-weight: bold;
     margin-top: 15px;
   }
-
+  
+/* MODAL */
   .modal.show {
     display: block;
   }

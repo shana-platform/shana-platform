@@ -1,0 +1,109 @@
+.confident-container {
+    background: #f7fafc;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* padding: 60px 20px; */
+  }
+  
+  /* Week Badge */
+  .week-badge {
+    background: #e9f5fa;
+    color: #2b7a9e;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Title */
+  .confident-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #25304b;
+    margin-bottom: 5px;
+  }
+  
+  /* Practice text */
+  .practice-text {
+    color: #eb7646;
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  
+  /* Card */
+  .objectives-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9eef2;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .objectives-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #25304b;
+    margin-bottom: 15px;
+  }
+  
+  /* List */
+  .objectives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .objectives-list li {
+    font-size: 17px;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: #eb7646;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Decorative line */
+  .line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #eb7646, #3acfd5);
+    border-radius: 2px;
+    margin-top: 40px;
+  }
+
+  .save-btn {
+    background: linear-gradient(to right, #4c8ef7, #4c8ef7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .confident-title {
+      font-size: 38px;
+    }
+    .objectives-card {
+      padding: 25px;
+    }
+  }
+  

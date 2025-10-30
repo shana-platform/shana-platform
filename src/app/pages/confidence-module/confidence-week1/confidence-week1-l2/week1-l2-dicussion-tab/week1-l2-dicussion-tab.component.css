@@ -93,3 +93,14 @@
 .comment {
   color: #475569;
 }
+
+.activity-btn {
+  margin-top: 1rem;
+  background: #6caef8;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
