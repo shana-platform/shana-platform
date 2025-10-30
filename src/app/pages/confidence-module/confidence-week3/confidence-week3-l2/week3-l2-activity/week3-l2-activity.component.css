@@ -1,0 +1,104 @@
+.confident-voice-container {
+    /* min-height: 100vh; */
+    background-color: #f9fbfc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  /* Header section */
+  .circle-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #93c5fd, #f6ad55);
+    margin-bottom: 1.2rem;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 0.3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #475569;
+    font-weight: 500;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0.5rem auto 2rem;
+  }
+  
+  /* Cards */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid rgba(100, 149, 237, 0.4);
+  }
+  
+  /* Gradient backgrounds for each card */
+  .idea {
+    background: linear-gradient(145deg, #e0f2fe, #bae6fd);
+  }
+  
+  .talent {
+    background: linear-gradient(145deg, #fef3c7, #fde68a);
+  }
+  
+  .story {
+    background: linear-gradient(145deg, #e0f2fe, #c7d2fe);
+  }
+  
+  .icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #1e3a8a;
+  }
+  
+  /* Footer note */
+  .footer-note {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 650px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  .footer-note p {
+    margin: 0.5rem 0;
+    color: #475569;
+  }
+  
+  .highlight {
+    color: #1e40af;
+    font-weight: 600;
+  }
+  

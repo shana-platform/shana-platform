@@ -1,0 +1,80 @@
+<div class="challenge-container">
+    <div class="header-section">
+      <span class="badge"><i class="fa-solid fa-star"></i> Challenge of the Week</span>
+      <h1>Say Something Kind or Share an Idea</h1>
+      <p class="subtitle">
+        Build your confidence by sharing your thoughts each day. Every voice matters, 
+        and your ideas can make a difference.
+      </p>
+    </div>
+  
+    <!-- Daily Challenge -->
+    <div class="card challenge-card">
+      <h4><i class="fa-solid fa-bolt"></i> Your Daily Challenge</h4>
+      <p class="description">
+        Each day, challenge yourself to speak up at least once. It could be:
+      </p>
+      <ul>
+        <li>Sharing a kind word with a classmate or family member</li>
+        <li>Contributing an idea during class discussions</li>
+        <li>Asking a thoughtful question about something you're curious about</li>
+        <li>Expressing appreciation or encouragement to someone</li>
+      </ul>
+    </div>
+  
+    <!-- Confidence & Planning -->
+    <div class="card planning-card">
+      <h4>Confidence & Planning</h4>
+      <p class="description">
+        Track your daily "speak up" moments. Tick each day after sharing!
+      </p>
+  
+      <div class="days">
+        <label class="day-item" *ngFor="let day of days; let i = index">
+          <input type="checkbox" [(ngModel)]="day.checked" (change)="updateProgress()" />
+          {{ day.name }}
+        </label>
+      </div>
+    </div>
+  
+    <!-- Progress Tracker -->
+    <div class="card progress-card">
+      <h4>Progress Tracker</h4>
+      <p class="progress-text">
+        You've completed <strong>{{ completedDays }}/7</strong> days this week!
+      </p>
+  
+      <div class="progress-bar-container">
+        <div
+          class="progress-bar"
+          [style.width.%]="(completedDays / 7) * 100"
+        ></div>
+      </div>
+  
+      <button
+        *ngIf="completedDays === 7"
+        class="complete-btn"
+        (click)="openModal()"
+      >
+        🎉 Complete Module
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Lesson 3</strong></p>
+        <p class="modal-note">Complete more lessons to earn more trophies and level up!</p>
+        <div class="modal-actions">
+        <button routerLink="/confidence-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+  </div>
+  

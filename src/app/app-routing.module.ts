@@ -12,6 +12,7 @@ import { ConfidenceWeek2L3Component } from './pages/confidence-module/confidence
 import { ConfidenceWeek2Component } from './pages/confidence-module/confidence-week2/confidence-week2.component';
 import { ConfidenceWeek3L1Component } from './pages/confidence-module/confidence-week3/confidence-week3-l1/confidence-week3-l1.component';
 import { ConfidenceWeek3L2Component } from './pages/confidence-module/confidence-week3/confidence-week3-l2/confidence-week3-l2.component';
+import { ConfidenceWeek3L3Component } from './pages/confidence-module/confidence-week3/confidence-week3-l3/confidence-week3-l3.component';
 import { ConfidenceWeek3Component } from './pages/confidence-module/confidence-week3/confidence-week3.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
@@ -120,6 +121,7 @@ const routes: Routes = [
       { path: 'confidence-week3', component: ConfidenceWeek3Component },
       { path: 'confidence-week3-l1', component: ConfidenceWeek3L1Component },
       { path: 'confidence-week3-l2', component: ConfidenceWeek3L2Component },
+      { path: 'confidence-week3-l3', component: ConfidenceWeek3L3Component },
     ]
   }
 ];

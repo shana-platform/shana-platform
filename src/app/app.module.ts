@@ -72,6 +72,7 @@ import { ConfidenceWeek3L2Component } from './pages/confidence-module/confidence
 import { Week3L2ActivityComponent } from './pages/confidence-module/confidence-week3/confidence-week3-l2/week3-l2-activity/week3-l2-activity.component';
 import { Week3L2VideoComponent } from './pages/confidence-module/confidence-week3/confidence-week3-l2/week3-l2-video/week3-l2-video.component';
 import { Week3L2DiscussionComponent } from './pages/confidence-module/confidence-week3/confidence-week3-l2/week3-l2-discussion/week3-l2-discussion.component';
+import { ConfidenceWeek3L3Component } from './pages/confidence-module/confidence-week3/confidence-week3-l3/confidence-week3-l3.component';
 
 @NgModule({
   declarations: [
@@ -144,7 +145,8 @@ import { Week3L2DiscussionComponent } from './pages/confidence-module/confidence
     ConfidenceWeek3L2Component,
     Week3L2ActivityComponent,
     Week3L2VideoComponent,
-    Week3L2DiscussionComponent
+    Week3L2DiscussionComponent,
+    ConfidenceWeek3L3Component
   ],
   imports: [
     BrowserModule,
