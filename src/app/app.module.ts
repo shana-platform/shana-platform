@@ -73,6 +73,15 @@ import { Week3L2ActivityComponent } from './pages/confidence-module/confidence-w
 import { Week3L2VideoComponent } from './pages/confidence-module/confidence-week3/confidence-week3-l2/week3-l2-video/week3-l2-video.component';
 import { Week3L2DiscussionComponent } from './pages/confidence-module/confidence-week3/confidence-week3-l2/week3-l2-discussion/week3-l2-discussion.component';
 import { ConfidenceWeek3L3Component } from './pages/confidence-module/confidence-week3/confidence-week3-l3/confidence-week3-l3.component';
+import { ConfidenceWeek4Component } from './pages/confidence-module/confidence-week4/confidence-week4.component';
+import { ConfidenceWeek4L1Component } from './pages/confidence-module/confidence-week4/confidence-week4-l1/confidence-week4-l1.component';
+import { ConfidenceWeek4L2Component } from './pages/confidence-module/confidence-week4/confidence-week4-l2/confidence-week4-l2.component';
+import { Week4L2ActivityComponent } from './pages/confidence-module/confidence-week4/confidence-week4-l2/week4-l2-activity/week4-l2-activity.component';
+import { Week4L2DiscussionComponent } from './pages/confidence-module/confidence-week4/confidence-week4-l2/week4-l2-discussion/week4-l2-discussion.component';
+import { Week4L2VideoComponent } from './pages/confidence-module/confidence-week4/confidence-week4-l2/week4-l2-video/week4-l2-video.component';
+import { ConfidenceWeek4L3Component } from './pages/confidence-module/confidence-week4/confidence-week4-l3/confidence-week4-l3.component';
+import { ConfidenceWeek4L4Component } from './pages/confidence-module/confidence-week4/confidence-week4-l4/confidence-week4-l4.component';
+import { ModuleProjectComponent } from './pages/module-project/module-project.component';
 
 @NgModule({
   declarations: [
@@ -146,7 +155,16 @@ import { ConfidenceWeek3L3Component } from './pages/confidence-module/confidence
     Week3L2ActivityComponent,
     Week3L2VideoComponent,
     Week3L2DiscussionComponent,
-    ConfidenceWeek3L3Component
+    ConfidenceWeek3L3Component,
+    ConfidenceWeek4Component,
+    ConfidenceWeek4L1Component,
+    ConfidenceWeek4L2Component,
+    Week4L2ActivityComponent,
+    Week4L2DiscussionComponent,
+    Week4L2VideoComponent,
+    ConfidenceWeek4L3Component,
+    ConfidenceWeek4L4Component,
+    ModuleProjectComponent
   ],
   imports: [
     BrowserModule,

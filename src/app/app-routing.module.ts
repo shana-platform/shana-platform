@@ -14,6 +14,11 @@ import { ConfidenceWeek3L1Component } from './pages/confidence-module/confidence
 import { ConfidenceWeek3L2Component } from './pages/confidence-module/confidence-week3/confidence-week3-l2/confidence-week3-l2.component';
 import { ConfidenceWeek3L3Component } from './pages/confidence-module/confidence-week3/confidence-week3-l3/confidence-week3-l3.component';
 import { ConfidenceWeek3Component } from './pages/confidence-module/confidence-week3/confidence-week3.component';
+import { ConfidenceWeek4L1Component } from './pages/confidence-module/confidence-week4/confidence-week4-l1/confidence-week4-l1.component';
+import { ConfidenceWeek4L2Component } from './pages/confidence-module/confidence-week4/confidence-week4-l2/confidence-week4-l2.component';
+import { ConfidenceWeek4L3Component } from './pages/confidence-module/confidence-week4/confidence-week4-l3/confidence-week4-l3.component';
+import { ConfidenceWeek4L4Component } from './pages/confidence-module/confidence-week4/confidence-week4-l4/confidence-week4-l4.component';
+import { ConfidenceWeek4Component } from './pages/confidence-module/confidence-week4/confidence-week4.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
@@ -41,6 +46,7 @@ import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IdentityModuleComponent } from './pages/identity-module/identity-module.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ModuleProjectComponent } from './pages/module-project/module-project.component';
 import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
 import { SecondWeekLevel2Component } from './pages/second-week-welcome/second-week-level2/second-week-level2.component';
@@ -122,6 +128,12 @@ const routes: Routes = [
       { path: 'confidence-week3-l1', component: ConfidenceWeek3L1Component },
       { path: 'confidence-week3-l2', component: ConfidenceWeek3L2Component },
       { path: 'confidence-week3-l3', component: ConfidenceWeek3L3Component },
+      { path: 'confidence-week4', component: ConfidenceWeek4Component },
+      { path: 'confidence-week4-l1', component: ConfidenceWeek4L1Component },
+      { path: 'confidence-week4-l2', component: ConfidenceWeek4L2Component },
+      { path: 'confidence-week4-l3', component: ConfidenceWeek4L3Component },
+      { path: 'confidence-week4-l4', component: ConfidenceWeek4L4Component },
+      { path: 'module-project', component: ModuleProjectComponent },
     ]
   }
 ];
