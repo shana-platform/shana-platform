@@ -1,0 +1,52 @@
+<div class="confidence-container">
+    <div class="badge-header">
+      <span class="tag">✨ Build Your Confidence</span>
+      <h1><span class="gradient-text">Confidence Badge</span></h1>
+      <p class="subtitle">
+        Create a personal certificate celebrating what makes you confident
+      </p>
+    </div>
+  
+    <div class="content">
+      <!-- Left Section -->
+      <div class="input-section">
+        <h3>What makes you confident?</h3>
+        <textarea
+          [(ngModel)]="confidenceReason"
+          placeholder="Type your reason here... (e.g., I believe in my abilities, I've overcome challenges, I'm always learning)"
+          maxlength="200"
+        ></textarea>
+        <div class="char-count">{{ confidenceReason.length }}/200 characters</div>
+        <p class="tip">✨ Be specific and proud!</p>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="certificate-section" id="certificate">
+        <h4 class="live-preview">Live Preview</h4>
+  
+        <div class="certificate-card">
+          <div class="icon-area">
+            <i class="fas fa-award"></i>
+          </div>
+          <h2 class="title">Certificate of Confidence</h2>
+          <div class="line"></div>
+  
+          <p class="reason">
+            I am confident because... <br />
+            <strong>
+              {{
+                confidenceReason
+                  ? confidenceReason
+                  : 'Share your reason for confidence'
+              }}
+            </strong>
+          </p>
+  
+          <button class="download-btn" (click)="downloadCertificate()">
+            ⬇️ Download Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

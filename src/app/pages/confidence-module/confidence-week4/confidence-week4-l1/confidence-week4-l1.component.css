@@ -1,0 +1,194 @@
+.victory-container {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #f9fafc, #f3f6fb);
+    min-height: 100vh;
+  }
+  
+  .header-section {
+    margin-bottom: 2rem;
+  }
+  
+  .activity-tag {
+    background-color: #e8f0fe;
+    color: #3b82f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .title {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    color: #111827;
+  }
+  
+  .emoji {
+    font-size: 36px;
+  }
+  
+  .image-section img {
+    width: 70%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  
+  .card {
+    background: white;
+    width: 90%;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card li {
+    font-size: 18px;
+    color: #374151;
+    margin: 0.5rem 0;
+  }
+  
+  .note {
+    text-align: center;
+    font-style: italic;
+    color: #6b7280;
+    margin-top: 1.5rem;
+  }
+  
+  .share-card textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 1rem;
+    font-size: 16px;
+    resize: none;
+    margin-top: 1rem;
+  }
+  
+  .char-count {
+    text-align: right;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 0.3rem;
+  }
+  
+  .share-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .share-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* ✅ Modal styles */
+ /* Backdrop covers everything */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(17, 24, 39, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* High enough to appear above all content */
+  }
+  
+  /* White modal box */
+  .modal-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Headings and text */
+  .modal-box h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+  }
+  
+  .modal-box p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  /* Buttons inside modal */
+  .modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .modal-actions button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .close-btn {
+    background: #e5e7eb;
+    color: #111827;
+  }
+  
+  .close-btn:hover {
+    background: #d1d5db;
+  }
+  
+  .next-btn {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .next-btn:hover {
+    background: #2563eb;
+  }
+  

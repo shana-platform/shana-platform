@@ -1,0 +1,48 @@
+<div class="victory-container">
+    <div class="header-section">
+      <span class="activity-tag">Warm-Up Activity</span>
+      <h1 class="title">Victory Dance</h1>
+      <div class="emoji">🎉</div>
+    </div>
+  
+    <div class="image-section">
+      <img src="assets/victory-dance.jpg" alt="Victory Dance" />
+    </div>
+  
+    <div class="content-section">
+      <div class="card">
+        <h2>How it works:</h2>
+        <ul>
+          <li><span>1️⃣</span> Share one thing you're proud of</li>
+          <li><span>2️⃣</span> Show us your best dance move</li>
+        </ul>
+        <p class="note">Celebrate your wins, big or small! 💃🏽🕺🏽</p>
+      </div>
+  
+      <div class="card share-card">
+        <h2>Share Your Victory! 🎊</h2>
+        <textarea
+          [(ngModel)]="victoryText"
+          maxlength="500"
+          placeholder="What are you proud of today? (e.g., 'I completed my first project!' or 'I helped a colleague solve a problem')"
+        ></textarea>
+        <div class="char-count">{{ victoryText.length }}/500 characters</div>
+        <button class="share-btn" (click)="shareVictory()">Share & Dance! 🕺</button>
+      </div>
+    </div>
+  
+    <!-- ✅ Modal -->
+<!-- ✅ Modal -->
+<div *ngIf="showModal" class="modal-backdrop">
+    <div class="modal-box">
+      <h2>Good Job! 🎉</h2>
+      <p>Keep up the great work — every victory counts!</p>
+      <div class="modal-actions">
+        <!-- <button class="close-btn" (click)="closeModal()">Close</button> -->
+        <button class="next-btn" routerLink="/confidence-week4-l2">Next Lesson ➡️</button>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  

@@ -6,6 +6,8 @@
       
       <div *ngFor="let prompt of discussionPrompts" class="discussion-card">
         <h4 class="question">{{ prompt.question }}</h4>
+    
+        <!-- User Input Section -->
         <div class="user-answer">
           <textarea
             [(ngModel)]="prompt.userAnswer"
@@ -27,6 +29,24 @@
           </div>
         </ng-container>
         </div>
+    
+     
+    
+        <!-- Others' Answers -->
+        <!-- <div *ngIf="prompt.submitted" class="others-section">
+          <h5 class="others-title">See what others said:</h5>
+          <div *ngFor="let answer of prompt.others" class="other-answer">
+            <ng-container *ngIf="answer.name; else textAnswer">
+              <span class="name fw-semibold text-primary">{{ answer.name }}:</span>
+              <span class="comment">"{{ answer.comment }}"</span>
+            </ng-container>
+            <ng-template #textAnswer>
+              <span class="comment">"{{ answer.text }}"</span>
+            </ng-template>
+          </div>
+        </div> -->
       </div>
+      <!-- <br>
+      <button class="activity-btn">Proceed to activity section ➡️</button> -->
     </div>
 </main>

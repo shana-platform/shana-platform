@@ -1,0 +1,55 @@
+<div class="page-container">
+    <div class="form-card">
+      <div class="icon-circle">
+        <i class="fas fa-paper-plane"></i>
+      </div>
+  
+      <h2>Confidence & Planning Link</h2>
+      <p class="subtitle">
+        Create your personal confidence plan to guide your learning journey
+      </p>
+  
+      <form [formGroup]="confidenceForm" (ngSubmit)="onSubmit()">
+        <label>What's the first thing you'll keep practicing?</label>
+        <input
+          type="text"
+          formControlName="firstPractice"
+          placeholder="e.g., Reading for 20 minutes daily"
+        />
+  
+        <label>What's the second thing you'll keep practicing?</label>
+        <input
+          type="text"
+          formControlName="secondPractice"
+          placeholder="e.g., Solving math problems"
+        />
+  
+        <label>Who can help you with this?</label>
+        <input
+          type="text"
+          formControlName="helper"
+          placeholder="e.g., My teacher, parents, or study group"
+        />
+  
+        <button (click)="openModal()" type="submit">Create My Confidence Plan</button>
+      </form>
+    </div>
+  </div>
+
+    <!-- Modal -->
+<div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message"><strong>Bravo ooo!</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>week 4</strong> of the confidence module</p>
+        <p class="modal-note">Complete end of module project and earn the championship trophy!</p>
+        <div class="modal-actions">
+        <button routerLink="/confidence-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+  </div>
+  

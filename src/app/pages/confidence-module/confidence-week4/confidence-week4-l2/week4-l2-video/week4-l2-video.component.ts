@@ -1,11 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-week3-l2-video',
-  templateUrl: './week3-l2-video.component.html',
-  styleUrls: ['./week3-l2-video.component.css']
+  selector: 'app-week4-l2-video',
+  templateUrl: './week4-l2-video.component.html',
+  styleUrls: ['./week4-l2-video.component.css']
 })
-export class Week3L2VideoComponent implements OnInit {
+export class Week4L2VideoComponent implements OnInit {
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
   videoPlaying = false;
   

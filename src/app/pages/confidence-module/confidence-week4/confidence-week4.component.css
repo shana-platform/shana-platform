@@ -1,0 +1,148 @@
+.celebrating-me-page {
+    font-family: 'Inter', sans-serif;
+    background: #f9fbff;
+    padding: 9rem 12rem;
+    color: #1a1a1a;
+    min-height: 100vh;
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .header-section .left {
+    flex: 1;
+  }
+  
+  .week-label {
+    background-color: #e6f0ff;
+    color: #377dff;
+    padding: 0.4rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight {
+    color: #2d9cdb;
+  }
+  
+  .subtitle {
+    color: #8c8c8c;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .underline {
+    width: 50px;
+    height: 3px;
+    background-color: #f4a261;
+    border-radius: 2px;
+  }
+  
+  .header-section .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .header-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .objectives-section {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  
+  .objectives-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .objectives-subtext {
+    color: #6f6f6f;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+  
+  .objectives-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .objective-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .objective-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .objective-card .icon {
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .blue-card .icon {
+    background-color: #f0f6ff;
+    color: #377dff;
+  }
+  
+  .orange-card .icon {
+    background-color: #fff4ec;
+    color: #f4a261;
+  }
+  
+  .objective-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .objective-card p {
+    color: #6f6f6f;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .save-btn {
+    background: linear-gradient(to right, #4c8ef7, #4c8ef7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+  }
