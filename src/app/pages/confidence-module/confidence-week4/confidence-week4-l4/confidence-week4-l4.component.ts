@@ -30,7 +30,7 @@ export class ConfidenceWeek4L4Component implements OnInit {
     this.submitted = true;
 
     if (this.confidenceForm.invalid) {
-      alert('Provide your answers');
+      alert('Please share something you’re proud of!');
       return;
     }
 
