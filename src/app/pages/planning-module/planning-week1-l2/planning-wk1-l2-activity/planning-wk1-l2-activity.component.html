@@ -1,0 +1,88 @@
+<div class="container">
+
+    <span class="badge">✨ Activity Time</span>
+  
+    <h1>My Morning Plan</h1>
+    <p class="subtitle">
+      Draw your morning routine with 3 simple steps. What do you do to start a great day?
+    </p>
+  
+    <!-- STEP 1 -->
+    <div class="step-card step-1">
+      <span class="step-number">1</span>
+  
+      <div class="icon-circle">
+        <i class="fa fa-sun"></i>
+      </div>
+  
+      <input
+        type="text"
+        placeholder="Enter your first morning activity"
+        [(ngModel)]="steps[0]"
+      />
+  
+      <i *ngIf="steps[0]" class="fa fa-check check-icon"></i>
+    </div>
+  
+    <!-- STEP 2 -->
+    <div class="step-card step-2">
+      <span class="step-number">2</span>
+  
+      <div class="icon-circle">
+        <i class="fa fa-utensils"></i>
+      </div>
+  
+      <input
+        type="text"
+        placeholder="Enter your second morning activity"
+        [(ngModel)]="steps[1]"
+      />
+  
+      <i *ngIf="steps[1]" class="fa fa-check check-icon"></i>
+    </div>
+  
+    <!-- STEP 3 -->
+    <div class="step-card step-3">
+      <span class="step-number">3</span>
+  
+      <div class="icon-circle">
+        <i class="fa fa-bag-shopping"></i>
+      </div>
+  
+      <input
+        type="text"
+        placeholder="Enter your third morning activity"
+        [(ngModel)]="steps[2]"
+      />
+  
+      <i *ngIf="steps[2]" class="fa fa-check check-icon"></i>
+    </div>
+  
+    <div class="progress-text">
+      {{ completedCount }} / 3 Steps Completed
+    </div>
+  
+    <button
+    class="btn-complete"
+    [disabled]="completedCount !== 3"
+    (click)="openModal()"
+  >
+    Complete Morning Plan
+  </button>
+  
+      
+  
+  </div>
+  
+  <!-- MODAL BACKDROP -->
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+      <h2>🎉 Good Job!</h2>
+      <p>You have completed your morning plan.</p>
+  
+      <button class="btn-next" (click)="closeModal()">
+        Proceed to the Next Lesson
+      </button>
+    </div>
+  </div>
+  

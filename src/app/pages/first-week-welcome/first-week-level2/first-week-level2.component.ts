@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-first-week-level2',
@@ -19,11 +18,6 @@ export class FirstWeekLevel2Component implements OnInit {
     'How did she learn what makes her special?',
     'Is it okay to be different from others?'
   ];
-  // questions = [
-  //   "What are some things you're good at?",
-  //   "Can being kind or helpful be a strength too?",
-  //   "Do you have a strength you'd like to grow?"
-  // ];
   
   currentQuestionIndex = 0;
   studentInput = '';
@@ -32,10 +26,8 @@ export class FirstWeekLevel2Component implements OnInit {
   answers: string[] = [];
   conversation: { role: 'teacher' | 'student'; message: string }[] = [];
   previousAnswers: string[] = [];
-//   answers: string[] = [];
-// previousAnswers: string[] = [];
   responses: { name: string; question: string; response: string }[] = [];
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

@@ -82,6 +82,13 @@ import { Week4L2VideoComponent } from './pages/confidence-module/confidence-week
 import { ConfidenceWeek4L3Component } from './pages/confidence-module/confidence-week4/confidence-week4-l3/confidence-week4-l3.component';
 import { ConfidenceWeek4L4Component } from './pages/confidence-module/confidence-week4/confidence-week4-l4/confidence-week4-l4.component';
 import { ModuleProjectComponent } from './pages/module-project/module-project.component';
+import { PlanningWeek1Component } from './pages/planning-module/planning-week1/planning-week1.component';
+import { PlanningWeek1L1Component } from './pages/planning-module/planning-week1-l1/planning-week1-l1.component';
+import { PlanningWeek1L2Component } from './pages/planning-module/planning-week1-l2/planning-week1-l2.component';
+import { PlanningWeek1L3Component } from './pages/planning-module/planning-week1-l3/planning-week1-l3.component';
+import { PlanningWk1L2ActivityComponent } from './pages/planning-module/planning-week1-l2/planning-wk1-l2-activity/planning-wk1-l2-activity.component';
+import { PlanningWk1L2VideoComponent } from './pages/planning-module/planning-week1-l2/planning-wk1-l2-video/planning-wk1-l2-video.component';
+import { PlanningWk1L2DiscussionComponent } from './pages/planning-module/planning-week1-l2/planning-wk1-l2-discussion/planning-wk1-l2-discussion.component';
 
 @NgModule({
   declarations: [
@@ -164,7 +171,14 @@ import { ModuleProjectComponent } from './pages/module-project/module-project.co
     Week4L2VideoComponent,
     ConfidenceWeek4L3Component,
     ConfidenceWeek4L4Component,
-    ModuleProjectComponent
+    ModuleProjectComponent,
+    PlanningWeek1Component,
+    PlanningWeek1L1Component,
+    PlanningWeek1L2Component,
+    PlanningWeek1L3Component,
+    PlanningWk1L2ActivityComponent,
+    PlanningWk1L2VideoComponent,
+    PlanningWk1L2DiscussionComponent
   ],
   imports: [
     BrowserModule,

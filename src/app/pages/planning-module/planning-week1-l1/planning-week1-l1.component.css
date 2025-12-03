@@ -1,0 +1,31 @@
+/* Step circles */
+.step-number {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Pastel step backgrounds */
+.step-blue { background: #d9ecff; }
+.step-peach { background: #ffe4d3; }
+.step-green { background: #dff5e1; }
+.step-purple { background: #e8ddff; }
+
+/* Response section box */
+.response-box {
+    background: #ffffff;
+    border: 2px solid #eef3ff;
+}
+
+/* Response buttons */
+.response-item {
+    cursor: default;
+    font-size: 0.95rem;
+}
+
+.bg-response-blue { background:#d9ecff; }
+.bg-response-yellow { background:#ffeec9; }
+.bg-response-green { background:#d6ffe3; }

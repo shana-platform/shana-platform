@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #ffe9d2;
+    color: #c97a1c;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  h1 {
+    margin-top: 15px;
+    font-size: 32px;
+    color: #1d2b44;
+  }
+  
+  .subtitle {
+    color: #6b7a90;
+    margin-bottom: 40px;
+  }
+  
+  .step-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .step-1 { background: #e8f6ff; }
+  .step-2 { background: #e0f0ff; }
+  .step-3 { background: #dae4f8; }
+  
+  .step-number {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    width: 40px;
+    height: 40px;
+    background: #3b82f6;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #3b82f6;
+  }
+  
+  input {
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .check-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 32px;
+    color: #2563eb;
+    font-size: 18px;
+  }
+  
+  .progress-text {
+    margin-top: 25px;
+    font-weight: 600;
+  }
+  
+  .btn-complete {
+    margin-top: 15px;
+    padding: 14px 30px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btn-complete:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+  }
+
+  /* MODAL STYLES */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 18px;
+    text-align: center;
+    width: 90%;
+    max-width: 380px;
+    animation: scaleIn 0.25s ease;
+  }
+  
+  .modal-card h2 {
+    color: #1d2b44;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card p {
+    color: #6b7a90;
+    margin-bottom: 25px;
+  }
+  
+  .btn-next {
+    background: #3b82f6;
+    border: none;
+    padding: 12px 26px;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-next:hover {
+    opacity: 0.9;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  

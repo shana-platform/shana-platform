@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-planning-week1-l2',
+  templateUrl: './planning-week1-l2.component.html',
+  styleUrls: ['./planning-week1-l2.component.css']
+})
+export class PlanningWeek1L2Component implements OnInit {
+  activeTab: 'video' | 'discussion' | 'activity' = 'video';
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  setActiveTab(tab: 'video' | 'discussion' | 'activity'): void {
+    this.activeTab = tab;
+  }
+}

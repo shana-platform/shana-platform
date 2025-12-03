@@ -1,0 +1,63 @@
+<div class="challenge-container">
+
+    <span class="challenge-badge">Challenge of the Week</span>
+  
+    <h1>Follow Your Morning Plan</h1>
+    <p class="subtitle">
+      Track three days and discover what changes
+    </p>
+  
+    <!-- CHALLENGE CARD -->
+    <div class="challenge-card">
+  
+      <h3>Your Challenge</h3>
+      <p class="challenge-desc">
+        Follow your morning plan for three days and tick it off each day.
+      </p>
+  
+      <!-- DAYS -->
+      <div
+        class="day-item"
+        *ngFor="let day of days; let i = index"
+        (click)="toggleDay(i)"
+        [class.completed]="day.completed"
+      >
+        <div class="circle">
+          <i *ngIf="day.completed" class="fa fa-check"></i>
+        </div>
+        <span>{{ day.label }}</span>
+      </div>
+  
+    </div>
+  
+    <!-- WEEKEND REFLECTION -->
+    <div class="reflection-card">
+      <span class="reflection-title">WEEK-END REFLECTION</span>
+      <p class="reflection-text">
+        "What changed when you planned ahead?"
+      </p>
+    </div>
+  
+    <!-- CONFIDENCE MANTRA -->
+    <div class="mantra-card">
+      <span class="mantra-title">
+        💙 YOUR CONFIDENCE MANTRA
+      </span>
+      <p class="mantra-text">
+        "When I plan, I feel ready and calm."
+      </p>
+    </div>
+  </div>
+  
+  <!-- COMPLETION MODAL -->
+  <div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+            <h2 class="text-center">🎉 Congratulations!</h2>
+            <p class="modal-message">You've earned <strong>10 stars</strong> 🌟</p>
+            <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>Lesson 1</strong></p>
+            <p class="modal-note">Complete more lessons to earn more trophies and level up!</p>
+            <div class="modal-actions">
+            <button routerLink="/planning-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+            </div>
+    </div>
+  </div>

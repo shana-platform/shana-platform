@@ -48,6 +48,10 @@ import { IdentityModuleComponent } from './pages/identity-module/identity-module
 import { LoginComponent } from './pages/login/login.component';
 import { ModuleProjectComponent } from './pages/module-project/module-project.component';
 import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
+import { PlanningWeek1L1Component } from './pages/planning-module/planning-week1-l1/planning-week1-l1.component';
+import { PlanningWeek1L2Component } from './pages/planning-module/planning-week1-l2/planning-week1-l2.component';
+import { PlanningWeek1L3Component } from './pages/planning-module/planning-week1-l3/planning-week1-l3.component';
+import { PlanningWeek1Component } from './pages/planning-module/planning-week1/planning-week1.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
 import { SecondWeekLevel2Component } from './pages/second-week-welcome/second-week-level2/second-week-level2.component';
 import { SecondWeekLevel3Component } from './pages/second-week-welcome/second-week-level3/second-week-level3.component';
@@ -134,6 +138,10 @@ const routes: Routes = [
       { path: 'confidence-week4-l3', component: ConfidenceWeek4L3Component },
       { path: 'confidence-week4-l4', component: ConfidenceWeek4L4Component },
       { path: 'module-project', component: ModuleProjectComponent },
+      { path: 'planning-week1', component: PlanningWeek1Component },
+      { path: 'planning-week1-l1', component: PlanningWeek1L1Component },
+      { path: 'planning-week1-l2', component: PlanningWeek1L2Component },
+      { path: 'planning-week1-l3', component: PlanningWeek1L3Component },
     ]
   }
 ];
