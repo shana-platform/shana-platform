@@ -1,0 +1,113 @@
+.goal-builder-page-wrapper {
+    background-color: #f8faff;
+    color: #1e2b45;
+  }
+  
+  .page-title {
+    color: #1e2b45;
+  }
+  
+  .page-subtitle {
+    color: #7f8fa4;
+  }
+  
+  .builder-card {
+    margin: 0 auto;
+    width: 800px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+  }
+  
+  .builder-header {
+    color: #3b82f6;
+    font-size: 1.1rem;
+  }
+  
+  .goal-sentence-box {
+    background-color: #e5f0ff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 6px;
+  }
+  
+  .sentence-part {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1e2b45;
+  }
+  
+  .custom-select-part {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.8rem 0.8rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-weight: 600;
+    color: #3b82f6;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.15s;
+  }
+  
+  .custom-select-part:hover {
+    background-color: #f0f4ff;
+  }
+  
+  /* Specific Dropdown Widths */
+  .activity-select { width: 150px; }
+  .minutes-select { width: 80px; }
+  .time-select { width: 130px; }
+  .weeks-select { width: 60px; }
+  
+  /* Custom Activity Input */
+  .custom-activity-input {
+    border: 1px solid #ccc;
+  }
+  
+  .custom-activity-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+  }
+  
+  .smart-goal-output {
+    background-color: #fff1d6;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  
+  .smart-goal-label {
+    color: #f59e0b;
+    font-size: 0.9rem;
+  }
+  
+  .smart-goal-label .bi-circle-fill {
+    font-size: 0.5rem;
+  }
+  
+  .generated-goal-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .example-header {
+    color: #f59e0b;
+    font-size: 1.1rem;
+  }
+  
+  .example-list .list-group-item {
+    border-color: #eee;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #1e2b45;
+  }
+  
+  .example-list .example-icon {
+    color: #2ecc71;
+    font-size: 1.1rem;
+  }
+  

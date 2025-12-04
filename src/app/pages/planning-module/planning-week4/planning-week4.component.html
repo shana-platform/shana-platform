@@ -1,0 +1,46 @@
+<div class="celebration-page-wrapper py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7 text-center">
+  
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-5 celebration-header">
+              
+              <div class="owl-image-container flex-shrink-0 me-md-4 mb-4 mb-md-0">
+                  <img src="assets/tutor-mascot.png" alt="A cute cartoon owl wearing a graduation cap and holding a star." class="img-fluid rounded-3">
+              </div>
+  
+              <div class="text-content text-center text-md-start">
+                  <p class="tag-label text-muted fw-semibold mb-1">{{ tag }}</p>
+                  <h1 class="page-title fw-bold mb-2">
+                      {{ titlePart1 }} <span class="text-primary-blue">{{ titlePart2 }}</span>
+                  </h1>
+                  <p class="welcome-message text-muted mb-0">
+                      {{ welcomeMessage }}
+                  </p>
+              </div>
+          </div>
+  
+          <div class="card objective-card border-0 rounded-4 shadow-sm p-4 text-start">
+              <div class="d-flex align-items-start mb-3">
+                  <div class="icon-box flex-shrink-0 me-3">
+                      <i class="bi bi-patch-check-fill"></i>
+                  </div>
+                  <h5 class="objective-header fw-bold mb-0 pt-1">
+                      {{ objectiveHeader }}
+                  </h5>
+              </div>
+              
+              <p class="objective-text mb-0 ms-md-5 ps-md-3">
+                  {{ objectiveText }}
+              </p>
+          </div>
+          
+          <button 
+              class="btn btn-primary btn-lg mt-5 continue-button"
+              routerLink="/planning-week4-l1">
+              Begin Your Journey &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

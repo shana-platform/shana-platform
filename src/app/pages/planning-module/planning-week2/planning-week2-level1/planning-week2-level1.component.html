@@ -1,0 +1,79 @@
+<div class="journey-container">
+
+    <h2 class="title">Plan Your Journey</h2>
+    <p class="subtitle">
+      Which order makes a good afternoon plan? Drag the places to arrange your route!
+    </p>
+  
+    <!-- YOUR PLAN -->
+    <h4 class="section-title">YOUR PLAN</h4>
+  
+    <!-- Drop zone for the 4 slots -->
+    <div
+      class="plan-grid"
+      cdkDropList
+      id="planList"
+      [cdkDropListData]="planSlots"
+      [cdkDropListConnectedTo]="['visitList']"
+      (cdkDropListDropped)="onDrop($event)"
+    >
+  
+      <div class="plan-slot" *ngFor="let slot of planSlots; let i = index">
+  
+        <div class="slot-number">{{ i + 1 }}</div>
+  
+        <!-- empty slot -->
+        <ng-container *ngIf="!slot">
+          <div class="slot-placeholder">+</div>
+        </ng-container>
+  
+        <!-- filled slot -->
+        <ng-container *ngIf="slot">
+          <div class="slot-card" cdkDrag [cdkDragData]="slot">
+  
+            <img [src]="slot.image" class="slot-image" />
+            <div class="slot-label">{{ slot.name }}</div>
+  
+          </div>
+  
+          <button class="remove-btn" (click)="removeFromSlot(i)">×</button>
+        </ng-container>
+  
+      </div>
+  
+    </div>
+  
+    <!-- COMPLETED MESSAGE -->
+    <div class="completed-box" *ngIf="allFilled">
+      ✨ Great job! Your journey is planned!
+    </div>
+  
+    <!-- PLACES TO VISIT -->
+    <ng-container *ngIf="!allFilled">
+        <h4 class="section-title">PLACES TO VISIT</h4>
+  
+        <div
+          class="visit-grid"
+          cdkDropList
+          id="visitList"
+          [cdkDropListData]="places"
+          [cdkDropListConnectedTo]="['planList']"
+          (cdkDropListDropped)="onDrop($event)"
+        >
+          <div class="visit-card"
+               *ngFor="let place of places"
+               cdkDrag
+               [cdkDragData]="place">
+            <img [src]="place.image" class="visit-image" />
+            <div class="visit-label">{{ place.name }}</div>
+          </div>
+        </div>
+    </ng-container>
+    <br>
+  
+    <button class="reset-btn" (click)="reset()">Reset Plan</button>
+    <button style="background:#3f8cff;" class="text-white btn mx-2" routerLink="/planning-week2-l2">Next Lesson ➡️</button>
+  
+  </div>
+  
+  

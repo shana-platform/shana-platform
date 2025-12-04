@@ -1,0 +1,49 @@
+<div class="discussion-container mb-5">
+    <h2 class="section-title">Discussion Prompts
+      <p class="text-muted fs-6 fw-light">Think and share your thoughts</p>
+    </h2>
+    
+    <div *ngFor="let prompt of discussionPrompts" class="discussion-card">
+      <h4 class="question">{{ prompt.question }}</h4>
+  
+      <!-- User Input Section -->
+      <div class="user-answer">
+        <textarea
+          [(ngModel)]="prompt.userAnswer"
+          [disabled]="prompt.submitted"
+          placeholder="Type your response here..."
+          class="answer-box"></textarea>
+        <button
+          *ngIf="!prompt.submitted"
+          (click)="submitAnswer(prompt)"
+          class="submit-btn">
+          Submit
+        </button>
+        <div *ngIf="prompt.submitted" class="submitted-answer">
+          <strong>Your answer: <span class="text-primary">{{ prompt.userAnswer }}</span></strong>
+        </div>
+      <ng-container *ngIf="prompt.submitted">
+        <div class="thanks-message mt-2 text-primary small">
+          3 stars 🌟 earned!
+        </div>
+      </ng-container>
+      </div>
+  
+   
+  
+      <!-- Others' Answers -->
+      <div *ngIf="prompt.submitted" class="others-section">
+        <h5 class="others-title">See what others said:</h5>
+  
+        <div *ngFor="let answer of prompt.others" class="other-answer">
+          <ng-container *ngIf="answer.name; else textAnswer">
+            <span class="comment">"{{ answer.comment }}"</span>
+          </ng-container>
+          <ng-template #textAnswer>
+            <span class="comment">"{{ answer.text }}"</span>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  

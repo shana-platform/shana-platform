@@ -1,0 +1,216 @@
+/* --- General Styles --- */
+.tracker-page-wrapper {
+    background-color: #f8faff;
+    color: #1e2b45;
+    display: flex;
+    align-items: center;
+  }
+  
+  .challenge-title {
+    color: #1e2b45;
+    font-size: 2rem;
+  }
+  
+  .app-icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  /* --- SETUP View Styles --- */
+  .setup-card .setup-header {
+    color: #3b82f6;
+  }
+  
+  .setup-card .goal-input-field {
+    border: 1px solid #ccc;
+  }
+  
+  .setup-card .start-challenge-button {
+    background-color: #3b82f6;
+    border: none;
+    font-weight: 600;
+  }
+  
+  /* --- TRACKING & COMPLETE Shared Styles --- */
+  .my-goal-display {
+    background-color: white;
+    border: 1px solid #eee;
+  }
+  
+  .my-goal-display .bi-target {
+    color: #3b82f6;
+    font-size: 1.5rem;
+  }
+  
+  .my-goal-display .goal-label {
+    letter-spacing: 0.5px;
+  }
+  
+  /* --- Tracker Card (Day Checkboxes) --- */
+  .tracker-card {
+    background-color: white;
+  }
+  
+  .tracker-card .day-tracker-item {
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.2s;
+  }
+  
+  .tracker-card .day-tracker-item .day-star-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 5px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+  }
+  
+  .tracker-card .day-tracker-item .day-star-icon::before {
+    content: "\2605";
+    font-size: 3rem;
+    position: absolute;
+    color: #ddd;
+  }
+  
+  .tracker-card .day-tracker-item .day-star-icon .check-mark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1rem;
+    color: white;
+    z-index: 10;
+  }
+  
+  .tracker-card .day-tracker-item .day-label {
+    color: #7f8fa4;
+  }
+  
+  .tracker-card .day-tracker-item.is-active:hover {
+    opacity: 0.8;
+  }
+  
+  /* --- Completion State --- */
+  .tracker-card .day-tracker-item.is-complete .day-star-icon {
+    background-color: #ffc107;
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+  }
+  
+  .tracker-card .day-tracker-item.is-complete .day-star-icon::before {
+    content: "\2605";
+    color: #ffc107;
+  }
+  
+  .tracker-card .day-tracker-item.is-complete .day-star-icon .check-mark {
+    color: white;
+  }
+  
+  .tracker-card .day-tracker-item.is-complete .day-label {
+    color: #1e2b45;
+    font-weight: 600;
+  }
+  
+  /* --- Progress Bar --- */
+  .progress {
+    border-radius: 9999px;
+    background-color: #eee;
+  }
+  
+  .progress .progress-bar {
+    background-color: #3b82f6;
+    transition: width 0.6s ease;
+  }
+  
+  .challenge-complete-message {
+    color: #3b82f6;
+  }
+  
+  /* --- Confidence Quote Card --- */
+  .secondary-card {
+    background-color: #e8f0ff;
+  }
+  
+  .secondary-card .icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(59, 130, 246, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    font-size: 1.2rem;
+  }
+
+    /* MODAL */
+    .modal.show {
+        display: block;
+      }
+      
+      .modal-content {
+        background: #ffffff;
+        margin: auto;
+        padding: 2rem;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        animation: slideDown 0.3s ease;
+        text-align: center;
+      }
+      
+      .modal-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .modal-icon {
+        width: 80px;
+        margin-bottom: 1rem;
+      }
+      
+      .modal-message {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #00bfa6;
+      }
+      
+      .modal-subtext {
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+        color: #555;
+      }
+      
+      .modal-note {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #888;
+      }
+      
+      .modal-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+    
+      .btn.replay {
+        background-color: #00bfa6;
+        color: #fff;
+      }
+  

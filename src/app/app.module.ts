@@ -83,12 +83,35 @@ import { ConfidenceWeek4L3Component } from './pages/confidence-module/confidence
 import { ConfidenceWeek4L4Component } from './pages/confidence-module/confidence-week4/confidence-week4-l4/confidence-week4-l4.component';
 import { ModuleProjectComponent } from './pages/module-project/module-project.component';
 import { PlanningWeek1Component } from './pages/planning-module/planning-week1/planning-week1.component';
-import { PlanningWeek1L1Component } from './pages/planning-module/planning-week1-l1/planning-week1-l1.component';
-import { PlanningWeek1L2Component } from './pages/planning-module/planning-week1-l2/planning-week1-l2.component';
-import { PlanningWeek1L3Component } from './pages/planning-module/planning-week1-l3/planning-week1-l3.component';
-import { PlanningWk1L2ActivityComponent } from './pages/planning-module/planning-week1-l2/planning-wk1-l2-activity/planning-wk1-l2-activity.component';
-import { PlanningWk1L2VideoComponent } from './pages/planning-module/planning-week1-l2/planning-wk1-l2-video/planning-wk1-l2-video.component';
-import { PlanningWk1L2DiscussionComponent } from './pages/planning-module/planning-week1-l2/planning-wk1-l2-discussion/planning-wk1-l2-discussion.component';
+import { PlanningWeek1L1Component } from './pages/planning-module/planning-week1/planning-week1-l1/planning-week1-l1.component';
+import { PlanningWeek1L2Component } from './pages/planning-module/planning-week1/planning-week1-l2/planning-week1-l2.component';
+import { PlanningWeek1L3Component } from './pages/planning-module/planning-week1/planning-week1-l3/planning-week1-l3.component';
+import { PlanningWk1L2ActivityComponent } from './pages/planning-module/planning-week1/planning-week1-l2/planning-wk1-l2-activity/planning-wk1-l2-activity.component';
+import { PlanningWk1L2VideoComponent } from './pages/planning-module/planning-week1/planning-week1-l2/planning-wk1-l2-video/planning-wk1-l2-video.component';
+import { PlanningWk1L2DiscussionComponent } from './pages/planning-module/planning-week1/planning-week1-l2/planning-wk1-l2-discussion/planning-wk1-l2-discussion.component';
+import { PlanningWeek2Component } from './pages/planning-module/planning-week2/planning-week2.component';
+import { PlanningWeek2Level1Component } from './pages/planning-module/planning-week2/planning-week2-level1/planning-week2-level1.component';
+import { PlanningWeek2Level2Component } from './pages/planning-module/planning-week2/planning-week2-level2/planning-week2-level2.component';
+import { PlanningWeek2Level3Component } from './pages/planning-module/planning-week2/planning-week2-level3/planning-week2-level3.component';
+import { PlanningWk2L2ActivityComponent } from './pages/planning-module/planning-week2/planning-week2-level2/planning-wk2-l2-activity/planning-wk2-l2-activity.component';
+import { PlanningWk2L2VideoComponent } from './pages/planning-module/planning-week2/planning-week2-level2/planning-wk2-l2-video/planning-wk2-l2-video.component';
+import { PlanningWk2L2DiscussionComponent } from './pages/planning-module/planning-week2/planning-week2-level2/planning-wk2-l2-discussion/planning-wk2-l2-discussion.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PlanningWeek3Component } from './pages/planning-module/planning-week3/planning-week3.component';
+import { PlanningWeek3L1Component } from './pages/planning-module/planning-week3/planning-week3-l1/planning-week3-l1.component';
+import { PlanningWeek3L2Component } from './pages/planning-module/planning-week3/planning-week3-l2/planning-week3-l2.component';
+import { PlanningWeek3L3Component } from './pages/planning-module/planning-week3/planning-week3-l3/planning-week3-l3.component';
+import { PlanningWk3L2VideoComponent } from './pages/planning-module/planning-week3/planning-week3-l2/planning-wk3-l2-video/planning-wk3-l2-video.component';
+import { PlanningWk3L2ActivityComponent } from './pages/planning-module/planning-week3/planning-week3-l2/planning-wk3-l2-activity/planning-wk3-l2-activity.component';
+import { PlanningWk3L2DiscussionComponent } from './pages/planning-module/planning-week3/planning-week3-l2/planning-wk3-l2-discussion/planning-wk3-l2-discussion.component';
+import { PlanningWk3L2LessonComponent } from './pages/planning-module/planning-week3/planning-week3-l2/planning-wk3-l2-lesson/planning-wk3-l2-lesson.component';
+import { PlanningWeek4Component } from './pages/planning-module/planning-week4/planning-week4.component';
+import { PlanningWeek4L1Component } from './pages/planning-module/planning-week4/planning-week4-l1/planning-week4-l1.component';
+import { PlanningWeek4L2Component } from './pages/planning-module/planning-week4/planning-week4-l2/planning-week4-l2.component';
+import { PlanningWeek4L3Component } from './pages/planning-module/planning-week4/planning-week4-l3/planning-week4-l3.component';
+import { PlanningWk4L2ActivityComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-activity/planning-wk4-l2-activity.component';
+import { PlanningWk4L2DiscussionComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-discussion/planning-wk4-l2-discussion.component';
+import { PlanningWk4L2VideoComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-video/planning-wk4-l2-video.component';
 
 @NgModule({
   declarations: [
@@ -178,13 +201,36 @@ import { PlanningWk1L2DiscussionComponent } from './pages/planning-module/planni
     PlanningWeek1L3Component,
     PlanningWk1L2ActivityComponent,
     PlanningWk1L2VideoComponent,
-    PlanningWk1L2DiscussionComponent
+    PlanningWk1L2DiscussionComponent,
+    PlanningWeek2Component,
+    PlanningWeek2Level1Component,
+    PlanningWeek2Level2Component,
+    PlanningWeek2Level3Component,
+    PlanningWk2L2ActivityComponent,
+    PlanningWk2L2VideoComponent,
+    PlanningWk2L2DiscussionComponent,
+    PlanningWeek3Component,
+    PlanningWeek3L1Component,
+    PlanningWeek3L2Component,
+    PlanningWeek3L3Component,
+    PlanningWk3L2VideoComponent,
+    PlanningWk3L2ActivityComponent,
+    PlanningWk3L2DiscussionComponent,
+    PlanningWk3L2LessonComponent,
+    PlanningWeek4Component,
+    PlanningWeek4L1Component,
+    PlanningWeek4L2Component,
+    PlanningWeek4L3Component,
+    PlanningWk4L2ActivityComponent,
+    PlanningWk4L2DiscussionComponent,
+    PlanningWk4L2VideoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

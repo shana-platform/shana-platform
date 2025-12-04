@@ -1,0 +1,110 @@
+  <div class="quiz-page-wrapper">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7 text-center">
+
+            <div class="header-content mb-5">
+                <div class="app-icon-container mx-auto mb-3">
+                  <i class="fa fa-bullseye"></i>
+                </div>
+                <h1 class="quiz-title fw-bold">Goal Match-Up!</h1>
+                <p class="quiz-instructions text-muted">Choose which goal sounds <span style="color: #3b82f6;">SMARTer</span> — clearer, more specific, and doable!</p>
+              </div>
+
+
+        <ng-container *ngIf="!quizFinished">
+            <div class="row mb-1">
+                <div class="col">
+                    <span class="question-label text-muted fw-semibold">
+                        Question {{ currentQuestion.questionNumber }} of {{ allQuestions.length }}
+                    </span>
+                </div>
+                <div class="col-auto ml-auto">
+                    <span class="score-label text-muted fw-semibold">
+                        <i class="fa fa-star me-1"></i> {{ currentScore }} points
+                    </span>
+                </div>
+            </div>
+            
+            <div class="progress-bar-container d-flex justify-content-between align-items-center mb-5">
+                <div class="progress w-100" style="height: 6px;">
+                    <div class="progress-bar" role="progressbar" [style.width.%]="progressPercentage"
+                        [attr.aria-valuenow]="progressPercentage" [attr.aria-valuemin]="0" [attr.aria-valuemax]="100"></div>
+                </div>
+            </div>
+            
+            <h3 class="question-text fw-bold mb-4">
+                {{ currentQuestion.questionText }}
+            </h3>
+            
+            <div class="options-list">
+                <div *ngFor="let option of currentQuestion.options" [class]="getOptionClass(option.label)"
+                    (click)="selectOption(option.label)">
+                    <div class="option-label fw-bold flex-shrink-0 me-3">{{ option.label }}</div>
+                    <div class="option-text">{{ option.text }}</div>
+                </div>
+            </div>
+            
+            <div *ngIf="isAnswerSubmitted" class="mt-4">
+            
+                <div class="feedback-card p-4 rounded-3 text-start" [class.feedback-correct]="isAnswerCorrect"
+                    [class.feedback-incorrect]="!isAnswerCorrect">
+                    <div class="d-flex align-items-start">
+                        <div class="feedback-icon-box flex-shrink-0 me-3">
+                            <i class="fa" [class.fa-check-circle-fill]="isAnswerCorrect"
+                                [class.fa-exclamation-circle-fill]="!isAnswerCorrect"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1" *ngIf="isAnswerCorrect">Great Job!</h5>
+                            <h5 class="fw-bold mb-1" *ngIf="!isAnswerCorrect">Not quite!</h5>
+            
+                            <p class="mb-0 small">{{ feedbackMessage }}</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <button class="btn btn-primary btn-lg mt-4 w-100 next-question-button" (click)="nextQuestion()">
+                    {{ actionButtonText }} &rarr;
+                </button>
+            </div>
+        </ng-container>
+        
+
+          <!-- RESULTS -->
+          <div *ngIf="quizFinished">
+            <div class="results-content-card p-5 rounded-4 shadow-sm">
+
+                <div class="icon-success-container mx-auto mb-4">
+                  <i class="fa fa-stars"></i>
+                </div>
+                
+                <h1 class="results-message fw-bold mb-3">
+                  Great Job!
+                </h1>
+
+                <p class="score-label text-muted mb-1">You scored</p>
+
+                <div class="score-display mb-4">
+                  <span class="score-numerator fw-bold">{{ scoreCorrectCount }}</span>
+                  <span class="score-separator">/</span>
+                  <span class="score-denominator">{{ totalQuestions }}</span>
+                </div>
+
+                <p class="comment-text fw-medium mb-5">
+                  Well done! You understand SMART goals!
+                </p>
+
+                <button routerLink="/planning-week3-l2"
+                  class="btn btn-primary btn-lg play-again-button">
+                  <i class="fa fa-arrow-clockwise me-2"></i> Next Lesson
+                </button>
+            </div>
+        </div>
+          <!-- RESULTS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  

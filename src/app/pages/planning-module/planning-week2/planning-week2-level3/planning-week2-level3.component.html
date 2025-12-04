@@ -1,0 +1,72 @@
+<div class="challenge-page-wrapper">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7 text-center">
+  
+          <div class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold letter-spacing-1 mb-2">This Week</h6>
+            <h1 class="display-5 fw-bold text-dark-blue mb-3">Challenge of the Week</h1>
+            <div class="title-underline mx-auto"></div>
+          </div>
+  
+          <div class="card main-card border-0 shadow-sm rounded-4 mb-4 text-start text-md-center">
+            <div class="card-accent-border"></div>
+            <div class="card-body p-4 p-md-5">
+              <span class="badge bg-light-blue text-blue rounded-pill py-2 px-3 mb-4">
+                <i class="bi bi-stars me-1"></i> Weekly Challenge
+              </span>
+              
+              <h2 class="fw-bold text-dark-blue mb-5">
+                Use the Saturday Planner and share a photo or a short note on how it went.
+              </h2>
+  
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <button class="btn btn-custom-light-blue rounded-pill px-4 py-2 fw-semibold">
+                  <i class="bi bi-calendar4-event me-2"></i> Plan your Saturday
+                </button>
+                <button class="btn btn-custom-light-orange rounded-pill px-4 py-2 fw-semibold">
+                  <i class="bi bi-camera me-2"></i> Share your progress
+                </button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card secondary-card border-0 rounded-4 mb-2">
+            <div class="card-body p-4 d-flex align-items-center text-start">
+              <div class="icon-box flex-shrink-0 me-3 me-md-4">
+                <i class="bi bi-heart-fill text-orange"></i>
+              </div>
+              <div>
+                <h6 class="text-uppercase text-muted fw-bold letter-spacing-1 mb-1" style="font-size: 0.75rem;">Confidence Link</h6>
+                <p class="fs-5 text-dark-blue fst-italic mb-0">
+                  "My plan shows I can organise my day."
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <button (click)="openModal()" class="border border-none px-4 py-2 rounded-pill cursor-pointer" 
+          style="background:#6aa8ff; color:#fff; font-weight:500; font-size:16px;">
+              Complete Your Journey
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Modal -->
+<div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message"><strong>Bravo ooo!</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>week 2</strong> of the planning module</p>
+        <p class="modal-note">Complete end of module project and earn the championship trophy!</p>
+        <div class="modal-actions">
+        <button routerLink="/planning-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+  </div>

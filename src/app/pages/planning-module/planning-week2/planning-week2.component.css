@@ -1,0 +1,9 @@
+.soft-bg {
+    background: linear-gradient(to bottom right, #eef5fb, #fbf9f7);
+    min-height: 100vh;
+    border-radius: 25px;
+  }
+  .section-card {
+    border-radius: 25px;
+    border: none;
+  }

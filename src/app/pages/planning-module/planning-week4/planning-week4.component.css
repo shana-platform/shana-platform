@@ -1,0 +1,70 @@
+.celebration-page-wrapper {
+    background: linear-gradient(180deg, #ffffff, #f7f7f7);
+    color: #1e2b45;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* --- Header/Image Block --- */
+  .celebration-header .page-title {
+    color: #1e2b45;
+    font-size: 2.5rem;
+  }
+  
+  .celebration-header .page-title .text-primary-blue {
+    color: #3b82f6;
+  }
+  
+  .celebration-header .tag-label {
+    color: #f59e0b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .celebration-header .welcome-message {
+    font-size: 1.1rem;
+  }
+  
+  /* --- Owl Image Block --- */
+  .owl-image-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .owl-image-container img {
+    box-shadow: 0 8px 25px rgba(30, 43, 69, 0.1);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* --- Objective Card --- */
+  .objective-card {
+    background-color: #e5f0ff;
+    border-top: 5px solid rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.1);
+  }
+  
+  .objective-card .icon-box {
+    color: #3b82f6;
+    font-size: 1.5rem;
+  }
+  
+  .objective-card .objective-header {
+    color: #1e2b45;
+    font-size: 1.2rem;
+  }
+  
+  .objective-card .objective-text {
+    font-size: 1.1rem;
+    color: #1e2b45;
+  }
+  
+  /* --- Button Styles --- */
+  .continue-button {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    font-weight: 600;
+  }
+  

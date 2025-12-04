@@ -1,0 +1,95 @@
+<div class="planner-wrapper">
+
+    <!-- DATE BADGE -->
+    <span class="date-badge">
+      <i class="fa fa-calendar"></i> Thursday, December 4
+    </span>
+  
+    <h1>Saturday Planner</h1>
+    <p class="subtitle">Plan your perfect weekend day</p>
+  
+    <!-- PROGRESS -->
+    <div class="progress-wrapper">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="progressPercent"></div>
+      </div>
+      <span class="progress-text">{{ completedCount }}/{{ totalTasks }}</span>
+    </div>
+  
+    <!-- PLANNER GRID -->
+    <div class="planner-grid">
+  
+      <!-- MORNING -->
+      <div class="planner-card morning">
+        <div class="planner-header">
+          <div class="icon sun"><i class="fa fa-sun"></i></div>
+          <h3>Morning</h3>
+        </div>
+  
+        <div class="task"
+             *ngFor="let task of planner.morning"
+             (click)="toggleTask(task)"
+             [class.done]="task.done">
+          <span class="circle">
+            <i *ngIf="task.done" class="fa fa-check"></i>
+          </span>
+          {{ task.text }}
+        </div>
+  
+        <div class="add-task">
+          <input [(ngModel)]="newTask.morning" placeholder="+ Add task">
+          <button (click)="addTask('morning')">Add</button>
+        </div>
+      </div>
+  
+      <!-- AFTERNOON -->
+      <div class="planner-card afternoon">
+        <div class="planner-header">
+          <div class="icon cloud"><i class="fa fa-cloud"></i></div>
+          <h3>Afternoon</h3>
+        </div>
+  
+        <div class="task"
+             *ngFor="let task of planner.afternoon"
+             (click)="toggleTask(task)"
+             [class.done]="task.done">
+          <span class="circle">
+            <i *ngIf="task.done" class="fa fa-check"></i>
+          </span>
+          {{ task.text }}
+        </div>
+  
+        <div class="add-task">
+          <input [(ngModel)]="newTask.afternoon" placeholder="+ Add task">
+          <button (click)="addTask('afternoon')">Add</button>
+        </div>
+      </div>
+  
+      <!-- EVENING -->
+      <div class="planner-card evening">
+        <div class="planner-header">
+          <div class="icon moon"><i class="fa fa-moon"></i></div>
+          <h3>Evening</h3>
+        </div>
+  
+        <div class="task"
+             *ngFor="let task of planner.evening"
+             (click)="toggleTask(task)"
+             [class.done]="task.done">
+          <span class="circle">
+            <i *ngIf="task.done" class="fa fa-check"></i>
+          </span>
+          {{ task.text }}
+        </div>
+  
+        <div class="add-task">
+          <input [(ngModel)]="newTask.evening" placeholder="+ Add task">
+          <button (click)="addTask('evening')">Add</button>
+        </div>
+      </div>
+  
+    </div>
+    <p class="footer-text">Make the most of your Saturday ✨</p>
+    <button style="background:#3f8cff;" class="text-white btn mx-2" routerLink="/planning-week2-l3">Next Lesson ➡️</button>
+  </div>
+  

@@ -1,0 +1,25 @@
+    <h2 class="text-primary">Story</h2>
+    <div class="video-section">
+      <div class="video-wrapper" *ngIf="!videoPlaying" (click)="playVideo()">
+        <div class="play-icon">
+          ▶
+        </div>
+        <p class="play-text">Click to play video</p>
+      </div>
+      <video
+        #videoPlayer
+        *ngIf="videoPlaying"
+        class="actual-video"
+        controls
+        (ended)="videoPlaying = false">
+        <source src="https://drive.google.com/uc?export=download&id=1jcgfwMLtBTABu7MGTqJZEWGs7ikcIX9a" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+    
+      <div class="video-footer">
+        <div class="duration">
+          🔊 Duration: 4-5 minutes
+          <p> <a href="https://youtu.be/f0PJbx6cUFo?feature=shared">Click here</a> to watch video on youtube(to play with subtitles)</p>
+        </div>
+      </div>
+    </div>

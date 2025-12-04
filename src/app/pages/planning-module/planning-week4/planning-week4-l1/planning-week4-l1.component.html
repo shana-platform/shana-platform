@@ -1,0 +1,96 @@
+<!-- <div class="plan-relay-page-wrapper py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+  
+          <p class="tag-label fw-semibold mb-1">{{ pageTag }}</p>
+          <h1 class="page-title fw-bold">{{ pageTitle }}</h1>
+          <p class="instructions text-muted mb-5">{{ instructions }}</p>
+  
+          <p class="section-label text-start text-uppercase fw-semibold mb-3">Steps to Arrange</p>
+          <div class="steps-to-arrange-container mb-5">
+            <div 
+                cdkDropList 
+                [cdkDropListData]="stepsToArrange" 
+                [cdkDropListConnectedTo]="userOrder.map(slot => 'slot-' + slot.orderNumber)"
+                (cdkDropListDropped)="onStepDropped($event)" 
+                class="d-flex flex-wrap justify-content-center gap-3"
+            >
+              <div 
+                *ngFor="let step of stepsToArrange.filter(s => !s.isPlaced)" 
+                cdkDrag
+                [cdkDragData]="step" 
+                class="drag-step-item"
+                [attr.data-step-id]="step.id"
+              >
+                <i class="bi bi-grip-vertical me-2"></i> {{ step.text }}
+              </div>
+            </div>
+          </div>
+          
+          <p class="section-label text-start text-uppercase fw-semibold mb-3">Your Order</p>
+          <div class="order-slots-container mb-5">
+            <div 
+              *ngFor="let slot of userOrder" 
+              class="drop-slot-item d-flex align-items-center mb-3"
+            >
+              <div class="order-number flex-shrink-0 me-3">{{ slot.orderNumber }}</div>
+              
+              <div 
+                cdkDropList 
+                [id]="'slot-' + slot.orderNumber"
+                [cdkDropListData]="slot"
+                [cdkDropListConnectedTo]="['available-steps-list']"
+                [cdkDropListEnterPredicate]="slotEmptyPredicate"
+                (cdkDropListDropped)="onSlotDropped($event, slot)"
+                class="drop-zone flex-grow-1"
+              >
+                
+                <span 
+                  *ngIf="slot.placedStepId === null" 
+                  class="placeholder-text text-muted"
+                >
+                  Drop a step here
+                </span>
+                
+                <span 
+                  *ngIf="slot.placedStepId !== null" 
+                  class="placed-step-text fw-medium"
+                  cdkDrag
+                  [cdkDragData]="getStepById(slot.placedStepId)"
+                  
+                  >
+                  {{ getPlacedStepText(slot.placedStepId) }}
+                  
+                  <i 
+                      *ngIf="isAnswerChecked" 
+                      class="bi ms-2"
+                      [class.bi-check-circle-fill]="isStepCorrect(slot.placedStepId, slot.orderNumber)"
+                      [class.text-success]="isStepCorrect(slot.placedStepId, slot.orderNumber)"
+                      [class.bi-x-circle-fill]="!isStepCorrect(slot.placedStepId, slot.orderNumber)"
+                      [class.text-danger]="!isStepCorrect(slot.placedStepId, slot.orderNumber)"
+                  ></i>
+                </span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="d-flex justify-content-center gap-3">
+            <button 
+              class="btn check-answer-button fw-semibold"
+              (click)="checkAnswer()"
+            >
+              <i class="bi bi-check-lg me-2"></i> Check Answer
+            </button>
+            <button 
+              class="btn try-again-button fw-semibold"
+              (click)="tryAgain()"
+            >
+              <i class="bi bi-arrow-clockwise me-2"></i> Try Again
+            </button>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div> -->

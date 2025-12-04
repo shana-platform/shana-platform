@@ -48,10 +48,22 @@ import { IdentityModuleComponent } from './pages/identity-module/identity-module
 import { LoginComponent } from './pages/login/login.component';
 import { ModuleProjectComponent } from './pages/module-project/module-project.component';
 import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
-import { PlanningWeek1L1Component } from './pages/planning-module/planning-week1-l1/planning-week1-l1.component';
-import { PlanningWeek1L2Component } from './pages/planning-module/planning-week1-l2/planning-week1-l2.component';
-import { PlanningWeek1L3Component } from './pages/planning-module/planning-week1-l3/planning-week1-l3.component';
+import { PlanningWeek1L1Component } from './pages/planning-module/planning-week1/planning-week1-l1/planning-week1-l1.component';
+import { PlanningWeek1L2Component } from './pages/planning-module/planning-week1/planning-week1-l2/planning-week1-l2.component';
+import { PlanningWeek1L3Component } from './pages/planning-module/planning-week1/planning-week1-l3/planning-week1-l3.component';
 import { PlanningWeek1Component } from './pages/planning-module/planning-week1/planning-week1.component';
+import { PlanningWeek2Level1Component } from './pages/planning-module/planning-week2/planning-week2-level1/planning-week2-level1.component';
+import { PlanningWeek2Level2Component } from './pages/planning-module/planning-week2/planning-week2-level2/planning-week2-level2.component';
+import { PlanningWeek2Level3Component } from './pages/planning-module/planning-week2/planning-week2-level3/planning-week2-level3.component';
+import { PlanningWeek2Component } from './pages/planning-module/planning-week2/planning-week2.component';
+import { PlanningWeek3L1Component } from './pages/planning-module/planning-week3/planning-week3-l1/planning-week3-l1.component';
+import { PlanningWeek3L2Component } from './pages/planning-module/planning-week3/planning-week3-l2/planning-week3-l2.component';
+import { PlanningWeek3L3Component } from './pages/planning-module/planning-week3/planning-week3-l3/planning-week3-l3.component';
+import { PlanningWeek3Component } from './pages/planning-module/planning-week3/planning-week3.component';
+import { PlanningWeek4L1Component } from './pages/planning-module/planning-week4/planning-week4-l1/planning-week4-l1.component';
+import { PlanningWeek4L2Component } from './pages/planning-module/planning-week4/planning-week4-l2/planning-week4-l2.component';
+import { PlanningWeek4L3Component } from './pages/planning-module/planning-week4/planning-week4-l3/planning-week4-l3.component';
+import { PlanningWeek4Component } from './pages/planning-module/planning-week4/planning-week4.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
 import { SecondWeekLevel2Component } from './pages/second-week-welcome/second-week-level2/second-week-level2.component';
 import { SecondWeekLevel3Component } from './pages/second-week-welcome/second-week-level3/second-week-level3.component';
@@ -142,6 +154,18 @@ const routes: Routes = [
       { path: 'planning-week1-l1', component: PlanningWeek1L1Component },
       { path: 'planning-week1-l2', component: PlanningWeek1L2Component },
       { path: 'planning-week1-l3', component: PlanningWeek1L3Component },
+      { path: 'planning-week2', component: PlanningWeek2Component },
+      { path: 'planning-week2-l1', component: PlanningWeek2Level1Component },
+      { path: 'planning-week2-l2', component: PlanningWeek2Level2Component },
+      { path: 'planning-week2-l3', component: PlanningWeek2Level3Component },
+      { path: 'planning-week3', component: PlanningWeek3Component },
+      { path: 'planning-week3-l1', component: PlanningWeek3L1Component },
+      { path: 'planning-week3-l2', component: PlanningWeek3L2Component },
+      { path: 'planning-week3-l3', component: PlanningWeek3L3Component },
+      { path: 'planning-week4', component: PlanningWeek4Component },
+      { path: 'planning-week4-l1', component: PlanningWeek4L1Component },
+      { path: 'planning-week4-l2', component: PlanningWeek4L2Component },
+      { path: 'planning-week4-l3', component: PlanningWeek4L3Component },
     ]
   }
 ];

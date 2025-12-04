@@ -1,0 +1,138 @@
+<div class="tracker-page-wrapper py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+  
+          <div class="header-content mb-5">
+            <div class="app-icon-container mx-auto mb-3">
+              <i class="fa fa-bullseye"></i>
+            </div>
+            <h1 class="challenge-title fw-bold">{{ challengeTitle }}</h1>
+            <p class="challenge-subtitle text-muted">{{ challengeSubtitle }}</p>
+          </div>
+  
+          <div [ngSwitch]="state.currentView">
+  
+            <div *ngSwitchCase="'setup'">
+              <div class="card p-4 setup-card rounded-4 shadow-sm mb-4">
+                <div class="card-body p-0 text-start">
+                  <h5 class="fw-bold mb-3 setup-header">
+                    <i class="fa fa-stars me-2"></i> What's your goal?
+                  </h5>
+                  <p class="small text-muted mb-3">Set a simple, clear goal you can work on for 3 days</p>
+  
+                  <div class="input-group">
+                    <input
+                      #goalInput
+                      type="text"
+                      class="form-control goal-input-field"
+                      placeholder="e.g., Read for 15 minutes each day"
+                    >
+                    <button
+                      class="btn btn-primary start-challenge-button"
+                      (click)="startChallenge(goalInput.value)"
+                    >
+                      Start Challenge
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div *ngSwitchDefault>
+              
+              <div class="card p-3 my-goal-display rounded-4 shadow-sm mb-4 text-start">
+                <div class="d-flex align-items-center">
+                  <i class="fa fa-target me-3"></i>
+                  <div>
+                    <p class="small text-muted mb-0 goal-label">MY SMART GOAL</p>
+                    <p class="fw-bold mb-0 goal-text">{{ state.goalText }}</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card p-4 tracker-card rounded-4 shadow-sm mb-4">
+                <p class="text-muted small fw-bold mb-3 text-center">TAP TO MARK COMPLETE</p>
+                
+                <div class="d-flex justify-content-around">
+                  <div 
+                    *ngFor="let day of state.days; let i = index" 
+                    class="day-tracker-item"
+                    [class.is-complete]="day.isComplete"
+                    [class.is-active]="state.currentView === 'tracking'"
+                    (click)="toggleDayComplete(i)"
+                  >
+                    <div class="day-star-icon">
+                      <i *ngIf="day.isComplete" class="fa fa-check-lg check-mark"></i>
+                    </div>
+                    <p class="small day-label mb-0">Day {{ day.dayNumber }}</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress-container mb-4 text-start">
+                <p class="small text-muted mb-1">Progress</p>
+                <div class="progress" style="height: 12px;">
+                  <div 
+                    class="progress-bar" 
+                    role="progressbar" 
+                    [style.width.%]="progressPercentage" 
+                    [attr.aria-valuenow]="completedDaysCount" 
+                    [attr.aria-valuemin]="0" 
+                    [attr.aria-valuemax]="state.days.length"
+                  ></div>
+                </div>
+                <p class="progress-count small fw-bold text-end mt-1">
+                  {{ completedDaysCount }}/{{ state.days.length }} days
+                </p>
+                
+                <p *ngIf="state.currentView === 'complete'" class="challenge-complete-message fw-bold text-center mt-2">
+                    Challenge Complete! You're amazing!
+                </p>
+              </div>
+            </div>
+  
+            <div class="card secondary-card border-0 rounded-4 shadow-sm">
+              <div class="card-body p-4 d-flex align-items-center text-start">
+                <div class="icon-box flex-shrink-0 me-3">
+                  <i class="fa fa-list"></i>
+                </div>
+                <div>
+                  <h6 class="text-uppercase text-muted fw-bold letter-spacing-1 mb-1" style="font-size: 0.75rem;">CONFIDENCE & PLANNING</h6>
+                  <p class="fs-5 text-dark-blue mb-0">
+                    {{ state.currentQuote.text }}
+                  </p>
+                  <p class="small text-muted mt-1 mb-0">{{ state.currentQuote.subText }}</p>
+                </div>
+              </div>
+            </div>
+            
+            <button 
+              *ngIf="state.currentView === 'complete'" 
+              class="btn btn-lg btn-primary mt-4 w-100"
+              (click)="openModal()">
+              Complete Your Journey
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Modal -->
+<div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message"><strong>Bravo ooo!</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>week 3</strong> of the planning module</p>
+        <p class="modal-note">Complete end of module project and earn the championship trophy!</p>
+        <div class="modal-actions">
+        <button routerLink="/planning-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+  </div>

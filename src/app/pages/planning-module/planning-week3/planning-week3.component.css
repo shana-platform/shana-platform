@@ -1,0 +1,85 @@
+/* --- General Styles --- */
+.smart-goal-plan-wrapper {
+    background-color: #f5f8ff; /* Page background */
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* --- Header Styles --- */
+  .small-label {
+    color: #3b82f6 !important; /* Accent blue */
+    letter-spacing: 1px;
+  }
+  
+  .smart-goal-title {
+    color: #1e2b45; /* Dark blue */
+  }
+  
+  /* --- Image Styles --- */
+  .image-container {
+    max-width: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .image-container .goal-image {
+    width: 100%;
+    /* Box-shadow with light blue accent */
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15), 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* --- Objective Card Styles --- */
+  .objective-card {
+    background-color: #e8f0ff; /* Light blue card background */
+    color: #1e2b45; /* Dark blue text */
+    box-shadow: 0 6px 15px rgba(30, 43, 69, 0.05); /* Subtle shadow */
+  }
+  
+  .objective-card .card-heading {
+    color: #1e2b45;
+    font-size: 1.25rem;
+  }
+  
+  .objective-card .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5c6b85; /* lighten(#1e2b45, 20%) approximation */
+  }
+  
+  .objective-card .focus-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 0.1rem !important;
+  }
+  
+  .objective-card .focus-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* Styles for the circular icon box */
+  .objective-card .icon-box {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.1); /* Light blue circle background */
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+  
+  .objective-card .icon-box .fa-lightbulb {
+    font-size: 1.1rem;
+  }
+  
+  .objective-card .card-divider {
+    border-top: 1px solid rgba(59, 130, 246, 0.2); /* Light blue divider */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  

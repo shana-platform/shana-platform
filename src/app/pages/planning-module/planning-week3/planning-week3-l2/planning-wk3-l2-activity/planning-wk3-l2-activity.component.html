@@ -1,0 +1,108 @@
+<div class="goal-builder-page-wrapper py-2">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="text-center">
+  
+          <div class="page-header mb-2">
+              <h1 class="page-title fw-bold">{{ pageTitle }}</h1>
+          </div>
+  
+          <div class="card builder-card border-0 rounded-4 shadow-sm p-4 mb-4">
+            <div class="card-body p-0">
+              <h5 class="fw-bold text-start mb-4 builder-header">
+                <i class="bi bi-stars me-2"></i> Build Your Goal
+              </h5>
+  
+              <div class="goal-sentence-box p-4 rounded-3 mb-4">
+                <span class="sentence-part">"I will</span>
+                
+                <select 
+                  class="form-select custom-select-part activity-select" 
+                  [(ngModel)]="selectedActivity"
+                  name="activity"
+                  aria-label="Choose activity"
+                >
+                  <option *ngFor="let opt of options.activities" [ngValue]="opt.value">{{ opt.label }}</option>
+                </select>
+                
+                <span class="sentence-part">for</span>
+                
+                <select 
+                  class="form-select custom-select-part minutes-select" 
+                  [(ngModel)]="selectedMinutes"
+                  name="minutes"
+                  aria-label="Choose minutes"
+                >
+                  <option *ngFor="let opt of options.minutes" [ngValue]="+opt.value">{{ opt.label }}</option>
+                </select>
+                
+                <span class="sentence-part">minutes</span>
+                
+                <select 
+                  class="form-select custom-select-part time-select" 
+                  [(ngModel)]="selectedTime"
+                  name="time"
+                  aria-label="Choose time"
+                >
+                  <option *ngFor="let opt of options.times" [ngValue]="opt.value">{{ opt.label }}</option>
+                </select>
+                
+                <span class="sentence-part">every day for</span>
+                
+                <select 
+                  class="form-select custom-select-part weeks-select" 
+                  [(ngModel)]="selectedWeeks"
+                  name="weeks"
+                  aria-label="Choose number of weeks"
+                >
+                  <option *ngFor="let opt of options.weeks" [ngValue]="+opt.value">{{ opt.label }}</option>
+                </select>
+                
+                <span class="sentence-part">week{{selectedWeeks > 1 ? 's' : ''}}."</span>
+              </div>
+  
+              <div class="text-start mb-3">
+                <p class="small text-muted mb-2">Or write your own activity:</p>
+                <input 
+                  type="text" 
+                  class="form-control custom-activity-input" 
+                  placeholder="e.g., practice spelling words"
+                  [(ngModel)]="customActivity"
+                  name="customActivity"
+                >
+              </div>
+  
+              <div class="smart-goal-output p-3 rounded-3 text-start mt-4">
+                <p class="fw-bold mb-1 smart-goal-label">
+                  <i class="fa fa-circle me-2"></i> Your SMART Goal:
+                </p>
+                <p class="mb-0 generated-goal-text">
+                  {{ smartGoalStatement }}
+                </p>
+              </div>
+  
+            </div>
+          </div>
+  
+          <div class="card builder-card border-0 rounded-4 shadow-sm p-4">
+            <div class="card-body p-0">
+              <h5 class="fw-bold mb-3 example-header">
+                <i class="fa fa-lightbulb me-2"></i> Example Goals
+              </h5>
+  
+              <ul class="list-group list-group-flush example-list">
+                <li *ngFor="let example of exampleGoals" class="list-group-item d-flex align-items-center py-3">
+                  <i class="fa me-3 example-icon" [ngClass]="example.icon"></i>
+                  {{ example.text }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button routerLink="/planning-week3-l3" class="btn btn-primary px-4 py-2 mt-2" 
+          style="border-radius:50px; background:#3f8cff;">
+                Proceed <i class="fa fa-arrow-right ms-2"></i>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
