@@ -1,96 +1,77 @@
-<!-- <div class="plan-relay-page-wrapper py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-xl-6 text-center">
-  
-          <p class="tag-label fw-semibold mb-1">{{ pageTag }}</p>
-          <h1 class="page-title fw-bold">{{ pageTitle }}</h1>
-          <p class="instructions text-muted mb-5">{{ instructions }}</p>
-  
-          <p class="section-label text-start text-uppercase fw-semibold mb-3">Steps to Arrange</p>
-          <div class="steps-to-arrange-container mb-5">
-            <div 
-                cdkDropList 
-                [cdkDropListData]="stepsToArrange" 
-                [cdkDropListConnectedTo]="userOrder.map(slot => 'slot-' + slot.orderNumber)"
-                (cdkDropListDropped)="onStepDropped($event)" 
-                class="d-flex flex-wrap justify-content-center gap-3"
-            >
-              <div 
-                *ngFor="let step of stepsToArrange.filter(s => !s.isPlaced)" 
-                cdkDrag
-                [cdkDragData]="step" 
-                class="drag-step-item"
-                [attr.data-step-id]="step.id"
-              >
-                <i class="bi bi-grip-vertical me-2"></i> {{ step.text }}
-              </div>
-            </div>
-          </div>
-          
-          <p class="section-label text-start text-uppercase fw-semibold mb-3">Your Order</p>
-          <div class="order-slots-container mb-5">
-            <div 
-              *ngFor="let slot of userOrder" 
-              class="drop-slot-item d-flex align-items-center mb-3"
-            >
-              <div class="order-number flex-shrink-0 me-3">{{ slot.orderNumber }}</div>
-              
-              <div 
-                cdkDropList 
-                [id]="'slot-' + slot.orderNumber"
-                [cdkDropListData]="slot"
-                [cdkDropListConnectedTo]="['available-steps-list']"
-                [cdkDropListEnterPredicate]="slotEmptyPredicate"
-                (cdkDropListDropped)="onSlotDropped($event, slot)"
-                class="drop-zone flex-grow-1"
-              >
-                
-                <span 
-                  *ngIf="slot.placedStepId === null" 
-                  class="placeholder-text text-muted"
-                >
-                  Drop a step here
-                </span>
-                
-                <span 
-                  *ngIf="slot.placedStepId !== null" 
-                  class="placed-step-text fw-medium"
-                  cdkDrag
-                  [cdkDragData]="getStepById(slot.placedStepId)"
-                  
-                  >
-                  {{ getPlacedStepText(slot.placedStepId) }}
-                  
-                  <i 
-                      *ngIf="isAnswerChecked" 
-                      class="bi ms-2"
-                      [class.bi-check-circle-fill]="isStepCorrect(slot.placedStepId, slot.orderNumber)"
-                      [class.text-success]="isStepCorrect(slot.placedStepId, slot.orderNumber)"
-                      [class.bi-x-circle-fill]="!isStepCorrect(slot.placedStepId, slot.orderNumber)"
-                      [class.text-danger]="!isStepCorrect(slot.placedStepId, slot.orderNumber)"
-                  ></i>
-                </span>
-              </div>
-            </div>
-          </div>
-  
-          <div class="d-flex justify-content-center gap-3">
-            <button 
-              class="btn check-answer-button fw-semibold"
-              (click)="checkAnswer()"
-            >
-              <i class="bi bi-check-lg me-2"></i> Check Answer
-            </button>
-            <button 
-              class="btn try-again-button fw-semibold"
-              (click)="tryAgain()"
-            >
-              <i class="bi bi-arrow-clockwise me-2"></i> Try Again
-            </button>
-          </div>
-  
-        </div>
+<div class="container py-5 plan-relay-page">
+
+  <!-- Header -->
+  <div class="text-center mb-4">
+    <span class="warmup-badge">✨ Warm-Up Game</span>
+    <h1 class="page-title mt-3">Plan Relay</h1>
+    <p class="page-subtitle">
+      Drag the steps into the right order to make a good plan!
+    </p>
+  </div>
+
+  <!-- Steps to Arrange -->
+  <div class="steps-wrapper mb-5">
+    <h6 class="section-title">STEPS TO ARRANGE</h6>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="steps"
+      (cdkDropListDropped)="drop($event)"
+      class="steps-container">
+
+      <div
+        class="step-card"
+        *ngFor="let step of steps"
+        cdkDrag>
+        <span class="drag-icon">⋮⋮</span>
+        {{ step }}
       </div>
     </div>
-  </div> -->
+  </div>
+
+  <!-- Your Order -->
+  <div class="order-wrapper mb-4">
+    <h6 class="section-title">YOUR ORDER</h6>
+
+    <div
+      class="order-slot"
+      *ngFor="let slot of orderSlots; let i = index"
+      cdkDropList
+      [cdkDropListData]="orderSlots"
+      (cdkDropListDropped)="drop($event)">
+
+      <span class="order-number">{{ i + 1 }}</span>
+
+      <div class="slot-content">
+        <span *ngIf="!orderSlots[i]" class="order-placeholder">
+          Drop a step here
+        </span>
+        <span *ngIf="orderSlots[i]" class="dropped-step">
+          {{ orderSlots[i] }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback -->
+  <div *ngIf="showResult" class="feedback-card" [class.success]="isCorrect" [class.error]="!isCorrect">
+    <div *ngIf="isCorrect">
+      🎉 Great job! You planned it perfectly!
+    </div>
+    <div *ngIf="!isCorrect">
+      😊 Nice try! Planning takes practice — give it another go.
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="d-flex justify-content-center gap-3 mt-4">
+    <button class="btn btn-primary check-btn" (click)="checkAnswer()">
+      ✅ Check Answer
+    </button>
+
+    <button class="btn btn-outline-secondary try-btn" (click)="tryAgain()">
+      🔄 Try Again
+    </button>
+  </div>
+
+</div>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planning-week3-l2.component.css']
 })
 export class PlanningWeek3L2Component implements OnInit {
-  activeTab: 'video' | 'discussion' | 'activity' | 'lesson' = 'activity';
+  activeTab: 'video' | 'discussion' | 'activity' | 'lesson' = 'video';
   constructor() { }
 
   ngOnInit(): void {

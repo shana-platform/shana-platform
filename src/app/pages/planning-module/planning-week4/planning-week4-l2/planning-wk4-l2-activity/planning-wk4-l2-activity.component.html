@@ -1,1 +1,61 @@
-<p>planning-wk4-l2-activity works!</p>
+<div class="page">
+    <div class="header">
+      <p>
+        Create your one-week planner with daily tasks.
+        Complete them all to unlock your celebration!
+      </p>
+    </div>
+    <div class="grid">
+  
+      <!-- Day Cards -->
+      <div class="day-card" *ngFor="let day of days">
+        <small>DAY {{ days.indexOf(day) + 1 }}</small>
+        <h3>{{ day.day }}</h3>
+  
+        <div class="task"
+             *ngFor="let task of day.tasks"
+             [class.done]="task.completed"
+             (click)="toggleTask(task)">
+          {{ task.text }}
+        </div>
+  
+        <button class="add-btn" (click)="addTask(day)">
+          + Add task
+        </button>
+      </div>
+  
+      <!-- Celebration Box -->
+      <div class="celebration-card">
+        <h3>🎉 Celebration Box</h3>
+        <p>Complete all tasks to unlock</p>
+  
+        <div class="progress">
+          <span>Weekly Progress</span>
+          <strong>{{ completedTasks }}/{{ totalTasks }} tasks</strong>
+        </div>
+  
+        <div class="progress-bar">
+          <div class="fill" [style.width.%]="progressPercent"></div>
+        </div>
+  
+        <textarea
+          placeholder="Complete all tasks to write your celebration..."
+          [disabled]="!celebrationUnlocked"
+          [(ngModel)]="celebrationText">
+        </textarea>
+      </div>
+
+      <button routerLink="/planning-week4-l3" class="btn btn-primary mt-2" 
+      style="background:#3f8cff;">
+            Proceed <i class="fa fa-arrow-right ms-2"></i>
+        </button>
+  
+    </div>
+  
+    <!-- Footer hint -->
+    <div class="hint">
+      ✨ Click on tasks to mark them complete
+    </div>
+  
+  </div>
+  

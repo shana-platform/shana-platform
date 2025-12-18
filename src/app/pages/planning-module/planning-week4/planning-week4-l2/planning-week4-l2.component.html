@@ -1,1 +1,42 @@
-<p>planning-week4-l2 works!</p>
+<div class="story-container">
+    <header class="story-header">
+      <h1>📹 Jayne and Her Jump Rope Goal</h1>
+      <p class="author">by Shana</p>
+    </header>
+    <nav class="story-tabs">
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'video'" 
+        (click)="setActiveTab('video')">
+        📹 Video
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'discussion'" 
+        (click)="setActiveTab('discussion')">
+        💬 Discussion
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'activity'" 
+        (click)="setActiveTab('activity')">
+        🎨 Activity
+      </button>
+    </nav>
+  
+    <!-- Story Summary Section -->
+    <section class="summary-card" *ngIf="activeTab === 'video'">
+        <app-planning-wk4-l2-video></app-planning-wk4-l2-video>
+    </section>
+  
+    <!-- Discussion Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'discussion'">
+        <app-planning-wk4-l2-discussion></app-planning-wk4-l2-discussion>
+    </section>
+  
+    <!-- Activity Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'activity'">
+        <app-planning-wk4-l2-activity></app-planning-wk4-l2-activity>
+    </section>
+  </div>
+  

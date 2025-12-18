@@ -1,1 +1,87 @@
-<p>planning-week4-l3 works!</p>
+<div class="challenge-wrapper text-center">
+
+    <!-- Week Badge -->
+    <div class="week-badge">
+      <i class="fa fa-calendar"></i>
+      <span>This Week</span>
+    </div>
+  
+    <!-- Title -->
+    <h1 class="page-title">Challenge of the Week</h1>
+  
+    <!-- Challenge Card -->
+    <div class="card challenge-card">
+  
+      <div class="challenge-item">
+        <div class="icon blue">
+          <i class="fa fa-calendar"></i>
+        </div>
+        <div class="content">
+          <h4>Use the One-Week Planner</h4>
+          <p>
+            Plan your week intentionally and mindfully. Set goals,
+            track your progress, and celebrate each step forward.
+          </p>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="challenge-item">
+        <div class="icon orange">
+          <i class="fa fa-camera"></i>
+        </div>
+        <div class="content">
+          <h4>Share Your Proud Moment</h4>
+          <p>
+            Capture a photo or write a story about something you
+            accomplished. Big or small, every win matters.
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Confidence Link Card -->
+    <div class="card confidence-card">
+      <div class="confidence-header">
+        <i class="fa fa-heart"></i>
+        <span>CONFIDENCE LINK</span>
+      </div>
+  
+      <blockquote>
+        “I can plan, act, and celebrate my wins!”
+      </blockquote>
+  
+      <button class="reminder-btn" (click)="toggleReminder()">
+        <i class="fa fa-check-circle"></i>
+        Remember this daily
+      </button>
+    </div>
+  
+    <!-- Footer Text -->
+    <button 
+    class="btn btn-lg btn-primary mt-4 w-100"
+    (click)="openModal()">
+    Complete Your Journey
+  </button>
+  
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" [ngClass]="{ 'show': showModal }" (click)="outsideClick($event)">
+    <div class="modal-content animated fadeInDown">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+        <img src="assets/trophy.png" alt="Trophy" class="modal-icon" />
+        <h2>🎉 Congratulations!</h2>
+        </div>
+        <p class="modal-message"><strong>Bravo ooo!</strong> 🌟</p>
+        <p class="modal-subtext">🏆 You’ve unlocked a trophy for completing <strong>week 4</strong> of the confidence module</p>
+        <p class="modal-note">Complete end of module project and earn the championship trophy!</p>
+        <div class="modal-actions">
+        <button routerLink="/confidence-module" class="btn replay" (click)="closeModal()">🔁 Back to Dashboard</button>
+        </div>
+    </div>
+  </div>
+  
