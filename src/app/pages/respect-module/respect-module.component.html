@@ -1,0 +1,59 @@
+<div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <span class="week-pill">💙 WEEK 1</span>
+      <h1>Respect for Self</h1>
+      <p>Learn what it means to treat yourself with kindness and respect!</p>
+    </div>
+  
+    <!-- Progress -->
+    <div class="progress-wrapper">
+      <div class="progress-text">
+        Question {{ currentIndex + 1 }} of {{ questions.length }}
+      </div>
+  
+      <div class="progress-bar">
+        <div
+          class="progress-fill"
+          [style.width.%]="((currentIndex + 1) / questions.length) * 100">
+        </div>
+      </div>
+  
+      <div class="points">
+        ⭐ {{ score }} points
+      </div>
+    </div>
+  
+    <!-- Card -->
+    <div class="card">
+      <span class="badge">✨ Does this show self-respect?</span>
+  
+      <h2>“{{ currentQuestion.text }}”</h2>
+  
+      <div class="actions">
+        <button
+          class="yes"
+          (click)="selectAnswer('YES')">
+          ✔ YES
+        </button>
+  
+        <button
+          class="no"
+          (click)="selectAnswer('NO')">
+          ✖ NO
+        </button>
+      </div>
+  
+      <!-- Feedback -->
+      <div class="feedback" *ngIf="showFeedback">
+        {{ currentQuestion.feedback }}
+      </div>
+    </div>
+  
+    <footer>
+      Made with 🧡 for learning
+    </footer>
+  
+  </div>
+  

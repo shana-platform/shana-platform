@@ -64,6 +64,7 @@ import { PlanningWeek4L1Component } from './pages/planning-module/planning-week4
 import { PlanningWeek4L2Component } from './pages/planning-module/planning-week4/planning-week4-l2/planning-week4-l2.component';
 import { PlanningWeek4L3Component } from './pages/planning-module/planning-week4/planning-week4-l3/planning-week4-l3.component';
 import { PlanningWeek4Component } from './pages/planning-module/planning-week4/planning-week4.component';
+import { RespectModuleComponent } from './pages/respect-module/respect-module.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
 import { SecondWeekLevel2Component } from './pages/second-week-welcome/second-week-level2/second-week-level2.component';
 import { SecondWeekLevel3Component } from './pages/second-week-welcome/second-week-level3/second-week-level3.component';
@@ -166,6 +167,7 @@ const routes: Routes = [
       { path: 'planning-week4-l1', component: PlanningWeek4L1Component },
       { path: 'planning-week4-l2', component: PlanningWeek4L2Component },
       { path: 'planning-week4-l3', component: PlanningWeek4L3Component },
+      { path: 'respect-module', component:  RespectModuleComponent },
     ]
   }
 ];

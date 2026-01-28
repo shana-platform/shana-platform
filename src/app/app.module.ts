@@ -112,6 +112,7 @@ import { PlanningWeek4L3Component } from './pages/planning-module/planning-week4
 import { PlanningWk4L2ActivityComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-activity/planning-wk4-l2-activity.component';
 import { PlanningWk4L2DiscussionComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-discussion/planning-wk4-l2-discussion.component';
 import { PlanningWk4L2VideoComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-video/planning-wk4-l2-video.component';
+import { RespectModuleComponent } from './pages/respect-module/respect-module.component';
 
 @NgModule({
   declarations: [
@@ -223,7 +224,8 @@ import { PlanningWk4L2VideoComponent } from './pages/planning-module/planning-we
     PlanningWeek4L3Component,
     PlanningWk4L2ActivityComponent,
     PlanningWk4L2DiscussionComponent,
-    PlanningWk4L2VideoComponent
+    PlanningWk4L2VideoComponent,
+    RespectModuleComponent
   ],
   imports: [
     BrowserModule,
