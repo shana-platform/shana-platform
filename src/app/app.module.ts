@@ -113,6 +113,7 @@ import { PlanningWk4L2ActivityComponent } from './pages/planning-module/planning
 import { PlanningWk4L2DiscussionComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-discussion/planning-wk4-l2-discussion.component';
 import { PlanningWk4L2VideoComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-video/planning-wk4-l2-video.component';
 import { RespectModuleComponent } from './pages/respect-module/respect-module.component';
+import { RespectWeek1Component } from './pages/respect-module/respect-week1/respect-week1.component';
 
 @NgModule({
   declarations: [
@@ -225,7 +226,8 @@ import { RespectModuleComponent } from './pages/respect-module/respect-module.co
     PlanningWk4L2ActivityComponent,
     PlanningWk4L2DiscussionComponent,
     PlanningWk4L2VideoComponent,
-    RespectModuleComponent
+    RespectModuleComponent,
+    RespectWeek1Component
   ],
   imports: [
     BrowserModule,

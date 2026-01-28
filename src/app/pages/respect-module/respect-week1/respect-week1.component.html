@@ -1,0 +1,83 @@
+<div class="page">
+
+    <div class="header">
+      <span class="week-pill">💙 WEEK 1</span>
+      <h1>Respect for Self</h1>
+      <p>Learn what it means to treat yourself with kindness and respect!</p>
+    </div>
+
+    <div class="card intro-card" *ngIf="!quizStarted">
+
+        <img
+          src="assets/respect-illustration.png"
+          alt="Respect Illustration"
+          class="intro-image"
+        />
+    
+        <span class="badge">✨ Warm-Up Activity</span>
+    
+        <h2>Yes or No? Respect Myself!</h2>
+    
+        <p class="intro-text">
+          Tap <span class="yes-text">YES</span> or
+          <span class="no-text">NO</span> to show if an action shows self-respect.
+        </p>
+    
+        <button class="start-btn" (click)="startQuiz()">
+          ✨ Start Quiz
+        </button>
+    
+      </div>
+
+      
+      <div *ngIf="quizStarted">
+
+        <!-- Progress -->
+        <div class="progress-wrapper">
+          <div class="progress-text">
+            Question {{ currentIndex + 1 }} of {{ questions.length }}
+          </div>
+    
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              [style.width.%]="((currentIndex + 1) / questions.length) * 100">
+            </div>
+          </div>
+    
+          <div class="points">
+            ⭐ {{ score }} points
+          </div>
+        </div>
+    
+        <!-- Question Card -->
+        <div class="card">
+    
+          <span class="badge">✨ Does this show self-respect?</span>
+    
+          <h2>“{{ currentQuestion.text }}”</h2>
+    
+          <div class="actions">
+            <button class="yes" (click)="selectAnswer('YES')">
+              ✔ YES
+            </button>
+    
+            <button class="no" (click)="selectAnswer('NO')">
+              ✖ NO
+            </button>
+          </div>
+    
+          <div class="feedback" *ngIf="showFeedback">
+            {{ currentQuestion.feedback }}
+          </div>
+    
+        </div>
+    
+      </div>
+    
+      <footer>
+        Made with 🧡 for learning
+      </footer>
+    
+    </div>
+    
