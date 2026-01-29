@@ -1,0 +1,223 @@
+.page {
+    background: #f4fbff;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Greeting */
+  .greeting {
+    display: inline-block;
+    background: #eaf4ff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 42px;
+    color: #1e2b45;
+    margin-bottom: 6px;
+  }
+  
+  .subtitle {
+    color: #6b7a99;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Week badge */
+  .week-badge {
+    display: inline-block;
+    background: #ffd666;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  }
+  
+  .card-image {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+  
+  .card h3 {
+    color: #1e2b45;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    color: #6b7a99;
+    font-size: 15px;
+  }
+  
+  .highlight {
+    color: #3b82f6;
+    font-weight: 600;
+  }
+  
+  /* Progress dots */
+  .progress {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  
+  .dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #cfe5ff;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .dot.active {
+    background: #2a9df4;
+    color: white;
+    border-color: #2a9df4;
+  }
+  
+  .progress-text {
+    font-size: 14px;
+    color: #6b7a99;
+  }
+  
+  /* Quote */
+  .quote {
+    font-size: 22px;
+    font-style: italic;
+    color: #1e2b45;
+    margin: 20px 0;
+  }
+  
+  /* Buttons */
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .btn.primary {
+    background: #2a9df4;
+    color: white;
+  }
+  
+  .btn.secondary {
+    background: #eaf4ff;
+    color: #2a9df4;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    margin-top: 20px;
+    background: #7bedab;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    animation: popIn 0.3s ease;
+  }
+  
+  .modal-emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card h2 {
+    font-size: 28px;
+    color: #1e2b45;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card p {
+    color: #6b7a99;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .next-btn {
+    background: #2a9df4;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

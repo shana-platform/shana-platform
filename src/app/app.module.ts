@@ -114,6 +114,17 @@ import { PlanningWk4L2DiscussionComponent } from './pages/planning-module/planni
 import { PlanningWk4L2VideoComponent } from './pages/planning-module/planning-week4/planning-week4-l2/planning-wk4-l2-video/planning-wk4-l2-video.component';
 import { RespectModuleComponent } from './pages/respect-module/respect-module.component';
 import { RespectWeek1Component } from './pages/respect-module/respect-week1/respect-week1.component';
+import { RespectWeek2Component } from './pages/respect-module/respect-week2/respect-week2.component';
+import { RespectWk1L1Component } from './pages/respect-module/respect-week1/respect-wk1-l1/respect-wk1-l1.component';
+import { RespectWk1L1ActivityComponent } from './pages/respect-module/respect-week1/respect-wk1-l1/respect-wk1-l1-activity/respect-wk1-l1-activity.component';
+import { RespectWk1L1StoryComponent } from './pages/respect-module/respect-week1/respect-wk1-l1/respect-wk1-l1-story/respect-wk1-l1-story.component';
+import { RespectWk1L1DiscussionComponent } from './pages/respect-module/respect-week1/respect-wk1-l1/respect-wk1-l1-discussion/respect-wk1-l1-discussion.component';
+import { RespectWk1L2Component } from './pages/respect-module/respect-week1/respect-wk1-l2/respect-wk1-l2.component';
+import { RespectWk2L2Component } from './pages/respect-module/respect-week2/respect-wk2-l2/respect-wk2-l2.component';
+import { RespectWk2L1Component } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1.component';
+import { RespectWk2L1DiscussionComponent } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1-discussion/respect-wk2-l1-discussion.component';
+import { RespectWk2L1ActivityComponent } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1-activity/respect-wk2-l1-activity.component';
+import { RespectWk2L1StoryComponent } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1-story/respect-wk2-l1-story.component';
 
 @NgModule({
   declarations: [
@@ -227,7 +238,18 @@ import { RespectWeek1Component } from './pages/respect-module/respect-week1/resp
     PlanningWk4L2DiscussionComponent,
     PlanningWk4L2VideoComponent,
     RespectModuleComponent,
-    RespectWeek1Component
+    RespectWeek1Component,
+    RespectWeek2Component,
+    RespectWk1L1Component,
+    RespectWk1L1ActivityComponent,
+    RespectWk1L1StoryComponent,
+    RespectWk1L1DiscussionComponent,
+    RespectWk1L2Component,
+    RespectWk2L2Component,
+    RespectWk2L1Component,
+    RespectWk2L1DiscussionComponent,
+    RespectWk2L1ActivityComponent,
+    RespectWk2L1StoryComponent
   ],
   imports: [
     BrowserModule,

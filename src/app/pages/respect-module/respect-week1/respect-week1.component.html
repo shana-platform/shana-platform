@@ -45,7 +45,7 @@
             </div>
           </div>
     
-          <div class="points">
+          <div class="points" style="margin-bottom: 2px;">
             ⭐ {{ score }} points
           </div>
         </div>
@@ -79,5 +79,24 @@
         Made with 🧡 for learning
       </footer>
     
-    </div>
+      <!-- END OF QUIZ MODAL -->
+<div class="modal-overlay" *ngIf="showEndModal">
+  <div class="modal-card">
+
+    <div class="modal-icon">🎉</div>
+
+    <h2>Good Job!</h2>
+
+    <p>
+      You did great!  
+      You’re learning how to respect yourself.
+    </p>
+
+    <button class="modal-btn" routerLink="/respect-week1-l1">
+      Proceed to Next Lesson →
+    </button>
+
+  </div>
+</div>
+ </div>
     

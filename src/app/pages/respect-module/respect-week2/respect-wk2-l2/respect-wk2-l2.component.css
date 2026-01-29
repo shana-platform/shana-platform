@@ -1,0 +1,176 @@
+/* Container Background */
+.kindness-page {
+    background-color: #eef7ff;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  .main-title {
+    color: #1e3a8a; /* Deep blue */
+    font-weight: 800;
+  }
+  
+  /* Challenge Card */
+  .challenge-card {
+    background: white;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  
+  .challenge-header {
+    color: #3b82f6;
+    font-weight: 700;
+  }
+  
+  .word-badge {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .word-badge:hover {
+    transform: scale(1.05);
+    background-color: #2563eb;
+  }
+  
+  .illustration-img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Confidence Line (Orange Gradient) */
+  .confidence-line-card {
+    background: linear-gradient(135deg, #ffcc33 0%, #ffb347 100%);
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(255, 179, 71, 0.3);
+  }
+  
+  .confidence-text {
+    color: #5c3d00;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.8rem;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .decor-star {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    font-size: 8rem;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+  }
+  
+  /* Photo Frame Card */
+  .photo-frame {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  
+  .group-image {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+  }
+  
+  .footer-note {
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  /* Submit button */
+  .submit-btn {
+    margin-top: 20px;
+    background: #7bedab;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    animation: popIn 0.3s ease;
+  }
+  
+  .modal-emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card h2 {
+    font-size: 28px;
+    color: #1e2b45;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card p {
+    color: #6b7a99;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .next-btn {
+    background: #2a9df4;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

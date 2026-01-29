@@ -14,6 +14,8 @@ interface Question {
 export class RespectWeek1Component implements OnInit {
 
   quizStarted = false;
+  showEndModal = false;
+
 
   questions: Question[] = [
     {
@@ -79,9 +81,17 @@ export class RespectWeek1Component implements OnInit {
   nextQuestion() {
     this.showFeedback = false;
     this.selectedAnswer = null;
-
+  
     if (this.currentIndex < this.questions.length - 1) {
       this.currentIndex++;
+    } else {
+      // LAST QUESTION DONE
+      this.showEndModal = true;
     }
   }
+  
+  proceedToNextLesson() {
+    this.showEndModal = false;
+  }
+  
 }

@@ -1,0 +1,87 @@
+<div class="page-container">
+    <div class="container text-center">
+      
+      <h1 class="header-title mb-2">✨ Respect Stickers ✨</h1>
+      <p class="text-secondary mb-4">Choose symbols of respect and create your own mini poster! 🎨</p>
+  
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-5">
+          <div class="input-wrapper d-flex align-items-center p-3">
+            <span class="me-2 fs-4">👏</span>
+            <input 
+              type="text" 
+              [(ngModel)]="userName" 
+              class="form-control input-box" 
+              placeholder="Enter your name..."
+            >
+          </div>
+        </div>
+      </div>
+  
+      <h6 class="fw-bold text-uppercase text-muted mb-4 small tracking-wider">Choose Your Stickers 👇</h6>
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-6 col-md-3 col-lg-2" *ngFor="let s of availableStickers">
+          <div class="sticker-card p-4 shadow-sm" (click)="addSticker(s)">
+            <img [src]="s.imageUrl" [alt]="s.name" class="sticker-img-preview mb-3">
+            <div class="fw-bold text-primary">{{ s.name }}</div>
+            <div class="small text-muted">{{ s.desc }}</div>
+          </div>
+        </div>
+      </div>
+  
+      <h6 class="fw-bold text-secondary mb-3">Your Poster ✨</h6>
+      <div class="poster-canvas p-5 d-flex flex-column align-items-center">
+        
+        <div class="bubble bg-danger" style="width: 100px; height: 100px; top: -20px; left: -20px;"></div>
+        <div class="bubble bg-warning" style="width: 60px; height: 60px; top: 15%; right: 5%;"></div>
+        <div class="bubble bg-success" style="width: 120px; height: 120px; bottom: -30px; left: 15%;"></div>
+        <div class="bubble bg-info" style="width: 80px; height: 80px; bottom: 20%; right: 10%;"></div>
+  
+        <h2 class="header-title mb-5" style="z-index: 1;">
+          {{ userName ? userName + "'s" : 'My' }} Respect Poster
+        </h2>
+  
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 w-100 flex-grow-1" style="z-index: 1;">
+          <div *ngIf="selectedStickers.length === 0" class="text-muted fst-italic">
+            Click stickers above to add them here! 🎨
+          </div>
+          
+          <div *ngFor="let s of selectedStickers" class="added-sticker">
+            <img [src]="s.imageUrl" class="sticker-img-poster" [title]="s.name">
+          </div>
+        </div>
+  
+        <div class="mt-4" style="z-index: 1;">🌟 💙 🌟</div>
+      </div>
+  
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <button class="btn btn-start-over" (click)="reset()">
+          🔄 Start Over
+        </button>
+        <button class="btn btn-save shadow" (click)="save()">
+          📥 Save Poster
+        </button>
+      </div>
+  
+      <footer class="mt-5 text-secondary small pb-4">
+        Remember: Respect makes the world a better place! 💙
+      </footer>
+    </div>
+  </div>
+
+
+    <!-- MODAL -->
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+  
+      <div class="modal-emoji">🎉</div>
+  
+      <h2>Good Job!</h2>
+      <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+  
+      <button class="next-btn" routerLink="/respect-week2-l2">
+        Continue ➡️
+      </button>
+  
+    </div>
+  </div>

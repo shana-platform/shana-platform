@@ -1,0 +1,79 @@
+<div class="page-wrapper">
+
+    <!-- Header -->
+    <span class="week-badge">✨ Week 2</span>
+    <h1 class="title">Respect for Others</h1>
+    <p class="subtitle">💙 What Would You Do?</p>
+  
+    <!-- Progress Section -->
+    <div class="progress-section">
+      <span class="question-count">
+        Question {{ current + 1 }} of {{ scenarios.length }}
+      </span>
+  
+      <div class="stars">
+        <span
+          *ngFor="let s of scenarios; let i = index"
+          [class.active]="i <= current">★</span>
+      </div>
+    </div>
+  
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="progress"></div>
+    </div>
+  
+    <!-- Quiz Card -->
+    <div class="quiz-card" *ngIf="!completed">
+  
+      <h3 class="question">
+        {{ scenarios[current].question }}
+      </h3>
+  
+      <!-- Answers -->
+      <button
+        *ngFor="let option of scenarios[current].options"
+        class="answer-btn"
+        [class.correct]="selected && option.correct"
+        [class.wrong]="selected === option && !option.correct"
+        [disabled]="selected"
+        (click)="select(option)">
+  
+        {{ option.label }}
+      </button>
+  
+      <!-- Feedback -->
+      <div
+        *ngIf="showFeedback && selected?.correct"
+        class="feedback success">
+        💚 {{ scenarios[current].feedback }}
+      </div>
+  
+      <div
+        *ngIf="showFeedback && !selected?.correct"
+        class="feedback error">
+        Try again! Think about what shows respect.
+  
+        <button class="try-again" (click)="next()">
+          Try Again
+        </button>
+      </div>
+  
+      <p class="hint">
+        Tap the respectful answer to continue! 💙
+      </p>
+    </div>
+  
+    <!-- Completion Modal -->
+    <div class="modal-backdrop" *ngIf="completed">
+      <div class="completion-modal">
+        <h2>🎉 Good job!</h2>
+        <p>You completed the Respect for Others lesson.</p>
+  
+        <button class="next-lesson" routerLink="/respect-week2-l1">
+          Next Lesson
+        </button>
+      </div>
+    </div>
+  
+  </div>
+  

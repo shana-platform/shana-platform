@@ -1,0 +1,228 @@
+/* Page Wrapper */
+.page-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f4faff 0%, #eef6ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Header */
+  .week-badge {
+    background: #e6f1ff;
+    color: #3b82f6;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0;
+  }
+  
+  .subtitle {
+    margin-top: 6px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #3b82f6;
+  }
+  
+  /* Progress */
+  .progress-section {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .question-count {
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  .stars span {
+    font-size: 18px;
+    color: #cbd5e1;
+  }
+  
+  .stars span.active {
+    color: #22c55e;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 100%;
+    max-width: 420px;
+    height: 8px;
+    background: #e6f1ff;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #60a5fa, #22d3ee);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+  
+  /* Quiz Card */
+  .quiz-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px 22px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    text-align: center;
+  }
+  
+  /* Question */
+  .question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 24px;
+  }
+  
+  /* Answer Buttons */
+  .answer-btn {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    background: #eaf4ff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e40af;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .answer-btn:hover:not(:disabled) {
+    background: #dbeafe;
+    transform: translateY(-1px);
+  }
+  
+  .answer-btn:disabled {
+    cursor: default;
+  }
+  
+  /* Correct / Wrong States */
+  .answer-btn.correct {
+    background: #22c55e;
+    color: #ffffff;
+  }
+  
+  .answer-btn.wrong {
+    background: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  /* Feedback */
+  .feedback {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 15px;
+  }
+  
+  .feedback.success {
+    background: #ecfdf5;
+    color: #16a34a;
+  }
+  
+  .feedback.error {
+    background: #fff1f2;
+    color: #b91c1c;
+  }
+  
+  /* Try Again Button */
+  .try-again {
+    margin-top: 14px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Hint */
+  .hint {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  /* Completion Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
+  
+  .completion-modal {
+    background: #ffffff;
+    padding: 32px 28px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  }
+  
+  .completion-modal h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    color: #16a34a;
+  }
+  
+  .completion-modal p {
+    font-size: 15px;
+    color: #475569;
+  }
+  
+  /* Next Lesson Button */
+  .next-lesson {
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #3b82f6, #22d3ee);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .next-lesson:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Mobile Tweaks */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 26px;
+    }
+  
+    .question {
+      font-size: 18px;
+    }
+  }
+  

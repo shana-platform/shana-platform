@@ -1,0 +1,103 @@
+<div class="page-bg">
+
+    <!-- Header -->
+    <div class="header">
+      <span class="pill">☀️ Today’s Activity</span>
+  
+      <h1>
+        Show Your <span>Happy Self</span>!
+      </h1>
+  
+      <p class="subtitle">
+        Draw or upload a picture of yourself doing something good
+        for your body or mind! 🤍
+      </p>
+    </div>
+  
+    <!-- Inspiration -->
+    <h2 class="section-title">Get Inspired! 💡</h2>
+  
+    <div class="inspiration-grid">
+  
+      <div class="inspo-card">
+        <img src="assets/sleeping.png" />
+        <h3>Sleeping Well</h3>
+        <p>Rest makes you strong and happy!</p>
+      </div>
+  
+      <div class="inspo-card">
+        <img src="assets/smiling.png" />
+        <h3>Smiling Big</h3>
+        <p>A smile makes everything better!</p>
+      </div>
+  
+      <div class="inspo-card">
+        <img src="assets/eating.png" />
+        <h3>Eating Healthy</h3>
+        <p>Fruits give you super energy!</p>
+      </div>
+  
+      <div class="inspo-card">
+        <img src="assets/reading.png" />
+        <h3>Reading Books</h3>
+        <p>Books take you on adventures!</p>
+      </div>
+  
+    </div>
+  
+    <!-- Upload Section -->
+    <div class="upload-section">
+
+        <h2>Your Turn! 🎨</h2>
+        <p class="subtitle">Upload your drawing or photo below</p>
+      
+        <div class="upload-box">
+      
+          <!-- BEFORE upload -->
+          <ng-container *ngIf="!selectedImage">
+            <div class="upload-icon">⬆️</div>
+            <h3>Upload Your Picture! 📸</h3>
+            <p>
+              Draw or take a picture of yourself doing
+              something good for your body or mind!
+            </p>
+      
+            <label class="upload-btn">
+              Choose a Picture
+              <input type="file" hidden (change)="onFileSelected($event)" />
+            </label>
+          </ng-container>
+      
+          <!-- AFTER upload -->
+          <ng-container *ngIf="selectedImage">
+            <img [src]="selectedImage" class="preview-image" />
+          </ng-container>
+      
+        </div>
+      </div>
+      
+      <ng-container *ngIf="selectedImage">
+        <button class="submit-btn" (click)="submitImage()">
+            Submit Image ✅
+          </button>
+      </ng-container>
+     
+  
+  </div>
+  
+  <!-- MODAL -->
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+  
+      <div class="modal-emoji">🎉</div>
+  
+      <h2>Good Job!</h2>
+      <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+  
+      <button class="next-btn" routerLink="/respect-week2-l2" (click)="closeModal()">
+        Continue ➡️
+      </button>
+  
+    </div>
+  </div>
+  

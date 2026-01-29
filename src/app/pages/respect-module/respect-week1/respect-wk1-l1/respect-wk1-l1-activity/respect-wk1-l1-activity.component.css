@@ -1,0 +1,211 @@
+.page-bg {
+    min-height: 100vh;
+    background: linear-gradient(#f4fbff, #e8f6ff);
+    padding: 40px 20px 60px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Header */
+  .pill {
+    background: #e7f4ff;
+    color: #1c8ed6;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+  
+  .header h1 {
+    font-size: 44px;
+    color: #1e2b45;
+  }
+  
+  .header h1 span {
+    color: #1c9bf0;
+  }
+  
+  .subtitle {
+    color: #6b7a99;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 12px auto 40px;
+  }
+  
+  /* Inspiration */
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+    color: #1e2b45;
+  }
+  
+  .inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+  }
+  
+  .inspo-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+  
+  .inspo-card img {
+    width: 100px;
+    margin-bottom: 12px;
+  }
+  
+  .inspo-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .inspo-card p {
+    color: #6b7a99;
+    font-size: 14px;
+  }
+  
+  /* Upload */
+  .upload-section {
+    margin-top: 40px;
+  }
+  
+  .upload-box {
+    background: #ecf8ff;
+    border: 2px dashed #8ccfff;
+    border-radius: 28px;
+    padding: 50px 20px;
+    max-width: 620px;
+    margin: 24px auto;
+  }
+  
+  .upload-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .upload-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .upload-box p {
+    color: #6b7a99;
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+  
+  .upload-btn {
+    background: #2a9df4;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .upload-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Preview */
+  .preview-image {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 60px;
+    color: #7a8aa6;
+    font-size: 14px;
+  }
+  
+
+  /* Submit button */
+.submit-btn {
+    margin-top: 20px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    animation: popIn 0.3s ease;
+  }
+  
+  .modal-emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card h2 {
+    font-size: 28px;
+    color: #1e2b45;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card p {
+    color: #6b7a99;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .next-btn {
+    background: #2a9df4;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
