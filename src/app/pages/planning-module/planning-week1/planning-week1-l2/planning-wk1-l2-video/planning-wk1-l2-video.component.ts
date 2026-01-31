@@ -8,37 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class PlanningWk1L2VideoComponent implements OnInit {
   slides = [
     {
-      image: 'assets/ama-intro.png'
+      image: 'assets/PW1P1.png'
     },
     {
-      image: 'assets/ama1.png'
+      image: 'assets/PW1P2.png'
     },
     {
-      image: 'assets/ama2.png'
+      image: 'assets/PW1P3.png'
     },
     {
-      image: 'assets/ama3.png'
+      image: 'assets/PW1P4.png'
     },
     {
-      image: 'assets/ama4.png'
+      image: 'assets/PW1P5.png'
     },
     {
-      image: 'assets/ama5.png'
+      image: 'assets/PW1P6.png'
     },
     {
-      image: 'assets/ama6.png'
+      image: 'assets/PW1P7.png'
     },
     {
-      image: 'assets/ama7.png'
-    },
-    {
-      image: 'assets/ama8.png'
-    },
-    {
-      image: 'assets/ama9.png'
-    },
-    {
-      image: 'assets/ama10.png'
+      image: 'assets/PW1P8.png'
     }
   ];
 

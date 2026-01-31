@@ -1,0 +1,46 @@
+<div class="page-container">
+    <div class="main-card">
+      <div class="heart-icon-container">
+        <div class="heart-circle">
+          <span class="heart">❤</span>
+        </div>
+      </div>
+  
+      <h1 class="main-title">WEEK 1 – UNDERSTANDING MY FEELINGS</h1>
+  
+      <div class="objective-box">
+        <h3 class="box-label">Objective</h3>
+        <p>Learners recognise different feelings and understand that feelings can change.</p>
+      </div>
+  
+      <div class="feelings-container">
+        <h2 class="section-title">Feelings Check</h2>
+        <p class="question-text">Which feeling did you feel most yesterday?</p>
+  
+        <div class="emoji-grid">
+          <button *ngFor="let feeling of feelings" 
+                  (click)="selectFeeling(feeling.name)"
+                  [class.selected]="selectedFeeling === feeling.name"
+                  [style.background-color]="feeling.color">
+            <span class="emoji">{{ feeling.emoji }}</span>
+            <span class="label">{{ feeling.name }}</span>
+          </button>
+        </div>
+  
+        <div class="feedback-box" *ngIf="showFeedback">
+          <span class="sparkles">✨</span>
+          <p>"All feelings are okay. Well done for noticing how you feel."</p>
+        </div>
+      </div>
+  
+      <div class="pagination">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+  
+      <button class="begin-btn" *ngIf="showFeedback" (click)="startJourney()">
+        Begin your journey →
+      </button>
+    </div>
+  </div>

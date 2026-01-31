@@ -137,6 +137,15 @@ import { RespectWk4L2Component } from './pages/respect-module/respect-week4/resp
 import { RespectWk4L1ActivityComponent } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1-activity/respect-wk4-l1-activity.component';
 import { RespectWk4L1DiscussionComponent } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1-discussion/respect-wk4-l1-discussion.component';
 import { RespectWk4L1StoryComponent } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1-story/respect-wk4-l1-story.component';
+import { IntegrityModuleComponent } from './pages/integrity-module/integrity-module.component';
+import { EmpathyModuleComponent } from './pages/empathy-module/empathy-module.component';
+import { EmpathyWeek4Component } from './pages/empathy-module/empathy-week4/empathy-week4.component';
+import { EmpathyWeek3Component } from './pages/empathy-module/empathy-week3/empathy-week3.component';
+import { EmpathyWeek2Component } from './pages/empathy-module/empathy-week2/empathy-week2.component';
+import { EmpathyWeek1Component } from './pages/empathy-module/empathy-week1/empathy-week1.component';
+import { EmpathyWk1L1Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1.component';
+import { EmpathyWk1L2Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l2/empathy-wk1-l2.component';
+import { EmpathyWk1L3Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l3/empathy-wk1-l3.component';
 
 @NgModule({
   declarations: [
@@ -273,7 +282,16 @@ import { RespectWk4L1StoryComponent } from './pages/respect-module/respect-week4
     RespectWk4L2Component,
     RespectWk4L1ActivityComponent,
     RespectWk4L1DiscussionComponent,
-    RespectWk4L1StoryComponent
+    RespectWk4L1StoryComponent,
+    IntegrityModuleComponent,
+    EmpathyModuleComponent,
+    EmpathyWeek4Component,
+    EmpathyWeek3Component,
+    EmpathyWeek2Component,
+    EmpathyWeek1Component,
+    EmpathyWk1L1Component,
+    EmpathyWk1L2Component,
+    EmpathyWk1L3Component
   ],
   imports: [
     BrowserModule,

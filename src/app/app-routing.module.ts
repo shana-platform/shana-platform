@@ -20,6 +20,11 @@ import { ConfidenceWeek4L3Component } from './pages/confidence-module/confidence
 import { ConfidenceWeek4L4Component } from './pages/confidence-module/confidence-week4/confidence-week4-l4/confidence-week4-l4.component';
 import { ConfidenceWeek4Component } from './pages/confidence-module/confidence-week4/confidence-week4.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { EmpathyModuleComponent } from './pages/empathy-module/empathy-module.component';
+import { EmpathyWeek1Component } from './pages/empathy-module/empathy-week1/empathy-week1.component';
+import { EmpathyWeek2Component } from './pages/empathy-module/empathy-week2/empathy-week2.component';
+import { EmpathyWeek3Component } from './pages/empathy-module/empathy-week3/empathy-week3.component';
+import { EmpathyWeek4Component } from './pages/empathy-module/empathy-week4/empathy-week4.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
 import { FifthWeekLevel3Component } from './pages/fifth-week-welcome/fifth-week-level3/fifth-week-level3.component';
@@ -45,6 +50,7 @@ import { FourthWeekWelcomeComponent } from './pages/fourth-week-welcome/fourth-w
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IdentityModuleComponent } from './pages/identity-module/identity-module.component';
+import { IntegrityModuleComponent } from './pages/integrity-module/integrity-module.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ModuleProjectComponent } from './pages/module-project/module-project.component';
 import { PlanningModuleComponent } from './pages/planning-module/planning-module.component';
@@ -192,6 +198,12 @@ const routes: Routes = [
       { path: 'respect-week3-l2', component:  RespectWk3L2Component },
       { path: 'respect-week4-l1', component:  RespectWk4L1Component },
       { path: 'respect-week4-l2', component:  RespectWk4L2Component },
+      { path: 'empathy-module', component:  EmpathyModuleComponent },
+      { path: 'empathy-week1', component:  EmpathyWeek1Component },
+      { path: 'empathy-week2', component:  EmpathyWeek2Component },
+      { path: 'empathy-week3', component:  EmpathyWeek3Component },
+      { path: 'empathy-week4', component:  EmpathyWeek4Component },
+      { path: 'integrity-module', component:  IntegrityModuleComponent },
     ]
   }
 ];
