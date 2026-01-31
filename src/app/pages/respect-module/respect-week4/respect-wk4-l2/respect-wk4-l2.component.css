@@ -1,0 +1,193 @@
+/* Page Wrapper */
+.kindness-wrapper {
+    min-height: 100vh;
+    padding: 40px 16px 60px;
+    background: linear-gradient(#e9f7ff, #dff1ff);
+  }
+  
+  /* Header */
+  .header-area {
+    position: relative;
+    padding: 40px 16px 20px;
+    background-image: url('/assets/watercolor.jpg');
+    background-repeat: repeat;
+    background-size: contain;
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .heart-badge {
+    width: 60px;
+    height: 60px;
+    background: #2f80ff;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-weight: 800;
+    color: #1f2b46;
+  }
+  
+  .subtitle {
+    color: #6b7280;
+    font-size: 15px;
+  }
+  
+  /* Challenge Card */
+  .challenge-card {
+    background: white;
+    max-width: 680px;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .badge-pill {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .challenge-text {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2b46;
+    line-height: 1.3;
+  }
+  
+  .blue {
+    color: #3b82f6;
+  }
+  
+  .orange {
+    color: #fb923c;
+  }
+  
+  .emoji-row span {
+    font-size: 20px;
+    margin: 0 6px;
+  }
+  
+  /* Confidence Line */
+  .confidence-card {
+    max-width: 680px;
+    background: #e9f5ff;
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .confidence-icon {
+    width: 44px;
+    height: 44px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .confidence-content {
+    text-align: left;
+  }
+  
+  .confidence-content .label {
+    color: #3b82f6;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .confidence-content p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2b46;
+  }
+  
+  .confidence-content span {
+    color: #3b82f6;
+  }
+  
+  .complete-btn {
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 30px;
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    animation: popIn 0.3s ease;
+  }
+  
+  .modal-emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card h2 {
+    font-size: 28px;
+    color: #1e2b45;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card p {
+    color: #6b7a99;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .next-btn {
+    background: #2a9df4;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

@@ -71,6 +71,12 @@ import { RespectWk1L2Component } from './pages/respect-module/respect-week1/resp
 import { RespectWeek2Component } from './pages/respect-module/respect-week2/respect-week2.component';
 import { RespectWk2L1Component } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1.component';
 import { RespectWk2L2Component } from './pages/respect-module/respect-week2/respect-wk2-l2/respect-wk2-l2.component';
+import { RespectWeek3Component } from './pages/respect-module/respect-week3/respect-week3.component';
+import { RespectWk3L1Component } from './pages/respect-module/respect-week3/respect-wk3-l1/respect-wk3-l1.component';
+import { RespectWk3L2Component } from './pages/respect-module/respect-week3/respect-wk3-l2/respect-wk3-l2.component';
+import { RespectWeek4Component } from './pages/respect-module/respect-week4/respect-week4.component';
+import { RespectWk4L1Component } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1.component';
+import { RespectWk4L2Component } from './pages/respect-module/respect-week4/respect-wk4-l2/respect-wk4-l2.component';
 import { SecondWeekLevel1Component } from './pages/second-week-welcome/second-week-level1/second-week-level1.component';
 import { SecondWeekLevel2Component } from './pages/second-week-welcome/second-week-level2/second-week-level2.component';
 import { SecondWeekLevel3Component } from './pages/second-week-welcome/second-week-level3/second-week-level3.component';
@@ -176,10 +182,16 @@ const routes: Routes = [
       { path: 'respect-module', component:  RespectModuleComponent },
       { path: 'respect-week1', component:  RespectWeek1Component },
       { path: 'respect-week2', component:  RespectWeek2Component },
+      { path: 'respect-week3', component:  RespectWeek3Component },
+      { path: 'respect-week4', component:  RespectWeek4Component },
       { path: 'respect-week1-l1', component:  RespectWk1L1Component },
       { path: 'respect-week1-l2', component:  RespectWk1L2Component },
       { path: 'respect-week2-l1', component:  RespectWk2L1Component },
       { path: 'respect-week2-l2', component:  RespectWk2L2Component },
+      { path: 'respect-week3-l1', component:  RespectWk3L1Component },
+      { path: 'respect-week3-l2', component:  RespectWk3L2Component },
+      { path: 'respect-week4-l1', component:  RespectWk4L1Component },
+      { path: 'respect-week4-l2', component:  RespectWk4L2Component },
     ]
   }
 ];

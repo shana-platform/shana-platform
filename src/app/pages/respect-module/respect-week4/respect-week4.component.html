@@ -1,0 +1,78 @@
+<div class="main-container">
+    <div class="header-container">
+        <span class="badge">✨ WEEK 4 ✨</span>
+        <h1 class="main-title">
+          Respect for <span class="highlight-text">Differences</span>
+        </h1>
+        <p class="subtitle">
+          Let's discover how our differences make our world more beautiful! 🌍
+        </p>
+      </div>
+  
+    <div class="card" *ngIf="!isFinished">
+      <div class="warm-up-header">
+        <div class="icon-group">
+          <div class="user-icon">👤</div>
+          <div>
+            <h3>🌟 Warm-Up: "Same or Different?"</h3>
+            <p>Look at pairs of children and tap what is different!</p>
+          </div>
+        </div>
+        <div class="heart-badge">❤️ {{questions.length}} Questions</div>
+      </div>
+  
+      <div class="quiz-body">
+        <div class="stats">
+          <span>Question {{currentIndex + 1}} of {{questions.length}}</span>
+          &nbsp;
+          <span>Score: {{score}} ⭐</span>
+        </div>
+        
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="progress"></div>
+        </div>
+  
+        <div class="image-container">
+          <img [src]="currentQuestion.image" alt="Friends">
+        </div>
+  
+        <h2 class="question-text">{{currentQuestion.text}}</h2>
+  
+        <div class="options-grid">
+          <button *ngFor="let option of currentQuestion.options" 
+                  (click)="checkAnswer(option)"
+                  [disabled]="showFeedback"
+                  [ngClass]="{
+                    'correct': showFeedback && option === currentQuestion.correctAnswer,
+                    'wrong': showFeedback && selectedAnswer === option && !isCorrect,
+                    'selected': selectedAnswer === option
+                  }">
+            {{option}}
+          </button>
+        </div>
+  
+        <div class="feedback-container" *ngIf="showFeedback" [ngClass]="isCorrect ? 'success' : 'fail'">
+          <div class="feedback-header">
+             ✨ {{isCorrect ? 'Fantastic!' : 'Nice try!'}} ✨
+          </div>
+          <p>{{currentQuestion.feedback}}</p>
+        </div>
+  
+        <button class="next-btn" *ngIf="showFeedback" (click)='nextQuestion()'>
+          {{ currentIndex === questions.length - 1 ? 'See Results' : 'Next Question' }} →
+        </button>
+      </div>
+    </div>
+  
+    <div class="card results" *ngIf="isFinished">
+      <div class="confetti">🎉</div>
+      <h1>Amazing Job!</h1>
+      <p>You got <strong>{{score}}</strong> out of <strong>{{questions.length}}</strong> correct!</p>
+      <div class="stars">⭐⭐⭐</div>
+      <div class="motto-box">✨ Differences make the world beautiful! ✨</div>
+      <button class="play-again" (click)="restart()">Play Again! 🔄</button>
+      <button class="play-again" routerLink="/respect-week4-l1">Next Lesson →</button>
+    </div>
+  
+    <p class="footer-note">Remember: Every person is special and unique! ❤️</p>
+  </div>

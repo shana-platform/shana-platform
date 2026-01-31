@@ -125,6 +125,18 @@ import { RespectWk2L1Component } from './pages/respect-module/respect-week2/resp
 import { RespectWk2L1DiscussionComponent } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1-discussion/respect-wk2-l1-discussion.component';
 import { RespectWk2L1ActivityComponent } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1-activity/respect-wk2-l1-activity.component';
 import { RespectWk2L1StoryComponent } from './pages/respect-module/respect-week2/respect-wk2-l1/respect-wk2-l1-story/respect-wk2-l1-story.component';
+import { RespectWeek3Component } from './pages/respect-module/respect-week3/respect-week3.component';
+import { RespectWk3L1Component } from './pages/respect-module/respect-week3/respect-wk3-l1/respect-wk3-l1.component';
+import { RespectWk3L2Component } from './pages/respect-module/respect-week3/respect-wk3-l2/respect-wk3-l2.component';
+import { RespectWk3L1ActivityComponent } from './pages/respect-module/respect-week3/respect-wk3-l1/respect-wk3-l1-activity/respect-wk3-l1-activity.component';
+import { RespectWk3L1StoryComponent } from './pages/respect-module/respect-week3/respect-wk3-l1/respect-wk3-l1-story/respect-wk3-l1-story.component';
+import { RespectWk3L1DiscussionComponent } from './pages/respect-module/respect-week3/respect-wk3-l1/respect-wk3-l1-discussion/respect-wk3-l1-discussion.component';
+import { RespectWeek4Component } from './pages/respect-module/respect-week4/respect-week4.component';
+import { RespectWk4L1Component } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1.component';
+import { RespectWk4L2Component } from './pages/respect-module/respect-week4/respect-wk4-l2/respect-wk4-l2.component';
+import { RespectWk4L1ActivityComponent } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1-activity/respect-wk4-l1-activity.component';
+import { RespectWk4L1DiscussionComponent } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1-discussion/respect-wk4-l1-discussion.component';
+import { RespectWk4L1StoryComponent } from './pages/respect-module/respect-week4/respect-wk4-l1/respect-wk4-l1-story/respect-wk4-l1-story.component';
 
 @NgModule({
   declarations: [
@@ -249,7 +261,19 @@ import { RespectWk2L1StoryComponent } from './pages/respect-module/respect-week2
     RespectWk2L1Component,
     RespectWk2L1DiscussionComponent,
     RespectWk2L1ActivityComponent,
-    RespectWk2L1StoryComponent
+    RespectWk2L1StoryComponent,
+    RespectWeek3Component,
+    RespectWk3L1Component,
+    RespectWk3L2Component,
+    RespectWk3L1ActivityComponent,
+    RespectWk3L1StoryComponent,
+    RespectWk3L1DiscussionComponent,
+    RespectWeek4Component,
+    RespectWk4L1Component,
+    RespectWk4L2Component,
+    RespectWk4L1ActivityComponent,
+    RespectWk4L1DiscussionComponent,
+    RespectWk4L1StoryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,62 @@
+<div class="challenge-container">
+
+    <h1 class="title">
+      My <span>Neat Space</span> Challenge ✨
+    </h1>
+  
+    <p class="subtitle">
+      Show us your super-tidy space! Clean up a small area and share your amazing work.
+    </p>
+  
+    <!-- HOW IT WORKS -->
+    <div class="steps">
+      <div class="step">1️⃣ Pick your space</div>
+      <div class="step">2️⃣ Clean it up</div>
+      <div class="step">3️⃣ Take a photo</div>
+      <div class="step">4️⃣ Share & celebrate</div>
+    </div>
+  
+    <!-- UPLOAD AREA -->
+    <div class="upload-box">
+
+        <input
+          type="file"
+          accept="image/*"
+          id="fileInput"
+          hidden
+          (change)="onFileSelected($event)"
+        />
+      
+        <!-- Preview -->
+        <div *ngIf="previewUrl" class="preview-container">
+          <img [src]="previewUrl" alt="Preview" />
+        </div>
+      
+        <label for="fileInput" class="upload-label">
+          📷 Choose Photo
+        </label>
+      
+        <p *ngIf="selectedFile">{{ selectedFile.name }}</p>
+      
+        <button
+          class="upload-btn"
+          [disabled]="!selectedFile || uploading"
+          (click)="uploadPhoto()">
+          {{ uploading ? 'Uploading...' : 'Upload Photo' }}
+        </button>
+      </div>
+      
+  
+  </div>
+  
+  <!-- SUCCESS POPUP -->
+  <div class="popup-backdrop" *ngIf="showSuccessPopup">
+    <div class="popup">
+      <h2>🎉 Good job!</h2>
+      <p>You did amazing. Your neat space looks great!</p>
+      <button routerLink="/respect-week3-l2">
+        Proceed to Next Lesson ➡️
+      </button>
+    </div>
+  </div>
+  

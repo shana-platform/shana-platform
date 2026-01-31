@@ -1,0 +1,91 @@
+<div class="page">
+
+    <h1>Respect for Belongings</h1>
+    <p class="subtitle">Drag each item to the correct zone 👇</p>
+  
+    <div class="score" *ngIf="rightZone.length + wrongZone.length">
+      🏆 Score: {{ score }}/5
+    </div>
+  
+    <!-- ITEMS -->
+    <div 
+    class="items"
+    cdkDropList
+    #itemsList="cdkDropList"
+    [cdkDropListData]="items"
+    [cdkDropListConnectedTo]="[rightList, wrongList]">
+      <div
+        class="item-card"
+        *ngFor="let item of items"
+        cdkDrag
+      >
+        <div class="icon">{{ item.icon }}</div>
+        <div>{{ item.label }}</div>
+        <small>Drag me 👇</small>
+      </div>
+    </div>
+  
+    <!-- ZONES -->
+    <div class="zones">
+  
+      <!-- RIGHT -->
+      <div
+      class="zone right"
+      cdkDropList
+      #rightList="cdkDropList"
+      [cdkDropListData]="rightZone"
+      [cdkDropListConnectedTo]="[itemsList, wrongList]"
+      (cdkDropListDropped)="drop($event, 'right')"
+      >
+        <h3>🟢 Right Place</h3>
+  
+        <div
+        class="result-card"
+        [class.correct]="item.status === 'correct'"
+        [class.incorrect]="item.status === 'wrong'"
+        *ngFor="let item of rightZone"
+        >
+          {{ item.icon }} {{ item.label }}
+          <span>✔</span>
+        </div>
+      </div>
+  
+      <!-- WRONG -->
+      <div
+      class="zone wrong"
+      cdkDropList
+      #wrongList="cdkDropList"
+      [cdkDropListData]="wrongZone"
+      [cdkDropListConnectedTo]="[itemsList, rightList]"
+      (cdkDropListDropped)="drop($event, 'wrong')"
+      >
+        <h3>🔴 Wrong Place</h3>
+  
+        <div
+          class="result-card"
+          [class.correct]="item.status === 'correct'"
+          [class.incorrect]="item.status === 'wrong'"
+          *ngFor="let item of wrongZone"
+        >
+          {{ item.icon }} {{ item.label }}
+          <span>{{ item.status === 'correct' ? '✔' : '✘' }}</span>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- PERFECT SCORE MESSAGE -->
+    <div class="perfect" *ngIf="allSorted">
+      🎉 Perfect Score! You know exactly where everything belongs!
+    </div>
+  
+    <!-- ACTION BUTTON -->
+    <button
+      class="action-btn"
+      (click)="allSorted ? nextLesson() : playAgain()"
+    >
+      {{ allSorted ? 'Next Lesson ➡️' : 'Play Again 🔄' }}
+    </button>
+  
+  </div>
+  

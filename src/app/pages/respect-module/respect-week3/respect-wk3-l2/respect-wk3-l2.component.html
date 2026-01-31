@@ -1,0 +1,66 @@
+<div class="weekly-wrapper text-center">
+
+    <!-- Header -->
+    <h1 class="title">
+      Weekly <span>Challenge</span>
+    </h1>
+    <p class="subtitle">Build great habits, one day at a time! ✨</p>
+  
+    <!-- Challenge Card -->
+    <div class="card challenge-card mx-auto">
+      <div class="card-body text-start">
+        <div class="d-flex align-items-center mb-2">
+          <div class="icon-circle me-2">⭐</div>
+          <h5 class="mb-0 fw-bold">Challenge of the Week</h5>
+        </div>
+        <p class="mb-0">
+          Choose one thing to keep neat every day:
+          <span class="highlight blue">your shoes</span>,
+          <span class="highlight teal">bag</span>,
+          <span class="highlight green">books</span>,
+          or <span class="highlight purple">bed</span>.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Illustration -->
+    <div class="illustration my-4">
+      <img src="assets/organized-items.png" alt="challenge items" />
+    </div>
+  
+    <!-- Confidence Line -->
+    <div class="confidence-card mx-auto">
+      <div class="d-flex align-items-center mb-2">
+        <div class="heart-circle me-2">💛</div>
+        <strong>Confidence Line</strong>
+      </div>
+      <p class="mb-0">"Respect shows in how I care for things."</p>
+    </div>
+  
+    <!-- Complete Button -->
+    <button
+      class="btn btn-warning complete-btn mt-4"
+      (click)="completeLesson()">
+      Complete Lesson ✅
+    </button>
+  
+    <p class="footer-text mt-3">
+      ✨ You've got this! Keep shining! ✨
+    </p>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+  
+      <div class="modal-emoji">🎉</div>
+  
+      <h2>Good Job!</h2>
+      <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+  
+      <button class="next-btn" routerLink="/respect-module">
+        Back To Dashboard ➡️
+      </button>
+  
+    </div>
+  </div>
