@@ -26,11 +26,6 @@ export class EmpathyWeek1Component implements OnInit {
     this.showFeedback = true;
   }
 
-  startJourney() {
-    console.log('Journey started!');
-    // Navigation logic here
-  }
-
   constructor() { }
 
   ngOnInit(): void {

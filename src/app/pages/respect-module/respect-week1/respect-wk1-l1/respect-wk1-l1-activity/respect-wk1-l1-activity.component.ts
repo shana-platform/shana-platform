@@ -31,7 +31,5 @@ export class RespectWk1L1ActivityComponent implements OnInit {
 
   closeModal() {
     this.showModal = false;
-    // 👉 later you can route to next lesson here
-    // this.router.navigate(['/next-lesson']);
   }
 }

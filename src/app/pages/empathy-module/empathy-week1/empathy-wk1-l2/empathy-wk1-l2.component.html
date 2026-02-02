@@ -1,1 +1,63 @@
-<p>empathy-wk1-l2 works!</p>
+<div class="page">
+    <div class="header">
+      <div class="badge">📅 Challenge of the Week</div>
+      <h1>Daily Feelings <span>Check-In</span></h1>
+      <p>
+        Track the range of emotions you felt each day.
+        See if you can name how you felt at different times of the day.
+      </p>
+    </div>
+  
+    <div class="section" *ngFor="let time of times">
+      <h3>{{ time }}</h3>
+      <p class="question">How did you feel?</p>
+  
+      <div class="emotions">
+        <div
+          class="emotion-card"
+          *ngFor="let e of emotions"
+          [class.active]="isSelected(time, e.label)"
+          (click)="selectEmotion(time, e.label)"
+        >
+          <div class="emoji">{{ e.icon }}</div>
+          <span>{{ e.label }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bottom-cards">
+      <div class="feedback">
+        💬 Feedback
+        <p>“Noticing feelings helps you understand yourself.”</p>
+      </div>
+  
+      <div class="confidence">
+        💪 Confidence Link
+        <p>“My feelings matter, and I can understand them.”</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-center">
+    <button class="submit-btn" (click)="completeLesson()">
+        Complete Lesson ✅
+      </button>
+  </div>
+
+
+ <!-- MODAL -->
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+  
+      <div class="modal-emoji">🎉</div>
+  
+      <h2>Good Job!</h2>
+      <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+  
+      <button class="next-btn" routerLink="/empathy-module">
+        Back To Dashboard ➡️
+      </button>
+  
+    </div>
+  </div>
+  

@@ -22,6 +22,8 @@ import { ConfidenceWeek4Component } from './pages/confidence-module/confidence-w
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmpathyModuleComponent } from './pages/empathy-module/empathy-module.component';
 import { EmpathyWeek1Component } from './pages/empathy-module/empathy-week1/empathy-week1.component';
+import { EmpathyWk1L1Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1.component';
+import { EmpathyWk1L2Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l2/empathy-wk1-l2.component';
 import { EmpathyWeek2Component } from './pages/empathy-module/empathy-week2/empathy-week2.component';
 import { EmpathyWeek3Component } from './pages/empathy-module/empathy-week3/empathy-week3.component';
 import { EmpathyWeek4Component } from './pages/empathy-module/empathy-week4/empathy-week4.component';
@@ -200,6 +202,8 @@ const routes: Routes = [
       { path: 'respect-week4-l2', component:  RespectWk4L2Component },
       { path: 'empathy-module', component:  EmpathyModuleComponent },
       { path: 'empathy-week1', component:  EmpathyWeek1Component },
+      { path: 'empathy-week1-l1', component:  EmpathyWk1L1Component },
+      { path: 'empathy-week1-l2', component:  EmpathyWk1L2Component },
       { path: 'empathy-week2', component:  EmpathyWeek2Component },
       { path: 'empathy-week3', component:  EmpathyWeek3Component },
       { path: 'empathy-week4', component:  EmpathyWeek4Component },

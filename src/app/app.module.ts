@@ -145,7 +145,9 @@ import { EmpathyWeek2Component } from './pages/empathy-module/empathy-week2/empa
 import { EmpathyWeek1Component } from './pages/empathy-module/empathy-week1/empathy-week1.component';
 import { EmpathyWk1L1Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1.component';
 import { EmpathyWk1L2Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l2/empathy-wk1-l2.component';
-import { EmpathyWk1L3Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l3/empathy-wk1-l3.component';
+import { EmpathyWk1L1StoryComponent } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1-story/empathy-wk1-l1-story.component';
+import { EmpathyWk1L1DiscussionComponent } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1-discussion/empathy-wk1-l1-discussion.component';
+import { EmpathyWk1L1ActivityComponent } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1-activity/empathy-wk1-l1-activity.component';
 
 @NgModule({
   declarations: [
@@ -291,7 +293,9 @@ import { EmpathyWk1L3Component } from './pages/empathy-module/empathy-week1/empa
     EmpathyWeek1Component,
     EmpathyWk1L1Component,
     EmpathyWk1L2Component,
-    EmpathyWk1L3Component
+    EmpathyWk1L1StoryComponent,
+    EmpathyWk1L1DiscussionComponent,
+    EmpathyWk1L1ActivityComponent
   ],
   imports: [
     BrowserModule,

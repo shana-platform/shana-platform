@@ -1,1 +1,42 @@
-<p>empathy-wk1-l1 works!</p>
+<div class="story-container">
+    <header class="story-header">
+      <h1>Kojo’s Mixed-Up Morning</h1>
+      <p class="author">by Shana</p>
+    </header>
+    <nav class="story-tabs">
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'video'" 
+        (click)="setActiveTab('video')">
+        📷 Picture slide
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'discussion'" 
+        (click)="setActiveTab('discussion')">
+        💬 Discussion
+      </button>
+      <!-- <button 
+        class="tab" 
+        [class.active]="activeTab === 'activity'" 
+        (click)="setActiveTab('activity')">
+        🎨 Activity
+      </button> -->
+    </nav>
+  
+    <!-- Story Summary Section -->
+    <section class="summary-card" *ngIf="activeTab === 'video'">
+        <app-empathy-wk1-l1-story></app-empathy-wk1-l1-story>
+    </section>
+  
+    <!-- Discussion Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'discussion'">
+        <app-empathy-wk1-l1-discussion></app-empathy-wk1-l1-discussion>
+    </section>
+  
+    <!-- Activity Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'activity'">
+        <app-empathy-wk1-l1-activity></app-empathy-wk1-l1-activity>
+    </section>
+  </div>
+  
