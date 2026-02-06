@@ -1,1 +1,91 @@
-<p>empathy-week2 works!</p>
+<div class="lesson-wrapper">
+
+    <!-- HERO SECTION -->
+    <div class="lesson-hero container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <span class="week-badge">● Week 2</span>
+  
+          <h1 class="lesson-title">
+            Noticing How <br />
+            <span>Others Feel</span>
+          </h1>
+  
+          <div class="objective-card d-flex align-items-center gap-3">
+            <div class="objective-icon">👁️</div>
+            <div>
+              <strong>Objective</strong>
+              <p class="mb-0">
+                Learn to notice and understand other people's feelings.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 text-center">
+          <div class="image-card">
+            <img
+              src="assets/hero-emotions.png"
+              alt="Kids illustration"
+            />
+            <div class="heart-badge">❤️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- RECAP SECTION -->
+    <div class="container recap-section">
+      <div class="recap-card">
+  
+        <div class="recap-header d-flex align-items-center gap-3">
+          <div class="recap-icon">💬</div>
+          <div>
+            <small class="text-uppercase text-muted">Recap</small>
+            <h5 class="mb-0">Feelings Review</h5>
+          </div>
+        </div>
+  
+        <div class="question-box mt-4">
+          <p class="fw-semibold mb-3">
+            🤔 Which feeling did you learn about last week?
+          </p>
+  
+          <div class="d-flex gap-3 flex-wrap">
+            <button
+              class="feeling-btn"
+              [class.active]="selected === 'happy'"
+              (click)="selectFeeling('happy')"
+            >
+              Happy 😊
+            </button>
+  
+            <button
+              class="feeling-btn"
+              [class.active]="selected === 'sad'"
+              (click)="selectFeeling('sad')"
+            >
+              Sad 😢
+            </button>
+  
+            <button
+              class="feeling-btn"
+              [class.active]="selected === 'angry'"
+              (click)="selectFeeling('angry')"
+            >
+              Angry 😠
+            </button>
+          </div>
+        </div>
+  
+        <div *ngIf="selected" class="success-box mt-4">
+          ✨ Great memory! ✨
+        </div>
+        <button *ngIf="selected" routerLink="/empathy-week2-l1" class="begin-btn">
+            Begin your journey →
+          </button>
+      </div>
+    </div>
+  
+  </div>
+  

@@ -25,6 +25,9 @@ import { EmpathyWeek1Component } from './pages/empathy-module/empathy-week1/empa
 import { EmpathyWk1L1Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l1/empathy-wk1-l1.component';
 import { EmpathyWk1L2Component } from './pages/empathy-module/empathy-week1/empathy-wk1-l2/empathy-wk1-l2.component';
 import { EmpathyWeek2Component } from './pages/empathy-module/empathy-week2/empathy-week2.component';
+import { EmpathyWk2L1Component } from './pages/empathy-module/empathy-week2/empathy-wk2-l1/empathy-wk2-l1.component';
+import { EmpathyWk2L2Component } from './pages/empathy-module/empathy-week2/empathy-wk2-l2/empathy-wk2-l2.component';
+import { EmpathyWk2L3Component } from './pages/empathy-module/empathy-week2/empathy-wk2-l3/empathy-wk2-l3.component';
 import { EmpathyWeek3Component } from './pages/empathy-module/empathy-week3/empathy-week3.component';
 import { EmpathyWeek4Component } from './pages/empathy-module/empathy-week4/empathy-week4.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
@@ -205,6 +208,9 @@ const routes: Routes = [
       { path: 'empathy-week1-l1', component:  EmpathyWk1L1Component },
       { path: 'empathy-week1-l2', component:  EmpathyWk1L2Component },
       { path: 'empathy-week2', component:  EmpathyWeek2Component },
+      { path: 'empathy-week2-l1', component:  EmpathyWk2L1Component },
+      { path: 'empathy-week2-l2', component:  EmpathyWk2L2Component },
+      { path: 'empathy-week2-l3', component:  EmpathyWk2L3Component },
       { path: 'empathy-week3', component:  EmpathyWeek3Component },
       { path: 'empathy-week4', component:  EmpathyWeek4Component },
       { path: 'integrity-module', component:  IntegrityModuleComponent },

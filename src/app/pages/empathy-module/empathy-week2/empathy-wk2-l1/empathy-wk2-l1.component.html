@@ -1,0 +1,84 @@
+<div class="page-wrapper">
+
+  <div class="header">
+    <span class="tag">WARM-UP</span>
+    <h2>How Might They Feel?</h2>
+    <p class="instructions">
+      Look at each picture and choose how the person might feel.
+    </p>
+  </div>
+
+  <div
+    class="question-card"
+    *ngFor="let q of questions; let i = index"
+  >
+    <div class="question-header">
+      <span class="number">{{ i + 1 }}</span>
+      <h3>{{ q.text }}</h3>
+    </div>
+
+    <img class="question-img" [src]="q.image" />
+
+    <!-- MULTIPLE CHOICE -->
+    <ng-container *ngIf="q.type === 'mcq'">
+      <div
+        class="option"
+        *ngFor="let opt of q.options"
+        [ngClass]="getOptionClass(q, opt)"
+        (click)="selectOption(q, opt)"
+      >
+        <span class="badge">{{ opt.label }}</span>
+        {{ opt.text }}
+        <span class="icon" *ngIf="q.selected === opt">
+          {{ opt.correct ? '✔' : '✖' }}
+        </span>
+      </div>
+    </ng-container>
+
+    <!-- TEXT INPUT -->
+    <ng-container *ngIf="q.type === 'input'">
+      <input
+        class="text-input"
+        type="text"
+        placeholder="Type your answer..."
+        [(ngModel)]="q.userAnswer"
+      />
+      <button class="submit-btn" (click)="submitText(q)">
+        Submit
+      </button>
+    </ng-container>
+
+    <!-- FEEDBACK -->
+    <div class="feedback" *ngIf="q.showFeedback">
+      <strong>{{ q.feedbackTitle }}</strong>
+      <p>{{ q.feedback }}</p>
+    </div>
+  </div>
+
+  <!-- existing content stays the same -->
+
+<button
+class="final-submit"
+*ngIf="allAnswered"
+(click)="completeLesson()"
+>
+Submit Answers
+</button>
+
+<!-- MODAL -->
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="modal-card">
+
+    <div class="modal-emoji">🎉</div>
+
+    <h2>Good Job!</h2>
+    <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+
+    <button class="next-btn" routerLink="/empathy-week2-l2">
+      Next Lesson ➡️
+    </button>
+
+  </div>
+</div>
+
+</div>

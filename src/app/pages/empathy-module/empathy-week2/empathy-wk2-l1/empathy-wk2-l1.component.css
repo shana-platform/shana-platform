@@ -1,0 +1,198 @@
+.page-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background: #f6fbff;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.tag {
+  background: #e6f0ff;
+  color: #2563eb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.instructions {
+  color: #64748b;
+}
+
+.question-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.number {
+  width: 32px;
+  height: 32px;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.question-img {
+  display: block;
+  margin: 30px auto;
+  max-width: 200px;
+}
+
+.option {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.option:hover {
+  border-color: #3b82f6;
+}
+
+.option.correct {
+  background: #ecfdf5;
+  border-color: #22c55e;
+}
+
+.option.wrong {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.icon {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.text-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.feedback {
+  margin-top: 20px;
+  background: #ecfdf5;
+  border: 2px solid #22c55e;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.final-submit {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  animation: popIn 0.3s ease;
+}
+
+.modal-emoji {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.modal-card h2 {
+  font-size: 28px;
+  color: #1e2b45;
+  margin-bottom: 10px;
+}
+
+.modal-card p {
+  color: #6b7a99;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.next-btn {
+  background: #2a9df4;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

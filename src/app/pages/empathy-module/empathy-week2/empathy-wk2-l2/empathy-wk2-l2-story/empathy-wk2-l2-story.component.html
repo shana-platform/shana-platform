@@ -1,0 +1,52 @@
+
+<div class="story-container">
+    <!-- Title -->
+    <h1 class="story-title">
+      <span class="highlight-green me-3">Abena's</span>
+  
+      <span class="highlight-blue">Adventure</span>
+    </h1>
+    <p class="story-subtitle">
+        During break time, Abena ran outside to join her friends on the playground. She laughed as she played hopscotch and chased the other children. But then, out of the corner of her eye, she noticed Kweku sitting alone on a quiet bench under the big mango tree.
+        He wasn’t running or playing. He didn’t even seem to be talking to anyone. His shoulders looked a little slumped, and his eyes stared at the ground. Something about the way he sat made Abena feel a little tug in her heart.
+        Abena paused for a moment. She remembered how lonely it felt the last time she had no one to play with. Taking a deep breath, she walked over to Kweku and gently asked, “Hi Kweku. Do you want to play with me?”
+        Kweku looked up, surprised. A small smile appeared on his face. “Really? You want me to play?” he asked softly.
+        “Yes!” Abena said. “We can play catch or hopscotch—anything you like!”
+        Slowly, Kweku stood up and joined her. At first, he moved a little shyly, but soon he laughed when Abena missed catching the ball. The other children on the playground noticed them playing together and smiled too.
+        By the end of break time, both Abena and Kweku felt happy. Kweku wasn’t alone anymore, and Abena felt proud that she had reached out and made someone feel included.
+        Abena realized that sometimes, just a small act of kindness—like asking someone to join in—could make a big difference.
+        
+      </p>
+  
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="nav-btn left" (click)="prevSlide()">&#8249;</button>
+  
+      <div class="slide">
+        <div class="slide-image">
+          <img [src]="slides[currentIndex].image" [alt]="">
+        </div>
+      </div>
+  
+      <button class="nav-btn right" (click)="nextSlide()">&#8250;</button>
+    </div>
+  
+    <!-- Indicators -->
+    <div class="indicators">
+      <span 
+        *ngFor="let slide of slides; let i = index" 
+        class="dot" 
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  
+    <!-- Footer Controls -->
+    <div class="footer-controls">
+      <span class="page-count">{{ currentIndex + 1 }} of {{ slides.length }}</span>
+      <button class="autoplay-btn" (click)="toggleAutoplay()">
+        {{ autoplay ? '⏸ Pause' : '▶ Auto Play' }}
+      </button>
+    </div>
+  </div>
+  

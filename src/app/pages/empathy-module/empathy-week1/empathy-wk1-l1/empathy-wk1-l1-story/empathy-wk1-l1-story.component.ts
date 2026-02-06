@@ -8,28 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class EmpathyWk1L1StoryComponent implements OnInit {
   slides = [
     {
-      image: 'assets/RW1P1.png'
+      image: 'assets/EW1P1.png'
     },
     {
-      image: 'assets/RW1P2.png'
+      image: 'assets/EW1P2.png'
     },
     {
-      image: 'assets/RW1P3.png'
+      image: 'assets/EW1P3.png'
     },
     {
-      image: 'assets/RW1P4.png'
+      image: 'assets/EW1P4.png'
     },
     {
-      image: 'assets/RW1P5.png'
+      image: 'assets/EW1P5.png'
     },
     {
-      image: 'assets/RW1P6.png'
+      image: 'assets/EW1P6.png'
     },
     {
-      image: 'assets/RW1P7.png'
+      image: 'assets/EW1P7.png'
     },
     {
-      image: 'assets/RW1P8.png'
+      image: 'assets/EW1P8.png'
     }
   ];
 

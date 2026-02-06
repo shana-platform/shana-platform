@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./empathy-week2.component.css']
 })
 export class EmpathyWeek2Component implements OnInit {
+  selected: string | null = null;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+selectFeeling(feeling: string) {
+  this.selected = feeling;
+}
 }

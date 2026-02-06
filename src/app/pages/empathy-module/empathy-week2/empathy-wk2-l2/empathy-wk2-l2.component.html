@@ -1,0 +1,42 @@
+<div class="story-container">
+    <header class="story-header">
+      <h1>Mini story - Abena and the Quiet Bench</h1>
+      <p class="author">by Shana</p>
+    </header>
+    <nav class="story-tabs">
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'video'" 
+        (click)="setActiveTab('video')">
+        📷 Picture slide
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'discussion'" 
+        (click)="setActiveTab('discussion')">
+        💬 Discussion
+      </button>
+      <!-- <button 
+        class="tab" 
+        [class.active]="activeTab === 'activity'" 
+        (click)="setActiveTab('activity')">
+        🎨 Activity
+      </button> -->
+    </nav>
+  
+    <!-- Story Summary Section -->
+    <section class="summary-card" *ngIf="activeTab === 'video'">
+        <app-empathy-wk2-l2-story></app-empathy-wk2-l2-story>
+    </section>
+  
+    <!-- Discussion Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'discussion'">
+        <app-empathy-wk2-l2-discussion></app-empathy-wk2-l2-discussion>
+    </section>
+  
+    <!-- Activity Tab -->
+    <!-- <section class="discussion-card" *ngIf="activeTab === 'activity'">
+        <app-empathy-wk1-l1-activity></app-empathy-wk1-l1-activity>
+    </section> -->
+  </div>
+  

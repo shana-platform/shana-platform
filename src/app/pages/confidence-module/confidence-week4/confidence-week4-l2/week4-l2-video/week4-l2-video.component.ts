@@ -8,22 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class Week4L2VideoComponent implements OnInit {
   slides = [
     {
-      image: 'assets/shane-intro.png'
+      image: 'assets/CW4P1.png'
     },
     {
-      image: 'assets/shane.png'
+      image: 'assets/CW4P2.png'
     },
     {
-      image: 'assets/shane1.png'
+      image: 'assets/CW4P3.png'
     },
     {
-      image: 'assets/shane2.png'
+      image: 'assets/CW4P4.png'
     },
     {
-      image: 'assets/shane3.png'
+      image: 'assets/CW4P5.png'
     },
     {
-      image: 'assets/shane4.png'
+      image: 'assets/CW4P6.png'
+    },
+    {
+      image: 'assets/CW4P7.png'
+    },
+    {
+      image: 'assets/CW4P8.png'
     }
   ];
 

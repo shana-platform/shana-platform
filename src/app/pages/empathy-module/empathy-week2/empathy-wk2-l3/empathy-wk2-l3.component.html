@@ -1,0 +1,79 @@
+<div class="challenge-page">
+
+    <!-- Badge -->
+    <div class="challenge-badge">
+      ✨ Challenge of the Week
+    </div>
+  
+    <!-- Main Card -->
+    <div class="challenge-card">
+  
+      <img
+        src="assets/kindness-hero.png"
+        alt="Kind kids illustration"
+        class="challenge-image"
+      />
+  
+      <h3 class="challenge-title">
+        👁️ Kind Watch Challenge
+      </h3>
+  
+      <div class="challenge-instruction">
+        Notice one person who is not feeling their best and do one kind action.
+      </div>
+  
+      <div class="hearts">
+        <span>🧡</span>
+        <span>🧡</span>
+        <span>🧡</span>
+      </div>
+    </div>
+  
+    <!-- Feedback -->
+    <div class="info-card feedback-card">
+      <div class="info-icon">💬</div>
+      <div>
+        <small>FEEDBACK</small>
+        <p class="mb-0 fst-italic">
+          “Small kindness makes a big difference.”
+        </p>
+      </div>
+    </div>
+  
+    <!-- Confidence Link -->
+    <div class="info-card confidence-card">
+      <div class="info-icon">⭐</div>
+      <div>
+        <small>CONFIDENCE LINK</small>
+        <p class="mb-0 fw-semibold">
+          “I notice how others feel and choose kindness.”
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center">
+        <button class="submit-btn" (click)="completeLesson()">
+            Complete Lesson ✅
+          </button>
+      </div>
+  
+  </div>
+  
+
+
+
+ <!-- MODAL -->
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+  
+      <div class="modal-emoji">🎉</div>
+  
+      <h2>Good Job!</h2>
+      <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+  
+      <button class="next-btn" routerLink="/empathy-module">
+        Back To Dashboard ➡️
+      </button>
+  
+    </div>
+  </div>
