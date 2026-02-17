@@ -1,0 +1,192 @@
+.challenge-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 24px;
+    background: #f3fbff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  /* HEADER */
+  .page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f3c88;
+    margin-bottom: 24px;
+  }
+  
+  /* HERO IMAGE */
+  .hero-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .hero-image {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  /* CHALLENGE CARD */
+  .challenge-card {
+    margin-top: 24px;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    text-align: left;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #e6f4ff;
+    color: #1e88e5;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  .challenge-title {
+    font-size: 22px;
+    color: #1f3c88;
+    margin: 8px 0 16px;
+  }
+  
+  .challenge-task {
+    background: #eef7ff;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #334;
+  }
+  
+  /* INFO CARDS */
+  .info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .info-card {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    text-align: left;
+  }
+  
+  .info-card .icon {
+    font-size: 22px;
+  }
+  
+  .feedback {
+    background: #fff4d6;
+  }
+  
+  .confidence {
+    background: #e8f4ff;
+  }
+  
+  .info-card h4 {
+    margin: 0;
+    font-size: 15px;
+    color: #1f3c88;
+  }
+  
+  .info-card p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  /* FOOTER */
+  .footer-note {
+    margin-top: 28px;
+    font-size: 14px;
+    color: #5a6ea6;
+  }
+  
+   /* Submit button */
+   .submit-btn {
+    margin-top: 20px;
+    background: #7bedab;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    animation: popIn 0.3s ease;
+  }
+  
+  .modal-emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card h2 {
+    font-size: 28px;
+    color: #1e2b45;
+    margin-bottom: 10px;
+  }
+  
+  .modal-card p {
+    color: #6b7a99;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .next-btn {
+    background: #2a9df4;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

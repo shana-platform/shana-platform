@@ -1,0 +1,80 @@
+<div class="challenge-page">
+
+    <!-- HEADER -->
+    <h1 class="page-title">
+      ✨ Challenge of the Week ✨
+    </h1>
+  
+    <!-- HERO CARD -->
+    <div class="hero-card">
+      <img
+        src="assets/kind-words-hero.png"
+        alt="Kind words illustration"
+        class="hero-image"
+      />
+    </div>
+  
+    <!-- MAIN CHALLENGE CARD -->
+    <div class="challenge-card">
+      <span class="badge">🌟 Challenge of the Week</span>
+  
+      <h2 class="challenge-title">
+        ❤️ Kind Words Challenge
+      </h2>
+  
+      <div class="challenge-task">
+        💬 Say one kind thing to someone each day.
+      </div>
+    </div>
+  
+    <!-- INFO CARDS -->
+    <div class="info-cards">
+  
+      <div class="info-card feedback">
+        <div class="icon">👍</div>
+        <div>
+          <h4>Feedback</h4>
+          <p><em>"Your words can make someone's day better."</em></p>
+        </div>
+      </div>
+  
+      <div class="info-card confidence">
+        <div class="icon">🔗</div>
+        <div>
+          <h4>Confidence Link</h4>
+          <p><em>"My words can help others feel safe and happy."</em></p>
+        </div>
+      </div>
+  
+    </div>
+<br>
+    <div class="text-center">
+        <button class="submit-btn" (click)="completeLesson()">
+            Complete Lesson ✅
+          </button>
+      </div>
+  
+    <!-- FOOTER NOTE -->
+    <p class="footer-note">
+      Remember: Small acts of kindness create big ripples! 💙
+    </p>
+  
+  </div>
+  
+
+   <!-- MODAL -->
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-card">
+  
+      <div class="modal-emoji">🎉</div>
+  
+      <h2>Good Job!</h2>
+      <p>You did an amazing job.<br>Proceed to the next lesson!</p>
+  
+      <button class="next-btn" routerLink="/empathy-module">
+        Back To Dashboard ➡️
+      </button>
+  
+    </div>
+  </div>
+  

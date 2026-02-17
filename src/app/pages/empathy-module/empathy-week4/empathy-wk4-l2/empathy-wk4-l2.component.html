@@ -1,0 +1,31 @@
+<div class="story-container">
+    <header class="story-header">
+      <h1>Zainab Shares Her Umbrella</h1>
+      <p class="author">by Shana</p>
+    </header>
+    <nav class="story-tabs">
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'video'" 
+        (click)="setActiveTab('video')">
+        📷 Picture slide
+      </button>
+      <button 
+        class="tab" 
+        [class.active]="activeTab === 'discussion'" 
+        (click)="setActiveTab('discussion')">
+        💬 Discussion
+      </button>
+    </nav>
+  
+    <!-- Story Summary Section -->
+    <section class="summary-card" *ngIf="activeTab === 'video'">
+        <app-empathy-wk4-l2-story></app-empathy-wk4-l2-story>
+    </section>
+  
+    <!-- Discussion Tab -->
+    <section class="discussion-card" *ngIf="activeTab === 'discussion'">
+        <app-empathy-wk4-l2-discussion></app-empathy-wk4-l2-discussion>
+    </section>
+  </div>
+  

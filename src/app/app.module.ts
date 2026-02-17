@@ -153,6 +153,17 @@ import { EmpathyWk2L2Component } from './pages/empathy-module/empathy-week2/empa
 import { EmpathyWk2L2StoryComponent } from './pages/empathy-module/empathy-week2/empathy-wk2-l2/empathy-wk2-l2-story/empathy-wk2-l2-story.component';
 import { EmpathyWk2L2DiscussionComponent } from './pages/empathy-module/empathy-week2/empathy-wk2-l2/empathy-wk2-l2-discussion/empathy-wk2-l2-discussion.component';
 import { EmpathyWk2L3Component } from './pages/empathy-module/empathy-week2/empathy-wk2-l3/empathy-wk2-l3.component';
+import { EmpathyWk3L1Component } from './pages/empathy-module/empathy-week3/empathy-wk3-l1/empathy-wk3-l1.component';
+import { EmpathyWk3L2Component } from './pages/empathy-module/empathy-week3/empathy-wk3-l2/empathy-wk3-l2.component';
+import { EmpathyWk3L3Component } from './pages/empathy-module/empathy-week3/empathy-wk3-l3/empathy-wk3-l3.component';
+import { EmpathyWk3L2VideoComponent } from './pages/empathy-module/empathy-week3/empathy-wk3-l2/empathy-wk3-l2-video/empathy-wk3-l2-video.component';
+import { EmpathyWk3L2DiscussionComponent } from './pages/empathy-module/empathy-week3/empathy-wk3-l2/empathy-wk3-l2-discussion/empathy-wk3-l2-discussion.component';
+import { EmpathyWk4L1Component } from './pages/empathy-module/empathy-week4/empathy-wk4-l1/empathy-wk4-l1.component';
+import { EmpathyWk4L2Component } from './pages/empathy-module/empathy-week4/empathy-wk4-l2/empathy-wk4-l2.component';
+import { EmpathyWk4L3Component } from './pages/empathy-module/empathy-week4/empathy-wk4-l3/empathy-wk4-l3.component';
+import { EmpathyWk4L2StoryComponent } from './pages/empathy-module/empathy-week4/empathy-wk4-l2/empathy-wk4-l2-story/empathy-wk4-l2-story.component';
+import { EmpathyWk4L2DiscussionComponent } from './pages/empathy-module/empathy-week4/empathy-wk4-l2/empathy-wk4-l2-discussion/empathy-wk4-l2-discussion.component';
+import { IntegrityWeek1Component } from './pages/integrity-module/integrity-week1/integrity-week1.component';
 
 @NgModule({
   declarations: [
@@ -305,7 +316,18 @@ import { EmpathyWk2L3Component } from './pages/empathy-module/empathy-week2/empa
     EmpathyWk2L2Component,
     EmpathyWk2L2StoryComponent,
     EmpathyWk2L2DiscussionComponent,
-    EmpathyWk2L3Component
+    EmpathyWk2L3Component,
+    EmpathyWk3L1Component,
+    EmpathyWk3L2Component,
+    EmpathyWk3L3Component,
+    EmpathyWk3L2VideoComponent,
+    EmpathyWk3L2DiscussionComponent,
+    EmpathyWk4L1Component,
+    EmpathyWk4L2Component,
+    EmpathyWk4L3Component,
+    EmpathyWk4L2StoryComponent,
+    EmpathyWk4L2DiscussionComponent,
+    IntegrityWeek1Component
   ],
   imports: [
     BrowserModule,

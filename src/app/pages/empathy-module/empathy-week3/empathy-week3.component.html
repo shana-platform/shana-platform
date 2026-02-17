@@ -1,1 +1,76 @@
-<p>empathy-week3 works!</p>
+<div class="page">
+
+    <!-- WEEK TAG -->
+    <div class="week-tag">📚 Week 3</div>
+  
+    <!-- TITLE -->
+    <h1 class="title">
+      <span>Kind Words</span> and Actions
+    </h1>
+  
+    <!-- HERO IMAGE -->
+    <div class="hero">
+      <img src="assets/kids-sharing.jpg" alt="Kindness illustration">
+      <div class="star-badge">⭐</div>
+    </div>
+  
+    <!-- OBJECTIVE CARD -->
+    <div class="objective-card">
+      <div class="icon">🎯</div>
+      <div>
+        <h3>Objective</h3>
+        <p>Understand how words and actions affect others.</p>
+      </div>
+    </div>
+  
+    <!-- RECAP -->
+    <h2 class="recap-title">✨ Recap Quiz</h2>
+  
+    <!-- ✅ QUIZ CARD (YOUR LOGIC PRESERVED) -->
+    <div class="quiz-card">
+  
+      <h3 class="question">
+        Which action shows kindness?
+      </h3>
+  
+      <div class="options">
+        <button
+          *ngFor="let option of options"
+          class="option-btn"
+          [class.correct]="selectedOption === option && option.isCorrect"
+          [class.wrong]="selectedOption === option && !option.isCorrect"
+          [disabled]="selectedOption"
+          (click)="selectOption(option)"
+        >
+          {{ option.icon }} {{ option.text }}
+          <span *ngIf="selectedOption === option">
+            {{ option.isCorrect ? '✔' : '✘' }}
+          </span>
+        </button>
+      </div>
+  
+      <!-- FEEDBACK -->
+      <div *ngIf="selectedOption && answeredCorrectly" class="success">
+        Yes! Sharing shows kindness. 🌟
+      </div>
+  
+      <div *ngIf="selectedOption && !answeredCorrectly" class="error">
+        Oops! Try again! 💪
+      </div>
+  
+      <!-- ACTION BUTTON -->
+      <button
+        class="action-btn"
+        (click)="answeredCorrectly ? nextLesson() : tryAgain()"
+      >
+        {{ answeredCorrectly ? 'Proceed to Next Lesson ➡️' : 'Try Again' }}
+      </button>
+  
+    </div>
+  
+    <p class="reminder">
+      Remember: Small acts of kindness make a big difference! 💙
+    </p>
+  
+  </div>
+  

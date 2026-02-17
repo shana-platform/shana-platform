@@ -1,0 +1,102 @@
+<div class="warmup-page">
+
+    <h1>Kind or Not Kind?</h1>
+    <p class="subtitle">🎮 Sorting Game</p>
+  
+    <!-- FOCUS CARD -->
+    <div class="focus-card">
+      <h3>🌟 Empathy Focus for Learners</h3>
+      <ul>
+        <li>Noticing when someone feels hurt or embarrassed</li>
+        <li>Using kind words instead of laughing</li>
+        <li>Helping and encouraging others when things go wrong</li>
+      </ul>
+    </div>
+  
+    <p class="instruction">Drag each action into the correct box</p>
+  
+    <!-- DRAG ITEMS -->
+    <div
+      class="options"
+      cdkDropList
+      #optionsList="cdkDropList"
+      [cdkDropListData]="options"
+      [cdkDropListConnectedTo]="[kindList, notKindList]"
+    >
+      <div
+        class="card"
+        *ngFor="let item of options"
+        cdkDrag
+      >
+        {{ item.label }}
+      </div>
+    </div>
+  
+    <!-- DROP ZONES -->
+    <div class="drop-zones">
+  
+      <!-- KIND -->
+      <div
+        class="drop-box kind"
+        cdkDropList
+        #kindList="cdkDropList"
+        [cdkDropListData]="kind"
+        [cdkDropListConnectedTo]="[optionsList]"
+        (cdkDropListDropped)="drop($event, true)"
+      >
+        <h3>✅ Kind</h3>
+  
+        <div
+          class="card"
+          *ngFor="let item of kind"
+          [class.correct]="item.isEmpathy"
+          [class.wrong]="!item.isEmpathy"
+        >
+          {{ item.label }}
+          <span>{{ item.isEmpathy ? '✅' : '❌' }}</span>
+        </div>
+      </div>
+  
+      <!-- NOT KIND -->
+      <div
+        class="drop-box not-kind"
+        cdkDropList
+        #notKindList="cdkDropList"
+        [cdkDropListData]="notKind"
+        [cdkDropListConnectedTo]="[optionsList]"
+        (cdkDropListDropped)="drop($event, false)"
+      >
+        <h3>❌ Not Kind</h3>
+  
+        <div
+          class="card"
+          *ngFor="let item of notKind"
+          [class.correct]="!item.isEmpathy"
+          [class.wrong]="item.isEmpathy"
+        >
+          {{ item.label }}
+          <span>{{ !item.isEmpathy ? '✅' : '❌' }}</span>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- PROGRESS -->
+    <p class="progress">{{ sortedCount }} of 6 sorted</p>
+  
+    <!-- FINAL FEEDBACK -->
+    <div *ngIf="allCorrect" class="final-feedback">
+      💬 Great sorting! Kind actions show empathy.
+    </div>
+  
+    <!-- NEXT BUTTON -->
+    <button
+      class="next-btn"
+      [disabled]="!allCorrect"
+      (click)="nextLesson()"
+    >
+      Proceed to Next Lesson ➡️
+    </button>
+  
+  </div>
+  

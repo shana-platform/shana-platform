@@ -29,7 +29,13 @@ import { EmpathyWk2L1Component } from './pages/empathy-module/empathy-week2/empa
 import { EmpathyWk2L2Component } from './pages/empathy-module/empathy-week2/empathy-wk2-l2/empathy-wk2-l2.component';
 import { EmpathyWk2L3Component } from './pages/empathy-module/empathy-week2/empathy-wk2-l3/empathy-wk2-l3.component';
 import { EmpathyWeek3Component } from './pages/empathy-module/empathy-week3/empathy-week3.component';
+import { EmpathyWk3L1Component } from './pages/empathy-module/empathy-week3/empathy-wk3-l1/empathy-wk3-l1.component';
+import { EmpathyWk3L2Component } from './pages/empathy-module/empathy-week3/empathy-wk3-l2/empathy-wk3-l2.component';
+import { EmpathyWk3L3Component } from './pages/empathy-module/empathy-week3/empathy-wk3-l3/empathy-wk3-l3.component';
 import { EmpathyWeek4Component } from './pages/empathy-module/empathy-week4/empathy-week4.component';
+import { EmpathyWk4L1Component } from './pages/empathy-module/empathy-week4/empathy-wk4-l1/empathy-wk4-l1.component';
+import { EmpathyWk4L2Component } from './pages/empathy-module/empathy-week4/empathy-wk4-l2/empathy-wk4-l2.component';
+import { EmpathyWk4L3Component } from './pages/empathy-module/empathy-week4/empathy-wk4-l3/empathy-wk4-l3.component';
 import { FifthWeekLevel1Component } from './pages/fifth-week-welcome/fifth-week-level1/fifth-week-level1.component';
 import { FifthWeekLevel2Component } from './pages/fifth-week-welcome/fifth-week-level2/fifth-week-level2.component';
 import { FifthWeekLevel3Component } from './pages/fifth-week-welcome/fifth-week-level3/fifth-week-level3.component';
@@ -212,8 +218,18 @@ const routes: Routes = [
       { path: 'empathy-week2-l2', component:  EmpathyWk2L2Component },
       { path: 'empathy-week2-l3', component:  EmpathyWk2L3Component },
       { path: 'empathy-week3', component:  EmpathyWeek3Component },
+      { path: 'empathy-week3-l1', component:  EmpathyWk3L1Component },
+      { path: 'empathy-week3-l2', component:  EmpathyWk3L2Component },
+      { path: 'empathy-week3-l3', component:  EmpathyWk3L3Component },
       { path: 'empathy-week4', component:  EmpathyWeek4Component },
+      { path: 'empathy-week4-l1', component:  EmpathyWk4L1Component },
+      { path: 'empathy-week4-l2', component:  EmpathyWk4L2Component },
+      { path: 'empathy-week4-l3', component:  EmpathyWk4L3Component },
       { path: 'integrity-module', component:  IntegrityModuleComponent },
+      { path: 'integrity-week1', component:  EmpathyWk4L1Component },
+      // { path: 'integrity-week1-l1', component:  IntegrityWeek1Component },
+      // { path: 'integrity-week1-l2', component:  IntegrityWeek2Component },
+      // { path: 'integrity-week1-l3', component:  IntegrityWeek3Component },
     ]
   }
 ];

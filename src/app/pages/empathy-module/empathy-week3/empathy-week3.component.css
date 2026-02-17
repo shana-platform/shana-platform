@@ -1,0 +1,185 @@
+/* PAGE */
+.page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #e9f6ff, #dff1ff);
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+  }
+  
+  /* WEEK TAG */
+  .week-tag {
+    display: inline-block;
+    background: #ffe8d6;
+    color: #f97316;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* TITLE */
+  .title {
+    margin: 20px 0 30px;
+    font-size: 36px;
+    font-weight: 800;
+  }
+  
+  .title span {
+    color: #3b82f6;
+  }
+  
+  /* HERO */
+  .hero {
+    position: relative;
+    max-width: 760px;
+    margin: auto;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    width: 100%;
+    display: block;
+  }
+  
+  .star-badge {
+    position: absolute;
+    right: -12px;
+    bottom: -12px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* OBJECTIVE */
+  .objective-card {
+    max-width: 760px;
+    margin: 30px auto;
+    background: linear-gradient(90deg, #3b82f6, #38bdf8);
+    color: #fff;
+    padding: 22px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .objective-card .icon {
+    background: rgba(255,255,255,0.25);
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 22px;
+  }
+  
+  .objective-card h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .objective-card p {
+    margin: 4px 0 0;
+    font-size: 14px;
+  }
+  
+  /* RECAP */
+  .recap-title {
+    margin: 40px 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  /* QUIZ CARD */
+  .quiz-card {
+    max-width: 760px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  }
+  
+  /* QUESTION */
+  .question {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  /* OPTIONS */
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .option-btn {
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: #cfe5ff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  
+  .option-btn:hover {
+    transform: scale(1.02);
+  }
+  
+  .option-btn.correct {
+    background: #22c55e;
+    color: #fff;
+  }
+  
+  .option-btn.wrong {
+    background: #fecaca;
+    color: #991b1b;
+  }
+  
+  .option-btn:disabled {
+    cursor: default;
+    opacity: 0.9;
+  }
+  
+  /* FEEDBACK */
+  .success {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 14px;
+    background: #e7f8ed;
+    color: #15803d;
+    font-weight: 600;
+  }
+  
+  .error {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 14px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-weight: 600;
+  }
+  
+  /* ACTION BUTTON */
+  .action-btn {
+    margin-top: 22px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: #f1f5f9;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  /* REMINDER */
+  .reminder {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #64748b;
+  }
+  

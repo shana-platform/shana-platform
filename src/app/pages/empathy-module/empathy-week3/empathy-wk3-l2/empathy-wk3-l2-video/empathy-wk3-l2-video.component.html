@@ -1,0 +1,50 @@
+
+<div class="story-container">
+    <!-- Title -->
+    <h1 class="story-title">
+      <span class="highlight-green me-3">Yaw's</span>
+  
+      <span class="highlight-blue">Adventure</span>
+    </h1>
+    <p class="story-subtitle">
+        Yaw was sitting on the classroom floor, carefully building a tall tower with his blocks. He worked slowly, placing each block on top of the other. He wanted his tower to be the tallest one in the room.
+        Suddenly, the tower wobbled and crashed to the floor. Bang! The blocks scattered everywhere.
+        Some children nearby laughed when they saw the fallen tower. Yaw’s face grew hot, and his eyes filled with tears. He felt sad and a little embarrassed. He wanted to stop playing and move away.
+        Efua, his friend, noticed Yaw’s quiet face and the blocks on the floor. She walked over and sat beside him. In a kind voice, she said, “It’s okay, Yaw. Sometimes things fall down. Let’s build it again together.”
+        Yaw looked at Efua. Her smile made him feel less alone. He wiped his eyes and nodded.
+        Together, they picked up the blocks and started again. This time, Yaw felt calmer and more confident. Even though the tower was not perfect, Yaw felt better because he had a friend who understood his feelings.
+        Yaw learned that when someone is kind and supportive, it can help hurt feelings feel lighter.        
+      </p>
+  
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="nav-btn left" (click)="prevSlide()">&#8249;</button>
+  
+      <div class="slide">
+        <div class="slide-image">
+          <img [src]="slides[currentIndex].image" [alt]="">
+        </div>
+      </div>
+  
+      <button class="nav-btn right" (click)="nextSlide()">&#8250;</button>
+    </div>
+  
+    <!-- Indicators -->
+    <div class="indicators">
+      <span 
+        *ngFor="let slide of slides; let i = index" 
+        class="dot" 
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  
+    <!-- Footer Controls -->
+    <div class="footer-controls">
+      <span class="page-count">{{ currentIndex + 1 }} of {{ slides.length }}</span>
+      <button class="autoplay-btn" (click)="toggleAutoplay()">
+        {{ autoplay ? '⏸ Pause' : '▶ Auto Play' }}
+      </button>
+    </div>
+  </div>
+  

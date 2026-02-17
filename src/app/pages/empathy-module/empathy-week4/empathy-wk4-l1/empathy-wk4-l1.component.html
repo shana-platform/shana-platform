@@ -1,0 +1,52 @@
+<div class="scenario-page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>💛 What Would You Do?</h1>
+      <p class="subtitle">A kindness & empathy warm-up quiz</p>
+    </div>
+  
+    <!-- INSTRUCTIONS -->
+    <div class="instruction-card">
+      ⭐ Read each situation and tap the button to discover the kindest action!
+    </div>
+  
+    <!-- SCENARIO GRID -->
+    <div class="scenario-grid">
+  
+      <div class="scenario-card" *ngFor="let s of scenarios">
+  
+        <span class="step">{{ s.id }}</span>
+  
+        <img [src]="s.image" alt="Scenario image" />
+  
+        <h3>{{ s.title }}</h3>
+  
+        <!-- BUTTON -->
+        <button
+          class="action"
+          [class.success]="s.revealed"
+          [class.primary]="!s.revealed"
+          (click)="reveal(s)"
+          [disabled]="s.revealed"
+        >
+          {{ s.revealed ? '💚 ' + s.answer : '✨ What Would You Do?' }}
+        </button>
+  
+        <!-- FEEDBACK (ONLY AFTER CLICK) -->
+        <p *ngIf="s.revealed" class="feedback">
+          {{ s.feedback }}
+        </p>
+  
+      </div>
+  
+    </div>
+  
+    <!-- FINAL MESSAGE -->
+    <div *ngIf="allCompleted" class="text-center">
+        <button class="next-btn" routerLink="/empathy-week4-l2">
+            Continue Lesson ➡️
+          </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,28 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card shadow-sm border-0 p-4 w-100" style="max-width: 520px;">
+      
+      <h5 class="fw-semibold mb-1">
+        💙 Your Challenge
+      </h5>
+      <p class="text-muted small mb-3">
+        Do one kind action today and record it
+      </p>
+  
+      <textarea
+        class="form-control mb-3"
+        rows="3"
+        placeholder="What kind thing did you do today? ✨"
+        [(ngModel)]="kindAction">
+      </textarea>
+  
+      <!-- Complete Module Button -->
+      <!-- <button
+        *ngIf="canComplete"
+        class="btn btn-primary w-100"
+        (click)="openCompletionModal(completeModal)">
+        Complete Module
+      </button> -->
+  
+    </div>
+  </div>
+  
