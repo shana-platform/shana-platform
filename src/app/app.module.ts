@@ -164,6 +164,7 @@ import { EmpathyWk4L3Component } from './pages/empathy-module/empathy-week4/empa
 import { EmpathyWk4L2StoryComponent } from './pages/empathy-module/empathy-week4/empathy-wk4-l2/empathy-wk4-l2-story/empathy-wk4-l2-story.component';
 import { EmpathyWk4L2DiscussionComponent } from './pages/empathy-module/empathy-week4/empathy-wk4-l2/empathy-wk4-l2-discussion/empathy-wk4-l2-discussion.component';
 import { IntegrityWeek1Component } from './pages/integrity-module/integrity-week1/integrity-week1.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -327,7 +328,8 @@ import { IntegrityWeek1Component } from './pages/integrity-module/integrity-week
     EmpathyWk4L3Component,
     EmpathyWk4L2StoryComponent,
     EmpathyWk4L2DiscussionComponent,
-    IntegrityWeek1Component
+    IntegrityWeek1Component,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

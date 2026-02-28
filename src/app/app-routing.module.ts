@@ -102,6 +102,7 @@ import { SecondWeekLevel5Component } from './pages/second-week-welcome/second-we
 import { SecondWeekLevel6Component } from './pages/second-week-welcome/second-week-level6/second-week-level6.component';
 import { SecondWeekLevel7Component } from './pages/second-week-welcome/second-week-level7/second-week-level7.component';
 import { SecondWeekWelcomeComponent } from './pages/second-week-welcome/second-week-welcome.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ThirdWeekLevel1Component } from './pages/third-week-welcome/third-week-level1/third-week-level1.component';
 import { ThirdWeekLevel2Component } from './pages/third-week-welcome/third-week-level2/third-week-level2.component';
 import { ThirdWeekLevel3Component } from './pages/third-week-welcome/third-week-level3/third-week-level3.component';
@@ -114,6 +115,7 @@ import { ThirdWeekWelcomeComponent } from './pages/third-week-welcome/third-week
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignUpComponent },
   {
     path: '',
     component: LayoutComponent,
