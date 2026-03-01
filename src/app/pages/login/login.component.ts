@@ -27,18 +27,18 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  login() {
-    this.router.navigate(['/dashboard']);
-  }
-
   // login() {
-  //   this.authService.login(this.credentials).subscribe({
-  //     next: () => {
-  //       this.router.navigate(['/dashboard']);
-  //     },
-  //     error: (err) => {
-  //       alert('Invalid credentials');
-  //     }
-  //   });
+  //   this.router.navigate(['/dashboard']);
   // }
+
+  login() {
+    this.authService.login(this.credentials).subscribe({
+      next: () => {
+        this.router.navigate(['/dashboard']);
+      },
+      error: (err) => {
+        alert('Invalid credentials');
+      }
+    });
+  }
 }

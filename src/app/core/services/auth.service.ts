@@ -12,6 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   register(userData: any) {
+    console.log(userData)
     return this.http.post(`${this.baseUrl}/register`, userData);
   }
 
