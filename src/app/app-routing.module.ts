@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 import { LayoutComponent } from './layout/layout.component';
 import { ConfidenceModuleComponent } from './pages/confidence-module/confidence-module.component';
 import { ConfidenceWeek1L1Component } from './pages/confidence-module/confidence-week1/confidence-week1-l1/confidence-week1-l1.component';
@@ -120,7 +121,9 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: DashboardComponent,
+      //  canActivate: [AuthGuard] 
+      },
       { path: 'games', component: GamesPageComponent },
       { path: 'home', component: HomeComponent },
       { path: 'first-week', component: FirstWeekWelcomeComponent },
