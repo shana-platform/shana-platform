@@ -35,3 +35,10 @@
     opacity: 0.8;
     transform: scale(1.05);
   }
+
+  .gradient-text {
+    background: linear-gradient(to right, #9b5de5, #f15bb5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  

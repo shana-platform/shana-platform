@@ -11,7 +11,7 @@ export class SignUpComponent implements OnInit {
   // Object to collect data via ngModel
   user = {
     // firstName: '',
-    // lastName: '',
+    name: '',
     email: '',
     password: '',
     // profileImage: null as File | null,

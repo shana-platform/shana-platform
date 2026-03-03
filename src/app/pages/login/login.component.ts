@@ -27,18 +27,26 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  // login() {
-  //   this.router.navigate(['/dashboard']);
-  // }
-
   login() {
-    this.authService.login(this.credentials).subscribe({
-      next: () => {
-        this.router.navigate(['/dashboard']);
-      },
-      error: (err) => {
-        alert('Invalid credentials');
-      }
-    });
+  if (this.loginForm.valid) {
+    this.authService.login(this.loginForm.value)
+      .subscribe({
+        next: (res: any) => {
+          console.log('Login success:', res);
+
+          // Save JWT token
+          localStorage.setItem('token', res.token);
+
+          // Redirect to dashboard
+          this.router.navigate(['/dashboard']);
+        },
+        error: (err) => {
+          console.error('Login failed:', err);
+          alert('Invalid email or password');
+        }
+      });
+  } else {
+    alert('provide email and password');
   }
+}
 }
