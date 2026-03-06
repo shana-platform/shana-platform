@@ -34,10 +34,8 @@ export class LoginComponent implements OnInit {
         next: (res: any) => {
           console.log('Login success:', res);
 
-          // Save JWT token
           localStorage.setItem('token', res.token);
 
-          // Redirect to dashboard
           this.router.navigate(['/dashboard']);
         },
         error: (err) => {

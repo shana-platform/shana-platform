@@ -56,16 +56,19 @@
                         width="120"
                         height="120"
                         style="object-fit: cover; cursor: pointer;"
-                        (click)="fileInput.click()"
-                      >
+                        (click)="fileInput.click()">
                   
                       <input 
                         #fileInput
                         type="file"
                         hidden
+                        accept="image/*">
+                      <!-- <input 
+                        #fileInput
+                        type="file"
+                        hidden
                         accept="image/*"
-                        (change)="onFileSelected($event)">
-                  
+                        (change)="onFileSelected($event)"> -->
                     </div>
                   
                   </div>
@@ -83,6 +86,20 @@
 
                 <div class="mb-3">
                   <label class="form-label">Name</label>
+                  <input name="name" type="name" class="form-control" placeholder="you@example.com">
+                </div>
+              
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" placeholder="you@example.com">
+              </div>
+              
+              <div class="mb-3 position-relative">
+                <label class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" placeholder="Create a strong password">
+              </div>
+                <!-- <div class="mb-3">
+                  <label class="form-label">Name</label>
                   <input [(ngModel)]="user.name" name="name" type="name" class="form-control" placeholder="you@example.com">
                 </div>
               
@@ -94,7 +111,7 @@
               <div class="mb-3 position-relative">
                 <label class="form-label">Password</label>
                 <input [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="Create a strong password">
-              </div>
+              </div> -->
   
             <!-- Terms -->
             <div class="form-check mb-4">
