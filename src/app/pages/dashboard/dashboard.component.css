@@ -56,7 +56,6 @@
   font-size: 0.95rem;
 }
 
-/* Icon with hexagon style */
 .stat-icon {
   width: 50px;
   height: 50px;
@@ -77,7 +76,6 @@
   color: #fff;
 }
 
-/* Different colors per icon */
 .stat-icon.star {
   background: #facc15;
 }
@@ -94,7 +92,6 @@
   background: #ffb7ce;
 }
 
-/* Adventures */
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -102,118 +99,20 @@
   margin-bottom: 1rem;
 }
 
-.adventures {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.adventure-card {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  position: relative;
-  transition: all 0.3s ease;
+.creative-card {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #C0D6DF, #96b0b7);
   cursor: pointer;
 }
 
-.adventure-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-}
-
-.adventure-card .info h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #111827;
-  margin: 0;
-}
-
-.adventure-card .info p {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin: 0.3rem 0 1rem;
-}
-
-/* Progress */
-.progress {
-  height: 15px;
-  background: #e5e7eb;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  background: #2D82B7;
-  transition: width 0.4s ease;
-}
-
-.progress-label {
-  position: absolute;
-  right: 2rem;
-  bottom: 1.1rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #2D82B7;
-}
-.modules-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 30px;
-  background-color: #faf9f6;
-}
-
-.module-card {
-  background: #fff;
+.creative-card .icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: #fcf1eb;
   border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.module-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-.emoji {
+.creative-card .icon-box i {
   font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-}
-
-p {
-  margin: 5px 0 0;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Warm & Subtle Theme Colors */
-.identity,
-.confidence,
-.planning {
-  background: linear-gradient(135deg, #C0D6DF, #96b0b7);
-}
-
-.integrity,
-.respect,
-.empathy {
-  background: linear-gradient(135deg, #e7d8f6, #f4e1f1);
-}
-
-.speaking,
-.listening,
-.expression {
-  background: linear-gradient(135deg, #d8f3dc, #f0fdf4);
+  color: #8d4e2a;
 }

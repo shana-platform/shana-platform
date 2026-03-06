@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { ModuleService } from 'src/app/core/services/module.service';
 import { StudentService } from 'src/app/core/services/student.service';
 
@@ -15,11 +16,13 @@ export class DashboardComponent implements OnInit {
   loading = false;
   errorMessage = '';
 
-constructor(private studentService: StudentService, private moduleService: ModuleService) { }
+constructor(private studentService: StudentService, private moduleService: ModuleService, private authService: AuthService) { }
 
 ngOnInit(): void {
-  this.loadStudents();
-  this.loadModules();
+         
+  const user = this.authService.getLoggedUser();
+
+  console.log("Logged user:", user);
 }
 
 loadStudents() {

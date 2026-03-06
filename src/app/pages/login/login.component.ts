@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+  loginForm!: FormGroup;
   currentYear = new Date().getFullYear()
 
   credentials = {
@@ -17,34 +17,57 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
-  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) {
+  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) { }
+
+
+  ngOnInit() {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
-  }
+   }
 
+//   login() {
+//   if (this.loginForm.valid) {
+//     this.authService.login(this.loginForm.value)
+//       .subscribe({
+//         next: (res: any) => {
+//           console.log('Login success:', res);
 
-  ngOnInit() { }
+//           localStorage.setItem('token', res.token);
 
-  login() {
-  if (this.loginForm.valid) {
-    this.authService.login(this.loginForm.value)
-      .subscribe({
-        next: (res: any) => {
-          console.log('Login success:', res);
+//           this.router.navigate(['/dashboard']);
+//         },
+//         error: (err) => {
+//           console.error('Login failed:', err);
+//           alert('Invalid email or password');
+//         }
+//       });
+//   } else {
+//     alert('provide email and password');
+//   }
+// }
 
-          localStorage.setItem('token', res.token);
-
-          this.router.navigate(['/dashboard']);
-        },
-        error: (err) => {
-          console.error('Login failed:', err);
-          alert('Invalid email or password');
-        }
-      });
-  } else {
-    alert('provide email and password');
-  }
+// login() {
+//   this.authService.login(this.loginForm.value).subscribe({
+//     next: (res:any) => {
+//       console.log('Logged in user', res);
+//       this.router.navigate(['/dashboard']);
+//     },
+//     error: () => {
+//       // alert('provide email and password');
+//     }
+//   });
+// }
+login() {
+  this.authService.login(this.loginForm.value).subscribe({
+    next: (res:any) => {
+      console.log('Logged in user', res);
+      this.router.navigate(['/dashboard']);
+    },
+    error: (err) => {
+      alert(err?.error?.message || 'Invalid email or password');
+    }
+  });
 }
 }
