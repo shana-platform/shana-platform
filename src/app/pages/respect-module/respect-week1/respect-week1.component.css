@@ -1,7 +1,7 @@
 .page {
     font-family: 'Segoe UI', sans-serif;
     background: #f6fbff;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     padding: 32px 16px;
     text-align: center;
   }
@@ -57,7 +57,7 @@
   .points {
     position: absolute;
     right: 0;
-    top: -4px;
+    bottom: 15px;
     background: #ffe9d6;
     color: #ff8a1f;
     padding: 6px 14px;
@@ -138,8 +138,8 @@
   }
   
   .intro-image {
-    max-width: 100%;
-    height: auto;
+    /* max-width: 100%; */
+    height: 300px;
     margin-bottom: 20px;
   }
   

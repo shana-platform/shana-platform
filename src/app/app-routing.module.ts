@@ -201,7 +201,24 @@ const routes: Routes = [
       { path: 'planning-week4-l1', component: PlanningWeek4L1Component },
       { path: 'planning-week4-l2', component: PlanningWeek4L2Component },
       { path: 'planning-week4-l3', component: PlanningWeek4L3Component },
-      { path: 'respect-module', component:  RespectModuleComponent },
+
+
+
+      // { path: 'respect-module', component:  RespectModuleComponent },
+      { 
+        path: 'respect-module', 
+        component: RespectModuleComponent, 
+        data: { breadcrumb: 'Respect Module' },
+        children: [
+          { 
+            path: 'week1', 
+            component: RespectWeek1Component, 
+            data: { breadcrumb: 'Week 1' } 
+          }
+        ]
+      },
+
+
       { path: 'respect-week1', component:  RespectWeek1Component },
       { path: 'respect-week2', component:  RespectWeek2Component },
       { path: 'respect-week3', component:  RespectWeek3Component },

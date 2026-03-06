@@ -62,11 +62,11 @@ export class LoginComponent implements OnInit {
 login() {
   this.authService.login(this.loginForm.value).subscribe({
     next: (res:any) => {
-      console.log('Logged in user', res);
+      // console.log('Logged in user', res);
       this.router.navigate(['/dashboard']);
     },
     error: (err) => {
-      alert(err?.error?.message || 'Invalid email or password');
+      alert('Invalid email or password');
     }
   });
 }

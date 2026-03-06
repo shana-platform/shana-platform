@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 
 
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./respect-module.component.css']
 })
 export class RespectModuleComponent implements OnInit {
+  user: any;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    // this.user = this.authService.getLoggedUser();
   }
-
-
 }

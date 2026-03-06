@@ -20,6 +20,11 @@ interface DiscussionPrompt {
   styleUrls: ['./respect-wk1-l1-discussion.component.css']
 })
 export class RespectWk1L1DiscussionComponent implements OnInit {
+  currentIndex = 0;
+  userAnswers: string[] = new Array(5).fill('');
+  showSample = false;
+  isReviewModalOpen = false;
+
   discussionPrompts: DiscussionPrompt[] = [
     {
       id: 1,
@@ -78,9 +83,21 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitAnswer(prompt: any) {
-    if (prompt.userAnswer.trim()) {
-      prompt.submitted = true;
+  get currentPrompt() {
+    return this.discussionPrompts[this.currentIndex];
+  }
+
+  checkAnswer() {
+    this.showSample = true;
+  }
+
+  nextQuestion() {
+    if (this.currentIndex < this.discussionPrompts.length - 1) {
+      this.currentIndex++;
+      this.showSample = false;
+    } else {
+      this.isReviewModalOpen = true;
     }
   }
 }
+

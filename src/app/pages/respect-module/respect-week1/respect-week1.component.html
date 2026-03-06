@@ -1,102 +1,63 @@
 <div class="page">
 
-    <div class="header">
-      <span class="week-pill">💙 WEEK 1</span>
-      <h1>Respect for Self</h1>
-      <p>Learn what it means to treat yourself with kindness and respect!</p>
+  <div class="header">
+    <span class="week-pill">💙 WEEK 1</span>
+    <h1>Respect for Self</h1>
+    <p>Learn what it means to treat yourself with kindness and respect!</p>
+  </div>
+
+  <!-- Intro Card -->
+  <div class="card intro-card" *ngIf="!quizStarted">
+    <img src="assets/respect-illustration.png" alt="Respect Illustration" class="intro-image" />
+    <span class="badge">✨ Warm-Up Activity</span>
+    <h2>Yes or No? Respect Myself!</h2>
+    <p class="intro-text">
+      Tap <span class="yes-text">YES</span> or
+      <span class="no-text">NO</span> to show if an action shows self-respect.
+    </p>
+    <button class="start-btn" (click)="startQuiz()">✨ Start Quiz</button>
+  </div>
+
+  <!-- Quiz -->
+  <div *ngIf="quizStarted">
+    <div class="progress-wrapper">
+      <div class="progress-text">
+        Question {{ currentIndex + 1 }} of {{ questions.length }}
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="((currentIndex + 1) / questions.length) * 100"></div>
+      </div>
+      <div class="points">⭐ {{ score }} points</div>
     </div>
 
-    <div class="card intro-card" *ngIf="!quizStarted">
+    <!-- Question Card -->
+    <div class="card">
+      <span class="badge">✨ Does this show self-respect?</span>
+      <h2>“{{ currentQuestion.text }}”</h2>
 
-        <img
-          src="assets/respect-illustration.png"
-          alt="Respect Illustration"
-          class="intro-image"
-        />
-    
-        <span class="badge">✨ Warm-Up Activity</span>
-    
-        <h2>Yes or No? Respect Myself!</h2>
-    
-        <p class="intro-text">
-          Tap <span class="yes-text">YES</span> or
-          <span class="no-text">NO</span> to show if an action shows self-respect.
-        </p>
-    
-        <button class="start-btn" (click)="startQuiz()">
-          ✨ Start Quiz
-        </button>
-    
+      <div class="actions">
+        <button class="yes" (click)="selectAnswer('YES')">✔ YES</button>
+        <button class="no" (click)="selectAnswer('NO')">✖ NO</button>
       </div>
 
-      
-      <div *ngIf="quizStarted">
-
-        <!-- Progress -->
-        <div class="progress-wrapper">
-          <div class="progress-text">
-            Question {{ currentIndex + 1 }} of {{ questions.length }}
-          </div>
-    
-          <div class="progress-bar">
-            <div
-              class="progress-fill"
-              [style.width.%]="((currentIndex + 1) / questions.length) * 100">
-            </div>
-          </div>
-    
-          <div class="points" style="margin-bottom: 2px;">
-            ⭐ {{ score }} points
-          </div>
-        </div>
-    
-        <!-- Question Card -->
-        <div class="card">
-    
-          <span class="badge">✨ Does this show self-respect?</span>
-    
-          <h2>“{{ currentQuestion.text }}”</h2>
-    
-          <div class="actions">
-            <button class="yes" (click)="selectAnswer('YES')">
-              ✔ YES
-            </button>
-    
-            <button class="no" (click)="selectAnswer('NO')">
-              ✖ NO
-            </button>
-          </div>
-    
-          <div class="feedback" *ngIf="showFeedback">
-            {{ currentQuestion.feedback }}
-          </div>
-    
-        </div>
-    
+      <!-- Feedback -->
+      <div class="feedback" *ngIf="showFeedback">
+        {{ feedbackMessage }}
       </div>
-    
-      <footer>
-        Made with 🧡 for learning
-      </footer>
-    
-      <!-- END OF QUIZ MODAL -->
-<div class="modal-overlay" *ngIf="showEndModal">
-  <div class="modal-card">
-
-    <div class="modal-icon">🎉</div>
-
-    <h2>Good Job!</h2>
-
-    <p>
-      You did great!  
-      You’re learning how to respect yourself.
-    </p>
-
-    <button class="modal-btn" routerLink="/respect-week1-l1">
-      Proceed to Next Lesson →
-    </button>
-
+    </div>
   </div>
+
+  <!-- END OF QUIZ MODAL -->
+  <div class="modal-overlay" *ngIf="showEndModal">
+    <div class="modal-card">
+      <div class="modal-icon">🎉</div>
+      <h2>Good Job!</h2>
+      <h4>You've earned {{ score }} stars ⭐</h4>
+      <p>You did great! You’re learning how to respect yourself.</p>
+      <button class="modal-btn" (click)="proceedToNextLesson()">
+        Proceed to Next Lesson →
+      </button>
+    </div>
+  </div>
+
 </div>
- </div>
-    

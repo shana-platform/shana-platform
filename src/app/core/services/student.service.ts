@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { USERS } from 'src/app/fake-db';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,27 @@ export class StudentService {
   // Delete student
   deleteStudent(id: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);
+  }
+
+  updateUserStats(updates: Partial<{ stars: number, badges: number, trophies: number, modulesCompleted: number }>) {
+    const user = JSON.parse(localStorage.getItem('loggedUser') || 'null');
+    if (!user) return;
+  
+    // Update the stats
+    user.stars += updates.stars || 0;
+    user.badges += updates.badges || 0;
+    user.trophies += updates.trophies || 0;
+    user.modulesCompleted += updates.modulesCompleted || 0;
+  
+    // Update USERS array in memory
+    const index = USERS.findIndex(u => u.email === user.email);
+    if (index !== -1) {
+      USERS[index] = user;
+    }
+  
+    // Save the updated user in localStorage for dashboard
+    localStorage.setItem('loggedUser', JSON.stringify(user));
+  
+    return user;
   }
 }

@@ -13,36 +13,44 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
     // REGISTER
     if (url.endsWith('/api/register') && method === 'POST') {
-      const newUser: User = body;
-
-      // Check if email exists
-      if (USERS.find(u => u.email === newUser.email)) {
-        return throwError(() => ({
-          status: 400,
-          error: { message: 'Email already exists' }
-        }));
+        const newUser: User = body;
+      
+        if (USERS.find(u => u.email === newUser.email)) {
+          return throwError(() => ({
+            status: 400,
+            error: { message: 'Email already exists' }
+          }));
+        }
+      
+        newUser.id = new Date().getTime();
+        
+        // Initialize stats
+        newUser.stars = 0;
+        newUser.badges = 0;
+        newUser.trophies = 0;
+        newUser.modulesAssigned = 0;
+      
+        USERS.push(newUser);
+      
+        return of(new HttpResponse({ status: 200, body: { message: 'Account created successfully' } }));
       }
-
-      newUser.id = new Date().getTime(); // simple id
-      USERS.push(newUser); // store in memory
-
-      return of(new HttpResponse({ status: 200, body: { message: 'Account created successfully' } }));
-    }
 
     // LOGIN
     if (url.endsWith('/api/login') && method === 'POST') {
-      const { email, password } = body;
-      const user = USERS.find(u => u.email === email && u.password === password);
-
-      if (!user) {
-        return throwError(() => ({
-          status: 401,
-          error: { message: 'Invalid email or password. Please create an account.' }
-        }));
+        const { email, password } = body;
+      
+        const user = USERS.find(u => u.email === email && u.password === password);
+      
+        if (!user) {
+          return throwError(() => ({
+            status: 401,
+            error: { message: 'Invalid email or password. Please create an account.' }
+          }));
+        }
+      
+        // Return full user details including stats
+        return of(new HttpResponse({ status: 200, body: user }));
       }
-
-      return of(new HttpResponse({ status: 200, body: user }));
-    }
 
     // pass through other requests
     return next.handle(request);

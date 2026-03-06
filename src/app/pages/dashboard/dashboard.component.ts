@@ -10,19 +10,17 @@ import { StudentService } from 'src/app/core/services/student.service';
 })
 export class DashboardComponent implements OnInit {
 
-  students: any;
   modules: any[] = [];
   selectedModule: any;
-  loading = false;
   errorMessage = '';
+  loading = false;
+  students: any;
+  user: any;
 
 constructor(private studentService: StudentService, private moduleService: ModuleService, private authService: AuthService) { }
 
 ngOnInit(): void {
-         
-  const user = this.authService.getLoggedUser();
-
-  console.log("Logged user:", user);
+  this.user = this.authService.getLoggedUser();
 }
 
 loadStudents() {

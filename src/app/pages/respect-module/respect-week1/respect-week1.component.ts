@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { StudentService } from 'src/app/core/services/student.service';
 
 interface Question {
   text: string;
@@ -45,12 +48,12 @@ export class RespectWeek1Component implements OnInit {
     }
   ];
 
-  currentIndex = 0;
   score = 0;
-  selectedAnswer: 'YES' | 'NO' | null = null;
+  currentIndex = 0;
   showFeedback = false;
+  selectedAnswer: 'YES' | 'NO' | null = null;
 
-  constructor() { }
+  constructor(private router: Router, private studentService: StudentService) { }
 
   ngOnInit(): void {
   }
@@ -63,19 +66,30 @@ export class RespectWeek1Component implements OnInit {
     return this.questions[this.currentIndex];
   }
 
+  feedbackMessage: string = '';
+
   selectAnswer(answer: 'YES' | 'NO') {
     if (this.showFeedback) return;
-
+  
     this.selectedAnswer = answer;
     this.showFeedback = true;
-
+  
     if (answer === this.currentQuestion.correctAnswer) {
+      this.feedbackMessage = this.currentQuestion.feedback;
       this.score++;
+  
+      setTimeout(() => {
+        this.nextQuestion();
+      }, 1800);
+  
+    } else {
+      this.feedbackMessage = 'No, try again!';
+      setTimeout(() => {
+        this.showFeedback = false;
+        this.selectedAnswer = null;
+        this.feedbackMessage = '';
+      }, 1500);
     }
-
-    setTimeout(() => {
-      this.nextQuestion();
-    }, 1800);
   }
 
   nextQuestion() {
@@ -85,13 +99,18 @@ export class RespectWeek1Component implements OnInit {
     if (this.currentIndex < this.questions.length - 1) {
       this.currentIndex++;
     } else {
-      // LAST QUESTION DONE
       this.showEndModal = true;
     }
   }
   
   proceedToNextLesson() {
-    this.showEndModal = false;
+    // this.router.navigate(['/dashboard']);
+    this.router.navigate(['/respect-week1-l1']);
+
+    // this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
+
+    // alert(`You earned 1 star! Total stars: ${updatedUser.stars}`);
   }
-  
 }
+
+

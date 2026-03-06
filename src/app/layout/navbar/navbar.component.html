@@ -1,3 +1,35 @@
+  <!-- <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="assets/shana.png" alt="Logo" class="brand-logo" />
+    </div>
+    <div class="navbar-actions">
+      <div class="notification">
+        🔔
+        <span class="badge">3</span>
+      </div>
+      <img class="avatar" src="assets/user.png" alt="User" />
+      <span class="user-name">{{user.name}}</span>
+    </div>
+  </nav> -->
+  
+
+   <!-- <div class="breadcrumb-container border-bottom bg-light px-4 py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li *ngFor="let bc of (breadcrumbService.breadcrumbs$ | async); let last = last" 
+            class="breadcrumb-item" 
+            [class.active]="last">
+          
+          <a *ngIf="!last" [routerLink]="bc.url" class="text-decoration-none text-muted">
+            {{ bc.label }}
+          </a>
+          
+          <span *ngIf="last">{{ bc.label }}</span>
+        </li>
+      </ol>
+    </nav>
+  </div> -->
+
   <nav class="navbar">
     <div class="navbar-brand">
       <img src="assets/shana.png" alt="Logo" class="brand-logo" />
@@ -8,7 +40,33 @@
         <span class="badge">3</span>
       </div>
       <img class="avatar" src="assets/user.png" alt="User" />
-      <span class="user-name">Jane Doe</span>
+      <span class="user-name">{{user.name}}</span>
     </div>
   </nav>
-  
+
+<div class="breadcrumb-container border-bottom bg-light px-4 py-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a routerLink="/dashboard" class="text-decoration-none text-muted">Dashboard</a></li>
+      <li class="breadcrumb-item"><a routerLink="/respect-module" class="text-decoration-none text-muted">Respect Module</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Week 1</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- <div class="breadcrumb-container border-bottom bg-light px-4 py-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li *ngFor="let bc of (breadcrumbService.breadcrumbs$ | async); let last = last" 
+          class="breadcrumb-item" 
+          [class.active]="last">
+        
+        <a *ngIf="!last" [routerLink]="bc.url" class="text-decoration-none text-muted">
+          {{ bc.label }}
+        </a>
+        
+        <span *ngIf="last">{{ bc.label }}</span>
+      </li>
+    </ol>
+  </nav>
+</div> -->
