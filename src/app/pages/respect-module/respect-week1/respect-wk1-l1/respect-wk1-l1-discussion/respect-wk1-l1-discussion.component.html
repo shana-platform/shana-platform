@@ -1,52 +1,62 @@
-<div class="discussion-container mb-5">
-    <h2 class="section-title">Independent Discussion Prompts
-      <p class="text-muted fs-6 fw-light">Type your answers in the text boxes provided.</p>
-    </h2>
-    
-    <div *ngFor="let prompt of discussionPrompts" class="discussion-card">
-      <h4 class="question">{{ prompt.question }}</h4>
-  
-      <!-- User Input Section -->
-      <div class="user-answer">
-        <textarea
-          [(ngModel)]="prompt.userAnswer"
-          [disabled]="prompt.submitted"
-          placeholder="Type your response here..."
-          class="answer-box"></textarea>
-        <button
-          *ngIf="!prompt.submitted"
-          (click)="submitAnswer(prompt)"
-          class="submit-btn">
-          Submit
-        </button>
-        <div *ngIf="prompt.submitted" class="submitted-answer">
-          <strong>Your answer: <span class="text-primary">{{ prompt.userAnswer }}</span></strong>
-        </div>
-      <ng-container *ngIf="prompt.submitted">
-        <div class="thanks-message mt-2 text-primary small">
-            {{ prompt.feedback }}
-        </div>
-      </ng-container>
-      </div>
-  
-   
-  
-      <!-- Others' Answers -->
-      <div *ngIf="prompt.submitted" class="others-section">
-        <h5 class="others-title">Sample Answers:</h5>
-  
-        <div *ngFor="let answer of prompt.others" class="other-answer">
-          <!-- When it's a named comment -->
-          <ng-container *ngIf="answer.name; else textAnswer">
-            <span class="comment">{{ answer.comment }}</span>
-          </ng-container>
-  
-          <!-- When it's a plain text answer -->
-          <ng-template #textAnswer>
-            <span class="comment">{{ answer.text }}</span>
-          </ng-template>
-        </div>
-      </div>
+<div class="container mt-5">
+  <div class="card main-quiz-card border-0 shadow-sm p-4 mb-4">
+    <div class="d-flex align-items-center mb-4">
+      <span class="badge rounded-circle bg-light text-dark p-2 me-3 shadow-sm">{{currentPrompt.id}}</span>
+      <h4 class="fw-bold mb-0">{{currentPrompt.question}}</h4>
+    </div>
+
+    <textarea 
+      [(ngModel)]="userAnswers[currentIndex]"
+      class="form-control custom-textarea mb-3" 
+      rows="4" 
+      placeholder="Type your answer here...">
+    </textarea>
+
+    <div class="d-flex gap-2">
+      <button *ngIf="!showSample" (click)="checkAnswer()" class="btn btn-orange rounded-pill px-4">
+        <i class="fa fa-check-circle me-2"></i> Check Answer
+      </button>
+      
+      <button *ngIf="showSample" (click)="nextQuestion()" class="btn btn-orange rounded-pill px-4">
+        {{ currentIndex === 4 ? 'Review Answers' : 'Next Question' }}
+      </button>
+    </div>
+
+    <div *ngIf="showSample" class="sample-box mt-4 p-4 rounded-4 animate__animated animate__fadeIn">
+      <p class="text-muted pt-3">{{currentPrompt.feedback}}</p>
+      <hr>
+      <h6 class="text-uppercase fw-bold orange-text mb-3">Sample Answers</h6>
+      <ul class="list-unstyled">
+        <li *ngFor="let ans of currentPrompt.sampleAnswers" class="mb-2 d-flex">
+          <i class="fa fa-chevron-right orange-text me-2"></i> {{ans}}
+        </li>
+      </ul>
     </div>
   </div>
-  
+</div>
+
+<div *ngIf="isReviewModalOpen" class="custom-modal-backdrop">
+  <div class="custom-modal p-4 shadow-lg rounded-5">
+    <h3>Review Your Answers</h3>
+    <div *ngFor="let q of discussionPrompts; let i = index" class="mb-3">
+      <p class="fw-bold">{{i+1}}. {{q.question}}</p>
+      <div class="bg-light p-2 rounded">{{userAnswers[i] || 'No answer provided'}}</div>
+    </div>
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <button (click)="isReviewModalOpen = false" class="btn btn-light rounded-pill px-4">Go Back</button>
+      <button (click)="showModal()" class="btn btn-orange rounded-pill px-4"><i class="bi bi-send"></i> Submit</button>
+    </div>
+  </div>
+</div>
+
+  <!-- END OF QUIZ MODAL -->
+  <div class="modal-overlay" *ngIf="showEndModal">
+    <div class="modal-card">
+      <div class="modal-icon">🎉</div>
+      <h2>Good Job!</h2>
+      <p>Proceed to activity session to complete your lesson.</p>
+      <button class="btn btn-primary" routerLink="/respect-week1-l1">
+        Back to Lesson →
+      </button>
+    </div>
+  </div>

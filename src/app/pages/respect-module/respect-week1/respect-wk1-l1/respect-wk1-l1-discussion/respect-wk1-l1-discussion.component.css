@@ -1,107 +1,270 @@
-.discussion-container {
-    max-width: 800px;
+/* .main-quiz-card {
+    border-radius: 24px;
+    width: 800px;
     margin: 0 auto;
     padding: 24px;
-    font-family: 'Poppins', sans-serif;
+}
+
+.custom-textarea {
+  background-color: #fdf8f5;
+  border: 1px solid #f2e1d8;
+  border-radius: 20px;
+  padding: 20px;
+  resize: none;
+}
+
+.custom-textarea:focus {
+  box-shadow: none;
+  border-color: #d68a5c;
+}
+
+.sample-box {
+  background-color: #fcf1eb;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.btn-orange {
+  background-color: #d68a5c;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-orange:hover {
+  background-color: #bd754b;
+  color: white;
+}
+
+.orange-text {
+  color: #8d4e2a;
+}
+
+.custom-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.custom-modal {
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+  border: 1px solid #eee;
+  font-style: italic;
+  color: #666;
+} */
+
+/* --- Global & Container Styles --- */
+.container {
+  max-width: 800px;
+}
+
+/* --- The Main Quiz Card (White Card) --- */
+.main-quiz-card {
+  background-color: #ffffff;
+  border-radius: 24px; /* Extra rounded corners as seen in your layout */
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+/* --- Badge & Icon Styling --- */
+.badge.rounded-circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0 !important;
+  color: #333;
+  font-weight: bold;
+}
+
+/* --- Textarea & Inputs --- */
+.custom-textarea {
+  background-color: #fdf8f5; /* Soft peach/tan background */
+  border: 1px solid #f2e1d8;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #555;
+  resize: none;
+}
+
+.custom-textarea:focus {
+  background-color: #fff;
+  border-color: #d68a5c;
+  box-shadow: 0 0 0 0.25rem rgba(214, 138, 92, 0.1);
+  outline: none;
+}
+
+.custom-textarea::placeholder {
+  color: #adb5bd;
+}
+
+/* --- Sample Answers Box --- */
+.sample-box {
+  background-color: #fcf1eb;
+  border: 1px solid rgba(141, 78, 42, 0.1);
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.sample-box .orange-text {
+  color: #8d4e2a;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+.sample-box ul li {
+  color: #5a5a5a;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sample-box ul li i {
+  color: #d68a5c;
+  font-size: 0.8rem;
+}
+
+/* --- Primary Brand Button (Orange) --- */
+.btn-orange {
+  background-color: #d68a5c;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #bd754b;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214, 138, 92, 0.3);
+}
+
+.btn-orange:active {
+  transform: translateY(0);
+}
+
+/* --- Review Modal Styles --- */
+.custom-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(2px);
+}
+
+.custom-modal {
+  background: #ffffff;
+  width: 95%;
+  max-width: 550px;
+  max-height: 85vh;
+  border-radius: 28px;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalSlideUp 0.3s ease-out;
+}
+
+.custom-modal h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.custom-modal .modal-subtitle {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.custom-modal .q-number {
+  color: #d68a5c;
+  font-weight: 700;
+}
+
+.custom-modal .bg-light {
+  background-color: #f1f3f5 !important;
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #444;
+  font-size: 0.95rem;
+  border: none;
+}
+
+/* --- Animations --- */
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .section-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #1e3a8a; /* Softer blue */
-    text-align: center;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .discussion-card {
-    background: #f8fafc;
-    border-radius: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    padding: 20px;
-    margin-bottom: 24px;
-  }
-  
-  .question {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #0f172a;
-    margin-bottom: 12px;
-  }
-  
-  .answer-box {
-    width: 100%;
-    min-height: 80px;
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    padding: 10px;
-    font-size: 1rem;
-    resize: none;
-    outline: none;
-    transition: border 0.2s ease;
-  }
-  
-  .answer-box:focus {
-    border-color: #3b82f6;
-  }
-  
-  .submit-btn {
-    background-color: #3b82f6;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .submit-btn:hover {
-    background-color: #2563eb;
-  }
-  
-  .submitted-answer {
-    margin-top: 16px;
-    background-color: #e0f2fe;
-    border-radius: 8px;
-    padding: 10px 12px;
-    color: #0f172a;
-  }
-  
-  .others-section {
-    margin-top: 20px;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 10px;
-  }
-  
-  .others-title {
-    color: #334155;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .other-answer {
-    margin-bottom: 8px;
-    background-color: #f1f5f9;
-    padding: 8px 10px;
-    border-radius: 8px;
-  }
-  
-  .other-answer .name {
-    color: #1d4ed8;
-  }
-  
-  .comment {
-    color: #475569;
-  }
-  
-  .activity-btn {
-    margin-top: 1rem;
-    background: #6caef8;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
+}
+
+.animate__fadeIn {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* MODAL CARD */
+.modal-card {
+  background: #ffffff;
+  padding: 40px 32px;
+  border-radius: 28px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: popIn 0.3s ease;
+}
+
+.modal-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.modal-card h2 {
+  font-size: 28px;
+  color: #1e2b45;
+  margin-bottom: 12px;
+}
+
+.modal-card p {
+  color: #6b7a99;
+  font-size: 16px;
+  margin-bottom: 28px;
+}

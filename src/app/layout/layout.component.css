@@ -8,6 +8,7 @@ app-sidebar {
   min-width: 220px;
   background: linear-gradient(to bottom, #4f46e5, #ec4899);
   color: white;
+  height: 100vh;
 }
 
 .main-content-wrapper {
