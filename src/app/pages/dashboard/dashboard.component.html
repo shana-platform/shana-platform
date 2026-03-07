@@ -80,15 +80,15 @@
   </div> -->
   
   <div class="row mt-2">
-    <div class="col-6" routerLink="/respect-module">
+    <div *ngFor="let module of modules;" class="col-6 mt-3" routerLink="/respect-module">
       <div class="card creative-card border-0 shadow-sm p-3">
         <div class="icon-box d-flex align-items-center justify-content-center mb-4">
-          <i class="fa-regular fa-handshake"></i>
+          <i class="fa fa-book"></i>
          </div>
         <div class="card-body p-0">
-          <h3 class="card-title fw-bold">Creative Studio</h3>
+          <h3 class="card-title fw-bold">{{module.title}}</h3>
           <p class="card-text text-muted">
-            Respect for Self • Respect for Others • Respect for Belongings
+            {{module.description}}
           </p>
         </div>
       </div>

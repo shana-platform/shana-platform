@@ -17,10 +17,13 @@ export class DashboardComponent implements OnInit {
   students: any;
   user: any;
 
-constructor(private studentService: StudentService, private moduleService: ModuleService, private authService: AuthService) { }
+constructor(private studentService: StudentService, private moduleservice: ModuleService, private authService: AuthService) { }
 
 ngOnInit(): void {
   this.user = this.authService.getLoggedUser();
+
+  this.modules = this.moduleservice.getAllModulesForStudent(this.user.email);
+  console.log(this.modules)
 }
 
 loadStudents() {
@@ -56,68 +59,68 @@ deleteStudent(id: string) {
   });
 }
 
-  loadModules(): void {
-    this.loading = true;
+  // loadModules(): void {
+  //   this.loading = true;
 
-    this.moduleService.getAllModules().subscribe({
-      next: (res) => {
-        this.modules = res;
-        this.loading = false;
-      },
-      error: (err) => {
-        console.error(err);
-        this.errorMessage = 'Failed to load modules';
-        this.loading = false;
-      }
-    });
-  }
+  //   this.moduleService.getAllModules().subscribe({
+  //     next: (res) => {
+  //       this.modules = res;
+  //       this.loading = false;
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //       this.errorMessage = 'Failed to load modules';
+  //       this.loading = false;
+  //     }
+  //   });
+  // }
 
-  getModule(id: string): void {
-    this.moduleService.getModuleById(id).subscribe({
-      next: (res) => {
-        this.selectedModule = res;
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    });
-  }
+  // getModule(id: string): void {
+  //   this.moduleService.getModuleById(id).subscribe({
+  //     next: (res) => {
+  //       this.selectedModule = res;
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //     }
+  //   });
+  // }
 
-  createModule(moduleData: any): void {
-    this.moduleService.createModule(moduleData).subscribe({
-      next: (res) => {
-        console.log('Module created', res);
-        this.loadModules();
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    });
-  }
+  // createModule(moduleData: any): void {
+  //   this.moduleService.createModule(moduleData).subscribe({
+  //     next: (res) => {
+  //       console.log('Module created', res);
+  //       this.loadModules();
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //     }
+  //   });
+  // }
 
-  updateModule(id: string, moduleData: any): void {
-    this.moduleService.updateModule(id, moduleData).subscribe({
-      next: (res) => {
-        this.loadModules();
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    });
-  }
+  // updateModule(id: string, moduleData: any): void {
+  //   this.moduleService.updateModule(id, moduleData).subscribe({
+  //     next: (res) => {
+  //       this.loadModules();
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //     }
+  //   });
+  // }
 
-  deleteModule(id: string): void {
-    if (!confirm('Are you sure you want to delete this module?')) {
-      return;
-    }
-    this.moduleService.deleteModule(id).subscribe({
-      next: () => {
-        this.loadModules();
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    });
-  }
+  // deleteModule(id: string): void {
+  //   if (!confirm('Are you sure you want to delete this module?')) {
+  //     return;
+  //   }
+  //   this.moduleService.deleteModule(id).subscribe({
+  //     next: () => {
+  //       this.loadModules();
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //     }
+  //   });
+  // }
 
 }

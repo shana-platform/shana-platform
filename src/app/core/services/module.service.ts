@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Module, MODULES } from 'src/app/fake-db';
 
 @Injectable({
   providedIn: 'root'
@@ -38,5 +39,12 @@ export class ModuleService {
 
   deleteModule(id: string): Observable<any> {
   return this.http.delete(`${this.baseUrl}/${id}`);
-}
+  }
+
+  getAllModulesForStudent(studentEmail: string): Module[] {
+    return MODULES.map(m => ({
+      ...m,
+      completed: m.completedBy.includes(studentEmail)
+    }));
+  }  
 }

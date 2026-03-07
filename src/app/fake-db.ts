@@ -11,6 +11,13 @@ export interface User {
     trophies: number;
     modulesAssigned: number;
   }
+
+  export interface Module {
+  id: number;
+  title: string;
+  description: string;
+  completedBy: string[];
+  }
   
   export const USERS: User[] = [
     {
@@ -36,3 +43,24 @@ export interface User {
       modulesAssigned: 0
     }
   ];
+
+  export const MODULES: Module[] = [
+  {
+    id: 1,
+    title: 'Creative Studio',
+    description: 'Respect for Self • Respect for Others • Respect for Belongings.',
+    completedBy: []
+  }
+  // {
+  //   id: 2,
+  //   title: 'Basic Geometry',
+  //   description: 'Learn shapes, angles, and areas.',
+  //   completedBy: []
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Reading Comprehension',
+  //   description: 'Improve reading and understanding skills.',
+  //   completedBy: []
+  // }
+];
