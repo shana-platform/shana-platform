@@ -241,6 +241,21 @@
 }
 
 /* MODAL CARD */
+.modal-overlay {
+  position: fixed;        /* keeps it on top of the screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.4); /* dark background */
+  z-index: 1000;               /* ensures it stays above everything */
+}
+
 .modal-card {
   background: #ffffff;
   padding: 40px 32px;

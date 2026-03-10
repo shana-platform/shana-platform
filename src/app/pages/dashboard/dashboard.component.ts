@@ -20,10 +20,11 @@ export class DashboardComponent implements OnInit {
 constructor(private studentService: StudentService, private moduleservice: ModuleService, private authService: AuthService) { }
 
 ngOnInit(): void {
-  this.user = this.authService.getLoggedUser();
+  this.loadModules();
+  // this.user = this.authService.getLoggedUser();
 
-  this.modules = this.moduleservice.getAllModulesForStudent(this.user.email);
-  console.log(this.modules)
+  // this.modules = this.moduleservice.getAllModulesForStudent(this.user.email);
+  // console.log(this.modules)
 }
 
 loadStudents() {
@@ -59,21 +60,21 @@ deleteStudent(id: string) {
   });
 }
 
-  // loadModules(): void {
-  //   this.loading = true;
-
-  //   this.moduleService.getAllModules().subscribe({
-  //     next: (res) => {
-  //       this.modules = res;
-  //       this.loading = false;
-  //     },
-  //     error: (err) => {
-  //       console.error(err);
-  //       this.errorMessage = 'Failed to load modules';
-  //       this.loading = false;
-  //     }
-  //   });
-  // }
+  loadModules(): void {
+    this.loading = true;
+    this.moduleservice.getAllModules().subscribe({
+      next: (res) => {
+        this.modules = res;
+        console.log(this.modules)
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error(err);
+        this.errorMessage = 'Failed to load modules';
+        this.loading = false;
+      }
+    });
+  }
 
   // getModule(id: string): void {
   //   this.moduleService.getModuleById(id).subscribe({

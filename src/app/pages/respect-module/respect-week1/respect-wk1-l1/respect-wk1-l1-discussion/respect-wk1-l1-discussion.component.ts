@@ -83,6 +83,7 @@ get currentPrompt() {
 
   showModal(){
     this.showEndModal = true;
+    this.isReviewModalOpen = false
   }
 }
 
