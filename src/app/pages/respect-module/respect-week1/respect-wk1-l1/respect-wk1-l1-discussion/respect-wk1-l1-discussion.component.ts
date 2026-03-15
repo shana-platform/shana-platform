@@ -1,18 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-// interface DiscussionAnswer {
-//   name?: string;
-//   comment?: string;
-//   text?: string;
-// }
-
-// interface DiscussionPrompt {
-//   id: number;
-//   question: string;
-//   userAnswer?: string;
-//   submitted?: boolean | any;
-//   sampleAnswers: DiscussionAnswer[];
-//   feedback: any;
-// }
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { StudentService } from 'src/app/core/services/student.service';
 
 @Component({
   selector: 'app-respect-wk1-l1-discussion',
@@ -20,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./respect-wk1-l1-discussion.component.css']
 })
 export class RespectWk1L1DiscussionComponent implements OnInit {
+  @Output() goNext = new EventEmitter<void>();
   currentIndex = 0;
   userAnswers: string[] = new Array(5).fill('');
   showSample = false;
   isReviewModalOpen = false;
   showEndModal = false;
+  score = 0;
+  user: any;
 
   discussionPrompts = [
     {
@@ -41,7 +32,7 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
     },
     {
       id: 3,
-      question: 'What can you say instead of ‘I can’t do it’?',
+      question: 'What can you say instead of ‘I can’t do it?',
       sampleAnswers: ['I will try.', 'I can learn this.', 'Let me practice'],
       feedback: 'Nice! Positive words help your brain grow.'
     },
@@ -59,9 +50,11 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private studentService: StudentService, private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.user = this.authService.getLoggedUser();
+    console.log(this.user)
   }
 
 get currentPrompt() {
@@ -84,6 +77,20 @@ get currentPrompt() {
   showModal(){
     this.showEndModal = true;
     this.isReviewModalOpen = false
+    this.score = 5;
+  }
+
+    proceedToNextLesson() {
+      const res = this.score + this.user.stars;
+      console.log(res);
+    // const res = `${this.score} + ${this.user.stars}`
+    // console.log(res)
+    // this.router.navigate(['/dashboard']);
+    // this.router.navigate(['/respect-week1-l1']);
+    this.showEndModal = false;
+    this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
+    this.goNext.emit();
+    // alert(`You earned 1 star! Total stars: ${updatedUser.stars}`);
   }
 }
 

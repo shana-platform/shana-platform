@@ -31,7 +31,7 @@
   
     <!-- Discussion Tab -->
     <section class="discussion-card" *ngIf="activeTab === 'discussion'">
-        <app-respect-wk1-l1-discussion></app-respect-wk1-l1-discussion>
+        <app-respect-wk1-l1-discussion (goNext)="setActiveTab('activity')"></app-respect-wk1-l1-discussion>
     </section>
   
     <!-- Activity Tab -->

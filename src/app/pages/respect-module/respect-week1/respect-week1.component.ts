@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/core/services/auth.service';
 import { StudentService } from 'src/app/core/services/student.service';
 
 interface Question {
@@ -106,9 +105,7 @@ export class RespectWeek1Component implements OnInit {
   proceedToNextLesson() {
     // this.router.navigate(['/dashboard']);
     this.router.navigate(['/respect-week1-l1']);
-
-    // this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
-
+    this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
     // alert(`You earned 1 star! Total stars: ${updatedUser.stars}`);
   }
 }

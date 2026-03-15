@@ -21,8 +21,8 @@ constructor(private studentService: StudentService, private moduleservice: Modul
 
 ngOnInit(): void {
   this.loadModules();
-  // this.user = this.authService.getLoggedUser();
-
+  this.user = this.authService.getLoggedUser();
+  console.log(this.user)
   // this.modules = this.moduleservice.getAllModulesForStudent(this.user.email);
   // console.log(this.modules)
 }
@@ -60,21 +60,21 @@ deleteStudent(id: string) {
   });
 }
 
-  loadModules(): void {
-    this.loading = true;
-    this.moduleservice.getAllModules().subscribe({
-      next: (res) => {
-        this.modules = res;
-        console.log(this.modules)
-        this.loading = false;
-      },
-      error: (err) => {
-        console.error(err);
-        this.errorMessage = 'Failed to load modules';
-        this.loading = false;
-      }
-    });
-  }
+loadModules(): void {
+  this.loading = true;
+  this.moduleservice.getAllModules().subscribe({
+    next: (res) => {
+      this.modules = res;
+      console.log(this.modules)
+      this.loading = false;
+    },
+    error: (err) => {
+      console.error(err);
+      this.errorMessage = 'Failed to load modules';
+      this.loading = false;
+    }
+  });
+}
 
   // getModule(id: string): void {
   //   this.moduleService.getModuleById(id).subscribe({
