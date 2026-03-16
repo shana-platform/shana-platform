@@ -33,7 +33,7 @@ export interface User {
     },
     {
       id: 2,
-      name: "Ama",
+      name: "Barbara Dadzie",
       email: "barbaradadzie4@gmail.com",
       password: "Zurich@405",
       imageUrl: "https://i.pravatar.cc/150?img=7",
