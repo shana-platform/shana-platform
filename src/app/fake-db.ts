@@ -34,8 +34,8 @@ export interface User {
     {
       id: 2,
       name: "Ama",
-      email: "ama@shana.com",
-      password: "123456",
+      email: "barbaradadzie4@gmail.com",
+      password: "Zurich@405",
       imageUrl: "https://i.pravatar.cc/150?img=7",
       stars: 0,
       badges: 0,
