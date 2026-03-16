@@ -12,8 +12,8 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
 
   userAnswers: string[] = new Array(5).fill('');
   isReviewModalOpen = false;
-  showEndModal = false;
   showSample = false;
+  showEndModal = false;
   currentIndex = 0;
   score = 0;
   user: any;
