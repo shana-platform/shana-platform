@@ -9,9 +9,14 @@
             <input type="email" formControlName="email" placeholder="student@shana.edu" />
           </div>
             <br>
-          <label>Password</label>
+           <label>Password</label>
           <div class="input-group">
-            <input type="password" formControlName="password" placeholder="Enter your password" />
+            <input [type]="hidePassword ? 'password' : 'text'" formControlName="password" placeholder="Enter your password" />
+
+            <button type="button" class="toggle-password-btn" (click)="togglePasswordVisibility()"
+              title="Toggle Password Visibility">
+              {{ hidePassword ? '👁️' : '👁️‍🗨️' }}
+            </button>
           </div>
   
           <div class="options">
@@ -19,7 +24,7 @@
             <a href="#">Forgot password?</a>
           </div>
   
-          <button (click)="login()" type="submit" class="btn-primary">
+          <button type="submit" class="btn-primary">
             💬 Sign In to Dashboard
           </button>
   

@@ -167,7 +167,6 @@ import { IntegrityWeek1Component } from './pages/integrity-module/integrity-week
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
-import { FakeBackendInterceptor } from './core/interceptors/fake-backend.interceptor';
 
 @NgModule({
   declarations: [
@@ -345,8 +344,7 @@ import { FakeBackendInterceptor } from './core/interceptors/fake-backend.interce
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      // useClass: AuthInterceptor,
-      useClass: FakeBackendInterceptor,
+      useClass: AuthInterceptor,
       multi: true
     }
   ],

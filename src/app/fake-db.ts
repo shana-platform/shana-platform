@@ -1,66 +1,66 @@
-export interface User {
-    id: number;
-    name: string;
-    email: string;
-    password: string;
-    imageUrl: string;
+// export interface User {
+//     id: number;
+//     name: string;
+//     email: string;
+//     password: string;
+//     imageUrl: string;
   
-    // New fields
-    stars: number;
-    badges: number;
-    trophies: number;
-    modulesAssigned: number;
-  }
+//     // New fields
+//     stars: number;
+//     badges: number;
+//     trophies: number;
+//     modulesAssigned: number;
+//   }
 
-  export interface Module {
-  id: number;
-  title: string;
-  description: string;
-  completedBy: string[];
-  }
+//   export interface Module {
+//   id: number;
+//   title: string;
+//   description: string;
+//   completedBy: string[];
+//   }
   
-  export const USERS: User[] = [
-    {
-      id: 1,
-      name: "Marian Amoah",
-      email: "marianboyeamoah@gmail.com",
-      password: "test123",
-      imageUrl: "blob:http://localhost:4200/d84c86bf-34b0-413c-9486-056e09b2098a",
-      stars: 0,
-      badges: 0,
-      trophies: 0,
-      modulesAssigned: 0
-    },
-    {
-      id: 2,
-      name: "Ama",
-      email: "ama@shana.com",
-      password: "123456",
-      imageUrl: "https://i.pravatar.cc/150?img=7",
-      stars: 0,
-      badges: 0,
-      trophies: 0,
-      modulesAssigned: 0
-    }
-  ];
+//   export const USERS: User[] = [
+//     {
+//       id: 1,
+//       name: "Marian Amoah",
+//       email: "marianboyeamoah@gmail.com",
+//       password: "test123",
+//       imageUrl: "blob:http://localhost:4200/d84c86bf-34b0-413c-9486-056e09b2098a",
+//       stars: 0,
+//       badges: 0,
+//       trophies: 0,
+//       modulesAssigned: 0
+//     },
+//     {
+//       id: 2,
+//       name: "Ama",
+//       email: "ama@shana.com",
+//       password: "123456",
+//       imageUrl: "https://i.pravatar.cc/150?img=7",
+//       stars: 0,
+//       badges: 0,
+//       trophies: 0,
+//       modulesAssigned: 0
+//     }
+//   ];
 
-  export const MODULES: Module[] = [
-  {
-    id: 1,
-    title: 'Creative Studio',
-    description: 'Respect for Self • Respect for Others • Respect for Belongings.',
-    completedBy: []
-  }
-  // {
-  //   id: 2,
-  //   title: 'Basic Geometry',
-  //   description: 'Learn shapes, angles, and areas.',
-  //   completedBy: []
-  // },
-  // {
-  //   id: 3,
-  //   title: 'Reading Comprehension',
-  //   description: 'Improve reading and understanding skills.',
-  //   completedBy: []
-  // }
-];
+//   export const MODULES: Module[] = [
+//   {
+//     id: 1,
+//     title: 'Creative Studio',
+//     description: 'Respect for Self • Respect for Others • Respect for Belongings.',
+//     completedBy: []
+//   }
+//   // {
+//   //   id: 2,
+//   //   title: 'Basic Geometry',
+//   //   description: 'Learn shapes, angles, and areas.',
+//   //   completedBy: []
+//   // },
+//   // {
+//   //   id: 3,
+//   //   title: 'Reading Comprehension',
+//   //   description: 'Improve reading and understanding skills.',
+//   //   completedBy: []
+//   // }
+// ];

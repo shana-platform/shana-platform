@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { USERS } from 'src/app/fake-db';
 
 @Injectable({
   providedIn: 'root'
@@ -49,10 +48,10 @@ export class StudentService {
     user.modulesCompleted += updates.modulesCompleted || 0;
   
     // Update USERS array in memory
-    const index = USERS.findIndex(u => u.email === user.email);
-    if (index !== -1) {
-      USERS[index] = user;
-    }
+    // const index = USERS.findIndex(u => u.email === user.email);
+    // if (index !== -1) {
+    //   USERS[index] = user;
+    // }
   
     // Save the updated user in localStorage for dashboard
     localStorage.setItem('loggedUser', JSON.stringify(user));

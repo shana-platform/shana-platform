@@ -8,15 +8,17 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
-  // Object to collect data via ngModel
+
   user = {
-    // firstName: '',
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
     imageUrl: '',
   };
   imagePreview: string | ArrayBuffer | null = null;
+  hidePassword = true;
+
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
@@ -25,38 +27,41 @@ export class SignUpComponent implements OnInit {
 onFileSelected(event: any) {
   const file = event.target.files[0];
   if (file) {
-    // Generate a temporary URL for the file
-    this.user.imageUrl = URL.createObjectURL(file); // ✅ store as URL
-    this.imagePreview = this.user.imageUrl;         // optional preview
+    this.user.imageUrl = URL.createObjectURL(file);
+    this.imagePreview = this.user.imageUrl;
   }
 }
 
-  // register() {
-  //   if (!this.user.email || !this.user.password || !this.user.firstName) {
-  //     alert('Please fill in all required fields.');
-  //     return;
-  //   }
-  //   console.log('Account Data Collected:', this.user);
-  //   this.authService.register(this.user).subscribe({
-  //     next: () => {
-  //       alert('Registration successful!');
-  //       this.router.navigate(['/login']);
-  //     },
-  //     error: (err) => {
-  //       console.error(err);
-  //     }
-  //   });
-  // }
-
   register() {
+    if (!this.user.email || !this.user.password || !this.user.firstName || !this.user.lastName) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    console.log('Account Data Collected:', this.user);
     this.authService.register(this.user).subscribe({
       next: () => {
-        alert('Account created successfully! Now you can login.');
+        alert('Registration successful!');
         this.router.navigate(['/login']);
       },
       error: (err) => {
-        alert(err?.error?.message);
+        console.error(err);
       }
     });
   }
+
+  togglePasswordVisibility() {
+    this.hidePassword = !this.hidePassword;
+  }
+
+  // register() {
+  //   this.authService.register(this.user).subscribe({
+  //     next: () => {
+  //       alert('Account created successfully! Now you can login.');
+  //       this.router.navigate(['/login']);
+  //     },
+  //     error: (err) => {
+  //       alert(err?.error?.message);
+  //     }
+  //   });
+  // }
 }

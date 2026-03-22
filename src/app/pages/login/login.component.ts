@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  hidePassword = true;
   loginForm!: FormGroup;
   currentYear = new Date().getFullYear()
 
@@ -26,6 +27,10 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
     });
    }
+
+   togglePasswordVisibility() {
+    this.hidePassword = !this.hidePassword;
+  }
 
 //   login() {
 //   if (this.loginForm.valid) {
@@ -60,14 +65,20 @@ export class LoginComponent implements OnInit {
 //   });
 // }
 login() {
-  this.authService.login(this.loginForm.value).subscribe({
-    next: (res:any) => {
-      // console.log('Logged in user', res);
-      this.router.navigate(['/dashboard']);
-    },
-    error: (err) => {
-      alert('Invalid email or password');
+    console.log('login')
+    if(this.loginForm.invalid){
+      alert('please provide email and password');
+      return
     }
-  });
-}
+    this.authService.login(this.loginForm.value).subscribe({
+      next: (res:any) => {
+        // console.log('Logged in user', res);
+        this.router.navigate(['/dashboard']);
+      },
+      error: (err) => {
+        console.log(err)
+        alert('Invalid email or password');
+      }
+    });
+  }
 }

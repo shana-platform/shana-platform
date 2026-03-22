@@ -27,19 +27,22 @@
           <p class="text-muted mb-4">
             Begin your adventure in learning today!
           </p>
-            <div class="row">
-                <div class="mb-4 text-center">
-                    <label class="form-label d-block fw-semibold">
-                      Profile Image
-                    </label>
-                    <div class="position-relative d-inline-block">
-                      <input type="file" (change)="onFileSelected($event)" />
-                      <img *ngIf="imagePreview" [src]="imagePreview" width="80" class="rounded-circle" />
-                    </div>
-                  </div>
+          <div class="row">
+            <div class="mb-4 text-center">
+              <div class="position-relative d-inline-block">
+                <input type="file" id="profileUpload" class="d-none" (change)="onFileSelected($event)" accept="image/*" />
+                <label for="profileUpload" style="cursor: pointer;" title="Click to change image">
+                <img [src]="imagePreview || 'assets/default-user.png'" class="rounded-circle border shadow-sm"
+                  style="width: 80px; height: 80px; object-fit: cover; display: block; margin: 0 auto;" alt="Profile Image" />
+                </label>
+              </div>
+              <div class="text-muted mt-1" style="font-size: 12px;">
+                Click the image to upload
+              </div>
             </div>
+          </div>
             <div class="row">
-              <!-- <div class="col-md-6 mb-3">
+              <div class="col-md-6 mb-3">
                 <label class="form-label">First Name</label>
                 <input [(ngModel)]="user.firstName" name="firstName" type="text" class="form-control" placeholder="John">
               </div>
@@ -47,20 +50,31 @@
               <div class="col-md-6 mb-3">
                 <label class="form-label">Last Name</label>
                 <input [(ngModel)]="user.lastName" name="lastName" type="text" class="form-control" placeholder="Doe">
-              </div> -->
-                <div class="mb-3">
-                  <label class="form-label">Name</label>
-                  <input [(ngModel)]="user.name" name="name" type="name" class="form-control" placeholder="you@example.com">
-                </div>
-              
+              </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
                 <input [(ngModel)]="user.email" name="email" type="email" class="form-control" placeholder="you@example.com">
               </div>
               
-              <div class="mb-3 position-relative">
+              <!-- <div class="mb-3 position-relative">
                 <label class="form-label">Password</label>
-                <input [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="Create a strong password">
+                
+                <input [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="Create a strong password">
+                    <button type="button" class="toggle-password-btn" (click)="togglePasswordVisibility()"
+                      title="Toggle Password Visibility">
+                      {{ hidePassword ? '👁️' : '👁️‍🗨️' }}
+                    </button>
+              </div> -->
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+              
+                <div class="position-relative">
+                  <input [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="user.password" name="password" class="form-control"
+                    placeholder="Create a strong password" style="padding-right: 40px;"> <button type="button"
+                    class="toggle-password-btn" (click)="togglePasswordVisibility()" title="Toggle Password Visibility">
+                    {{ hidePassword ? '👁️' : '👁️‍🗨️' }}
+                  </button>
+                </div>
               </div>
   
             <!-- Terms -->

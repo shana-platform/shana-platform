@@ -18,6 +18,6 @@ export class RespectModuleComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getLoggedUser();
 
-    this.modules = this.moduleservice.getAllModulesForStudent(this.user.email);
+    // this.modules = this.moduleservice.getAllModulesForStudent(this.user.email);
   }
 }
