@@ -26,7 +26,7 @@
   
     <!-- Story Summary Section -->
     <section class="summary-card" *ngIf="activeTab === 'video'">
-        <app-respect-wk1-l1-story></app-respect-wk1-l1-story>
+        <app-respect-wk1-l1-story (goNext)="setActiveTab('discussion')"></app-respect-wk1-l1-story>
     </section>
   
     <!-- Discussion Tab -->

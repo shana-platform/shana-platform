@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./respect-wk1-l1.component.css']
 })
 export class RespectWk1L1Component implements OnInit {
-  activeTab: 'video' | 'discussion' | 'activity' = 'discussion';
+  activeTab: 'video' | 'discussion' | 'activity' = 'video';
   constructor() { }
 
   ngOnInit(): void {

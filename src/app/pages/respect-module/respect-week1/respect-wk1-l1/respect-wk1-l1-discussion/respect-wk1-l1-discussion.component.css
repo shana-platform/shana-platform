@@ -1,92 +1,15 @@
-/* .main-quiz-card {
-    border-radius: 24px;
-    width: 800px;
-    margin: 0 auto;
-    padding: 24px;
-}
 
-.custom-textarea {
-  background-color: #fdf8f5;
-  border: 1px solid #f2e1d8;
-  border-radius: 20px;
-  padding: 20px;
-  resize: none;
-}
-
-.custom-textarea:focus {
-  box-shadow: none;
-  border-color: #d68a5c;
-}
-
-.sample-box {
-  background-color: #fcf1eb;
-  border: 1px solid rgba(0,0,0,0.03);
-}
-
-.btn-orange {
-  background-color: #d68a5c;
-  color: white;
-  font-weight: 600;
-}
-
-.btn-orange:hover {
-  background-color: #bd754b;
-  color: white;
-}
-
-.orange-text {
-  color: #8d4e2a;
-}
-
-.custom-modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1050;
-}
-
-.custom-modal {
-  background-color: white;
-  width: 90%;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-  animation: fadeInModal 0.3s ease-out;
-}
-
-@keyframes fadeInModal {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.bg-light {
-  background-color: #f8f9fa !important;
-  border: 1px solid #eee;
-  font-style: italic;
-  color: #666;
-} */
-
-/* --- Global & Container Styles --- */
 .container {
   max-width: 800px;
 }
 
-/* --- The Main Quiz Card (White Card) --- */
 .main-quiz-card {
   background-color: #ffffff;
-  border-radius: 24px; /* Extra rounded corners as seen in your layout */
+  border-radius: 24px;
   border: none;
   transition: transform 0.2s ease;
 }
 
-/* --- Badge & Icon Styling --- */
 .badge.rounded-circle {
   width: 40px;
   height: 40px;
@@ -98,9 +21,8 @@
   font-weight: bold;
 }
 
-/* --- Textarea & Inputs --- */
 .custom-textarea {
-  background-color: #fdf8f5; /* Soft peach/tan background */
+  background-color: #fdf8f5;
   border: 1px solid #f2e1d8;
   border-radius: 20px;
   padding: 20px;
@@ -120,7 +42,6 @@
   color: #adb5bd;
 }
 
-/* --- Sample Answers Box --- */
 .sample-box {
   background-color: #fcf1eb;
   border: 1px solid rgba(141, 78, 42, 0.1);
@@ -145,7 +66,6 @@
   font-size: 0.8rem;
 }
 
-/* --- Primary Brand Button (Orange) --- */
 .btn-orange {
   background-color: #d68a5c;
   color: #ffffff;
@@ -166,7 +86,6 @@
   transform: translateY(0);
 }
 
-/* --- Review Modal Styles --- */
 .custom-modal-backdrop {
   position: fixed;
   top: 0;
@@ -219,7 +138,6 @@
   border: none;
 }
 
-/* --- Animations --- */
 @keyframes modalSlideUp {
   from {
     opacity: 0;
@@ -240,9 +158,8 @@
   to { opacity: 1; }
 }
 
-/* MODAL CARD */
 .modal-overlay {
-  position: fixed;        /* keeps it on top of the screen */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -252,8 +169,8 @@
   justify-content: center;
   align-items: center;
 
-  background: rgba(0,0,0,0.4); /* dark background */
-  z-index: 1000;               /* ensures it stays above everything */
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
 }
 
 .modal-card {

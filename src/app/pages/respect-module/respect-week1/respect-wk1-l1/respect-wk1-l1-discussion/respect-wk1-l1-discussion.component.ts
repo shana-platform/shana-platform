@@ -9,11 +9,12 @@ import { StudentService } from 'src/app/core/services/student.service';
 })
 export class RespectWk1L1DiscussionComponent implements OnInit {
   @Output() goNext = new EventEmitter<void>();
-  currentIndex = 0;
+
   userAnswers: string[] = new Array(5).fill('');
-  showSample = false;
   isReviewModalOpen = false;
+  showSample = false;
   showEndModal = false;
+  currentIndex = 0;
   score = 0;
   user: any;
 
