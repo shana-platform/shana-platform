@@ -1,3 +1,4 @@
+import { APP_CONFIG } from 'src/app/config/app.config';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap } from 'rxjs/operators';
@@ -7,7 +8,7 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private baseUrl = 'http://localhost:3000/api/auth';
+  private baseUrl = APP_CONFIG.apiUrl;
 
   constructor(private http: HttpClient) {}
 
