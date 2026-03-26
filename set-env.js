@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// Use environment variable or fallback
 const apiUrl = process.env.API_URL || 'http://localhost:3000/api';
 
 const envConfig = `
