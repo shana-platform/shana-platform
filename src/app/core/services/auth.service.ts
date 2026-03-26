@@ -13,11 +13,11 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   register(userData: any) {
-    return this.http.post(`${this.baseUrl}/register`, userData);
+    return this.http.post(`${this.baseUrl}/auth/register`, userData);
   }
 
 login(credentials: any) {
-    return this.http.post(`${this.baseUrl}/login`, credentials)
+    return this.http.post(`${this.baseUrl}/auth/login`, credentials)
       .pipe(
         tap((response: any) => {
           localStorage.setItem('token', response.token);
