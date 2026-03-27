@@ -60,9 +60,9 @@
                 <label class="form-label">Password</label>
                 <div class="position-relative">
                   <input [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="user.password" name="password" class="form-control"
-                    placeholder="Create a strong password" style="padding-right: 40px;"> <button type="button"
+                    placeholder="Create a strong password" style="padding-right: 45px;"> <button type="button"
                     class="toggle-password-btn" (click)="togglePasswordVisibility()" title="Toggle Password Visibility">
-                    {{ hidePassword ? '👁️' : '👁️‍🗨️' }}
+                    <i class="fa" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"></i>
                   </button>
                 </div>
               </div>
@@ -87,6 +87,5 @@
             </div>
         </div>
       </div>
-  
     </div>
   </div>

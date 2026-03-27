@@ -136,16 +136,16 @@ input[type="text"] {
 
 
 .toggle-password-btn {
-  background: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
   border: none;
+  background: transparent;
   cursor: pointer;
-  padding: 0 5px;
   font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.7; /* Makes it look a bit softer */
-  transition: opacity 0.2s ease;
+  padding: 0;
+  line-height: 1;
 }
 
 .toggle-password-btn:hover {

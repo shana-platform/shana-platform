@@ -42,17 +42,17 @@
   }
 
   .toggle-password-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 5px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    line-height: 1;
+  }
 
 .toggle-password-btn:hover {
   opacity: 1;
