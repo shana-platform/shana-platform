@@ -24,7 +24,8 @@
             <a href="#">Forgot password?</a>
           </div>
   
-          <button type="submit" class="btn-primary">
+          <button type="submit" class="btn-primary" [disabled]="saving">
+            <i *ngIf="saving" class="fa fa-spinner fa-spin me-2"></i>
             💬 Sign In to Dashboard
           </button>
   
@@ -37,7 +38,6 @@
       </div>
     </div>
   
-    <!-- Right pane: Hero image or branding -->
     <div class="right-pane">
       <img style="height: 597px; width: 800px;" src="assets/hero-strengths.jpg" alt="Learning Illustration" />
     </div>

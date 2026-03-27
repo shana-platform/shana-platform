@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 export class LoginComponent implements OnInit {
   hidePassword = true;
   loginForm!: FormGroup;
+  saving:boolean = false;
   currentYear = new Date().getFullYear()
 
   credentials = {
@@ -32,39 +33,8 @@ export class LoginComponent implements OnInit {
     this.hidePassword = !this.hidePassword;
   }
 
-//   login() {
-//   if (this.loginForm.valid) {
-//     this.authService.login(this.loginForm.value)
-//       .subscribe({
-//         next: (res: any) => {
-//           console.log('Login success:', res);
-
-//           localStorage.setItem('token', res.token);
-
-//           this.router.navigate(['/dashboard']);
-//         },
-//         error: (err) => {
-//           console.error('Login failed:', err);
-//           alert('Invalid email or password');
-//         }
-//       });
-//   } else {
-//     alert('provide email and password');
-//   }
-// }
-
-// login() {
-//   this.authService.login(this.loginForm.value).subscribe({
-//     next: (res:any) => {
-//       console.log('Logged in user', res);
-//       this.router.navigate(['/dashboard']);
-//     },
-//     error: () => {
-//       // alert('provide email and password');
-//     }
-//   });
-// }
 login() {
+  this.saving = true;
     console.log('login')
     if(this.loginForm.invalid){
       alert('please provide email and password');
@@ -72,12 +42,13 @@ login() {
     }
     this.authService.login(this.loginForm.value).subscribe({
       next: (res:any) => {
-        // console.log('Logged in user', res);
+        this.saving = false;
         this.router.navigate(['/dashboard']);
       },
       error: (err) => {
         console.log(err)
         alert('Invalid email or password');
+        this.saving = false;
       }
     });
   }

@@ -1,6 +1,6 @@
+import { AuthService } from 'src/app/core/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
+  saving:boolean = false;
 
   user = {
     firstName: '',
@@ -23,7 +24,6 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {}
 
-// Handle File Selection for Profile Image
 onFileSelected(event: any) {
   const file = event.target.files[0];
   if (file) {
@@ -33,6 +33,7 @@ onFileSelected(event: any) {
 }
 
   register() {
+    this.saving = true;
     if (!this.user.email || !this.user.password || !this.user.firstName || !this.user.lastName) {
       alert('Please fill in all required fields.');
       return;
@@ -40,6 +41,7 @@ onFileSelected(event: any) {
     console.log('Account Data Collected:', this.user);
     this.authService.register(this.user).subscribe({
       next: () => {
+        this.saving = false;
         alert('Registration successful!');
         this.router.navigate(['/login']);
       },
@@ -52,16 +54,4 @@ onFileSelected(event: any) {
   togglePasswordVisibility() {
     this.hidePassword = !this.hidePassword;
   }
-
-  // register() {
-  //   this.authService.register(this.user).subscribe({
-  //     next: () => {
-  //       alert('Account created successfully! Now you can login.');
-  //       this.router.navigate(['/login']);
-  //     },
-  //     error: (err) => {
-  //       alert(err?.error?.message);
-  //     }
-  //   });
-  // }
 }
