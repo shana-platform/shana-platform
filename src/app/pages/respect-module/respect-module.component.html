@@ -12,7 +12,7 @@
       
       <div class="stat-card">
         <div class="stat-info">
-          <h2>{{user.stars}}</h2>
+          <h2>{{user?.stars || '0'}}</h2>
           <p>Stars Earned</p>
         </div>
         <div class="stat-icon star">
@@ -22,7 +22,7 @@
       
       <div class="stat-card">
         <div class="stat-info">
-          <h2>{{user.trophies}}</h2>
+          <h2>{{user?.trophies || '0'}}</h2>
           <p>Trophies Won</p>
         </div>
         <div class="stat-icon trophy">
@@ -32,7 +32,7 @@
       
       <div class="stat-card">
         <div class="stat-info">
-          <h2>{{user.badges}}</h2>
+          <h2>{{user?.badges || '0'}}</h2>
           <p>Badges Collected</p>
         </div>
         <div class="stat-icon badge">

@@ -7,8 +7,7 @@
       <img class="avatar" [src]="user?.imageUrl || 'assets/default-user.png'" 
      (error)="$any($event.target).src = 'assets/default-user.png'" alt="User"/>
       <div class="user-info">
-        <!-- <span class="user-name">{{ user.name }}</span> -->
-        <span class="user-name">{{user.firstName}} {{user.lastName}}</span>
+        <span class="user-name">{{user?.firstName || 'None'}} {{user?.lastName}}</span>
         <span class="user-role">Student</span> 
       </div>
     </div>
