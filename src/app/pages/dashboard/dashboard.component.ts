@@ -20,9 +20,7 @@ export class DashboardComponent implements OnInit {
 constructor(private studentService: StudentService, private moduleservice: ModuleService, private authService: AuthService) { }
 
 ngOnInit(): void {
-  // this.loadModules();
   this.user = this.authService.getLoggedUser();
-  console.log(this.user)
 }
 
 loadStudents() {

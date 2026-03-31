@@ -1,25 +1,16 @@
 <div class="page">
-
-    <!-- Greeting -->
     <div class="greeting">
       ☀️ Good Morning, Sunshine!
     </div>
   
-    <!-- Title -->
     <h1>Believe in Yourself</h1>
     <p class="subtitle">Today is your day to shine ✨</p>
-  
-    <!-- Week badge -->
     <div class="week-badge">
       This Week 💛
     </div>
   
-    <!-- Cards -->
     <div class="cards">
-  
-      <!-- Challenge Card -->
       <div class="card">
-  
         <img src="assets/mirror-kindness.png" class="card-image" />
   
         <h3>✨ Challenge of the Week</h3>
@@ -27,14 +18,11 @@
           Say one kind thing to yourself every morning!
           <span class="highlight">Practice makes perfect</span>
         </p>
-  
-        <!-- Progress -->
         <div class="progress">
           <span
             *ngFor="let d of daysArray; let i = index"
             class="dot"
-            [class.active]="i < completedDays"
-          >
+            [class.active]="i < completedDays">
             ✓
           </span>
         </div>
@@ -44,25 +32,17 @@
         </p>
   
       </div>
-  
-      <!-- Confidence Card -->
       <div class="card">
-  
         <img src="assets/confidence-hero.png" class="card-image" />
-  
         <h3>💛 Confidence Line</h3>
-  
         <p class="quote">
           “Respect starts with me.”
         </p>
-  
         <div class="actions">
           <button class="btn secondary">Share 💌</button>
           <button class="btn primary">New Quote ✨</button>
         </div>
-  
       </div>
-  
     </div>
   
     <button class="submit-btn" (click)="completeLesson()">
@@ -75,16 +55,12 @@
     <!-- MODAL -->
 <div class="modal-backdrop" *ngIf="showModal">
     <div class="modal-card">
-  
       <div class="modal-emoji">🎉</div>
-  
       <h2>Good Job!</h2>
       <p>You did an amazing job.<br>Proceed to the next lesson!</p>
-  
       <button class="next-btn" routerLink="/respect-module">
         Back To Dashboard ➡️
       </button>
-  
     </div>
   </div>
   

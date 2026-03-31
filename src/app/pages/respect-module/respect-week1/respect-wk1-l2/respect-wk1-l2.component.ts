@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProgressService } from 'src/app/core/services/progress.service';
 
 @Component({
   selector: 'app-respect-wk1-l2',
@@ -10,7 +11,7 @@ export class RespectWk1L2Component implements OnInit {
   showModal = false;
   totalDays = 7;
 
-  constructor() { }
+  constructor(private progressService: ProgressService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,6 @@ export class RespectWk1L2Component implements OnInit {
 
   completeLesson() {
     this.showModal = true;
+    this.progressService.updateProgress('week1', 25);
   }
 }

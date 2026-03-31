@@ -24,13 +24,13 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {}
 
-onFileSelected(event: any) {
-  const file = event.target.files[0];
-  if (file) {
-    this.user.imageUrl = URL.createObjectURL(file);
-    this.imagePreview = this.user.imageUrl;
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.user.imageUrl = URL.createObjectURL(file);
+      this.imagePreview = this.user.imageUrl;
+    }
   }
-}
 
   register() {
     this.saving = true;
@@ -47,6 +47,7 @@ onFileSelected(event: any) {
       },
       error: (err) => {
         console.error(err);
+        this.saving = false;
       }
     });
   }

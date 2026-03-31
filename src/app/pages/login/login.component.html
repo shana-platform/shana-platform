@@ -1,44 +1,45 @@
 <div class="full-login-page">
-    <div class="left-pane">
-      <div class="login-box">
-        <form [formGroup]="loginForm" (ngSubmit)="login()">
-           <h5>✨ <span class="gradient-text">Welcome To <strong>Shana LifeSkills Center</strong></span> ✨</h5>
-           <br>
-          <label>Email Address</label>
-          <div class="input-group">
-            <input type="email" formControlName="email" placeholder="student@shana.edu" />
-          </div>
-            <br>
-           <label>Password</label>
-          <div class="input-group">
-            <input [type]="hidePassword ? 'password' : 'text'" formControlName="password" placeholder="Enter your password" />
-
-            <button type="button" class="toggle-password-btn" (click)="togglePasswordVisibility()"
-              title="Toggle Password Visibility">
-              <i class="fa" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"></i>
-            </button>
-          </div>
-  
-          <div class="options">
-            <label><input type="checkbox" /> Remember me</label>
-            <a href="#">Forgot password?</a>
-          </div>
-  
-          <button type="submit" class="btn-primary" [disabled]="saving">
-            <i *ngIf="saving" class="fa fa-spinner fa-spin me-2"></i>
-            💬 Sign In to Dashboard
+  <div class="left-pane">
+    <div class="login-box">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+         <h5>✨ <span class="gradient-text">Welcome To <strong>Shana LifeSkills Center</strong></span> ✨</h5>
+         <br>
+        
+        <label>Email Address</label>
+        <div class="input-group">
+          <input type="email" formControlName="email" placeholder="student@shana.edu" />
+        </div>
+        <br>
+         
+        <label>Password</label>
+        <div class="input-group">
+          <input [type]="hidePassword ? 'password' : 'text'" formControlName="password" placeholder="Enter your password" />
+          <button type="button" class="toggle-password-btn" (click)="togglePasswordVisibility()"
+            title="Toggle Password Visibility">
+            <i class="fa" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"></i>
           </button>
-  
-          <div class="footer-text">
-            New student? <a routerLink="/sign-up">Create an account</a>
-          </div>
-        </form>
-  
-        <footer>© {{currentYear}} ShanaPortal. All rights reserved.</footer>
-      </div>
-    </div>
-  
-    <div class="right-pane">
-      <img style="height: 597px; width: 800px;" src="assets/hero-strengths.jpg" alt="Learning Illustration" />
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary" [disabled]="saving">
+          <i *ngIf="saving" class="fa fa-spinner fa-spin me-2"></i>
+          💬 Sign In to Dashboard
+        </button>
+
+        <div class="footer-text">
+          New student? <a routerLink="/sign-up">Create an account</a>
+        </div>
+      </form>
+
+      <footer>© {{currentYear}} ShanaPortal. All rights reserved.</footer>
     </div>
   </div>
+
+  <div class="right-pane">
+    <img src="assets/hero-strengths.jpg" alt="Learning Illustration" />
+  </div>
+</div>

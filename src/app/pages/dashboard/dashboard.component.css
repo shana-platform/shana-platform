@@ -5,7 +5,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Greeting */
 .greeting {
   font-size: 2rem;
   font-weight: 700;
@@ -18,11 +17,10 @@
   margin-bottom: 2rem;
 }
 
-/* Stats */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -60,49 +58,43 @@
   width: 50px;
   height: 50px;
   background: #f3f4f6;
-  clip-path: polygon(
-    25% 6%, 75% 6%,
-    100% 50%,
-    75% 94%, 25% 94%,
-    0% 50%
-  );
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.stat-icon i {
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.stat-icon.star {
-  background: #facc15;
-}
-.stat-icon.trophy {
-  background: #22c55e;
-}
-.stat-icon.badge {
-  background: #6366f1;
-}
-.stat-icon.game {
-  background: #f97316;
-}
-.stat-icon.book {
-  background: #ffb7ce;
-}
+.stat-icon i { font-size: 1.2rem; color: #fff; }
+.stat-icon.star { background: #facc15; }
+.stat-icon.trophy { background: #22c55e; }
+.stat-icon.badge { background: #6366f1; }
+.stat-icon.game { background: #f97316; }
+.stat-icon.book { background: #ffb7ce; }
 
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #1d4e89;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .creative-card {
   border-radius: 24px;
   background: linear-gradient(135deg, #C0D6DF, #96b0b7);
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.creative-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
 }
 
 .creative-card .icon-box {
@@ -115,4 +107,34 @@
 .creative-card .icon-box i {
   font-size: 2rem;
   color: #8d4e2a;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES 
+   ========================================= */
+
+/* Tablet layout */
+@media (max-width: 992px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr); /* Stats wrap to 2 columns */
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1.2rem; /* Reduce white space on small screens */
+  }
+  
+  .stats {
+    grid-template-columns: 1fr; /* Stats stack vertically */
+  }
+  
+  .modules-grid {
+    grid-template-columns: 1fr; /* Learning modules stack vertically */
+  }
+  
+  .greeting {
+    font-size: 1.5rem; /* Slightly smaller text for mobile */
+  }
 }

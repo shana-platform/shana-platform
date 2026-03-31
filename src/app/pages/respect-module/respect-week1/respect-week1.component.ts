@@ -1,6 +1,8 @@
+import { ProgressService } from 'src/app/core/services/progress.service';
+import { StudentService } from 'src/app/core/services/student.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { StudentService } from 'src/app/core/services/student.service';
+import { take } from 'rxjs/operators';
 
 interface Question {
   text: string;
@@ -17,7 +19,6 @@ export class RespectWeek1Component implements OnInit {
 
   quizStarted = false;
   showEndModal = false;
-
 
   questions: Question[] = [
     {
@@ -51,10 +52,28 @@ export class RespectWeek1Component implements OnInit {
   currentIndex = 0;
   showFeedback = false;
   selectedAnswer: 'YES' | 'NO' | null = null;
+  feedbackMessage: string = '';
 
-  constructor(private router: Router, private studentService: StudentService) { }
+  constructor(
+    private router: Router, 
+    private studentService: StudentService,
+    private progressService: ProgressService
+  ) { }
 
   ngOnInit(): void {
+    this.progressService.currentProgress$.pipe(take(1)).subscribe(progress => {
+      console.log(progress)
+      if (progress['week1'] == 30) {
+        alert('You have already completed Level 1! Taking you to Level 2.');
+        this.router.navigate(['/respect-week1-l1']);
+      } else if (progress['week1'] == 70) {
+        alert('You have already completed Level 2! Taking you to Level 3.');
+        this.router.navigate(['/respect-week1-l2']);
+      } else {
+        alert('You have already completed week1! Taking you to week 2');
+        this.router.navigate(['/respect-week2']);
+      }
+    });
   }
 
   startQuiz() {
@@ -64,8 +83,6 @@ export class RespectWeek1Component implements OnInit {
   get currentQuestion() {
     return this.questions[this.currentIndex];
   }
-
-  feedbackMessage: string = '';
 
   selectAnswer(answer: 'YES' | 'NO') {
     if (this.showFeedback) return;
@@ -103,11 +120,13 @@ export class RespectWeek1Component implements OnInit {
   }
   
   proceedToNextLesson() {
-    // this.router.navigate(['/dashboard']);
+    this.progressService.updateProgress('week1', 100);
+    this.studentService.updateUserStats({ 
+      stars: this.score, 
+      modulesCompleted: 1,
+      badges: 0, 
+      trophies: 0 
+    });
     this.router.navigate(['/respect-week1-l1']);
-    this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
-    // alert(`You earned 1 star! Total stars: ${updatedUser.stars}`);
   }
 }
-
-

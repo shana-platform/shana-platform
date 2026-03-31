@@ -1,130 +1,84 @@
 .full-login-page {
-    display: flex;
-    height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-  }
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .gradient-text {
-    background: linear-gradient(to right, #9b5de5, #f15bb5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .left-pane {
-    width: 50%;
-    padding: 60px 40px;
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-  }
-  
-  .right-pane {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .right-pane img {
-    /* max-width: 90%; */
-    /* height: 90%; */
-  }
-  
-  .login-box {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .logo {
-    width: 60px;
-    height: auto;
-  }
-  
-  .brand {
-    color: #ff8f2e;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    color: #888;
-  }
-  
-  h2 {
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
-  
-  .form-subtitle {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
-  .input-group {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    border: none;
-    outline: none;
-    width: 100%;
-  }
-  
-  .options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
-  
-  .btn-primary {
-    background-color: #116997;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    width: 100%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0e577d;
-  }
-  
-  .footer-text {
-    font-size: 13px;
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  .footer-text a {
-    color: #5bb6e5;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 30px;
-  }
-  
+.gradient-text {
+  background: linear-gradient(to right, #9b5de5, #f15bb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.left-pane {
+  width: 50%;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.right-pane {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents image overflow */
+}
+
+.right-pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space without stretching */
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.brand {
+  color: #ff8f2e;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #888;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.input-group {
+  position: relative; /* CRITICAL: Keeps the absolute password toggle inside this box */
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 input[type="email"],
 input[type="password"],
 input[type="text"] {
@@ -132,8 +86,50 @@ input[type="text"] {
   outline: none;
   width: 100%;
   flex-grow: 1;
+  padding-right: 30px; /* Prevents text from typing underneath the eye icon */
 }
 
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #116997;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0e577d;
+}
+
+.footer-text {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.footer-text a {
+  color: #5bb6e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 30px;
+}
 
 .toggle-password-btn {
   position: absolute;
@@ -150,4 +146,28 @@ input[type="text"] {
 
 .toggle-password-btn:hover {
   opacity: 1;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+  .left-pane {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-login-page {
+    flex-direction: column;
+  }
+  
+  .left-pane {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  /* Hide the image on mobile devices for a cleaner login experience */
+  .right-pane {
+    display: none; 
+  }
 }

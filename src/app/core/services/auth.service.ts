@@ -10,6 +10,8 @@ export class AuthService {
 
   private baseUrl = APP_CONFIG.apiUrl;
 
+  // private baseUrl = 'http://localhost:3000/api';
+
   constructor(private http: HttpClient) {}
 
   register(userData: any) {
