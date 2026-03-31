@@ -1,247 +1,283 @@
 .page {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f6fbff;
-    min-height: 100vh;
-    padding: 32px 16px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    font-size: 36px;
-    color: #1e2b45;
-    margin: 12px 0;
-  }
-  
-  .header p {
-    color: #6b7a99;
-    max-width: 420px;
-    margin: auto;
-  }
-  
-  .week-pill {
-    background: #e7f1ff;
-    color: #2a7cff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 600;
-    display: inline-block;
-  }
-  
-  .progress-wrapper {
-    max-width: 600px;
-    margin: 32px auto;
-    position: relative;
-  }
-  
-  .progress-text {
-    text-align: left;
-    color: #6b7a99;
-    font-weight: 600;
-  }
-  
-  .progress-bar {
-    height: 10px;
-    background: #e8f1fb;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 8px;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #4da3ff, #2a7cff);
-    border-radius: 10px;
-    transition: width 0.4s ease;
-  }
-  
-  .points {
-    position: absolute;
-    right: 0;
-    bottom: 15px;
-    background: #ffe9d6;
-    color: #ff8a1f;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 600;
-  }
-  
-  .card {
-    background: #ffffff;
-    max-width: 600px;
-    margin: auto;
-    padding: 36px 24px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  }
-  
-  .badge {
-    background: #eaf7ff;
-    color: #0077cc;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 16px;
-  }
-  
-  .card h2 {
-    font-size: 26px;
-    color: #1e2b45;
-    margin-bottom: 28px;
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  button {
-    border: none;
-    padding: 16px 36px;
-    font-size: 18px;
-    border-radius: 18px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: transform 0.15s ease;
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-  }
-  
-  button.yes {
-    background: #e5f8ec;
-    color: #2dbf6e;
-  }
-  
-  button.no {
-    background: #ffe6e6;
-    color: #e34d4d;
-  }
-  
-  .feedback {
-    margin-top: 24px;
-    font-size: 18px;
-    color: #2a7cff;
-    font-weight: 600;
-  }
-  
-  footer {
-    margin-top: 40px;
-    color: #9aa8c7;
-    font-size: 14px;
-  }
-  
-  .intro-card {
-    text-align: center;
-  }
-  
-  .intro-image {
-    /* max-width: 100%; */
-    height: 300px;
-    margin-bottom: 20px;
-  }
-  
-  .intro-text {
-    color: #6b7a99;
-    font-size: 16px;
-    margin: 12px 0 24px;
-  }
-  
-  .yes-text {
-    color: #2dbf6e;
-    font-weight: 700;
-  }
-  
-  .no-text {
-    color: #e34d4d;
-    font-weight: 700;
-  }
-  
-  .start-btn {
-    background: #2a7cff;
-    color: #fff;
-    border: none;
-    padding: 18px 42px;
-    font-size: 18px;
-    border-radius: 20px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  
-  .start-btn:hover {
-    transform: scale(1.05);
-  }
-  
-
-  /* MODAL OVERLAY */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(30, 43, 69, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* MODAL CARD */
-.modal-card {
-  background: #ffffff;
-  padding: 40px 32px;
-  border-radius: 28px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6fbff;
+  min-height: 100vh;
+  padding: 32px 16px;
   text-align: center;
-  width: 90%;
-  max-width: 420px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-  animation: popIn 0.3s ease;
 }
 
-.modal-icon {
-  font-size: 48px;
+.header h1 {
+  font-size: 36px;
+  color: #1e2b45;
+  margin: 12px 0;
+}
+
+.header p {
+  color: #6b7a99;
+  max-width: 420px;
+  margin: auto;
+}
+
+.week-pill {
+  background: #e7f1ff;
+  color: #2a7cff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.progress-wrapper {
+  max-width: 600px;
+  margin: 32px auto;
+  position: relative;
+  display: flex; /* Added flex to handle points positioning better */
+  flex-direction: column;
+}
+
+.progress-text {
+  text-align: left;
+  color: #6b7a99;
+  font-weight: 600;
+  margin-bottom: 8px; /* Added spacing */
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e8f1fb;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4da3ff, #2a7cff);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.points {
+  position: absolute;
+  right: 0;
+  top: -8px; /* Moved to top so it doesn't overlap the bar */
+  background: #ffe9d6;
+  color: #ff8a1f;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card {
+  background: #ffffff;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  padding: 36px 32px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.badge {
+  background: #eaf7ff;
+  color: #0077cc;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
-.modal-card h2 {
-  font-size: 28px;
+.card h2 {
+  font-size: 26px;
   color: #1e2b45;
-  margin-bottom: 12px;
-}
-
-.modal-card p {
-  color: #6b7a99;
-  font-size: 16px;
   margin-bottom: 28px;
+  line-height: 1.3;
 }
 
-/* BUTTON */
-.modal-btn {
-  background: #2a7cff;
-  color: #fff;
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows buttons to wrap on tiny screens */
+}
+
+button {
   border: none;
-  padding: 16px 32px;
-  font-size: 16px;
-  border-radius: 20px;
-  font-weight: 700;
+  padding: 16px 36px;
+  font-size: 18px;
+  border-radius: 18px;
   cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.15s ease;
 }
 
-.modal-btn:hover {
+button:hover {
   transform: scale(1.05);
 }
 
-/* Animation */
+button.yes {
+  background: #e5f8ec;
+  color: #2dbf6e;
+  flex: 1; /* Makes buttons equal width */
+  min-width: 120px;
+}
+
+button.no {
+  background: #ffe6e6;
+  color: #e34d4d;
+  flex: 1; /* Makes buttons equal width */
+  min-width: 120px;
+}
+
+.feedback {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #2a7cff;
+  font-weight: 600;
+  animation: popIn 0.3s ease;
+}
+
+footer {
+  margin-top: 40px;
+  color: #9aa8c7;
+  font-size: 14px;
+}
+
+.intro-card {
+  text-align: center;
+}
+
+.intro-image {
+  width: 100%; /* Makes image responsive */
+  max-width: 300px; /* Caps the size on desktop */
+  height: auto; /* Maintains aspect ratio */
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  color: #6b7a99;
+  font-size: 16px;
+  margin: 12px 0 24px;
+  line-height: 1.5;
+}
+
+.yes-text { color: #2dbf6e; font-weight: 700; }
+.no-text { color: #e34d4d; font-weight: 700; }
+
+.start-btn {
+  background: #2a7cff;
+  color: #fff;
+  border: none;
+  padding: 18px 42px;
+  font-size: 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%; /* Full width on mobile looks better */
+  max-width: 250px;
+}
+
+.start-btn:hover { transform: scale(1.05); }
+
+/* MODAL STYLES (Unchanged) */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(30, 43, 69, 0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: #ffffff; padding: 40px 32px; border-radius: 28px;
+  text-align: center; width: 90%; max-width: 420px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: popIn 0.3s ease;
+  box-sizing: border-box;
+}
+
+.modal-icon { font-size: 48px; margin-bottom: 16px; }
+.modal-card h2 { font-size: 28px; color: #1e2b45; margin-bottom: 12px; }
+.modal-card p { color: #6b7a99; font-size: 16px; margin-bottom: 28px; }
+
+.modal-btn {
+  background: #2a7cff; color: #fff; border: none;
+  padding: 16px 32px; font-size: 16px; border-radius: 20px;
+  font-weight: 700; cursor: pointer; width: 100%;
+}
+.modal-btn:hover { transform: scale(1.05); }
+
 @keyframes popIn {
-  from {
-    transform: scale(0.85);
-    opacity: 0;
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES 
+   ========================================= */
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px; /* Slightly smaller header on mobile */
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+
+  .card {
+    padding: 24px 20px; /* Less padding inside the card */
+    border-radius: 20px;
+  }
+
+  .card h2 {
+    font-size: 22px; /* Smaller question text */
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+
+  .points {
+    position: relative; /* Moves points below text on mobile */
+    top: 0;
+    align-self: flex-start;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column; /* Stack Yes/No buttons vertically on very small screens */
+    gap: 12px;
+  }
+
+  button.yes, button.no {
+    width: 100%;
+  }
+
+  .page {
+    padding: 20px 12px;
+  }
+}
+
+/* New, specific large-screen media query for full-width elements and a wider card */
+@media (min-width: 1200px) {
+  /* The core card gets wider to make the elements more impactful on large monitors */
+  .card {
+    max-width: 600px; /* Wider card */
+    padding: 38px 30px; /* Increased padding for the larger scale */
+  }
+
+  /* Make the intro image fill the full width of the larger card container */
+  .intro-image {
+    max-width: none; /* Removes the 300px constraint */
+  }
+
+  /* Make the start button fill the full card content width */
+  .start-btn {
+    max-width: none; /* Removes the 250px constraint */
+    padding: 15px 40px; /* Increased padding for a more prominent full-width button */
+    font-size: 20px; /* slightly larger text size for visibility */
   }
 }

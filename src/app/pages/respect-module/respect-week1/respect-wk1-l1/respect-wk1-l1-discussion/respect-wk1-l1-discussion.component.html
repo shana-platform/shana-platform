@@ -1,36 +1,53 @@
 <div class="container mt-5">
   <div class="card main-quiz-card border-0 shadow-sm p-4 mb-4">
+    <p class="text-muted small fw-bold mb-2">Question {{currentIndex + 1}} of {{discussionPrompts.length}}</p>
+    
     <div class="d-flex align-items-center mb-4">
-      <span class="badge rounded-circle bg-light text-dark p-2 me-3 shadow-sm">{{currentPrompt.id}}</span>
       <h4 class="fw-bold mb-0">{{currentPrompt.question}}</h4>
     </div>
 
-    <textarea 
-      [(ngModel)]="userAnswers[currentIndex]"
-      class="form-control custom-textarea mb-3" 
-      rows="4" 
-      placeholder="Type your answer here...">
-    </textarea>
-
-    <div class="d-flex gap-2">
-      <button *ngIf="!showSample" (click)="checkAnswer()" class="btn btn-orange rounded-pill px-4">
-        <i class="fa fa-check-circle me-2"></i> Check Answer
-      </button>
-      
-      <button *ngIf="showSample" (click)="nextQuestion()" class="btn btn-orange rounded-pill px-4">
-        {{ currentIndex === 4 ? 'Review Answers' : 'Next Question' }}
+    <div class="options-container mb-4">
+      <button 
+        *ngFor="let option of currentPrompt.options" 
+        (click)="selectOption(option)"
+        [disabled]="showFeedback"
+        class="btn option-btn w-100 text-start mb-2 py-3 px-4 rounded-4"
+        [ngClass]="{
+          'selected': selectedOption === option && !showFeedback,
+          'correct': showFeedback && option === currentPrompt.correctAnswer,
+          'incorrect': showFeedback && selectedOption === option && option !== currentPrompt.correctAnswer,
+          'disabled': showFeedback && option !== currentPrompt.correctAnswer && selectedOption !== option
+        }">
+        {{ option }}
       </button>
     </div>
 
-    <div *ngIf="showSample" class="sample-box mt-4 p-4 rounded-4 animate__animated animate__fadeIn">
-      <p class="text-muted pt-3">{{currentPrompt.feedback}}</p>
-      <hr>
-      <h6 class="text-uppercase fw-bold orange-text mb-3">Sample Answers</h6>
-      <ul class="list-unstyled">
-        <li *ngFor="let ans of currentPrompt.sampleAnswers" class="mb-2 d-flex">
-          <i class="fa fa-chevron-right orange-text me-2"></i> {{ans}}
-        </li>
-      </ul>
+    <div class="d-flex gap-2">
+      <button 
+        *ngIf="!showFeedback" 
+        (click)="checkAnswer()" 
+        [disabled]="!selectedOption"
+        class="btn btn-warning rounded-pill px-4">
+        <i class="fa fa-check-circle me-2"></i> Check Answer
+      </button>
+      
+      <button 
+        *ngIf="showFeedback" 
+        (click)="nextQuestion()" 
+        class="btn btn-warning rounded-pill px-4">
+        {{ currentIndex === discussionPrompts.length - 1 ? 'Review Answers' : 'Next Question' }}
+      </button>
+    </div>
+
+    <div *ngIf="showFeedback" class="sample-box mt-4 p-4 rounded-4 animate__animated animate__fadeIn"
+         [ngClass]="isAnswerCorrect ? 'bg-success-subtle border-success' : 'bg-danger-subtle border-danger'">
+      
+      <h6 class="fw-bold mb-2" [ngClass]="isAnswerCorrect ? 'text-success' : 'text-danger'">
+        <i class="fa" [ngClass]="isAnswerCorrect ? 'fa-check-circle' : 'fa-times-circle'"></i> 
+        {{ isAnswerCorrect ? 'Correct!' : 'Not quite right.' }}
+      </h6>
+      
+      <p *ngIf="isAnswerCorrect" class="mb-0 text-dark">{{currentPrompt.feedback}}</p>
     </div>
   </div>
 </div>
@@ -38,26 +55,35 @@
 <div *ngIf="isReviewModalOpen" class="custom-modal-backdrop">
   <div class="custom-modal p-4 shadow-lg rounded-5">
     <h3>Review Your Answers</h3>
-    <div *ngFor="let q of discussionPrompts; let i = index" class="mb-3">
-      <p class="fw-bold">{{i+1}}. {{q.question}}</p>
-      <div class="bg-light p-2 rounded">{{userAnswers[i] || 'No answer provided'}}</div>
+    <h5 class="text-muted mb-4">You scored {{score}} out of {{discussionPrompts.length}}!</h5>
+    
+    <div *ngFor="let q of discussionPrompts; let i = index" class="mb-3 border-bottom pb-2">
+      <p class="fw-bold mb-1">{{i+1}}. {{q.question}}</p>
+      <div class="p-2 rounded" 
+           [ngClass]="userAnswers[i] === q.correctAnswer ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger'">
+        <strong>Your Answer:</strong> {{userAnswers[i] || 'No answer provided'}}
+      </div>
+      <div *ngIf="userAnswers[i] !== q.correctAnswer" class="p-2 text-muted small">
+        <strong>Correct Answer:</strong> {{q.correctAnswer}}
+      </div>
     </div>
+    
     <div class="d-flex justify-content-end gap-2 mt-4">
-      <button (click)="isReviewModalOpen = false" class="btn btn-light rounded-pill px-4">Go Back</button>
-      <button (click)="showModal()" class="btn btn-orange rounded-pill px-4"><i class="bi bi-send"></i> Submit</button>
+      <button (click)="showModal()" class="btn btn-secondary rounded-pill px-4 w-100">
+        <i class="bi bi-send"></i> Submit & Finish
+      </button>
     </div>
   </div>
 </div>
 
-  <!-- END OF QUIZ MODAL -->
-  <div class="modal-overlay" *ngIf="showEndModal">
-    <div class="modal-card">
-      <div class="modal-icon">🎉</div>
-      <h2>Good Job!</h2>
-      <h4>You have earned 5 stars!</h4>
-      <p>Proceed to activity session to complete your lesson.</p>
-      <button class="btn btn-primary" (click)="proceedToNextLesson()">
-        Next Lesson →
-      </button>
-    </div>
+<div class="modal-overlay" *ngIf="showEndModal">
+  <div class="modal-card">
+    <div class="modal-icon">🎉</div>
+    <h2>Good Job!</h2>
+    <h4>You earned {{score}} stars!</h4>
+    <p>Proceed to the activity session to complete your lesson.</p>
+    <button class="btn btn-orange rounded-pill w-100 py-2" (click)="proceedToNextLesson()">
+      Next Lesson →
+    </button>
   </div>
+</div>

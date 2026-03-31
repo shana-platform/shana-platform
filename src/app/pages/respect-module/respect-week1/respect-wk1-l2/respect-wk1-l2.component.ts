@@ -22,6 +22,6 @@ export class RespectWk1L2Component implements OnInit {
 
   completeLesson() {
     this.showModal = true;
-    this.progressService.updateProgress('week1', 25);
+    this.progressService.updateProgress('week1', 100);
   }
 }

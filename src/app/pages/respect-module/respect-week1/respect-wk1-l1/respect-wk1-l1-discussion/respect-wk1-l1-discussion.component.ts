@@ -2,6 +2,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { StudentService } from 'src/app/core/services/student.service';
 
+interface QuizQuestion {
+  id: number;
+  question: string;
+  options: string[];
+  correctAnswer: string;
+  feedback: string;
+}
+
 @Component({
   selector: 'app-respect-wk1-l1-discussion',
   templateUrl: './respect-wk1-l1-discussion.component.html',
@@ -12,41 +20,69 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
 
   userAnswers: string[] = new Array(5).fill('');
   isReviewModalOpen = false;
-  showSample = false;
+  showFeedback = false;
   showEndModal = false;
   currentIndex = 0;
   score = 0;
   user: any;
+  selectedOption: string = '';
+  isAnswerCorrect: boolean = false;
 
-  discussionPrompts = [
+  // Converted to Multiple Choice Format
+  discussionPrompts: QuizQuestion[] = [
     {
       id: 1,
-      question: 'Name one thing you like about yourself.',
-      sampleAnswers: ['I like that I am kind.', 'I like my smile.', 'I like that I try my best.'],
+      question: 'Which of the following is an example of liking yourself?',
+      options: [
+        'Saying bad things about my hair.',
+        'Being proud that I try my best.', // Correct
+        'Wishing I was someone else.'
+      ],
+      correctAnswer: 'Being proud that I try my best.',
       feedback: 'Lovely! Celebrating yourself builds respect.'
     },
     {
       id: 2,
-      question: 'How do you feel when someone is kind to you?',
-      sampleAnswers: ['I feel happy', 'I feel special.', 'It makes me smile.'],
+      question: 'How should you feel when someone is kind to you?',
+      options: [
+        'I feel angry.',
+        'I feel special and happy.', // Correct
+        'I ignore them.'
+      ],
+      correctAnswer: 'I feel special and happy.',
       feedback: 'Great reflection — you deserve kindness!'
     },
     {
       id: 3,
-      question: 'What can you say instead of ‘I can’t do it?',
-      sampleAnswers: ['I will try.', 'I can learn this.', 'Let me practice'],
+      question: 'What is a positive thing to say instead of "I can’t do it"?',
+      options: [
+        'I give up.',
+        'This is too hard for me.',
+        'I will try and practice.' // Correct
+      ],
+      correctAnswer: 'I will try and practice.',
       feedback: 'Nice! Positive words help your brain grow.'
     },
     {
       id: 4,
-      question: 'What healthy habits show respect for your body?',
-      sampleAnswers: ['Eating fruits and vegetables.', 'Drinking water', 'Sleeping early.'],
+      question: 'Which healthy habit shows respect for your body?',
+      options: [
+        'Eating fruits, vegetables, and drinking water.', // Correct
+        'Staying up all night playing games.',
+        'Never washing my hands.'
+      ],
+      correctAnswer: 'Eating fruits, vegetables, and drinking water.',
       feedback: 'Wonderful — your body loves good care.'
     },
     {
       id: 5,
       question: 'How can you treat yourself kindly today?',
-      sampleAnswers: ['I will rest when I’m tired.', 'I will speak nicely to myself.', 'I will take a break and breathe.'],
+      options: [
+        'I will rest when I’m tired and speak nicely to myself.', // Correct
+        'I will force myself to work even if I am sick.',
+        'I will yell at myself if I make a mistake.'
+      ],
+      correctAnswer: 'I will rest when I’m tired and speak nicely to myself.',
       feedback: 'Amazing! Self-respect happens in small steps.'
     }
   ];
@@ -55,21 +91,39 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.authService.getLoggedUser();
-    console.log(this.user)
   }
 
-get currentPrompt() {
+  get currentPrompt() {
     return this.discussionPrompts[this.currentIndex];
   }
 
+  // Called when the user clicks an option
+  selectOption(option: string) {
+    if (this.showFeedback) return; // Prevent clicking after an answer is submitted
+
+    this.selectedOption = option;
+  }
+
   checkAnswer() {
-    this.showSample = true;
+    if (!this.selectedOption) return; // Don't allow checking if nothing is selected
+
+    this.userAnswers[this.currentIndex] = this.selectedOption;
+    this.isAnswerCorrect = this.selectedOption === this.currentPrompt.correctAnswer;
+    
+    if (this.isAnswerCorrect) {
+      this.score += 1; // Award a point for a correct answer
+    }
+
+    this.showFeedback = true;
   }
 
   nextQuestion() {
+    this.showFeedback = false;
+    this.selectedOption = '';
+    this.isAnswerCorrect = false;
+
     if (this.currentIndex < this.discussionPrompts.length - 1) {
       this.currentIndex++;
-      this.showSample = false;
     } else {
       this.isReviewModalOpen = true;
     }
@@ -77,21 +131,13 @@ get currentPrompt() {
 
   showModal(){
     this.showEndModal = true;
-    this.isReviewModalOpen = false
-    this.score = 5;
+    this.isReviewModalOpen = false;
   }
 
-    proceedToNextLesson() {
-      const res = this.score + this.user.stars;
-      console.log(res);
-    // const res = `${this.score} + ${this.user.stars}`
-    // console.log(res)
-    // this.router.navigate(['/dashboard']);
-    // this.router.navigate(['/respect-week1-l1']);
+  proceedToNextLesson() {
     this.showEndModal = false;
+    // Pass the actual score the user earned
     this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
     this.goNext.emit();
-    // alert(`You earned 1 star! Total stars: ${updatedUser.stars}`);
   }
 }
-

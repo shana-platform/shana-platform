@@ -61,18 +61,18 @@ export class RespectWeek1Component implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.progressService.currentProgress$.pipe(take(1)).subscribe(progress => {
-      if (progress['week1'] == 30) {
-        alert('You have already completed Level 1! Taking you to Level 2.');
-        this.router.navigate(['/respect-week1-l1']);
-      } else if (progress['week1'] == 70) {
-        alert('You have already completed Level 2! Taking you to Level 3.');
-        this.router.navigate(['/respect-week1-l2']);
-      } else if (progress['week1'] == 100){
-        alert('You have already completed week1! Taking you to week 2');
-        this.router.navigate(['/respect-week2']);
-      }
-    });
+    // this.progressService.currentProgress$.pipe(take(1)).subscribe(progress => {
+    //   if (progress['week1'] == 30) {
+    //     alert('You have already completed Level 1! Taking you to Level 2.');
+    //     this.router.navigate(['/respect-week1-l1']);
+    //   } else if (progress['week1'] == 70) {
+    //     alert('You have already completed Level 2! Taking you to Level 3.');
+    //     this.router.navigate(['/respect-week1-l2']);
+    //   } else if (progress['week1'] == 100){
+    //     alert('You have already completed week1! Taking you to week 2');
+    //     this.router.navigate(['/respect-week2']);
+    //   }
+    // });
   }
 
   startQuiz() {
@@ -119,7 +119,7 @@ export class RespectWeek1Component implements OnInit {
   }
   
   proceedToNextLesson() {
-    this.progressService.updateProgress('week1', 100);
+    this.progressService.updateProgress('week1', 30);
     this.studentService.updateUserStats({ 
       stars: this.score, 
       modulesCompleted: 1,
