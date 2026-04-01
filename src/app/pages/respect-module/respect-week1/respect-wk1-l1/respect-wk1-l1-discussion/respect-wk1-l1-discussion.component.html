@@ -53,9 +53,9 @@
 </div>
 
 <div *ngIf="isReviewModalOpen" class="custom-modal-backdrop">
-  <div class="custom-modal p-4 shadow-lg rounded-5">
-    <h3>Review Your Answers</h3>
-    <h5 class="text-muted mb-4">You scored {{score}} out of {{discussionPrompts.length}}!</h5>
+  <div class="custom-modal p-5 shadow-lg rounded-5">
+    <h6>Review Your Answers</h6>
+    <h6 class="text-muted mb-4">You scored {{score}} out of {{discussionPrompts.length}}!</h6>
     
     <div *ngFor="let q of discussionPrompts; let i = index" class="mb-3 border-bottom pb-2">
       <p class="fw-bold mb-1">{{i+1}}. {{q.question}}</p>
@@ -82,7 +82,7 @@
     <h2>Good Job!</h2>
     <h4>You earned {{score}} stars!</h4>
     <p>Proceed to the activity session to complete your lesson.</p>
-    <button class="btn btn-orange rounded-pill w-100 py-2" (click)="proceedToNextLesson()">
+    <button class="btn btn-primary rounded-pill w-100 py-2" (click)="proceedToNextLesson()">
       Next Lesson →
     </button>
   </div>

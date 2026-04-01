@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-respect-wk2-l1-story',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./respect-wk2-l1-story.component.css']
 })
 export class RespectWk2L1StoryComponent implements OnInit {
+  @Output() goNext = new EventEmitter<void>();
+  
   slides = [
     {
       image: 'assets/RW2P1.png'
@@ -44,7 +46,12 @@ export class RespectWk2L1StoryComponent implements OnInit {
   }
 
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+    if (this.currentIndex === this.slides.length - 1) {
+      this.goNext.emit();
+    } else {
+      this.currentIndex++;
+      
+    }
   }
 
   prevSlide() {

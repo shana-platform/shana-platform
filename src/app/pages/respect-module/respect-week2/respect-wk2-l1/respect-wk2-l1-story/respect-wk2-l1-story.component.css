@@ -1,113 +1,160 @@
 .story-container {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    padding: 0px;
-    max-width: 1500px;
-    margin: auto;
-  }
-  
-  .story-title {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-  
-  .highlight-green {
-    color: #87b58a;
-  }
-  
-  .highlight-blue {
-    background: linear-gradient(90deg, #5ab6f9, #4dd2b0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .story-subtitle {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 30px;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px; /* Added padding so content doesn't touch the screen edges */
+  max-width: 1500px;
+  margin: auto;
+}
+
+.story-title {
+  /* clamp() automatically scales the font between 2rem and 4rem based on screen size */
+  font-size: clamp(2rem, 6vw, 4rem); 
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.highlight-green {
+  color: #87b58a;
+}
+
+.highlight-blue {
+  background: linear-gradient(90deg, #5ab6f9, #4dd2b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.story-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 800px; /* Keeps the paragraph from getting too wide on large screens */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Anchors the nav buttons for mobile layout */
+  max-width: 750px;
+  margin: 0 auto;
+  gap: 15px; /* Adds breathing room between buttons and image on desktop */
+}
+
+.slide {
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+.slide-image img {
+  width: 100%; /* Changed from fixed 600px to fluid 100% */
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px; /* Smooth corners for the image itself */
+}
+
+.nav-btn {
+  background: #fff6e0;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px; /* Slightly increased for better mobile touch targets */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  flex-shrink: 0; /* Prevents buttons from getting squished */
+}
+
+.nav-btn:hover {
+  background-color: #ffe3b3;
+}
+
+.indicators {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #1976d2;
+}
+
+.footer-controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.autoplay-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.autoplay-btn:hover {
+  background: #eee;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #f4a261, #efd6a4);
+  color: black;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS                     */
+/* ========================================= */
+@media (max-width: 600px) {
   .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 0; /* Remove desktop gap */
   }
-  
-  .slide {
-    display: flex;
-    max-width: 900px;
-    border-radius: 12px;
-    overflow: hidden;
-    /* height: 750px; */
-  }
-  
-  .slide-image img {
-    width: 600px;
-    height: auto;
-    object-fit: cover;
-  }
-  
+
+  /* Float buttons over the image on small screens to save space */
   .nav-btn {
-    background: #fff6e0;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    opacity: 0.9;
   }
-  
-  .nav-btn:hover {
-    background-color: #ffe3b3;
+
+  .nav-btn.left {
+    left: 5px;
   }
-  
-  .indicators {
-    margin-top: 20px;
+
+  .nav-btn.right {
+    right: 5px;
   }
-  
-  .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 4px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .dot.active {
-    background-color: #1976d2;
-  }
-  
-  .footer-controls {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .autoplay-btn {
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 4px 10px;
-    cursor: pointer;
-  }
-  
-  .autoplay-btn:hover {
-    background: #eee;
-  }
-  
-  .cta-button {
-    background: linear-gradient(to right, #f4a261, #efd6a4);
-    color: black;
-    font-weight: 600;
-    border: none;
-    padding: 0.4rem 1rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
+}

@@ -8,9 +8,9 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private baseUrl = APP_CONFIG.apiUrl;
+  // private baseUrl = APP_CONFIG.apiUrl;
 
-  // private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) {}
 

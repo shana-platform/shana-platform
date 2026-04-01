@@ -34,9 +34,9 @@ export class RespectWk1L1ActivityComponent implements OnInit {
   submitImage() {
     this.showModal = true;
     const res = this.score + this.user.stars;
-    this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
+    this.studentService.updateUserStats({ stars: 1, modulesCompleted: 0, badges: 0, trophies: 0 });
     // this.goNext.emit();
-    // alert(`You earned 1 star! Total stars: ${updatedUser.stars}`);
+    alert(`You earned 1 star!`);
   }
 
   closeModal() {

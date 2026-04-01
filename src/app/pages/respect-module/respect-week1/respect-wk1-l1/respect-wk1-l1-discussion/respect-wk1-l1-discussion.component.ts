@@ -28,7 +28,6 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
   selectedOption: string = '';
   isAnswerCorrect: boolean = false;
 
-  // Converted to Multiple Choice Format
   discussionPrompts: QuizQuestion[] = [
     {
       id: 1,
@@ -99,13 +98,13 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
 
   // Called when the user clicks an option
   selectOption(option: string) {
-    if (this.showFeedback) return; // Prevent clicking after an answer is submitted
+    if (this.showFeedback) return;
 
     this.selectedOption = option;
   }
 
   checkAnswer() {
-    if (!this.selectedOption) return; // Don't allow checking if nothing is selected
+    if (!this.selectedOption) return;
 
     this.userAnswers[this.currentIndex] = this.selectedOption;
     this.isAnswerCorrect = this.selectedOption === this.currentPrompt.correctAnswer;
@@ -136,7 +135,6 @@ export class RespectWk1L1DiscussionComponent implements OnInit {
 
   proceedToNextLesson() {
     this.showEndModal = false;
-    // Pass the actual score the user earned
     this.studentService.updateUserStats({ stars: this.score, modulesCompleted: 0, badges: 0, trophies: 0 });
     this.goNext.emit();
   }

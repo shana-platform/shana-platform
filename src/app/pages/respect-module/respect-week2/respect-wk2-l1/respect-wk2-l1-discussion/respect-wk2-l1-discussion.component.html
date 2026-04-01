@@ -1,33 +1,59 @@
 <div class="discussion-container mb-5">
-    <h2 class="section-title">Independent Discussion Prompts
-      <p class="text-muted fs-6 fw-light">Type your answers in the text boxes provided.</p>
-    </h2>
-    
-    <div *ngFor="let prompt of discussionPrompts" class="discussion-card">
-      <h4 class="question">{{ prompt.question }}</h4>
-  
-      <!-- User Input Section -->
-      <div class="user-answer">
-        <textarea
-          [(ngModel)]="prompt.userAnswer"
-          [disabled]="prompt.submitted"
-          placeholder="Type your response here..."
-          class="answer-box"></textarea>
-        <button
-          *ngIf="!prompt.submitted"
-          (click)="submitAnswer(prompt)"
-          class="submit-btn">
-          Submit
-        </button>
-        <div *ngIf="prompt.submitted" class="submitted-answer">
-          <strong>Your answer: <span class="text-primary">{{ prompt.userAnswer }}</span></strong>
-        </div>
-      <ng-container *ngIf="prompt.submitted">
-        <div class="thanks-message mt-2 text-primary small">
-            {{ prompt.feedback }}
-        </div>
-      </ng-container>
-      </div>
+  <h2 class="section-title">Let's Discuss Respect!
+    <p class="text-muted fs-6 fw-light mt-2">Choose the best answer for each question.</p>
+  </h2>
+
+  <div *ngIf="!isFinished" class="discussion-card animate-fade">
+    <p class="progress-text">Question {{ currentIndex + 1 }} of {{ discussionPrompts.length }}</p>
+
+    <h4 class="question">{{ currentPrompt.question }}</h4>
+
+    <div class="options-container">
+      <button 
+        *ngFor="let option of currentPrompt.options" 
+        (click)="selectOption(option)"
+        [disabled]="showFeedback"
+        class="option-btn"
+        [ngClass]="{
+          'selected': selectedOption === option && !showFeedback,
+          'correct': showFeedback && option === currentPrompt.correctAnswer,
+          'incorrect': showFeedback && selectedOption === option && option !== currentPrompt.correctAnswer,
+          'disabled': showFeedback && option !== currentPrompt.correctAnswer && selectedOption !== option
+        }">
+        {{ option }}
+      </button>
+    </div>
+
+    <div class="action-buttons">
+      <button 
+        *ngIf="!showFeedback" 
+        (click)="checkAnswer()" 
+        [disabled]="!selectedOption"
+        class="submit-btn">
+        Check Answer
+      </button>
+      
+      <button 
+        *ngIf="showFeedback" 
+        (click)="nextQuestion()" 
+        class="submit-btn next-btn">
+        {{ currentIndex === discussionPrompts.length - 1 ? 'Finish Quiz' : 'Next Question' }}
+      </button>
+    </div>
+
+    <div *ngIf="showFeedback" class="feedback-box" [ngClass]="isAnswerCorrect ? 'feedback-success' : 'feedback-error'">
+      <h6 class="feedback-title">
+        <span *ngIf="isAnswerCorrect">✅ Correct!</span>
+        <span *ngIf="!isAnswerCorrect">❌ Not quite right.</span>
+      </h6>
+      <p class="mb-0" *ngIf="isAnswerCorrect">{{ currentPrompt.feedback }}</p>
     </div>
   </div>
-  
+
+  <div *ngIf="isFinished" class="discussion-card text-center animate-fade">
+    <div class="finish-icon mb-3">🎉</div>
+    <h2 class="mb-3">All Done!</h2>
+    <p class="mb-4">You scored {{ score }} out of {{ discussionPrompts.length }}. Great job learning about respect!</p>
+    <button (click)="finishLesson()" class="submit-btn next-btn px-5">Complete Lesson</button>
+  </div>
+</div>
