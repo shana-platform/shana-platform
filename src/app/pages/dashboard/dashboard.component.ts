@@ -21,6 +21,7 @@ constructor(private studentService: StudentService, private moduleservice: Modul
 
 ngOnInit(): void {
   this.user = this.authService.getLoggedUser();
+  console.log(this.user)
 }
 
 loadStudents() {
